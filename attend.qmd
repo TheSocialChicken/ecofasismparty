@@ -1,0 +1,197 @@
+---
+title: "Citizen Registration"
+subtitle: "Evening Leisure Permit Application — Sector Warren, Year II"
+---
+
+<div class="scanlines"></div>
+
+<div class="ticker-wrap">
+  <span class="ticker">
+    ◆ LEISURE PERMIT REQUIRED ◆ SYNTHETIC FABRICS PROHIBITED ◆ CARBON CONFESSION BOOTH AVAILABLE ALL EVENING ◆ RATION TOKEN ECONOMY IN OPERATION ◆ SECTOR WARDEN ON PREMISES — IDENTIFY AND AVOID OR ENGAGE AT YOUR PERIL ◆
+  </span>
+</div>
+
+---
+
+## Your Evening Leisure Permit
+
+Print this, or present it on a screen. The permit is symbolic. The party is real.
+
+<div class="permit-card">
+  <div class="permit-header">
+    Emerald Republic — Ministry of Cultural Conformity<br>
+    Evening Leisure Permit · Sector Warren
+  </div>
+  <div class="permit-field">
+    <span class="label">Event</span>
+    <span class="value">Second Year Citizen Celebration</span>
+  </div>
+  <div class="permit-field">
+    <span class="label">Location</span>
+    <span class="value">The Warren</span>
+  </div>
+  <div class="permit-field">
+    <span class="label">Permit Duration</span>
+    <span class="value">Evening until late</span>
+  </div>
+  <div class="permit-field">
+    <span class="label">Carbon Allowance</span>
+    <span class="value">Special Event Exemption 4-B</span>
+  </div>
+  <div class="permit-field">
+    <span class="label">Synthetic Fabrics</span>
+    <span class="value">PROHIBITED</span>
+  </div>
+  <div class="permit-field">
+    <span class="label">Status</span>
+    <span class="value" style="color:#6dde6d;">APPROVED — PROCEED</span>
+  </div>
+  <div style="margin-top: 1rem; font-size: 0.75rem; color: #4a6a4a; border-top: 1px dashed #1a3a1a; padding-top: 0.7rem; letter-spacing: 0.1em;">
+    Bearer is authorised to engage in approved festivity, consume allocated rations, and question the Republic's methods in a theatrical context only. The Republic thanks you for your compliance.
+  </div>
+</div>
+
+---
+
+## Dress Code — Approved Citizen Aesthetic
+
+Citizens are encouraged to dress as befits a Republic that abolished fast fashion. Earth tones. Natural fibres. Dystopian utility chic. Propaganda agency swagger.
+
+<div class="dress-grid">
+
+<div class="dress-item">
+  <span class="icon">🌿</span>
+  <div class="title">Green Order</div>
+  <div class="desc">Olive, khaki, forest green. Military adjacency. The Covenant on your sleeve, literally or figuratively.</div>
+</div>
+
+<div class="dress-item">
+  <span class="icon">📋</span>
+  <div class="title">Bureau Official</div>
+  <div class="desc">Grey suits, lanyards, clipboards. "I'm from the Ministry of Cultural Conformity and I need to see your permit."</div>
+</div>
+
+<div class="dress-item">
+  <span class="icon">⛏</span>
+  <div class="title">Rewilding Worker</div>
+  <div class="desc">Work boots, soil-stained canvas, high-vis with the Republic seal. Your three months are showing.</div>
+</div>
+
+<div class="dress-item">
+  <span class="icon">📡</span>
+  <div class="title">GreenCast Correspondent</div>
+  <div class="desc">Microphone (prop), green lanyard, the specific expression of someone who has pre-cleared their questions.</div>
+</div>
+
+<div class="dress-item">
+  <span class="icon">🕯</span>
+  <div class="title">Resistance (Undercover)</div>
+  <div class="desc">You look like a citizen. You have a pre-Republic road atlas hidden somewhere. You trust no one. Especially not that Sector Warden.</div>
+</div>
+
+<div class="dress-item">
+  <span class="icon">⚖</span>
+  <div class="title">Tribunal Official</div>
+  <div class="desc">Dark robes, a gavel (prop), an expression of sincere ecological concern and zero flexibility.</div>
+</div>
+
+</div>
+
+<div class="warning-box">
+Synthetic fabrics are theatrically prohibited. The Republic does not actually have jurisdiction over your wardrobe. Wear what you want. The propaganda is more fun if you play along.
+</div>
+
+---
+
+## The Evening Programme
+
+Times are approximate. The Republic values punctuality but the bar does not.
+
+| Time | Event | Location |
+|------|-------|----------|
+| Arrival | Citizen Processing — show your Permit | Main Entrance |
+| Opening | Second Year Address (theatrical — audience participation) | Main Hall |
+| Ongoing | The Museum of Necessary Unpleasantness | Side Gallery |
+| Ongoing | Carbon Confession Booth | Dark Corner |
+| Ongoing | Tribunal Re-enactment | Stage |
+| Ongoing | GreenCast Live Broadcast (parody) | Screen Area |
+| Ongoing | Approved Music | Dance Floor |
+| Ongoing | Ration Token Economy (drinks) | The Bar |
+| Ongoing | Spot the Real Sector Warden | Everywhere |
+| Late | Underground Broadcasting — forbidden pre-Republic music | TBA |
+| Very Late | Collective departure in approved low-carbon transport | Presumably |
+
+---
+
+## Ration Token Economy
+
+The bar operates on **ration tokens** in true Republic style. Tokens are available at the Citizen Processing desk. One token = one drink. Additional tokens may be obtained by:
+
+- Successfully completing a Tribunal Re-enactment
+- Identifying contraband in the Black Market Corner
+- Denouncing a fellow citizen to a Bureau Official (theatrical only — no actual consequences unless they're your mate and the bit goes on too long)
+- Correctly reciting a Covenant clause from memory
+- Providing an explanation for your pre-Republic carbon crimes that satisfies the Confession Booth operative
+
+---
+
+## The Tribunal — Participation Guide
+
+The Extinction Tribunal will convene at intervals throughout the evening. Citizens may be called as defendant or prosecutor. The charges are fictional. The dramatic stakes are real.
+
+**Sample Charges:**
+- "The defendant owned a Land Rover and used it for the school run"
+- "The defendant flew to Ibiza four times in a single year and called it 'necessary'"
+- "The defendant lobbied against cycle lane expansion in their local council"
+- "The defendant kept using plastic bags even after they cost five pence"
+
+**Defence options:**
+- Ignorance (weak, but traditional)
+- Necessary economic activity (the Republic has heard this one)
+- Personal carbon offsets (the Tribunal will laugh)
+- Throwing a co-conspirator under the rewilding tractor
+
+---
+
+## The Carbon Confession Booth
+
+Unburden yourself. Tell the Booth Operative your greatest pre-Republic ecological sin. They will assess your carbon guilt on a scale of 1 (left the tap running) to 10 (owned an SUV with a personalised plate).
+
+High scores receive a symbolic sentence — typically some form of theatrical penance performed in front of whoever is nearby.
+
+All confessions are treated with the full gravity they deserve.
+
+---
+
+## Getting There — Citizens Are Reminded
+
+The Emerald Republic has abolished private vehicles. We note that it has not actually done this, as the Republic is fictional. Nevertheless, the organisers prefer you:
+
+- Walk / cycle / take the train / share a vehicle
+- Not show up in a diesel SUV and expect ideological immunity because you're wearing the right costume
+
+This is partly carbon guilt and partly just parking.
+
+---
+
+<div class="propaganda" data-label="Final Communiqué from the Ministry">
+
+Tonight is satire. Tonight is a party. Tonight we play at the world that almost was — or might yet be — and we laugh at it and we dance in it and we go home at the end.
+
+The point of dystopian fiction is to look at where the logic leads. The eco-fascism thesis starts with *"what if they were actually right about the emergency?"* and then asks *"and what if that made them stop caring about how they fixed it?"* That's the bit. That's the horror. Not that they were wrong about the planet. That they might have been right, and done this anyway.
+
+Think about it. Or don't. There's a Confession Booth and a Dance Floor and it's Year II and the earth is, somehow, still here.
+
+**THE EARTH ENDURES. THE REPUBLIC ENDURES. YOU ARE PERMITTED TO ENJOY THIS.**
+
+</div>
+
+<div style="text-align:center; margin: 2rem 0;">
+  <a href="index.qmd" class="cta-btn">RETURN TO THE INVITATION</a>
+  <a href="lore.qmd" class="cta-btn">READ THE CHRONICLE</a>
+</div>
+
+<div style="text-align:center; color: #2d7a2d; font-size: 0.75rem; letter-spacing: 0.2em; margin-top: 2rem;">
+MINISTRY OF CULTURAL CONFORMITY · SECTOR WARREN · YEAR II<br>
+Questions? Report them to a Bureau Official. They will file them appropriately.
+</div>
