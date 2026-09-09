@@ -1,0 +1,89 @@
+---
+title: ""
+format:
+  html:
+    page-layout: full
+---
+
+<div class="scanlines"></div>
+
+<div class="ticker-wrap">
+  <span class="ticker">
+    ◆ CARBON RATIONING LEVEL 4 IN EFFECT ◆ ALL LEISURE PERMITS MUST BE CARRIED ◆ SYNTHETIC FABRICS REMAIN PROHIBITED ◆ REPORT UNNECESARY COMBUSTION TO YOUR SECTOR WARDEN ◆ THE EARTH ENDURES. THE REPUBLIC ENDURES. ◆ TONIGHT'S CELEBRATION APPROVED UNDER DECREE 44-B ◆ REPORT UNNECESSARY COMBUSTION TO YOUR SECTOR WARDEN ◆
+  </span>
+</div>
+
+<div class="hero">
+  <div class="hero-sub">Ministry of Cultural Conformity presents</div>
+  <div class="hero-title">The Emerald Republic</div>
+  <div style="font-family: 'Special Elite', monospace; color: #4aad4a; letter-spacing: 0.3em; font-size: 0.9rem; margin: 0.5rem 0;">— SECOND YEAR OF THE GREEN COVENANT —</div>
+  <div class="seal">☘</div>
+  <div style="font-family: 'Special Elite', monospace; color: #c8a000; letter-spacing: 0.2em; font-size: 1.1rem; margin-top: 1rem;">
+    AN OFFICIAL CITIZEN CELEBRATION
+  </div>
+  <div class="hero-decree">
+    You are cordially summoned. Attendance is a privilege of citizenship.<br>
+    Sector: THE WARREN &nbsp;|&nbsp; Year II, Day of Communal Gratitude
+  </div>
+</div>
+
+---
+
+## SUMMONS TO CITIZEN CELEBRATION
+
+By order of the Cultural Conformity Bureau, the residents of **Sector Warren** are summoned to mark the Second Year of the Green Covenant with an evening of state-approved entertainment, communal reflection, and celebratory ration supplementation.
+
+The Republic has endured. The Earth breathes. You are invited to dance on the grave of the old world.
+
+<div class="propaganda" data-label="Official Communiqué">
+
+*"Two years ago, the skies over Parliament still burned with the fires of the old order. Two years ago, they said we were extremists. Tonight we are the government. Tonight we are the law. Tonight — we celebrate."*
+
+**— The Verdant, Second Year Address to the Green Assembly**
+
+</div>
+
+---
+
+## WHAT TO EXPECT
+
+The evening will proceed as all things proceed in the Emerald Republic: with purpose, with discipline, and with a great deal of fermented apple product from the approved collective orchards.
+
+You will encounter:
+
+- **The Museum of Necessary Unpleasantness** — an exhibition of What Had To Be Done
+- **The Tribunal Re-enactment Stage** — citizen volunteers play both sides
+- **The Carbon Confession Booth** — unburden yourself of your pre-Republic sins
+- **Approved Music** — frequency-certified by the Ministry of Acoustic Standards
+- **The Black Market Corner** — contraband (props only, probably)
+- **Sector Warden Impersonators** — spot the real one, win a ration token
+
+<div class="warning-box">
+Citizens are reminded that this is a satirical fiction event. The Emerald Republic is not real. The Just Stop Oil people have not, to our knowledge, seized Parliament. Yet. Costume props representing state authority are props. No actual compliance is required. The Verdant is a fictional character. Carbon guilt is real and yours to manage independently.
+</div>
+
+---
+
+## THE WORLD YOU ARE ENTERING
+
+When you step through the door, you step into **Year II of the Emerald Republic**.
+
+The old world ended not with a bang but with a spreadsheet — a carbon audit so damning that three governments fell in a week. Into the vacuum stepped the movement everyone had dismissed as irritating roadblockers. They had a plan. They had cells in every city. They had *The Verdant*.
+
+What followed was swift, ideologically coherent, and deeply unsettling to anyone who valued nuance.
+
+The Republic asks only one thing of its citizens: **compliance in the name of survival**. How much compliance is never quite specified. That's rather the point.
+
+<div style="text-align:center; margin: 2rem 0;">
+  <a href="lore.qmd" class="cta-btn">READ THE CHRONICLE</a>
+  <a href="manifesto.qmd" class="cta-btn">STUDY THE COVENANT</a>
+  <a href="attend.qmd" class="cta-btn">REGISTER AS CITIZEN</a>
+</div>
+
+---
+
+<div style="text-align:center; color: #2d7a2d; font-size: 0.75rem; letter-spacing: 0.2em; margin-top: 2rem;">
+MINISTRY OF CULTURAL CONFORMITY · SECTOR WARREN · YEAR II<br>
+This document has been approved under Green Covenant Article 7 (Cultural Expression for State Cohesion).<br>
+All irony has been pre-cleared.
+</div>

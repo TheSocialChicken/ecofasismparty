@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "THE EMERALD REPUBLIC"
+  description: "Official Citizen Celebration — Second Year of the Green Covenant"
+  favicon: "assets/favicon.ico"
+  navbar:
+    background: "#0a140a"
+    foreground: "#4aad4a"
+    logo: "assets/logo.svg"
+    title: "THE EMERALD REPUBLIC"
+    left:
+      - text: "HOME"
+        href: index.qmd
+      - text: "THE CHRONICLE"
+        href: lore.qmd
+      - text: "THE COVENANT"
+        href: manifesto.qmd
+      - text: "CITIZEN REGISTRATION"
+        href: attend.qmd
+  page-footer:
+    background: "#0a140a"
+    foreground: "#2d7a2d"
+    center: |
+      "THE EARTH ENDURES. THE REPUBLIC ENDURES." — The Verdant, Year Zero Address
+  open-graph:
+    title: "THE EMERALD REPUBLIC"
+    description: "You are cordially summoned to celebrate the Second Year of the Green Covenant."
+
+format:
+  html:
+    theme: [darkly, styles.css]
+    toc: false
+    mainfont: "Special Elite, monospace"
+    include-in-header:
+      text: |
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Share+Tech+Mono&family=UnifrakturMaguntia&display=swap" rel="stylesheet">

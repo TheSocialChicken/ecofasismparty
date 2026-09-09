@@ -1,0 +1,386 @@
+/*-- scss:rules --*/
+
+/* ===================================================
+   EMERALD REPUBLIC — OFFICIAL STATE DESIGN SYSTEM
+   Ministry of Cultural Conformity, Year II
+   =================================================== */
+
+:root {
+  --er-black:       #060c06;
+  --er-dark-green:  #0a1a0a;
+  --er-mid-green:   #0f2e0f;
+  --er-green:       #1a5c1a;
+  --er-bright:      #3db83d;
+  --er-lime:        #6dde6d;
+  --er-amber:       #c8a000;
+  --er-red:         #8b1a1a;
+  --er-paper:       #e8e0cc;
+  --er-text:        #c8d8c8;
+  --er-muted:       #4a6a4a;
+  --er-border:      #1a3a1a;
+}
+
+/* Base */
+body {
+  background-color: var(--er-black) !important;
+  color: var(--er-text) !important;
+  font-family: 'Share Tech Mono', monospace !important;
+  background-image:
+    radial-gradient(ellipse at 20% 80%, rgba(26,92,26,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(10,26,10,0.12) 0%, transparent 60%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Ccircle cx='30' cy='30' r='1' fill='%231a3a1a' opacity='0.4'/%3E%3C/svg%3E");
+}
+
+/* ── Typography ── */
+h1, h2, h3, h4, h5 {
+  font-family: 'Special Elite', monospace !important;
+  color: var(--er-lime) !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 { font-size: 2.4rem; border-bottom: 2px solid var(--er-green); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+h2 { font-size: 1.6rem; color: var(--er-bright) !important; }
+h3 { font-size: 1.2rem; color: var(--er-amber) !important; }
+
+p { line-height: 1.8; color: var(--er-text); }
+
+a { color: var(--er-lime) !important; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.2s; }
+a:hover { border-bottom-color: var(--er-lime); }
+
+strong { color: var(--er-lime); }
+em { color: var(--er-amber); font-style: normal; }
+
+/* ── Navbar ── */
+.navbar {
+  background-color: var(--er-black) !important;
+  border-bottom: 2px solid var(--er-green);
+  padding: 0.5rem 1rem;
+}
+.navbar-brand { font-family: 'Special Elite', monospace !important; color: var(--er-lime) !important; letter-spacing: 0.15em; font-size: 1.1rem; }
+.nav-link { color: var(--er-muted) !important; letter-spacing: 0.1em; font-size: 0.85rem; transition: color 0.2s; }
+.nav-link:hover, .nav-link.active { color: var(--er-lime) !important; }
+
+/* ── Footer ── */
+.nav-footer {
+  background-color: var(--er-black) !important;
+  border-top: 1px solid var(--er-border);
+  color: var(--er-muted) !important;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+/* ── Main content ── */
+#quarto-content main { padding: 2rem 1rem; max-width: 900px; margin: 0 auto; }
+
+/* ── Hero blocks ── */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  border: 2px solid var(--er-green);
+  background: linear-gradient(180deg, var(--er-dark-green) 0%, var(--er-black) 100%);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(26, 92, 26, 0.03) 2px,
+    rgba(26, 92, 26, 0.03) 4px
+  );
+  pointer-events: none;
+}
+.hero-title {
+  font-family: 'Special Elite', monospace !important;
+  font-size: clamp(2rem, 7vw, 4.5rem);
+  color: var(--er-lime) !important;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 30px rgba(109, 222, 109, 0.3);
+}
+.hero-sub {
+  font-size: 1rem;
+  color: var(--er-amber);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+.hero-decree {
+  font-size: 0.85rem;
+  color: var(--er-muted);
+  letter-spacing: 0.15em;
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--er-border);
+  padding-top: 1rem;
+}
+
+/* ── Stamp / seal ornaments ── */
+.seal {
+  display: inline-block;
+  border: 3px double var(--er-green);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  line-height: 114px;
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--er-green);
+  margin: 1.5rem auto;
+  box-shadow: 0 0 20px rgba(61, 184, 61, 0.15), inset 0 0 20px rgba(61, 184, 61, 0.05);
+}
+
+/* ── Callout / propaganda boxes ── */
+.propaganda {
+  border-left: 4px solid var(--er-green);
+  background: var(--er-dark-green);
+  padding: 1.2rem 1.5rem;
+  margin: 1.5rem 0;
+  font-family: 'Special Elite', monospace;
+  position: relative;
+}
+.propaganda::before {
+  content: attr(data-label);
+  position: absolute;
+  top: -0.7rem;
+  left: 1rem;
+  background: var(--er-black);
+  padding: 0 0.5rem;
+  font-size: 0.7rem;
+  color: var(--er-amber);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.warning-box {
+  border: 2px solid var(--er-red);
+  background: rgba(139, 26, 26, 0.1);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  color: #d4a0a0;
+}
+.warning-box::before {
+  content: "⚠ CITIZEN NOTICE ⚠";
+  display: block;
+  color: var(--er-red);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.5rem;
+  font-family: 'Special Elite', monospace;
+}
+
+/* ── Timeline ── */
+.timeline {
+  border-left: 2px solid var(--er-green);
+  padding-left: 2rem;
+  position: relative;
+  margin: 2rem 0;
+}
+.timeline-event {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.timeline-event::before {
+  content: '';
+  position: absolute;
+  left: -2.55rem;
+  top: 0.4rem;
+  width: 10px;
+  height: 10px;
+  background: var(--er-bright);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(61, 184, 61, 0.5);
+}
+.timeline-year {
+  font-family: 'Special Elite', monospace;
+  color: var(--er-amber);
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.3rem;
+}
+.timeline-event p { color: var(--er-text); margin: 0; }
+
+/* ── Manifesto clauses ── */
+.covenant-clause {
+  counter-increment: clause;
+  border: 1px solid var(--er-border);
+  background: var(--er-dark-green);
+  padding: 1.2rem 1.5rem 1.2rem 4rem;
+  margin: 1rem 0;
+  position: relative;
+}
+.covenant-clause::before {
+  content: counter(clause, upper-roman);
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'Special Elite', monospace;
+  font-size: 1.4rem;
+  color: var(--er-green);
+  min-width: 2rem;
+  text-align: center;
+}
+.clauses { counter-reset: clause; }
+
+/* ── Permit / ID card ── */
+.permit-card {
+  border: 3px solid var(--er-green);
+  background: var(--er-dark-green);
+  padding: 1.5rem;
+  max-width: 480px;
+  margin: 2rem auto;
+  font-family: 'Share Tech Mono', monospace;
+  position: relative;
+}
+.permit-card::after {
+  content: "EMERALD REPUBLIC";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 2rem;
+  color: rgba(26, 92, 26, 0.12);
+  font-family: 'Special Elite', monospace;
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: 0.2em;
+}
+.permit-header {
+  text-align: center;
+  color: var(--er-amber);
+  font-family: 'Special Elite', monospace;
+  letter-spacing: 0.2em;
+  font-size: 0.85rem;
+  border-bottom: 1px solid var(--er-green);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+.permit-field {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
+  border-bottom: 1px dashed var(--er-border);
+  padding-bottom: 0.3rem;
+}
+.permit-field .label { color: var(--er-muted); text-transform: uppercase; font-size: 0.75rem; letter-spacing: 0.15em; }
+.permit-field .value { color: var(--er-lime); }
+
+/* ── Dress code grid ── */
+.dress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.dress-item {
+  border: 1px solid var(--er-border);
+  background: var(--er-dark-green);
+  padding: 1rem;
+  text-align: center;
+}
+.dress-item .icon { font-size: 2rem; display: block; margin-bottom: 0.5rem; }
+.dress-item .title { color: var(--er-lime); font-family: 'Special Elite', monospace; font-size: 0.9rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.dress-item .desc { color: var(--er-muted); font-size: 0.8rem; margin-top: 0.3rem; }
+
+/* ── CTA button ── */
+.cta-btn {
+  display: inline-block;
+  background: var(--er-green);
+  color: var(--er-lime) !important;
+  padding: 0.8rem 2rem;
+  font-family: 'Special Elite', monospace;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border: 1px solid var(--er-bright);
+  margin: 0.5rem;
+  transition: background 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+.cta-btn:hover {
+  background: var(--er-bright);
+  color: var(--er-black) !important;
+  box-shadow: 0 0 20px rgba(61, 184, 61, 0.4);
+  border-bottom-color: var(--er-bright);
+}
+.cta-btn.danger {
+  background: rgba(139, 26, 26, 0.3);
+  border-color: var(--er-red);
+  color: #d4a0a0 !important;
+}
+
+/* ── Scanlines overlay ── */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 3px,
+    rgba(0, 0, 0, 0.08) 3px,
+    rgba(0, 0, 0, 0.08) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ── Quote blocks ── */
+blockquote {
+  border-left: 4px solid var(--er-amber) !important;
+  background: rgba(200, 160, 0, 0.05);
+  padding: 1rem 1.5rem !important;
+  font-family: 'Special Elite', monospace;
+  color: var(--er-amber) !important;
+  font-size: 1.1rem;
+}
+blockquote p { color: var(--er-amber) !important; }
+
+/* ── Table ── */
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+th { background: var(--er-dark-green); color: var(--er-lime); font-family: 'Special Elite', monospace; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.7rem 1rem; border: 1px solid var(--er-border); }
+td { padding: 0.6rem 1rem; border: 1px solid var(--er-border); color: var(--er-text); }
+tr:nth-child(even) td { background: rgba(26, 26, 26, 0.5); }
+
+/* ── Glitch effect on hero title ── */
+@keyframes glitch {
+  0%, 94%, 100% { text-shadow: 0 0 30px rgba(109,222,109,0.3); }
+  95% { text-shadow: -3px 0 rgba(255,0,0,0.5), 3px 0 rgba(0,255,255,0.5), 0 0 30px rgba(109,222,109,0.3); }
+  97% { text-shadow: 3px 0 rgba(255,0,0,0.5), -3px 0 rgba(0,255,255,0.5), 0 0 30px rgba(109,222,109,0.3); }
+}
+.hero-title { animation: glitch 8s infinite; }
+
+/* ── Ticker ── */
+.ticker-wrap {
+  background: var(--er-dark-green);
+  border-top: 1px solid var(--er-green);
+  border-bottom: 1px solid var(--er-green);
+  overflow: hidden;
+  padding: 0.4rem 0;
+  margin-bottom: 2rem;
+}
+.ticker {
+  display: inline-block;
+  white-space: nowrap;
+  animation: ticker 30s linear infinite;
+  font-size: 0.8rem;
+  color: var(--er-muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+@keyframes ticker { 0% { transform: translateX(100vw); } 100% { transform: translateX(-100%); } }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .hero { padding: 2.5rem 1rem; }
+  .hero-title { font-size: 2rem; }
+  #quarto-content main { padding: 1rem 0.5rem; }
+}
