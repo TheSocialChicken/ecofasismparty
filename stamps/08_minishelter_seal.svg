@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Outer Rim -->
+  <circle cx="100" cy="100" r="94" fill="none" stroke="#000" stroke-width="7"/>
+  <!-- Inner Rim Framing Center Icon -->
+  <circle cx="100" cy="100" r="56" fill="none" stroke="#000" stroke-width="3"/>
+
+  <!-- Circular Text -->
+  <path id="textPathTop" d="M 28 100 A 72 72 0 0 1 172 100" fill="none"/>
+  <text font-family="monospace, sans-serif" font-size="14" font-weight="900" letter-spacing="2.5" fill="#000">
+    <textPath href="#textPathTop" startOffset="50%" text-anchor="middle">MINISHELTER</textPath>
+  </text>
+  
+  <path id="textPathBottom" d="M 172 100 A 72 72 0 0 1 28 100" fill="none"/>
+  <text font-family="monospace, sans-serif" font-size="11.5" font-weight="900" letter-spacing="2" fill="#000">
+    <textPath href="#textPathBottom" startOffset="50%" text-anchor="middle">15-MINUTE SANCTUARY</textPath>
+  </text>
+
+  <!-- Center Icon: 15-Minute Grid & Boundary Gate -->
+  <rect x="74" y="74" width="52" height="52" fill="none" stroke="#000" stroke-width="5"/>
+  <line x1="91" y1="74" x2="91" y2="126" stroke="#000" stroke-width="3"/>
+  <line x1="109" y1="74" x2="109" y2="126" stroke="#000" stroke-width="3"/>
+  <line x1="74" y1="91" x2="126" y2="91" stroke="#000" stroke-width="3"/>
+  <line x1="74" y1="109" x2="126" y2="109" stroke="#000" stroke-width="3"/>
+  <path d="M100 62 L74 74 L126 74 Z" fill="#000"/>
+</svg>

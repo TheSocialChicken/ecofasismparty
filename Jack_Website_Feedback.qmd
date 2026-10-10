@@ -1,0 +1,131 @@
+---
+title: "Website Change Requests — Actionable Punch List for Jack"
+subtitle: "Target: staging.join-ecotopia.org (Staging Audit & Pre-Launch Review)"
+author:
+  - name: "Chris"
+    role: "Storytelling, Narrative & Design Lead"
+date: "2026-10-09"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    toc-location: left
+    theme: [darkly, styles.css]
+    smooth-scroll: true
+---
+
+::: {.callout-note title="Summary for Jack"}
+This is the compact punch list of **10 actionable changes** for `https://staging.join-ecotopia.org/`. All lore essays and physical venue details are stripped out. Only direct website fixes, form flow updates, and drop-in copy are listed below.
+:::
+
+---
+
+# 1. Critical Launch Blockers (Legal, Safety & Door Access)
+
+### 1.1 `/terms` — Final Contribution & Safety Copy (Drop-In)
+Replace draft placeholder `[PLACEHOLDER: amount and how to pay in advance.]` with:
+
+```markdown
+### Financial Contribution & Entry Voucher
+Participation in Ecotopia requires an advance contribution of €15.00 (sliding scale €10.00–€25.00 based on means) offsetting venue hiring at De Warren, food, beverage reserves, and recycled passports. Contributions are processed via the advance payment link or in cash/pin at the garage intake checkpoint. Subsidized grants: citizens@join-ecotopia.org.
+
+### House Rules, Safety & Game Step-Out Mechanics
+1. Age Requirement: Strictly 18+. Age verification takes place at the garage threshold.
+2. Safe-Word ("OZONE"): Speaking "OZONE" immediately breaks character for all actors and attendees. Nearby wardens must step back, offer space, and assist you.
+3. Observer Wristbands: Guests wishing to socialize and dance without roleplay, interrogation, or chores may request an Observer Wristband at the door. Wardens are forbidden from conscripting observers into chores.
+4. The Sanctuary: The second-floor library is a permanent non-theatrical Safe Zone (no roleplay or propaganda).
+```
+
+### 1.2 `/privacy` — GDPR Data Controller & Purge Schedule (Drop-In)
+Replace existing draft brackets with:
+
+```markdown
+### 1. Data Controller & Organizing Entity
+Operated by the Ecotopia Organizing Committee in partnership with De Warren Living Cooperative (Archipel 1, 1095 KJ Amsterdam). Data Steward: citizens@join-ecotopia.org.
+
+### 2. Legal Basis (GDPR Art. 6)
+Processed under Contractual Necessity (Art. 6(1)(b)) to administer event entry, assign roles, and print passports.
+
+### 3. Absolute Data Purge Date
+All personal data and quiz responses will be permanently deleted from databases and backups on 19 December 2026.
+```
+
+### 1.3 Door Check-In Risk — Vercel WAF & Shared NAT IP Jam
+* **The Vulnerability:** Automated load testing showed 40 rapid requests trigger Vercel's `HTTP 403 Challenge`.
+* **The Risk:** When 120 guests connect to De Warren's local Wi-Fi at the door to load their digital ticket/passport, they will share a single NAT IP. Vercel will interpret this concurrency surge as a DDoS attack and block entrance check-in.
+* **Action for Jack & DevOps:** Whitelist De Warren's external IP in Vercel/Cloudflare and disable aggressive bot challenge rules on `/citizen`, `/sign-in`, and `/apply` for the night of Nov 28. Have 120 pre-printed paper passports as an offline fallback.
+
+---
+
+# 2. Intake & Application Flow (`/apply`)
+
+### 2.1 Preamble Above Login Button
+Prevent drop-off by placing this teaser text directly above the `"Sign in with Tonomy"` button on `/apply`:
+> **THE THRESHOLD OF ADMISSION:** *"Before you may confess, you must exist in the ledger. You were born into debt. The water that washed your infant skin, the calories that sustained your youth, the oxygen drawn into your lungs: every milligram is owed to the biosphere. Authenticate your identity to begin the Five Confessions and calculate your starting balance."*
+
+### 2.2 The 5 Carbon Confession Questions (`CARBON_QUESTIONS`)
+Update form labels, hints, and option keys from generic carbon metrics to liturgical audits:
+
+| Field | Updated Label & Hint | Radio / Dropdown Options |
+| :--- | :--- | :--- |
+| **`flights`** | **Recreational Kerosene Combustion**<br>*Return trips double your debt.* | `f0`: Zero (soil-bound) \| `f1`: 1–2 \| `f2`: 3–5 \| `f3`: 6–10 \| `f4`: >10 (exhaust) |
+| **`car`** | **Complicity with Internal Combustion**<br>*The bitumen martyrs tore their skin. Where were you?* | `c0`: Unmotorized \| `c1`: Shared/borrowed \| `c2`: Owned one machine \| `c3`: Owned >1 |
+| **`meat`** | **Flesh Extraction & Caloric Carnivory**<br>*Miniplenty provides algae and pulse paste.* | `m0`: Botanical (zero blood) \| `m1`: Few/month \| `m2`: Few/week \| `m3`: Daily \| `m4`: Every meal |
+| **`ai`** | **Inquiries to the Silicon Mind (AI Compute)**<br>*Every prompt boiled freshwater. R.E.I.G.N. remembers.* | `a0`: Zero (manual thought) \| `a1`: 1–5 (glass) \| `a2`: 6–20 (bucket) \| `a3`: >20 (bath) \| `a4`: AI is helping me |
+| **`devices`** | **Parasitic Lithium & Listening Hardware**<br>*Every sensor transmitted compliance.* | `d0`: 1–2 (essentials) \| `d1`: 3–5 \| `d2`: 6–10 \| `d3`: >I can count (surrounded) |
+
+### 2.3 Starting Debt Backend Calculation
+Formula on submission: **$\text{Starting Balance} = -100 - \sum(\text{Confession Penalties})$**. Outputs initial balance between **$-150$ and $-500$ Carbon Credits** displayed on the confirmation screen.
+
+### 2.4 Sacramental Surrender Keys (`INTAKE_SURRENDER`)
+Standardize form options and pass these exact tags to the guest record for door export:  
+• `surname` ("My Surname") → `NAME_STRIKE` &nbsp;&nbsp;|&nbsp;&nbsp; • `opinions` ("My Opinions") → `HERESY_RISK`  
+• `weekends` ("My Weekends") → `LABOR_DRAFT` &nbsp;&nbsp;|&nbsp;&nbsp; • `hotwater` ("Hot Water") → `COLD_RATION`  
+• `bedtime` ("My Bedtime") → `NIGHT_SHIFT` &nbsp;&nbsp;|&nbsp;&nbsp; • `secrets` ("My Secrets") → `SURVEILLANCE_FOCUS`
+
+---
+
+# 3. Content, Copy & Frontend Fixes
+
+### 3.1 `/ministries` — Official 10 Newspeak Ministries (Drop-In)
+Replace placeholder ministry names with the official 10 Newspeak Ministries:
+1. **Miniplenty (Ministry of Ecological Bounty):** Food rationing, algae/pulse paste, caloric limits.
+2. **Minilove (Ministry of Ecological Harmony):** Biometric surveillance, garage interrogation, thought-audits.
+3. **Minijoy (Ministry of Morale):** Mandatory cheerfulness, elimination of pre-collapse nostalgia.
+4. **Minirenewal (Ministry of Elemental Reclamation):** Identity erasure, upcycling booth, biological composting.
+5. **Minilight (Ministry of Luminescence):** Rolling blackouts, kinetic bicycle generators for DJ power.
+6. **Miniflow (Ministry of Hydrological Purity):** Moisture metering, graywater recovery, urine audits (*Peetopia*).
+7. **Minibreath (Ministry of Atmospheric Rectitude):** Breath quotas, exhalation taxation.
+8. **Minishelter (Ministry of Domestic Confinement):** 15-minute perimeter enforcement, room curfews.
+9. **Miniservice (Ministry of Restorative Labor):** Mandatory dishwashing ("greenwashing") and cleaning shifts.
+10. **Minithrift (Ministry of Material Confiscation):** Seizure of petroleum fabrics and private possessions.
+
+### 3.2 Mobile Layout & CSS Collision Patch
+* **Bug:** The floating sticky `"VOICE A CONCERN"` megaphone button covers footer links and cards on screens <400px (iPhone SE).
+* **Fix:** Add to `styles.css`:
+```css
+@media (max-width: 480px) {
+  .floating-concern-btn { position: static !important; display: block; margin: 0.8rem auto; width: 90%; }
+}
+```
+
+### 3.3 Security Response Headers
+Add missing headers to `next.config.js` or `vercel.json`:
+* `X-Content-Type-Options: nosniff` &nbsp;&nbsp;|&nbsp;&nbsp; * `Referrer-Policy: strict-origin-when-cross-origin`
+
+---
+
+# 4. Master Action Checklist for Jack
+
+| # | Item Description | Route / Area | Owner | Priority | Status |
+| :-: | :--- | :--- | :--- | :-: | :--- |
+| **1** | Paste €15 fee & "OZONE" safe-word copy | `/terms` | Jack | **BLOCKER** | Drop-in ready |
+| **2** | Paste GDPR controller info & Dec 19 purge date | `/privacy` | Jack | **BLOCKER** | Drop-in ready |
+| **3** | Add Vercel rate-limit bypass for De Warren NAT IP | Hosting / DevOps | Jack / DevOps | **BLOCKER** | Action required |
+| **4** | Add "Threshold of Admission" teaser before sign-in | `/apply` | Web Dev | **HIGH** | Drop-in ready |
+| **5** | Update 5 carbon confession questions & options | `/apply` form | Web Dev | **HIGH** | Drop-in ready |
+| **6** | Update starting debt math formula ($-150$ to $-500$) | Backend | Web Dev | **MEDIUM** | Formula ready |
+| **7** | Standardize surrender options & door export tags | Form / DB | Web Dev | **MEDIUM** | Keys ready |
+| **8** | Paste 10 Newspeak Ministries copy | `/ministries` | Web Dev | **HIGH** | Drop-in ready |
+| **9** | Apply mobile CSS fix for floating button | `styles.css` | Web Dev | **MEDIUM** | Code ready |
+| **10** | Add `nosniff` and `Referrer-Policy` headers | Server config | Web Dev | **LOW** | Code ready |

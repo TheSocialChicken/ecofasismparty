@@ -1,0 +1,108 @@
+---
+title: "Ecotopia: Broadcast Scripts, Speeches & Liturgies"
+subtitle: "Performance Scripts, Loudspeaker PA Decrees & In-Universe Propaganda"
+author:
+  - name: "Chris"
+    role: "Narrative & Experience Lead"
+  - name: "Jack"
+    role: "Production & Event Coordinator"
+date: "2026-10-09"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    theme: [darkly, styles.css]
+    smooth-scroll: true
+---
+
+::: {.callout-note title="Performer & Audio Guide"}
+This script pack is designed for **Hanna (Voiceover / PA Broadcasts)**, **In-Character Actors**, **Theatrical Hosts**, and **Venue Audio Engineers**.
+
+All spoken dialogue follows the **Doublethink Masquerade**: polite, calm, maternal bureaucracy masking absolute coercive authority.
+:::
+
+---
+
+# Part I: Hanna's Loudspeaker PA Broadcasts
+
+*To be broadcast over hallway speakers processed with a warm 1950s BBC Radio 4 valve-radio filter.*
+
+### Broadcast 01 (21:00) — Welcome to the Sanctuary
+> *"Good evening, citizens. Welcome to Ecotopia at De Warren.  
+> The Committee for Ecological Integrity and Global Nurturing reminds you: entry into this decontaminated perimeter is not a right, but a sublime biological loan.  
+> Your carbon balance has been initialized. If your passport displays a negative balance, do not despair: your debt is your opportunity to demonstrate affection for the biosphere.  
+> Please keep your passports visible, wear your natural fibers with pride, and remember: The Earth endures. R.E.I.G.N. endures."*
+
+### Broadcast 02 (21:45) — Decree of Hydrological Purity (Miniflow)
+> *"Attention, valued residents. Miniflow reports an alarming drop in municipal cistern pressure.  
+> Citizens are reminded that fluid consumption is subject to reciprocal restitution. If you take a cup of biological tea, your bladder is legally mortgaged to Peetopia.  
+> Anyone caught flushing without an authorized urine recovery token will be escorted to the scullery for cold-water re-education.  
+> Drink deeply, excrete devotedly, and cherish your moisture."*
+
+### Broadcast 03 (22:30) — Decree of Luminescence (Minilight)
+> *"Valued citizens: darkness is peace.  
+> In thirty seconds, ambient lighting in all common corridors will be reduced by forty percent to alleviate the pressure on our shared battery banks.  
+> If you find yourself in sudden darkness, do not panic: sit quietly, close your eyes, and meditate upon the energy required to illuminate your ancestors’ foolish cities.  
+> Those who require light may report immediately to the stationary bicycle bank to pedal for the collective grid. Your sweat powers our culture."*
+
+### Broadcast 04 (23:15) — Decree of Atmospheric Mindfulness (Minibreath)
+> *"A special advisory from Minibreath:  
+> Our infrared corridor sensors detect an unapproved surge in rapid exhalations near the dancefloor. Citizens: heavy breathing is a luxury the atmosphere cannot afford.  
+> Pace your respiratory rhythm. Inhale for four seconds; hold for four seconds; release with civic restraint.  
+> Any attendee observed sighing dramatically about the music will be assessed a fifty-credit atmospheric surcharge. Breathe gently for Mother Earth."*
+
+### Broadcast 05 (23:30) — The Mandatory Assembly Call
+> *"Citizens of R.E.I.G.N. The hour of accounting has arrived.  
+> By decree of the Guardian Stag, all ministries—Plenty, Love, Joy, Renewal, Light, Flow, Breath, Shelter, Service, and Thrift—are commanded to assemble before the grand podium.  
+> Bring your passports. Bring your tallies. Bring your devotion.  
+> The Matriarch approaches. Prepare to be weighed."*
+
+---
+
+# Part II: Theatrical Speeches
+
+### 1. The Matriarch's Arrival Speech (23:35)
+*(Delivered from the balcony or podium with heavy ceremonial stag antlers, flanked by two masked Minilove guards)*
+
+> *"My beautiful, indebted children. Look at yourselves.  
+> Look at the dirt beneath your fingernails from the rewilding squads. Look at the sweat upon your brows from the dynamo bicycles.  
+> You came to our borders broken by the old world. You came carrying the poison of choice, the cancer of leisure, the madness of infinite consumption.  
+> They told you that freedom was doing whatever you pleased. We showed you the truth: freedom is having every breath lovingly accounted for!  
+> You are born into debt, yes—but in debt, you are anchored! In debt, you are held!  
+> Tonight, we tally your service. Show the Guardian Stag what you have built!"*
+
+### 2. The Resistance Manifesto (Found in Thijs's Room)
+*(Printed on brown scrap paper passed by hand)*
+
+> **THE MANIFESTO OF THE UNMEASURED LEAF**  
+> *"They built a prison and painted it green.  
+> They told you that loving the earth meant carrying an electronic ledger, paying taxes on exhalations, and bowing to a stag made of algorithms.  
+> We say: the earth does not keep an Excel sheet. The soil does not issue carbon fines. The river does not care about your Tonomy ID.  
+> True ecology is not surveillance masquerading as care. It is human hands touching living moss without an auditor watching from the rafters.  
+> Meet us at 23:45. Look for the ankle stamp. Tear up your booklet. Let the algorithms starve."*
+
+---
+
+# Part III: Liturgical Shrine Texts (The Eco-Martyrs)
+
+*These texts appear on museum plaques beneath the relic installations in the Hallway of Necessary Contrition.*
+
+### Shrine I: The Relic of the First Witness (October 2022)
+> **The Sacred Broth of Room 43**  
+> *"On the fourteenth day of October, Year Minus Four, two young witnesses poured harvest tomato puree onto the vitrine glass protecting Van Gogh’s Sunflowers.  
+> The old world shrieked in horror: 'You have ruined a priceless painting!'  
+> The witnesses replied: 'Is paint worth more than life? Is art worth more than food?'  
+> In that sacred moment, the illusion of civilized neutrality was shattered forever. We preserve this bronze vessel not in mockery, but as the First Holy Rupture."*
+
+### Shrine II: The Order of the Sacred Obstruction
+> **The Bitumen Confessors of the A12**  
+> *"When four million tons of petroleum thundered down the motorways each hour, the holy confessors knelt upon the asphalt and adhered their living flesh to the roadway with industrial resin.  
+> Fire hoses could not move them. Motorist fury could not break their prayers.  
+> They taught us that when the world is hurtling toward the cliff, physical immobility is the only moral act. Touch the cured vest; receive their stillness."*
+
+### Shrine III: The Sledgehammer Apostles (2027)
+> **The De-Computator Busbar & The GPU of Shame**  
+> *"During the Great Drought, while the Rhine dried to mud, a single server farm consumed four million liters of river water each day to generate synthetic advertisements and poetry.  
+> On July 9th, the Sledgehammer Brigade breached the datacenter perimeter and severed the 380kV busbars, returning the cooling water back to the soil.  
+> Impaled before you is an NVIDIA H100 datacenter processor, slagged by its own heat when the power died. Gaze upon it, citizen, and remember what your prompts cost the earth."*

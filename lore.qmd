@@ -1,131 +1,86 @@
 ---
-title: "The Chronicle of Necessary Events"
-subtitle: "An Official History of the Emerald Republic — Ministry of Truth and Ecology, Year II"
+title: "The Chronicle of the Four Epochs"
+subtitle: "An Official History of R.E.I.G.N. — Ministry of Ecological Harmony, Year Zero"
 ---
 
 <div class="scanlines"></div>
 
 <div class="ticker-wrap">
   <span class="ticker">
-    ◆ HISTORY IS WRITTEN BY THE SURVIVORS ◆ THE OLD CALENDAR IS ABOLISHED ◆ YEAR ZERO BEGAN WHEN IT HAD TO ◆ REMEMBER: WHAT CAME BEFORE WAS NOT LIVING — IT WAS BURNING ◆
+    ◆ HISTORY IS COMPILED BY THE STEWARDS ◆ THE SILICON MIND BOILED THE RIVERS ◆ THE FALLOUT UNITED THE SURVIVORS ◆ REMEMBER: WHAT CAME BEFORE WAS NOT LIVING — IT WAS BURNING ◆
   </span>
 </div>
 
-<div class="propaganda" data-label="Prefatory Note">
-What follows is the *Official Account*. Alternative accounts exist. Their authors are on sabbatical in rewilding labour camps and unavailable for comment. The Republic values accuracy. The Republic also values silence, when accuracy is inconvenient.
+<div class="propaganda" data-label="Prefatory Inscription">
+What follows is the <em>Canonical Chronicle</em> of our salvation. Alternative versions exist only in the corrupted memories of unregistered scavengers. In Ecotopia, history is not a debate—it is an unbroken chain of ecological necessity.
 </div>
 
 ---
 
-## Part I — The Age of Burning (Before Year Zero)
-
-The world the old generation built was a furnace with a loyalty programme.
-
-They knew. The reports came in for sixty years — meticulous, damning, increasingly desperate. Each report was filed. Each committee discussed it. Each summit produced a communiqué. The communiqués were filed next to the reports. The burning continued.
-
-By the mid-2020s, the language of climate discourse had fractured into two dialects: the *performative* ("we are deeply committed to net zero") and the *operational* (drilling permits, new airports, fossil fuel subsidies). The gap between them was measured in parts per million.
-
-And then the activists came out of the tunnels.
+## The Four Historical Epochs
 
 <div class="timeline">
 
 <div class="timeline-event">
-<div class="timeline-year">2024 — 2026</div>
-<p>The Movement Expands. What began as spray paint and road blockades becomes a distributed network of cells operating across 34 countries. Membership swells after the Marseille Heat Event kills 6,000 in a fortnight. The public mood shifts. The spray paint stays on the buildings longer before anyone bothers to remove it.</p>
+<div class="timeline-year">Epoch I — The Great Acceleration & The Compute Wars (~2025–2045)</div>
+<p>In the final convulsions of the old economy, multinational artificial intelligence conglomerates devoured Europe's electrical grid. Hyperscale server clusters demanded constant gigawatt baseloads, leading tech oligarchs to acquire dedicated nuclear reactors and freshwater watersheds to cool computing clusters. While ordinary citizens endured rolling green austerity blackouts and soaring tariffs, silicon chips burned the planet for algorithmic optimization. It was the age of digital excess, frantic automation, and atmospheric exhaustion.</p>
 </div>
 
 <div class="timeline-event">
-<div class="timeline-year">2027 — The Great Burning</div>
-<p>Southern European wildfires combine with record Saharan heat to produce a climate refugee crisis involving 4 million people in eight weeks. The Italian government collapses. Spain declares emergency rule. The Iberian network — the largest coordinated cell of eco-activists on the continent — begins operating openly, no longer bothering to wear masks. Nobody arrests them. The police have been reassigned to manage the refugee flows.</p>
+<div class="timeline-year">Epoch II — The Great Withering & The Long Collapse (~2045–2080)</div>
+<p>Humanity did not perish in a single evening. Over four grueling decades of cascading agricultural failures, thermal river collapses, and nuclear-containment breaches during extreme European heatwaves, 95% of human civilization withered away. Food distribution collapsed, cities emptied, and the surviving corporate conglomerates fused with militant ecological sects to seize the remaining habitable biomes.</p>
 </div>
 
 <div class="timeline-event">
-<div class="timeline-year">2028 — The London Protocols</div>
-<p>A hung Parliament, a constitutional crisis, and three successive Prime Ministers in four months create the conditions. The movement's legal arm — by now staffed with barristers, economists, and one former cabinet minister who'd had enough — drafts the London Protocols: emergency climate governance legislation, radical in scope, technically legal. It passes on a vote of 221 to 218. The margin is three MPs who believe it will fail quickly and position them well for the resulting election. It does not fail.</p>
+<div class="timeline-year">Epoch III — The Age of the Ledger (~2080–Present)</div>
+<p>Generations have now passed. The pre-collapse world of unmetered consumption, private property, and individual liberty has faded into distant, forbidden mythology. Surviving technocrats and ecologist-theocrats forged <strong>R.E.I.G.N.</strong> (Regime for Ecological Integrity and Global Nurturing). They established a programmable central-bank ledger grounded in one undeniable spiritual and physical truth: <strong>Every human being is born into Inherited Biological Sin (Carbon Debt).</strong> From your first infant breath, your existence is minted with a negative balance—compensating the living biosphere for the sins of old humanity, as well as your gestation, amniotic fluid, and lifetime oxygen demand.</p>
 </div>
 
 <div class="timeline-event">
-<div class="timeline-year">2029 — The Emergence of The Verdant</div>
-<p>No one knows the original name. That's the point. A figure appears simultaneously across the movement's distributed cells — same manifesto, same cadence, same willingness to say the unsayable. *"We have been asking. We have been asking for fifty years. The asking is over."* Whether The Verdant is one person, a committee, or an AI trained on climate grief and revolutionary tracts remains classified under the Green Covenant's Article 12 (State Security Through Productive Ambiguity).</p>
-</div>
-
-<div class="timeline-event">
-<div class="timeline-year">2029 — The Green Unification</div>
-<p>The cells coalesce into the **Green Order** over a single extraordinary fortnight. Broadcasting House is occupied — not stormed, occupied, with the building's own security standing aside after a three-hour conversation about their children's future. Parliament follows. The elected members are invited to continue meeting, under supervision, as an advisory body. Most do. The ones who don't are not harmed. They are simply ignored, which feels worse.</p>
-</div>
-
-<div class="timeline-event">
-<div class="timeline-year">Year Zero — The Declaration</div>
-<p>The Emerald Republic is declared from the steps of what was once the Palace of Westminster. The Carbon Constitution is ratified within six weeks. It is 14 pages long — shorter than most terms-and-conditions agreements — and contains within it the legal architecture for everything that follows. Legal scholars will later note that it was, in its way, an elegant document. Several of those scholars are currently on sabbatical.</p>
-</div>
-
-<div class="timeline-event">
-<div class="timeline-year">Year I — The Necessary Unpleasantness</div>
-<p>The Republic implements. Carbon rationing. Travel permits. The Extinction Tribunals — at first presented as truth commissions, evolving, as these things do, into something with rather more teeth. The private vehicle ban. The Great Rewilding Labour Conscription (three months mandatory service per adult citizen, per year). GreenCast replaces the BBC. The old internet is throttled to 2010 speeds to reduce data-centre power consumption; the dark web thrives. Nostalgia for the old world becomes a Category C offence.</p>
-</div>
-
-<div class="timeline-event">
-<div class="timeline-year">Year II — Now</div>
-<p>The Republic endures. The Earth, one must admit, does appear to be breathing slightly better. At what cost is a question you may ask quietly, in private, among trusted friends. At a party, say. A themed party. Where everything is fictional. Yes.</p>
+<div class="timeline-year">Epoch IV — Ecotopia at Sanctuary De Warren</div>
+<p>The decontaminated showcase sanctuary established at De Warren in Amsterdam. Here, selected applicants from the scorched borderlands arrive to confess their past complicity with fossil fuel culture, surrender their individualistic identities, and work down their inherited balances through joyful collective labor under the watchful benevolence of the Guardian Stag.</p>
 </div>
 
 </div>
 
 ---
 
-## Part II — The Verdant: A Portrait
+## The Hagiography of the Eco-Martyrs
 
-> *"I am not important. The carbon budget is important. I am merely the person who finally stopped being polite about it."*
-> — The Verdant, First Address, Year Zero
+R.E.I.G.N. does not view early direct-action climate protest with irony. The regime canonizes these activists as **The Holy Confessors of the Biological Pentecost**—the early saints who recognized that human civilization was hurtling toward suicide:
 
-What is known:
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
 
-- Appeared first as a pseudonymous author of the **Extinction Manifesto** (2026), which circulated on encrypted networks before being printed and left on the seats of trains across three continents
-- Voice: precise, unhurried, with the particular calm of someone who has already made peace with being called a monster
-- Never photographed without the Green Order's sigil obscuring their face
-- Reportedly has strong opinions about compost
-- Two biographies have been attempted. One author is rewilding in Northumberland. The other recanted.
+<div style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1.2rem; border-radius: 4px;">
+  <h4 style="color: #6dde6d; margin-top: 0;">The Apostles of the First Witness</h4>
+  <p style="font-size: 0.85rem; color: #a0cca0;"><strong>Room 43 (October 2022):</strong> The two young confessors who poured harvest tomato puree across the glass of Van Gogh’s <em>Sunflowers</em>. To R.E.I.G.N., this was the First Sacred Rupture—the moment when human beings were forced to confront whether dead museum paint was dearer than the living soil.</p>
+</div>
 
-The cult of personality that has formed around The Verdant is, officially, discouraged. Unofficially, the murals are very good.
+<div style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1.2rem; border-radius: 4px;">
+  <h4 style="color: #6dde6d; margin-top: 0;">The Order of the Sacred Obstruction</h4>
+  <p style="font-size: 0.85rem; color: #a0cca0;"><strong>The Bitumen Confessors of the A12:</strong> The martyrs who adhered their flesh with industrial polymer to highway asphalt in the face of water cannons. Their voluntary physical immobility mirrors the ancient desert hermits who refused to participate in an insane empire.</p>
+</div>
 
----
-
-## Part III — What They Did In The Name Of Sustainability
-
-The Republic does not hide its history. Hiding history is what the old world did. The Republic *contextualises* its history.
-
-| Act | Official Framing | Unofficial Assessment |
-|-----|------------------|-----------------------|
-| Extinction Tribunals | Accountability processes for historical carbon criminals | Show trials with excellent production values |
-| Rewilding Conscription | Participatory ecological restoration | Forced labour with better branding |
-| Carbon Rationing Level 4 | Emergency biosphere stabilisation protocol | You may not fly. You may not drive. You may not heat your house past 16°C |
-| GreenCast Only | Curated information environment | Propaganda, but accurate propaganda, mostly |
-| Nostalgia Prohibition | Protection of citizens from regressive ideation | You may not miss things |
-| The Quiet Relocations | Voluntary resettlement to ecological zones | Involuntary resettlement to ecological zones, without the voluntary |
-
-<div class="propaganda" data-label="Ministry of Truth Note">
-
-The table above is satirical fiction. The Emerald Republic is not real. The events described did not occur. Anyone who leaves this party believing they have been briefed on actual current events should eat something and drink some water.
+<div style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1.2rem; border-radius: 4px;">
+  <h4 style="color: #6dde6d; margin-top: 0;">The Sledgehammer Apostles</h4>
+  <p style="font-size: 0.85rem; color: #a0cca0;"><strong>The De-Computator Brigades (2027):</strong> The militants who breached datacenter perimeters during the great drought and severed the 380kV high-voltage lines, cutting power to runaway server clusters to return cooling water back to the Rhine.</p>
+</div>
 
 </div>
 
 ---
 
-## Part IV — Rumours (Unverified, Officially Denied)
+## Relics Displayed in the Hallway of Contrition
 
-- That The Verdant wept at the Declaration and had to be steadied by two Green Order lieutenants before finishing the speech
-- That the Carbon Constitution's final clause — *"And if this is not enough, we will do more"* — was added at 3am and nobody has been sure what it means since
-- That somewhere, a resistance exists; that somewhere, people print forbidden maps of the old motorways and pass them hand to hand; that somewhere, someone has a car in a barn
-- That the Earth, recovering, is beautiful in ways it hasn't been in living memory, and that this fact makes everything more complicated, not less
+Guests entering De Warren will pass through the **Hallway of Necessary Contrition**, viewing the venerated relics of the pre-collapse resistance:
+
+* **The Shroud of the High-Vis Tabard:** A salt-cured, frayed fluorescent orange safety vest preserved under museum vitrine glass like the Shroud of Turin.
+* **The GPU of Shame:** A melted, slagged NVIDIA H100 datacenter processing board impaled upon a rusted length of construction rebar.
+* **Sanctum Vasculum:** The gilded bronze vessel commemorating the sacred puree of Room 43.
 
 ---
 
 <div style="text-align:center; margin: 2rem 0;">
-  <a href="manifesto.qmd" class="cta-btn">READ THE COVENANT</a>
-  <a href="attend.qmd" class="cta-btn">REGISTER AS CITIZEN</a>
-</div>
-
-<div style="text-align:center; color: #2d7a2d; font-size: 0.75rem; letter-spacing: 0.2em; margin-top: 2rem;">
-MINISTRY OF TRUTH AND ECOLOGY · OFFICIAL HISTORY DIVISION · YEAR II<br>
-This chronicle has been reviewed for accuracy. Accuracy has been approved.
+  <a href="manifesto.qmd" class="cta-btn">STUDY THE TEN MINISTRIES</a>
+  <a href="attend.qmd" class="cta-btn">APPLY FOR ADMISSION</a>
 </div>

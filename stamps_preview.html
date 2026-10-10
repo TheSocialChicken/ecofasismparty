@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ecotopia 2026 — 3D-Printable Stamp Suite Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Share+Tech+Mono&family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #121316;
+      --card-bg: #1a1c23;
+      --card-border: #2e323e;
+      --text: #e6e6e6;
+      --text-dim: #8b92a2;
+      --accent: #2ecc71;
+      --gold: #d4af37;
+      --crimson: #c0392b;
+      --ink: #000000;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Share Tech Mono', monospace;
+      padding: 2rem 1.5rem 5rem;
+      line-height: 1.5;
+    }
+
+    header {
+      max-width: 1200px;
+      margin: 0 auto 2.5rem;
+      border-bottom: 2px solid #333846;
+      padding-bottom: 1.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      background: #252a36;
+      border: 1px solid #3d4457;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+      letter-spacing: 1px;
+      color: var(--accent);
+    }
+
+    h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.2rem;
+      letter-spacing: 2px;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      color: var(--text-dim);
+      font-size: 0.95rem;
+      max-width: 850px;
+      margin-bottom: 1.5rem;
+    }
+
+    .controls-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      background: #181b22;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #2a2f3d;
+      margin-bottom: 2rem;
+    }
+
+    .control-label {
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .color-btn {
+      cursor: pointer;
+      border: 2px solid transparent;
+      padding: 0.4rem 0.8rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      font-family: 'Share Tech Mono', monospace;
+      font-weight: bold;
+      transition: all 0.2s;
+    }
+    .btn-black { background: #e0e0e0; color: #000; border-color: #fff; }
+    .btn-crimson { background: #5c1818; color: #ff9999; border-color: #8c2323; }
+    .btn-gold { background: #4a3e14; color: #ffd966; border-color: #80681c; }
+    .btn-violet { background: #3b1b4d; color: #dcb3ff; border-color: #6a2b8e; }
+
+    .color-btn.active {
+      box-shadow: 0 0 10px rgba(255,255,255,0.4);
+      outline: 2px solid #fff;
+    }
+
+    .nav-links {
+      margin-left: auto;
+      display: flex;
+      gap: 1rem;
+    }
+    .nav-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.85rem;
+      border-bottom: 1px dashed var(--accent);
+    }
+    .nav-link:hover { color: #fff; border-bottom-style: solid; }
+
+    .category-section {
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+    }
+
+    .category-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
+      color: #fff;
+      border-left: 4px solid var(--accent);
+      padding-left: 0.75rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .category-subtitle {
+      font-size: 0.8rem;
+      font-family: 'Share Tech Mono', monospace;
+      color: var(--text-dim);
+      font-weight: normal;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .stamp-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .stamp-card:hover {
+      transform: translateY(-3px);
+      border-color: #4a5166;
+    }
+
+    .preview-box {
+      width: 100%;
+      height: 180px;
+      background: #fbfaf5; /* Ivory stamp paper simulation */
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .preview-box img {
+      max-width: 85%;
+      max-height: 85%;
+      object-fit: contain;
+      filter: contrast(120%);
+      transition: filter 0.3s;
+    }
+
+    /* Ink simulation color filters */
+    .ink-black img { filter: brightness(0) contrast(150%); }
+    .ink-crimson img { filter: invert(18%) sepia(85%) saturate(3000%) hue-rotate(345deg) brightness(85%); }
+    .ink-gold img { filter: invert(45%) sepia(85%) saturate(800%) hue-rotate(10deg) brightness(95%); }
+    .ink-violet img { filter: invert(15%) sepia(90%) saturate(2500%) hue-rotate(270deg) brightness(85%); }
+
+    .stamp-name {
+      font-weight: bold;
+      font-size: 0.95rem;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 0.25rem;
+    }
+    .stamp-role {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      text-align: center;
+      margin-bottom: 0.75rem;
+      min-height: 2.2em;
+    }
+
+    .meta-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+    .tag {
+      font-size: 0.65rem;
+      background: #121419;
+      border: 1px solid #2d323f;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      color: #b3b9c7;
+    }
+    .tag.highlight {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .card-footer {
+      margin-top: auto;
+      width: 100%;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .action-btn {
+      flex: 1;
+      text-align: center;
+      background: #252a36;
+      border: 1px solid #383f52;
+      color: #fff;
+      padding: 0.4rem;
+      font-size: 0.72rem;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .action-btn:hover { background: #353c4d; }
+    .action-btn.secondary { background: #1c202a; border-color: #2b3140; color: #a4adbf; }
+    .action-btn.secondary:hover { background: #282e3c; color: #fff; }
+
+    .landing-zone-info {
+      font-size: 0.7rem;
+      color: #f1c40f;
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-family: 'Special Elite', cursive;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge">ECOTOPIA 2026 // PHYSICAL PRODUCTION ASSETS</div>
+    <h1>3D-PRINTABLE STAMP SUITE</h1>
+    <p class="subtitle">
+      Vector-optimized SVGs & PNG heightmaps for Koolm's Parametric Stamp Maker (<a href="https://makerworld.com/en/models/1037541-stamp-maker-customizable-stamps#profileId-1021711" target="_blank" style="color:var(--accent);">MakerWorld #1037541</a>). All designs feature converted vector paths (&ge;0.8mm real-world stroke width) for zero-fuss TPU extrusion in Bambu Studio / MakerWorld Customizer.
+    </p>
+
+    <div class="controls-bar">
+      <span class="control-label">Simulate Ink Pad:</span>
+      <button class="color-btn btn-black active" onclick="setInk('black', this)">State Carbon Black</button>
+      <button class="color-btn btn-crimson" onclick="setInk('crimson', this)">Audit Crimson</button>
+      <button class="color-btn btn-gold" onclick="setInk('gold', this)">Speakeasy Gold</button>
+      <button class="color-btn btn-violet" onclick="setInk('violet', this)">Underground Violet</button>
+
+      <div class="nav-links">
+        <a class="nav-link" href="/print_passport_a6_booklet.html" target="_blank">📄 Passport Booklet (A6/A4)</a>
+        <a class="nav-link" href="/print_cards_deck.html" target="_blank">🃏 Cards Deck (45 Cards)</a>
+        <a class="nav-link" href="https://makerworld.com/en/models/1037541-stamp-maker-customizable-stamps#profileId-1021711" target="_blank">🛠 MakerWorld Tool</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. THE 10 MINISTRY SEALS OF OFFICE -->
+  <section class="category-section">
+    <div class="category-title">
+      <span>I. THE 10 MINISTRY SEALS OF OFFICE</span>
+      <span class="category-subtitle">(40mm Circular Stamp Faces • Affixed to Facilitator Clipboards & Passport Page 3 Visa)</span>
+    </div>
+
+    <div class="grid">
+      <!-- 01 Miniservice -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/01_miniservice_seal.svg" alt="Miniservice Seal">
+        </div>
+        <div class="stamp-name">Miniservice</div>
+        <div class="stamp-role">Ministry of Restorative Labor</div>
+        <div class="landing-zone-info">Landing Target: Page 3 (44mm Ring)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">40mm Ø Round</span>
+          <span class="tag">TPU 95A</span>
+          <span class="tag">Scrub Brush & Sponge</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/01_miniservice_seal.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/01_miniservice_seal.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+
+      <!-- 02 Minirenewal -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/02_minirenewal_seal.svg" alt="Minirenewal Seal">
+        </div>
+        <div class="stamp-name">Minirenewal</div>
+        <div class="stamp-role">Ministry of Elemental Reclamation</div>
+        <div class="landing-zone-info">Landing Target: Page 3 (44mm Ring)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">40mm Ø Round</span>
+          <span class="tag">TPU 95A</span>
+          <span class="tag">Mobius Loop & Sprout</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/02_minirenewal_seal.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/02_minirenewal_seal.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+
+      <!-- 03 Minilight -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/03_minilight_seal.svg" alt="Minilight Seal">
+        </div>
+        <div class="stamp-name">Minilight</div>
+        <div class="stamp-role">Ministry of Energetic Austerity</div>
+        <div class="landing-zone-info">Landing Target: Page 3 (44mm Ring)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">40mm Ø Round</span>
+          <span class="tag">TPU 95A</span>
+          <span class="tag">Incandescent Filament</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/03_minilight_seal.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/03_minilight_seal.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+
+      <!-- 04 Miniflow -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/04_miniflow_seal.svg" alt="Miniflow Seal">
+        </div>
+        <div class="stamp-name">Miniflow</div>
+        <div class="stamp-role">Ministry of Hydraulic Rectitude</div>
+        <div class="landing-zone-info">Landing Target: Page 3 (44mm Ring)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">40mm Ø Round</span>
+          <span class="tag">TPU 95A</span>
+          <span class="tag">Water Droplet & Stopcock</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/04_miniflow_seal.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/04_miniflow_seal.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+
+      <!-- 05 Miniplenty -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/05_miniplenty_seal.svg" alt="Miniplenty Seal">
+        </div>
+        <div class="stamp-name">Miniplenty</div>
+        <div class="stamp-role">Ministry of Caloric Rationing</div>
+        <div class="landing-zone-info">Landing Target: Page 3 (44mm Ring)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">40mm Ø Round</span>
+          <span class="tag">TPU 95A</span>
+          <span class="tag">Ration Scale & Yeast Block</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/05_miniplenty_seal.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/05_miniplenty_seal.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+
+      <!-- 06 Minilove -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/06_minilove_seal.svg" alt="Minilove Seal">
+        </div>
+        <div class="stamp-name">Minilove</div>
+        <div class="stamp-role">Ministry of Biological Harmony</div>
+        <div class="landing-zone-info">Landing Target: Page 3 (44mm Ring)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">40mm Ø Round</span>
+          <span class="tag">TPU 95A</span>
+          <span class="tag">Targeted Heart & Crosshairs</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/06_minilove_seal.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/06_minilove_seal.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+
+      <!-- 07 Minijoy -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/07_minijoy_seal.svg" alt="Minijoy Seal">
+        </div>
+        <div class="stamp-name">Minijoy</div>
+        <div class="stamp-role">Ministry of Morale & Celebration</div>
+        <div class="landing-zone-info">Landing Target: Page 3 (44mm Ring)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">40mm Ø Round</span>
+          <span class="tag">TPU 95A</span>
+          <span class="tag">Mandated Smile & Wig Waves</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/07_minijoy_seal.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/07_minijoy_seal.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+
+      <!-- 08 Minishelter -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/08_minishelter_seal.svg" alt="Minishelter Seal">
+        </div>
+        <div class="stamp-name">Minishelter</div>
+        <div class="stamp-role">Ministry of 15-Minute Sanctuary</div>
+        <div class="landing-zone-info">Landing Target: Page 3 (44mm Ring)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">40mm Ø Round</span>
+          <span class="tag">TPU 95A</span>
+          <span class="tag">15-Min Grid & Boundary Roof</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/08_minishelter_seal.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/08_minishelter_seal.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+
+      <!-- 09 Minithrift -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/09_minithrift_seal.svg" alt="Minithrift Seal">
+        </div>
+        <div class="stamp-name">Minithrift</div>
+        <div class="stamp-role">Ministry of Material Liberation</div>
+        <div class="landing-zone-info">Landing Target: Page 3 (44mm Ring)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">40mm Ø Round</span>
+          <span class="tag">TPU 95A</span>
+          <span class="tag">Confiscation Shears & Padlock</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/09_minithrift_seal.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/09_minithrift_seal.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+
+      <!-- 10 Minibreath -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/10_minibreath_seal.svg" alt="Minibreath Seal">
+        </div>
+        <div class="stamp-name">Minibreath</div>
+        <div class="stamp-role">Ministry of Atmospheric Rectitude</div>
+        <div class="landing-zone-info">Landing Target: Page 3 (44mm Ring)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">40mm Ø Round</span>
+          <span class="tag">TPU 95A</span>
+          <span class="tag">Spirometry Turbine & Arcs</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/10_minibreath_seal.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/10_minibreath_seal.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. LABOR VERIFICATION SHIFT STAMPS -->
+  <section class="category-section">
+    <div class="category-title">
+      <span>II. CONCESSION LABOR & CHORE VERIFICATION STAMPS</span>
+      <span class="category-subtitle">(18mm Square Stamps • Pressed into Passport Page 4 Labor Cells)</span>
+    </div>
+
+    <div class="grid">
+      <!-- Shift +20 -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/shift_plus_20.svg" alt="+20 CC Shift Stamp">
+        </div>
+        <div class="stamp-name">Standard Shift (+20 CC)</div>
+        <div class="stamp-role">Basic Labor Shift / Peetopia Return</div>
+        <div class="landing-zone-info">Landing Target: Page 4 (20mm Cell)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">18×18mm Square</span>
+          <span class="tag">TPU 95A</span>
+          <span class="tag">State Labor Verified</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/shift_plus_20.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/shift_plus_20.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+
+      <!-- Shift +30 -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/shift_plus_30.svg" alt="+30 CC Shift Stamp">
+        </div>
+        <div class="stamp-name">Heavy Shift (+30 CC)</div>
+        <div class="stamp-role">Scullery Dish Shift / Bike Dynamo</div>
+        <div class="landing-zone-info">Landing Target: Page 4 (20mm Cell)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">18×18mm Square</span>
+          <span class="tag">TPU 95A</span>
+          <span class="tag">State Labor Verified</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/shift_plus_30.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/shift_plus_30.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+
+      <!-- Shift +50 -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/shift_plus_50.svg" alt="+50 CC Shift Stamp">
+        </div>
+        <div class="stamp-name">Bonus Shift (+50 CC)</div>
+        <div class="stamp-role">Heroic Labor / Heresy Audit Bounty</div>
+        <div class="landing-zone-info">Landing Target: Page 4 (20mm Cell)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">18×18mm Square</span>
+          <span class="tag">TPU 95A</span>
+          <span class="tag">Bonus Shift Verified</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/shift_plus_50.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/shift_plus_50.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SPECIAL EVENT, VIP & RESISTANCE STAMPS -->
+  <section class="category-section">
+    <div class="category-title">
+      <span>III. VIP CLEARANCE, CLIMAX LIQUIDATION & RESISTANCE</span>
+      <span class="category-subtitle">(Custom Dimensions • Secret Infiltration & Event Climax Actions)</span>
+    </div>
+
+    <div class="grid">
+      <!-- VIP Speakeasy -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/vip_library_speakeasy.svg" alt="VIP Library Speakeasy Stamp">
+        </div>
+        <div class="stamp-name">The Library Speakeasy</div>
+        <div class="stamp-role">Citizen Class A Scotch Sanction</div>
+        <div class="landing-zone-info">Landing Target: Page 5 (VIP Target Box)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">38×16mm Octagon</span>
+          <span class="tag">TPU 95A</span>
+          <span class="tag">Gold / Black Ink</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/vip_library_speakeasy.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/vip_library_speakeasy.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+
+      <!-- Cleansed to Humus -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/cleansed_to_humus.svg" alt="Cleansed to Humus Stamp">
+        </div>
+        <div class="stamp-name">Cleansed to Humus</div>
+        <div class="stamp-role">Minirenewal Cadaveric Liquidation</div>
+        <div class="landing-zone-info">Landing Target: Page 7 (Perforated Slip)</div>
+        <div class="meta-tags">
+          <span class="tag highlight">34×13mm Stencil</span>
+          <span class="tag">TPU 95A / 0.2mm Nozzle</span>
+          <span class="tag">Blood Red Ink</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/cleansed_to_humus.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/cleansed_to_humus.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+
+      <!-- Resistance Ankle Stamp -->
+      <div class="stamp-card">
+        <div class="preview-box ink-black">
+          <img src="stamps/vectorized/resistance_ankle_stamp.svg" alt="Resistance Ankle Stamp">
+        </div>
+        <div class="stamp-name">The Resistance Ankle Mark</div>
+        <div class="stamp-role">Secret Network Operative Verification</div>
+        <div class="landing-zone-info">Landing Target: Citizen Ankle / Secret Dossier</div>
+        <div class="meta-tags">
+          <span class="tag highlight">18mm Ø Round</span>
+          <span class="tag">TPU 85A/95A</span>
+          <span class="tag">Skin-Safe Violet Ink</span>
+        </div>
+        <div class="card-footer">
+          <a class="action-btn" href="stamps/vectorized/resistance_ankle_stamp.svg" target="_blank" download>SVG (CAD)</a>
+          <a class="action-btn secondary" href="stamps/png/resistance_ankle_stamp.png" target="_blank" download>PNG</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function setInk(color, btn) {
+      document.querySelectorAll('.color-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      document.querySelectorAll('.preview-box').forEach(box => {
+        box.classList.remove('ink-black', 'ink-crimson', 'ink-gold', 'ink-violet');
+        box.classList.add('ink-' + color);
+      });
+    }
+  </script>
+</body>
+</html>

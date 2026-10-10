@@ -1,0 +1,152 @@
+---
+title: "Ecotopia: Lore & Narrative Canon Bible"
+subtitle: "The Master Worldbuilding, Tone of Voice & Theological Framework of R.E.I.G.N."
+author:
+  - name: "Chris"
+    role: "Storytelling, Narrative & Design Lead"
+  - name: "Jack"
+    role: "Production & Event Coordinator"
+date: "2026-10-09"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    number-sections: true
+    theme: [darkly, styles.css]
+    smooth-scroll: true
+---
+
+::: {.callout-note title="Target Audience & Document Scope"}
+This document is the official narrative bible for **Chris (Narrative Lead)**, **Actors & Performers**, **Voiceover Artists**, **Speechwriters**, and **Scenographers**.
+
+It establishes the four historical epochs, the Doublethink tone of voice rules, the sacred hagiography of the eco-martyrs, the theology of the 10 Ministries, and the classified cellar secret.
+:::
+
+---
+
+# The Core Premise & Master Narrative
+
+The outside world suffered civilizational collapse. Somewhere in the ruined, scorched wasteland of Europe, word has spread of one place that still functions: **Ecotopia**, the last sustainable sanctuary. Citizens apply through a digital portal to enter its borders.
+
+What citizens discover is that Ecotopia is a totalitarian ecological regime governed by **R.E.I.G.N.** (*Regime for Ecological Integrity and Global Nurturing*). Corporations and ecologist-theocrats have fused into a paternalistic lockdown state. Tonally, it is George Orwell's *1984*, but the enemy is not a foreign superpower—the enemy is ecological collapse.
+
+::: {.callout-important title="The Axiom of R.E.I.G.N."}
+*"First, the algorithms stole our power. Then, their reactors poisoned our skies. Now, you are born into debt, and every breath is accounted for. You traded your chaos for our care. Do not ask for your chains back."*
+:::
+
+---
+
+# The Four Historical Epochs
+
+### Epoch I: The Great Acceleration & The Compute Wars (~2025–2045)
+In the desperate scramble to scale synthetic artificial intelligence, multinational tech conglomerates purchased dedicated baseload nuclear power plants (Three Mile Island, small modular reactors) and devoured electrical grids to power gigawatt-scale server clusters. While the general public faced rolling green blackouts, sky-high tariffs, and austerity, hyperscalers drained freshwater watersheds to cool computing clusters. It was the age of digital excess, frantic automation, and atmospheric exhaustion.
+
+### Epoch II: The Great Withering & The Long Collapse (~2045–2080)
+Humanity did not perish in a single evening. Over four grueling decades of cascading agricultural failures, thermal river collapses, and nuclear-containment breaches during extreme European heatwaves, 95% of human civilization withered away. Food distribution collapsed, cities emptied, and the surviving corporate conglomerates fused with militant ecological sects to seize the remaining habitable biomes.
+
+### Epoch III: The Age of the Ledger (~2080–Present)
+Generations have now passed. The pre-collapse world of unmetered consumption, private property, and individual liberty has faded into distant, forbidden mythology. The surviving technocratic-theocratic state, **R.E.I.G.N.** (*Regime for Ecological Integrity and Global Nurturing*), forged a programmable central-bank digital currency lockdown regime built on an immovable theological premise: **Inherited Biological Sin (Carbon Debt).**
+* Every human being is born into ancestral debt: the instant you draw your first breath, your Digital Identity is minted with an automatic negative balance to compensate the living biosphere for the sins of old humanity, as well as your gestation, amniotic water, and lifetime oxygen consumption.
+* Your entire existence is spent in joyful state servitude, working down the debt of your biological footprint.
+
+### Epoch IV: Ecotopia at Sanctuary De Warren
+Sanctuary De Warren represents the model decontamination commune—a showcase enclave where selected applicants from the scorched borderlands surrender their old-world identities to work down their inherited balances under the gaze of the **Guardian Stag**.
+
+---
+
+# The Voice of R.E.I.G.N.: 1984 Doublethink
+
+## The Golden Law of the Masquerade
+Ecotopia is **never** referred to as "fascist," "cruel," or "dystopian" in-character. The state operates strictly through **Doublethink**: *horrifying acts of authoritarian control are masked behind virtuous, loving, maternal bureaucracy.*
+
+It is not cartoonish silliness or shallow toxic positivity; it is the calm, chilling conviction of an administration that believes absolute coercion is the highest form of ecological love.
+
+## The State Euphemism Lexicon
+
+| Brutal Dystopian Reality | Official State Euphemism | Responsible Ministry | Canonical State Justification |
+| :--- | :--- | :---: | :--- |
+| **Severe Caloric Starvation** | *"Biological Purity & Caloric Equilibrium"* | `Miniplenty` | *"The ration has been lovingly optimized. Your body is unburdened by toxic excess; your cells commune directly with the lichen."* |
+| **Biometric Surveillance & Terror** | *"Ideological Re-alignment & Maternal Care"* | `Minilove` | *"We do not interrogate; we hold your uncertainty until it becomes still. The Guardian Stag watches you because you are precious."* |
+| **Execution & Corpse Liquidation** | *"The Privilege of Elemental Upcycling"* | `Minirenewal` | *"Nobody is discarded. Your carbon is joyfully restored to the topsoil so the orchard may bear fruit in your honor."* |
+| **Rolling Blackouts & Penal Labor** | *"Kinetic Devotion & The Restful Dark"* | `Minilight` | *"Darkness is peace. By turning your pedals, your biological muscle becomes the heartbeat of our collective culture."* |
+| **Severe Water Rationing & Urine Metering** | *"Sacred Fluid Balance (Peetopia)"* | `Miniflow` | *"Every droplet in your bladder is borrowed from the river. To return it to the state is an act of high civic affection."* |
+| **Oxygen Metering & Breath Quotas** | *"Atmospheric Mindfulness"* | `Minibreath` | *"Your lungs are trustees of the common atmosphere. Slower breath is higher moral consciousness."* |
+| **15-Minute Grid Lockdowns & Curfew** | *"Neighborhood Sanctuary & Proximity Flourishing"* | `Minishelter` | *"You never need to wander beyond your perimeter. The community holds everything your spirit requires."* |
+| **Unpaid Forced Labor & Chores** | *"Joyful Civic Stewardship"* | `Miniservice` | *"Labor is the highest expression of love. To scrub a shared plate is to polish the soul of Ecotopia."* |
+| **Confiscation of Private Property** | *"Material Liberation & Sacred Lightness"* | `Minithrift` | *"Possessions are chains of carbon past. Surrendering your devices frees your hands to receive the future."* |
+| **Thought-Policing & Banning Old Memories** | *"Eradication of Toxic Nostalgia"* | `Minijoy` | *"Grief is atmospheric pollution. Nostalgia is counter-revolutionary rot. Joy is your biological duty."* |
+
+## Voiceover & PA Delivery Guide (Hanna)
+* **Tone:** Posh, clipped, unflappably polite BBC Radio 4 announcer voice.
+* **Atmosphere:** Maternal, gentle, yet utterly unyielding. 
+* **Example Broadcast:**  
+  > *"Attention, valued residents. Minilight reports an unauthorized spike in corridor illumination. Remember: light is a shared privilege, not a personal vanity. In three seconds, Sector 4 will receive the gift of complete darkness. Breathe deeply, remain in your designated quadrant, and reflect upon your debt to the sun."*
+
+---
+
+# The Sacred Hagiography: Martyrs of the Biological Pentecost
+
+R.E.I.G.N. does not view early direct-action climate protesters with irony. The regime canonizes them as **The Holy Confessors of the Biological Pentecost**—the early prophets who saw through the insanity of consumer capitalism:
+
+### 1. The Apostles of the First Witness (October 2022)
+The two young confessors of Room 43 who poured harvest tomato puree across the glass of Van Gogh’s *Sunflowers*. To R.E.I.G.N., this was the **First Sacred Rupture**: the moment humanity was forced to answer whether dead paint was dearer than the living soil.
+
+### 2. The Order of the Sacred Obstruction (The Holy Immovables)
+The holy martyrs who adhered their flesh with industrial polymer to the bitumen of the A12 and M25 motorways. In the hagiography of R.E.I.G.N., their voluntary immobility in front of water cannons and furious motorists mirrors the early Christian ascetics sitting upon desert pillars.
+
+### 3. The Sledgehammer Apostles of the Data Front (2027)
+The militant de-computator brigades who breached the perimeter fences of nuclear AI facilities during the 2027 drought, severing 380kV busbars to return cooling water back to the dying Rhine.
+
+### Sacred Relics Displayed at De Warren
+* **The Relic of the High-Vis Tabard:** A cured, salt-stained fluorescent orange vest preserved under museum vitrine glass like the Shroud of Turin.
+* **The GPU of Shame:** A slagged, melted NVIDIA H100 datacenter processor impaled upon rusty reinforcing rebar.
+* **Sanctum Vasculum:** The gilded bronze can said to have contained the first holy soup of Room 43.
+
+---
+
+# The Ten State Ministries of R.E.I.G.N.
+
+```
+                  ┌──────────────────────────────┐
+                  │      THE GUARDIAN STAG       │
+                  │   (Supreme State Arbiter)    │
+                  └──────────────┬───────────────┘
+                                 │
+     ┌─────────────┬─────────────┼─────────────┬─────────────┐
+     ▼             ▼             ▼             ▼             ▼
+ Miniplenty     Minilove      Minijoy     Minirenewal    Minilight
+ (Food Quota)  (Surveillance) (Morale)    (Recycling)    (Energy)
+     │             │             │             │             │
+     ▼             ▼             ▼             ▼             ▼
+  Miniflow     Minibreath   Minishelter   Miniservice   Minithrift
+ (Water Meter)  (Oxygen)     (Curfew)      (Labor)     (Confiscation)
+```
+
+1. **Miniplenty (Ministry of Ecological Bounty):** Enforces radical caloric reduction. Algae paste, steamed pulses, zero packaging.
+2. **Minilove (Ministry of Ecological Harmony):** The state's internal security apparatus. Runs the cameras, the interrogation holding pen, and the heresy tribunal.
+3. **Minijoy (Ministry of Morale & State Celebration):** Forces happiness. Any citizen caught frowning or discussing the pre-collapse world is issued a melancholy penalty.
+4. **Minirenewal (Ministry of Elemental Reclamation):** Manages the physical upcycling booth. When a citizen has failed too often, their identity is composted and their body reassigned.
+5. **Minilight (Ministry of Luminescence & Grid Harmony):** Rations electric power. Powers music through stationary bicycle dynamos and forces rolling blackout events.
+6. **Miniflow (Ministry of Hydrological Purity):** Measures every cubic centimeter of moisture consumed and excreted (*Peetopia* audits).
+7. **Minibreath (Ministry of Atmospheric Rectitude):** Meters lung capacity and exhalations to ensure citizens do not waste communal oxygen.
+8. **Minishelter (Ministry of Domestic Confinement):** Regulates perimeter borders, 15-minute sectors, and curfews.
+9. **Miniservice (Ministry of Restorative Labor):** Dispatches forced scrubbing, dishwashing ("greenwashing"), and sorting squads.
+10. **Minithrift (Ministry of Material Confiscation):** Seizes unauthorized synthetic fabrics, electronics, and trinkets.
+
+---
+
+# The Classified Archive: The Cellar Secret
+
+## The Great Hypocrisy
+The central narrative climax of Ecotopia hinges on a devastating secret kept by the regime's inner leadership:
+
+* **The Public Dogma:** Artificial Intelligence is strictly outlawed as the demonic technology that boiled the rivers and caused the meltdown. Citizens are taxed heavily for old prompt usage.
+* **The Classified Truth:** The regime's entire administrative apparatus—the biometric scoring, the Guardian Stag oracle calculations, and the carbon credit balance—is secretly calculated by a **salvaged, deep-cold server node running an LLM in the basement cellar**.
+
+The high priests of R.E.I.G.N. became the clandestine servants of the exact silicon machine that destroyed the world.
+
+## The Philosophy of the Secret Resistance
+Hidden in **Thijs's room**, the resistance is not against ecology—it is against **the ledger**.
+
+The resistance stands for genuine connection to nature and mutual human affection, proving that life cannot be reduced to a CBDC credit score. Its slogans never use corporate buzzwords like *"eco,"* *"sustainable,"* or *"carbon neutrality."* Instead, they champion human warmth, wild vegetation, and freedom from algorithmic optimization.

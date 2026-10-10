@@ -1,148 +1,116 @@
 ---
-title: "The Green Covenant"
-subtitle: "Carbon Constitution of the Emerald Republic — Ratified Year Zero, Thirty-First Day"
+title: "The Axioms of R.E.I.G.N. & The Ten Ministries"
+subtitle: "The Master Doctrine of Biocentric Governance — Ministry of Love, Year Zero"
 ---
 
 <div class="scanlines"></div>
 
 <div class="ticker-wrap">
   <span class="ticker">
-    ◆ THE COVENANT IS THE LAW ◆ THE LAW IS THE EARTH ◆ THE EARTH IS ALL ◆ ALL IS THE COVENANT ◆ MEMORISE. INTERNALISE. COMPLY. ◆
+    ◆ THE SOIL IS THE LEDGER ◆ THE DEBT IS YOUR PRIVILEGE ◆ ALL PAIN IS BIOCENTRIC LOVE ◆ THE GUARDIAN STAG WATCHES YOU BECAUSE YOU ARE PRECIOUS ◆
   </span>
 </div>
 
 <div style="text-align:center; padding: 2rem; border: 2px solid #1a5c1a; background: #0a1a0a; margin-bottom: 2rem;">
-  <div class="seal">⚖</div>
-  <div style="font-family: 'Special Elite', monospace; color: #6dde6d; letter-spacing: 0.2em; font-size: 1.4rem; text-transform: uppercase; margin: 1rem 0;">The Green Covenant</div>
-  <div style="color: #4a6a4a; font-size: 0.8rem; letter-spacing: 0.15em;">Preamble · Carbon Constitution of the Emerald Republic</div>
+  <div class="seal">🦌</div>
+  <div style="font-family: 'Special Elite', monospace; color: #6dde6d; letter-spacing: 0.2em; font-size: 1.4rem; text-transform: uppercase; margin: 1rem 0;">The Master Axiom</div>
+  <div style="color: #8cb88c; font-size: 0.95rem; line-height: 1.6; max-width: 650px; margin: 0 auto; font-style: italic;">
+    "First, the algorithms stole our power. Then, their reactors poisoned our skies. Now, you are born into debt, and every breath is accounted for. You traded your chaos for our care. Do not ask for your chains back."
+  </div>
 </div>
 
 ---
 
-## Preamble
+## The Rule of the Masquerade (Doublethink)
 
-*We, the survivors of the Age of Burning, who bore witness to the consequences of infinite appetite meeting a finite world, who watched the seas rise and the forests fall and the governments file the reports and schedule the follow-up meetings —*
+In Ecotopia, authority never speaks in the language of cruelty. Just as in George Orwell's *1984*, the regime operates through **The Masquerade**: *every coercive act of state survival is framed as an act of maternal love, scientific purity, and civic restoration.*
 
-*We, who were called extremists for insisting that arithmetic applies to the atmosphere —*
-
-*We, who asked and asked and asked until the asking became insufficient —*
-
-*Do hereby establish the Emerald Republic, and bind ourselves and all who dwell upon this recovered earth to the following Covenant. Not as ideology. Not as opinion. As physics.*
+* Nobody is starved — their calories are *lovingly optimized for biological equilibrium*.
+* Nobody is interrogated — their uncertainty is *held gently until it becomes still*.
+* Nobody is executed — they receive the *privilege of being elemental upcycled into humus*.
+* Nobody is forced into labor — they engage in *joyful physical devotion to the living grid*.
 
 ---
 
-## The Twenty Clauses
+## The Ten Ministries of R.E.I.G.N.
 
 <div class="clauses">
 
 <div class="covenant-clause">
-**The Earth Is Not A Resource.** The Earth is the condition of existence. It is not owned. It is not managed. It is inhabited, by permission, by those who demonstrate sufficient care. The Emerald Republic exists to enforce this permission structure.
+<strong>1. Miniplenty (Ministry of Ecological Bounty)</strong><br>
+<em>Mandate:</em> Food rationing, caloric budgeting, and total elimination of packaging waste.<br>
+<em>The Masquerade:</em> "Celebrating the beauty of self-imposed austerity and measured survival."<br>
+<em>Station at De Warren:</em> The Dry-Pulse Dispensary & Gruel Kettle (Dining Hall).
 </div>
 
 <div class="covenant-clause">
-**Carbon Is The Currency Of Survival.** Every human action has a carbon cost. Every carbon cost has a planetary consequence. The Republic shall maintain a Carbon Budget in perpetuity, and no law, no emergency, no convenience shall authorise its exceedance.
+<strong>2. Minilove (Ministry of Ecological Harmony)</strong><br>
+<em>Mandate:</em> Biometric surveillance, corridor cameras, behavioral interrogation, and social thought-audits.<br>
+<em>The Masquerade:</em> "Ensuring all souls exist in gentle, compliant harmony with Earth's carrying capacity."<br>
+<em>Station at De Warren:</em> The Garage Induction Checkpoint & Holding Pen.
 </div>
 
 <div class="covenant-clause">
-**The Right To Consumption Is Conditional.** Citizens retain the right to consume in proportion to the planetary budget divided by the population. No citizen may exceed their allocation. No citizen may transfer their allocation to any entity that will exceed it on their behalf.
+<strong>3. Minijoy (Ministry of Morale & State Celebration)</strong><br>
+<em>Mandate:</em> Mandatory cheerfulness, eradication of pre-collapse nostalgia, and collective emotional pacing.<br>
+<em>The Masquerade:</em> "Releasing pure human kinetic joy for the collective grid."<br>
+<em>Station at De Warren:</em> The Dynamo Dancefloor & Apocalyptic Melodrama Stage.
 </div>
 
 <div class="covenant-clause">
-**Private Combustion Is Abolished.** The private internal combustion vehicle, the private jet, the private gas boiler, the private anything that burns: abolished. Collectively-owned transport exists. It runs on time. It is sufficient.
+<strong>4. Minirenewal (Ministry of Elemental Reclamation)</strong><br>
+<em>Mandate:</em> Involuntary identity erasure, citizen upcycling, surname striking, and physical composting.<br>
+<em>The Masquerade:</em> "The sublime honor of surrendering one's physical form back to the living soil."<br>
+<em>Station at De Warren:</em> The Upcycling Portal & Suicide Carbon Booth.
 </div>
 
 <div class="covenant-clause">
-**The Great Rewilding Is Mandatory.** Forty percent of the Republic's land area shall be returned to ecological function by Year Ten. Citizens shall contribute no fewer than ninety days of rewilding labour per year. This is not punishment. This is participation. The distinction is important and will be explained to you again if necessary.
+<strong>5. Minilight (Ministry of Luminescence & Grid Harmony)</strong><br>
+<em>Mandate:</em> Rolling blackouts, kilowatt rationing, and penal stationary bicycle conscription.<br>
+<em>The Masquerade:</em> "Protecting our precious night sky and celebrating the spiritual depth of darkness."<br>
+<em>Station at De Warren:</em> The Breaker Room & Battery Bank (Basement).
 </div>
 
 <div class="covenant-clause">
-**Accountability Is Retroactive.** Those who knowingly perpetuated carbon criminality — executives, politicians, lobbyists, the architects of delay — shall answer to the Extinction Tribunals. That this is uncomfortable is acknowledged. That it is necessary is not subject to debate.
+<strong>6. Miniflow (Ministry of Hydrological Purity)</strong><br>
+<em>Mandate:</em> Moisture metering, graywater audits, and Peetopia biological fluid recovery.<br>
+<em>The Masquerade:</em> "Honoring every sacred drop of Earth's circulating lifeblood."<br>
+<em>Station at De Warren:</em> The Water Meter & Peetopia Restroom Audit Desk.
 </div>
 
 <div class="covenant-clause">
-**Information Shall Serve Survival.** Media which obscures ecological truth, which manufactures doubt, which frames the survival of the biosphere as a matter of political opinion, is not journalism. It is sabotage. It will be treated accordingly. GreenCast provides all necessary information.
+<strong>7. Minibreath (Ministry of Atmospheric Rectitude)</strong><br>
+<em>Mandate:</em> Human breath quotas, respiratory rhythm pacing, and exhalation taxation.<br>
+<em>The Masquerade:</em> "Harmonizing human exhalation with the delicate photosynthetic lung of the planet."<br>
+<em>Station at De Warren:</em> The Corridor Carbon Sensor & Oxygen Rationing Chamber.
 </div>
 
 <div class="covenant-clause">
-**The Past Shall Not Be Mourned Publicly.** Nostalgia for the Age of Burning — for its conveniences, its freedoms, its extraordinary waste — constitutes a form of ideological pollution. Citizens may feel what they feel. They may not perform regret for what we escaped.
+<strong>8. Minishelter (Ministry of Domestic Confinement)</strong><br>
+<em>Mandate:</em> 15-minute perimeter lockdowns, room curfews, and cubic-meter density optimization.<br>
+<em>The Masquerade:</em> "Maximizing thermal fellowship through cozy communal compression."<br>
+<em>Station at De Warren:</em> The Corridor Checkpoints & Residential Perimeters.
 </div>
 
 <div class="covenant-clause">
-**Children Belong To The Future.** All children in the Republic shall be educated in ecological citizenship from birth. The curriculum is the biosphere. The classroom is the rewilded field. The examination is whether the forest is still standing.
+<strong>9. Miniservice (Ministry of Restorative Labor)</strong><br>
+<em>Mandate:</em> Penal dishwashing, waste sorting, and perpetual decontamination squads.<br>
+<em>The Masquerade:</em> "Purifying the soul through the sacred, selfless rhythm of physical devotion."<br>
+<em>Station at De Warren:</em> The Scullery ("Greenwashing") & Compost Shoveling Bay.
 </div>
 
 <div class="covenant-clause">
-**Efficiency Is The Highest Aesthetic.** Beauty is what survives. Architecture, clothing, food, culture — all shall be evaluated first for ecological footprint, then for other qualities. Art that celebrates waste is not art. It is a confession.
-</div>
-
-<div class="covenant-clause">
-**The Collective Supersedes The Individual.** The individual's right to choose ends where the planet's right to continue begins. This boundary shall be determined by the Green Assembly, annually, based on the latest atmospheric data. Citizens may petition. Citizens may not override.
-</div>
-
-<div class="covenant-clause">
-**Borders Shall Be Ecological, Not Political.** The Republic recognises no nation-state boundary that contradicts ecological reality. Watersheds are jurisdictions. Forests are territories. The atmosphere is commons. Political borders that damage ecological ones shall yield.
-</div>
-
-<div class="covenant-clause">
-**Technology Must Justify Itself.** No technology shall be deployed whose net carbon cost exceeds its carbon saving over a ten-year horizon. Data centres, cryptocurrency, fast fashion supply chains, most of what was called the attention economy: reviewed, reduced, in some cases eliminated. The servers that remain run cold.
-</div>
-
-<div class="covenant-clause">
-**Silence Is Participation.** The citizen who says nothing when a neighbour burns, wastes, or consumes in excess is complicit in the burning, waste, and excess. The Republic does not require informers. It requires citizens who understand that the atmosphere cannot distinguish between the emissions of the guilty and the emissions of the merely convenient.
-</div>
-
-<div class="covenant-clause">
-**The Republic Does Not Apologise For What Was Necessary.** History will judge. History always does. The Republic is not governed by the judgment of the future — it is governed by the physics of the present. If what was done was wrong, let the archive show it, and let the forest judge whether it was worth it.
-</div>
-
-<div class="covenant-clause">
-**Emergency Powers Are Not Temporary.** The emergency is the condition of the age. The powers appropriate to the emergency are appropriate to the age. A sunset clause on survival is not a political document — it is a suicide note. The emergency powers are permanent until the emergency is resolved. The Republic shall determine when that is.
-</div>
-
-<div class="covenant-clause">
-**Dissent Shall Be Ecological.** Citizens may disagree with any policy of the Republic. They may propose alternatives. They may organise. Their proposed alternatives must, however, achieve equivalent or superior ecological outcomes. Dissent that does not pass this test is not political speech. It is sabotage dressed as opinion.
-</div>
-
-<div class="covenant-clause">
-**The Verdant Speaks For The Earth.** Pending the establishment of a permanent Green Assembly with confirmed electoral processes (see Appendix C for timeline, noting that Appendix C is a living document and the timeline is reviewed annually), executive authority resides with the office of The Verdant. This is a transitional arrangement. The transition is proceeding thoughtfully.
-</div>
-
-<div class="covenant-clause">
-**Joy Is Permitted.** The Republic is not a punishment. The Republic is a correction. Citizens are encouraged to experience pleasure, connection, beauty, and festivity within the approved carbon budget. The forest is beautiful. The clean river is beautiful. The sky, recovering, is beautiful. Dance in it.
-</div>
-
-<div class="covenant-clause">
-**And If This Is Not Enough, We Will Do More.** The Covenant is not the ceiling. It is the floor. Should the atmospheric data require it, the Republic shall act further. No act necessary for survival is outside the scope of this document. This clause was added at 3am on the final night of ratification. Everyone knew what it meant. Everyone signed anyway.
+<strong>10. Minithrift (Ministry of Material Confiscation)</strong><br>
+<em>Mandate:</em> Seizure of petroleum fabrics, plastic trinkets, and unauthorized possessions.<br>
+<em>The Masquerade:</em> "Liberating citizens from the toxic burden of non-biodegradable vanity."<br>
+<em>Station at De Warren:</em> The Contraband Surrender Locker & Upcycling Bench.
 </div>
 
 </div>
-
----
-
-<div class="propaganda" data-label="Critical Reading Note">
-
-The Covenant above is a piece of satirical speculative fiction exploring what happens when legitimate ecological urgency becomes detached from democratic accountability. It is not an endorsement of authoritarianism, forced labour, show trials, or the suppression of dissent — all of which are bad, including when performed in the name of good causes.
-
-The terrifying thing about well-written authoritarian documents is how internally consistent they are. This one is. That's the bit to sit with.
-
-</div>
-
----
-
-<blockquote>
-*"We did not want power. We wanted a liveable planet. The two turned out to be related. We are still deciding how we feel about that."*
-
-— The Verdant, private correspondence, leaked Year I, authenticity disputed by the Ministry of Information (which is suspicious in itself)
-</blockquote>
 
 ---
 
 <div style="text-align:center; margin: 2rem 0;">
-  <a href="attend.qmd" class="cta-btn">REGISTER AS CITIZEN</a>
   <a href="lore.qmd" class="cta-btn">READ THE CHRONICLE</a>
-</div>
-
-<div style="text-align:center; color: #2d7a2d; font-size: 0.75rem; letter-spacing: 0.2em; margin-top: 2rem;">
-MINISTRY OF CONSTITUTIONAL AFFAIRS · YEAR II<br>
-Citizens are reminded that studying the Covenant does not constitute endorsement. Or does it. The Republic is comfortable with ambiguity.
+  <a href="attend.qmd" class="cta-btn">BEGIN ADMISSION CONFESSION</a>
 </div>

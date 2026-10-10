@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>THE EMERALD REPUBLIC</title>
+<title>ECOTOPIA</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -77,10 +77,39 @@ ul.task-list li input[type="checkbox"] {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Special+Elite&amp;family=Share+Tech+Mono&amp;family=UnifrakturMaguntia&amp;display=swap" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
-<meta property="og:title" content="THE EMERALD REPUBLIC">
-<meta property="og:description" content="You are cordially summoned to celebrate the Second Year of the Green Covenant.">
-<meta property="og:site_name" content="THE EMERALD REPUBLIC">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="ECOTOPIA: THE LAST SUSTAINABLE UTOPIA">
+<meta property="og:description" content="You traded your chaos for our care. Do not ask for your chains back.">
+<meta property="og:site_name" content="ECOTOPIA">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -95,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
     <img src="./assets/logo.svg" alt="" class="navbar-logo dark-content">
     </a>
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">THE EMERALD REPUBLIC</span>
+    <span class="navbar-title">ECOTOPIA</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -110,15 +139,35 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./lore.html"> 
-<span class="menu-text">THE CHRONICLE</span></a>
+<span class="menu-text">THE 4 EPOCHS</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./manifesto.html"> 
-<span class="menu-text">THE COVENANT</span></a>
+<span class="menu-text">10 MINISTRIES</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./attend.html"> 
-<span class="menu-text">CITIZEN REGISTRATION</span></a>
+<span class="menu-text">ADMISSION &amp; QUIZ</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Jack_Website_Feedback.html"> 
+<span class="menu-text">FEEDBACK FOR JACK</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./quest_cards_and_facilitator_pack.html"> 
+<span class="menu-text">QUESTS &amp; PACK</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./broadcast_scripts_and_liturgy.html"> 
+<span class="menu-text">AUDIO &amp; SCRIPTS</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lore_and_narrative_bible.html"> 
+<span class="menu-text">LORE BIBLE</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./game_design_and_activities.html"> 
+<span class="menu-text">GAME DESIGN</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -142,69 +191,106 @@ ul.task-list li input[type="checkbox"] {
 
 </div>
 <div class="ticker-wrap">
-<p><span class="ticker"> ◆ CARBON RATIONING LEVEL 4 IN EFFECT ◆ ALL LEISURE PERMITS MUST BE CARRIED ◆ SYNTHETIC FABRICS REMAIN PROHIBITED ◆ REPORT UNNECESARY COMBUSTION TO YOUR SECTOR WARDEN ◆ THE EARTH ENDURES. THE REPUBLIC ENDURES. ◆ TONIGHT’S CELEBRATION APPROVED UNDER DECREE 44-B ◆ REPORT UNNECESSARY COMBUSTION TO YOUR SECTOR WARDEN ◆ </span></p>
+<p><span class="ticker"> ◆ BORN INTO DEBT — REPAID IN DEVOTION ◆ ALL BREATH ACCOUNTED FOR ◆ ARTIFICIAL INTELLIGENCE BANNED BY STATE DECREE ◆ REPORT UNAPPROVED NOSTALGIA TO MINILOVE ◆ THE EARTH ENDURES. R.E.I.G.N. ENDURES. ◆ SANCTUARY DE WARREN — NOV 28, 2026 ◆ </span></p>
 </div>
 <div class="hero">
 <div class="hero-sub">
-Ministry of Cultural Conformity presents
+The Regime for Ecological Integrity &amp; Global Nurturing presents
 </div>
 <div class="hero-title">
-The Emerald Republic
+ECOTOPIA
 </div>
-<div style="font-family: 'Special Elite', monospace; color: #4aad4a; letter-spacing: 0.3em; font-size: 0.9rem; margin: 0.5rem 0;">
-— SECOND YEAR OF THE GREEN COVENANT —
+<div style="font-family: 'Special Elite', monospace; color: #4aad4a; letter-spacing: 0.3em; font-size: 0.95rem; margin: 0.5rem 0;">
+— THE LAST SUSTAINABLE UTOPIA —
 </div>
 <div class="seal">
-☘
+🦌
 </div>
-<div style="font-family: 'Special Elite', monospace; color: #c8a000; letter-spacing: 0.2em; font-size: 1.1rem; margin-top: 1rem;">
-<pre><code>AN OFFICIAL CITIZEN CELEBRATION</code></pre>
+<div style="font-family: 'Special Elite', monospace; color: #c8a000; letter-spacing: 0.2em; font-size: 1.15rem; margin-top: 1rem;">
+<pre><code>DECONTAMINATION INDUCTION &amp; CITIZEN CELEBRATION</code></pre>
 </div>
 <div class="hero-decree">
-<pre><code>You are cordially summoned. Attendance is a privilege of citizenship.&lt;br&gt;
-Sector: THE WARREN &amp;nbsp;|&amp;nbsp; Year II, Day of Communal Gratitude</code></pre>
+<pre><code>You traded your chaos for our care. Do not ask for your chains back.&lt;br&gt;
+Sanctuary: DE WARREN (Amsterdam) &amp;nbsp;|&amp;nbsp; Saturday 28 November 2026</code></pre>
 </div>
 </div>
 <hr>
-<section id="summons-to-citizen-celebration" class="level2">
-<h2 class="anchored" data-anchor-id="summons-to-citizen-celebration">SUMMONS TO CITIZEN CELEBRATION</h2>
-<p>By order of the Cultural Conformity Bureau, the residents of <strong>Sector Warren</strong> are summoned to mark the Second Year of the Green Covenant with an evening of state-approved entertainment, communal reflection, and celebratory ration supplementation.</p>
-<p>The Republic has endured. The Earth breathes. You are invited to dance on the grave of the old world.</p>
-<div class="propaganda" data-label="Official Communiqué">
-<p><em>“Two years ago, the skies over Parliament still burned with the fires of the old order. Two years ago, they said we were extremists. Tonight we are the government. Tonight we are the law. Tonight — we celebrate.”</em></p>
-<p><strong>— The Verdant, Second Year Address to the Green Assembly</strong></p>
+<section id="summons-to-citizen-admission" class="level2">
+<h2 class="anchored" data-anchor-id="summons-to-citizen-admission">SUMMONS TO CITIZEN ADMISSION</h2>
+<p>By decree of the <strong>Regime for Ecological Integrity and Global Nurturing (R.E.I.G.N.)</strong>, surviving biological units of the outer wastelands are invited to apply for entry into <strong>Ecotopia</strong> at De Warren.</p>
+<p>The outside world burned. The reactors melted. The rivers dried. In Ecotopia, life endures through sacred, loving calculation. Every breath is metered, every calorie is honored, and every human being is born into a lovingly quantified <strong>Carbon Debt</strong>.</p>
+<div class="propaganda" data-label="The Axiom of R.E.I.G.N.">
+<p><em>“First, the algorithms stole our power. Then, their reactors poisoned our skies. Now, you are born into debt, and every breath is accounted for. You traded your chaos for our care. Do not ask for your chains back.”</em></p>
+<p><strong>— The Guardian Stag, Founding Inscription at the Gate of De Warren</strong></p>
 </div>
 <hr>
 </section>
-<section id="what-to-expect" class="level2">
-<h2 class="anchored" data-anchor-id="what-to-expect">WHAT TO EXPECT</h2>
-<p>The evening will proceed as all things proceed in the Emerald Republic: with purpose, with discipline, and with a great deal of fermented apple product from the approved collective orchards.</p>
-<p>You will encounter:</p>
+<section id="the-ten-ministries-of-r.e.i.g.n." class="level2">
+<h2 class="anchored" data-anchor-id="the-ten-ministries-of-r.e.i.g.n.">THE TEN MINISTRIES OF R.E.I.G.N.</h2>
+<p>Upon arrival, every citizen is drafted into one of the <strong>Ten Newspeak Ministries</strong> to perform joyful civic restitution:</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+<section id="miniplenty" class="level4" style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;">
+<h4 class="anchored" data-anchor-id="miniplenty">1. Miniplenty</h4>
+<p><strong>Caloric Bounty &amp; Rations:</strong> Algae paste, steamed pulses, and zero-waste rationing. The ration has been lovingly optimized.</p>
+</section>
+<section id="minilove" class="level4" style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;">
+<h4 class="anchored" data-anchor-id="minilove">2. Minilove</h4>
+<p><strong>Ecological Harmony:</strong> Total biometric surveillance, thought-audits, and gentle ideological re-alignment holding pens.</p>
+</section>
+<section id="minijoy" class="level4" style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;">
+<h4 class="anchored" data-anchor-id="minijoy">3. Minijoy</h4>
+<p><strong>Mandatory Morale:</strong> Criminalizing old-world nostalgia; enforcing joyful compliance; hosting the apocalyptic melodrama contests.</p>
+</section>
+<section id="minirenewal" class="level4" style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;">
+<h4 class="anchored" data-anchor-id="minirenewal">4. Minirenewal</h4>
+<p><strong>Elemental Reclamation:</strong> Identity reset, surname striking, and the sublime honor of returning physical form to the compost vat.</p>
+</section>
+<section id="minilight" class="level4" style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;">
+<h4 class="anchored" data-anchor-id="minilight">5. Minilight</h4>
+<p><strong>Luminescence &amp; Grid:</strong> Rolling blackouts, kilowatt rationing, and forced bicycle generator labor to power the DJ booth.</p>
+</section>
+<section id="miniflow" class="level4" style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;">
+<h4 class="anchored" data-anchor-id="miniflow">6. Miniflow</h4>
+<p><strong>Hydrological Purity:</strong> Moisture metering, graywater audits, and Peetopia biological fluid recovery enforcement.</p>
+</section>
+<section id="minibreath" class="level4" style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;">
+<h4 class="anchored" data-anchor-id="minibreath">7. Minibreath</h4>
+<p><strong>Atmospheric Rectitude:</strong> Human breathing quotas, respiratory rhythm pacing, and carbon exhalation taxation.</p>
+</section>
+<section id="minishelter" class="level4" style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;">
+<h4 class="anchored" data-anchor-id="minishelter">8. Minishelter</h4>
+<p><strong>Domestic Confinement:</strong> 15-minute perimeter enforcement, corridor curfews, and communal thermal compression.</p>
+</section>
+<section id="miniservice" class="level4" style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;">
+<h4 class="anchored" data-anchor-id="miniservice">9. Miniservice</h4>
+<p><strong>Restorative Labor:</strong> Penal dishwashing (“greenwashing”), scullery shifts, and perpetual decontamination squads.</p>
+</section>
+<section id="minithrift" class="level4" style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;">
+<h4 class="anchored" data-anchor-id="minithrift">10. Minithrift</h4>
+<p><strong>Material Confiscation:</strong> Seizure of petroleum fabrics, plastic trinkets, and unauthorized personal possessions.</p>
+</section>
+</div>
+<hr>
+</section>
+<section id="the-immersive-experience" class="level2">
+<h2 class="anchored" data-anchor-id="the-immersive-experience">THE IMMERSIVE EXPERIENCE</h2>
 <ul>
-<li><strong>The Museum of Necessary Unpleasantness</strong> — an exhibition of What Had To Be Done</li>
-<li><strong>The Tribunal Re-enactment Stage</strong> — citizen volunteers play both sides</li>
-<li><strong>The Carbon Confession Booth</strong> — unburden yourself of your pre-Republic sins</li>
-<li><strong>Approved Music</strong> — frequency-certified by the Ministry of Acoustic Standards</li>
-<li><strong>The Black Market Corner</strong> — contraband (props only, probably)</li>
-<li><strong>Sector Warden Impersonators</strong> — spot the real one, win a ration token</li>
+<li><strong>The Garage Induction:</strong> Descend through the draped industrial tunnel into the garage checkpoint to confess your sins and receive your physical <strong>Passport Booklet</strong>.</li>
+<li><strong>Starting Carbon Debt:</strong> Every guest starts with a negative balance (<span class="math inline">\(-150\)</span> to <span class="math inline">\(-500\)</span> credits). Pay it down through absurd tasks and ministry quests.</li>
+<li><strong>The VIP Scotch Library:</strong> Clear your debt and accumulate <span class="math inline">\(+100\)</span> credits to unlock access to the elite second-floor reserve library.</li>
+<li><strong>The Secret Resistance:</strong> Rumors speak of an unmonitored speakeasy in Thijs’s room, accessible only via a viral ankle stamp…</li>
+<li><strong>The Midnight Revolution &amp; Party:</strong> At 23:30, the regime convenes for judgment before the resistance moves, ending in a high-energy dance party until dawn.</li>
 </ul>
 <div class="warning-box">
-<p>Citizens are reminded that this is a satirical fiction event. The Emerald Republic is not real. The Just Stop Oil people have not, to our knowledge, seized Parliament. Yet. Costume props representing state authority are props. No actual compliance is required. The Verdant is a fictional character. Carbon guilt is real and yours to manage independently.</p>
+<p><strong>Safety &amp; Satire Notice:</strong> Ecotopia is an immersive theatrical party and narrative satire. It is strictly an 18+ event. Any participant or actor speaking the universal safe-word <strong>“OZONE”</strong> immediately pauses roleplay. Observer wristbands are available at the door for those who wish to socialize, drink, and dance without roleplay or chores.</p>
 </div>
 <hr>
-</section>
-<section id="the-world-you-are-entering" class="level2">
-<h2 class="anchored" data-anchor-id="the-world-you-are-entering">THE WORLD YOU ARE ENTERING</h2>
-<p>When you step through the door, you step into <strong>Year II of the Emerald Republic</strong>.</p>
-<p>The old world ended not with a bang but with a spreadsheet — a carbon audit so damning that three governments fell in a week. Into the vacuum stepped the movement everyone had dismissed as irritating roadblockers. They had a plan. They had cells in every city. They had <em>The Verdant</em>.</p>
-<p>What followed was swift, ideologically coherent, and deeply unsettling to anyone who valued nuance.</p>
-<p>The Republic asks only one thing of its citizens: <strong>compliance in the name of survival</strong>. How much compliance is never quite specified. That’s rather the point.</p>
 <div style="text-align:center; margin: 2rem 0;">
-<p><a href="./lore.html" class="cta-btn">READ THE CHRONICLE</a> <a href="./manifesto.html" class="cta-btn">STUDY THE COVENANT</a> <a href="./attend.html" class="cta-btn">REGISTER AS CITIZEN</a></p>
+<p><a href="./lore.html" class="cta-btn">EXPLORE THE FOUR EPOCHS</a> <a href="./manifesto.html" class="cta-btn">THE 10 MINISTRIES &amp; AXIOMS</a> <a href="./attend.html" class="cta-btn">CALCULATE YOUR CARBON DEBT</a></p>
 </div>
 <hr>
 <div style="text-align:center; color: #2d7a2d; font-size: 0.75rem; letter-spacing: 0.2em; margin-top: 2rem;">
-<p>MINISTRY OF CULTURAL CONFORMITY · SECTOR WARREN · YEAR II<br> This document has been approved under Green Covenant Article 7 (Cultural Expression for State Cohesion).<br> All irony has been pre-cleared.</p>
+<p>REGIME FOR ECOLOGICAL INTEGRITY AND GLOBAL NURTURING (R.E.I.G.N.) · SANCTUARY DE WARREN<br> All exhalations pre-authorized under Biocentric Ordinance 1984-G.<br> Artificial intelligence strictly prohibited by decree.</p>
 </div>
 
 
@@ -618,7 +704,7 @@ Sector: THE WARREN &amp;nbsp;|&amp;nbsp; Year II, Day of Communal Gratitude</cod
       &nbsp;
     </div>   
     <div class="nav-footer-center">
-<p>“THE EARTH ENDURES. THE REPUBLIC ENDURES.” — The Verdant, Year Zero Address</p>
+<p>“BORN INTO DEBT. REPAID IN DEVOTION.” — The Guardian Stag, Sanctuary De Warren</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

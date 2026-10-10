@@ -9,81 +9,126 @@ format:
 
 <div class="ticker-wrap">
   <span class="ticker">
-    ◆ CARBON RATIONING LEVEL 4 IN EFFECT ◆ ALL LEISURE PERMITS MUST BE CARRIED ◆ SYNTHETIC FABRICS REMAIN PROHIBITED ◆ REPORT UNNECESARY COMBUSTION TO YOUR SECTOR WARDEN ◆ THE EARTH ENDURES. THE REPUBLIC ENDURES. ◆ TONIGHT'S CELEBRATION APPROVED UNDER DECREE 44-B ◆ REPORT UNNECESSARY COMBUSTION TO YOUR SECTOR WARDEN ◆
+    ◆ BORN INTO DEBT — REPAID IN DEVOTION ◆ ALL BREATH ACCOUNTED FOR ◆ ARTIFICIAL INTELLIGENCE BANNED BY STATE DECREE ◆ REPORT UNAPPROVED NOSTALGIA TO MINILOVE ◆ THE EARTH ENDURES. R.E.I.G.N. ENDURES. ◆ SANCTUARY DE WARREN — NOV 28, 2026 ◆
   </span>
 </div>
 
 <div class="hero">
-  <div class="hero-sub">Ministry of Cultural Conformity presents</div>
-  <div class="hero-title">The Emerald Republic</div>
-  <div style="font-family: 'Special Elite', monospace; color: #4aad4a; letter-spacing: 0.3em; font-size: 0.9rem; margin: 0.5rem 0;">— SECOND YEAR OF THE GREEN COVENANT —</div>
-  <div class="seal">☘</div>
-  <div style="font-family: 'Special Elite', monospace; color: #c8a000; letter-spacing: 0.2em; font-size: 1.1rem; margin-top: 1rem;">
-    AN OFFICIAL CITIZEN CELEBRATION
+  <div class="hero-sub">The Regime for Ecological Integrity & Global Nurturing presents</div>
+  <div class="hero-title">ECOTOPIA</div>
+  <div style="font-family: 'Special Elite', monospace; color: #4aad4a; letter-spacing: 0.3em; font-size: 0.95rem; margin: 0.5rem 0;">— THE LAST SUSTAINABLE UTOPIA —</div>
+  <div class="seal">🦌</div>
+  <div style="font-family: 'Special Elite', monospace; color: #c8a000; letter-spacing: 0.2em; font-size: 1.15rem; margin-top: 1rem;">
+    DECONTAMINATION INDUCTION & CITIZEN CELEBRATION
   </div>
   <div class="hero-decree">
-    You are cordially summoned. Attendance is a privilege of citizenship.<br>
-    Sector: THE WARREN &nbsp;|&nbsp; Year II, Day of Communal Gratitude
+    You traded your chaos for our care. Do not ask for your chains back.<br>
+    Sanctuary: DE WARREN (Amsterdam) &nbsp;|&nbsp; Saturday 28 November 2026
   </div>
 </div>
 
 ---
 
-## SUMMONS TO CITIZEN CELEBRATION
+## SUMMONS TO CITIZEN ADMISSION
 
-By order of the Cultural Conformity Bureau, the residents of **Sector Warren** are summoned to mark the Second Year of the Green Covenant with an evening of state-approved entertainment, communal reflection, and celebratory ration supplementation.
+By decree of the **Regime for Ecological Integrity and Global Nurturing (R.E.I.G.N.)**, surviving biological units of the outer wastelands are invited to apply for entry into **Ecotopia** at De Warren.
 
-The Republic has endured. The Earth breathes. You are invited to dance on the grave of the old world.
+The outside world burned. The reactors melted. The rivers dried. In Ecotopia, life endures through sacred, loving calculation. Every breath is metered, every calorie is honored, and every human being is born into a lovingly quantified **Carbon Debt**.
 
-<div class="propaganda" data-label="Official Communiqué">
+<div class="propaganda" data-label="The Axiom of R.E.I.G.N.">
 
-*"Two years ago, the skies over Parliament still burned with the fires of the old order. Two years ago, they said we were extremists. Tonight we are the government. Tonight we are the law. Tonight — we celebrate."*
+*"First, the algorithms stole our power. Then, their reactors poisoned our skies. Now, you are born into debt, and every breath is accounted for. You traded your chaos for our care. Do not ask for your chains back."*
 
-**— The Verdant, Second Year Address to the Green Assembly**
+**— The Guardian Stag, Founding Inscription at the Gate of De Warren**
 
 </div>
 
 ---
 
-## WHAT TO EXPECT
+## THE TEN MINISTRIES OF R.E.I.G.N.
 
-The evening will proceed as all things proceed in the Emerald Republic: with purpose, with discipline, and with a great deal of fermented apple product from the approved collective orchards.
+Upon arrival, every citizen is drafted into one of the **Ten Newspeak Ministries** to perform joyful civic restitution:
 
-You will encounter:
+::: {style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0;"}
 
-- **The Museum of Necessary Unpleasantness** — an exhibition of What Had To Be Done
-- **The Tribunal Re-enactment Stage** — citizen volunteers play both sides
-- **The Carbon Confession Booth** — unburden yourself of your pre-Republic sins
-- **Approved Music** — frequency-certified by the Ministry of Acoustic Standards
-- **The Black Market Corner** — contraband (props only, probably)
-- **Sector Warden Impersonators** — spot the real one, win a ration token
+::: {style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;"}
+#### 1. Miniplenty
+**Caloric Bounty & Rations:** Algae paste, steamed pulses, and zero-waste rationing. The ration has been lovingly optimized.
+:::
+
+::: {style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;"}
+#### 2. Minilove
+**Ecological Harmony:** Total biometric surveillance, thought-audits, and gentle ideological re-alignment holding pens.
+:::
+
+::: {style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;"}
+#### 3. Minijoy
+**Mandatory Morale:** Criminalizing old-world nostalgia; enforcing joyful compliance; hosting the apocalyptic melodrama contests.
+:::
+
+::: {style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;"}
+#### 4. Minirenewal
+**Elemental Reclamation:** Identity reset, surname striking, and the sublime honor of returning physical form to the compost vat.
+:::
+
+::: {style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;"}
+#### 5. Minilight
+**Luminescence & Grid:** Rolling blackouts, kilowatt rationing, and forced bicycle generator labor to power the DJ booth.
+:::
+
+::: {style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;"}
+#### 6. Miniflow
+**Hydrological Purity:** Moisture metering, graywater audits, and Peetopia biological fluid recovery enforcement.
+:::
+
+::: {style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;"}
+#### 7. Minibreath
+**Atmospheric Rectitude:** Human breathing quotas, respiratory rhythm pacing, and carbon exhalation taxation.
+:::
+
+::: {style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;"}
+#### 8. Minishelter
+**Domestic Confinement:** 15-minute perimeter enforcement, corridor curfews, and communal thermal compression.
+:::
+
+::: {style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;"}
+#### 9. Miniservice
+**Restorative Labor:** Penal dishwashing ("greenwashing"), scullery shifts, and perpetual decontamination squads.
+:::
+
+::: {style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem; border-radius: 4px;"}
+#### 10. Minithrift
+**Material Confiscation:** Seizure of petroleum fabrics, plastic trinkets, and unauthorized personal possessions.
+:::
+
+:::
+
+---
+
+## THE IMMERSIVE EXPERIENCE
+
+* **The Garage Induction:** Descend through the draped industrial tunnel into the garage checkpoint to confess your sins and receive your physical **Passport Booklet**.
+* **Starting Carbon Debt:** Every guest starts with a negative balance ($-150$ to $-500$ credits). Pay it down through absurd tasks and ministry quests.
+* **The VIP Scotch Library:** Clear your debt and accumulate $+100$ credits to unlock access to the elite second-floor reserve library.
+* **The Secret Resistance:** Rumors speak of an unmonitored speakeasy in Thijs’s room, accessible only via a viral ankle stamp...
+* **The Midnight Revolution & Party:** At 23:30, the regime convenes for judgment before the resistance moves, ending in a high-energy dance party until dawn.
 
 <div class="warning-box">
-Citizens are reminded that this is a satirical fiction event. The Emerald Republic is not real. The Just Stop Oil people have not, to our knowledge, seized Parliament. Yet. Costume props representing state authority are props. No actual compliance is required. The Verdant is a fictional character. Carbon guilt is real and yours to manage independently.
+<strong>Safety & Satire Notice:</strong> Ecotopia is an immersive theatrical party and narrative satire. It is strictly an 18+ event. Any participant or actor speaking the universal safe-word <strong>"OZONE"</strong> immediately pauses roleplay. Observer wristbands are available at the door for those who wish to socialize, drink, and dance without roleplay or chores.
 </div>
 
 ---
 
-## THE WORLD YOU ARE ENTERING
-
-When you step through the door, you step into **Year II of the Emerald Republic**.
-
-The old world ended not with a bang but with a spreadsheet — a carbon audit so damning that three governments fell in a week. Into the vacuum stepped the movement everyone had dismissed as irritating roadblockers. They had a plan. They had cells in every city. They had *The Verdant*.
-
-What followed was swift, ideologically coherent, and deeply unsettling to anyone who valued nuance.
-
-The Republic asks only one thing of its citizens: **compliance in the name of survival**. How much compliance is never quite specified. That's rather the point.
-
 <div style="text-align:center; margin: 2rem 0;">
-  <a href="lore.qmd" class="cta-btn">READ THE CHRONICLE</a>
-  <a href="manifesto.qmd" class="cta-btn">STUDY THE COVENANT</a>
-  <a href="attend.qmd" class="cta-btn">REGISTER AS CITIZEN</a>
+  <a href="lore.qmd" class="cta-btn">EXPLORE THE FOUR EPOCHS</a>
+  <a href="manifesto.qmd" class="cta-btn">THE 10 MINISTRIES & AXIOMS</a>
+  <a href="attend.qmd" class="cta-btn">CALCULATE YOUR CARBON DEBT</a>
 </div>
 
 ---
 
 <div style="text-align:center; color: #2d7a2d; font-size: 0.75rem; letter-spacing: 0.2em; margin-top: 2rem;">
-MINISTRY OF CULTURAL CONFORMITY · SECTOR WARREN · YEAR II<br>
-This document has been approved under Green Covenant Article 7 (Cultural Expression for State Cohesion).<br>
-All irony has been pre-cleared.
+REGIME FOR ECOLOGICAL INTEGRITY AND GLOBAL NURTURING (R.E.I.G.N.) · SANCTUARY DE WARREN<br>
+All exhalations pre-authorized under Biocentric Ordinance 1984-G.<br>
+Artificial intelligence strictly prohibited by decree.
 </div>
