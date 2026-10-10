@@ -1,33 +1,55 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "index.qmd"
+    - "lore.qmd"
+    - "manifesto.qmd"
+    - "attend.qmd"
+    - "Jack_Website_Feedback.qmd"
+    - "quest_cards_and_facilitator_pack.qmd"
+    - "broadcast_scripts_and_liturgy.qmd"
+    - "lore_and_narrative_bible.qmd"
+    - "game_design_and_activities.qmd"
+    - "website_action_plan.qmd"
+    - "review.qmd"
 
 website:
-  title: "THE EMERALD REPUBLIC"
-  description: "Official Citizen Celebration — Second Year of the Green Covenant"
+  title: "ECOTOPIA"
+  description: "The Last Sustainable Utopia — Sanctuary De Warren, Nov 28, 2026"
   favicon: "assets/favicon.ico"
   navbar:
     background: "#0a140a"
     foreground: "#4aad4a"
     logo: "assets/logo.svg"
-    title: "THE EMERALD REPUBLIC"
+    title: "ECOTOPIA"
     left:
       - text: "HOME"
         href: index.qmd
-      - text: "THE CHRONICLE"
+      - text: "THE 4 EPOCHS"
         href: lore.qmd
-      - text: "THE COVENANT"
+      - text: "10 MINISTRIES"
         href: manifesto.qmd
-      - text: "CITIZEN REGISTRATION"
+      - text: "ADMISSION & QUIZ"
         href: attend.qmd
+      - text: "FEEDBACK FOR JACK"
+        href: Jack_Website_Feedback.qmd
+      - text: "QUESTS & PACK"
+        href: quest_cards_and_facilitator_pack.qmd
+      - text: "AUDIO & SCRIPTS"
+        href: broadcast_scripts_and_liturgy.qmd
+      - text: "LORE BIBLE"
+        href: lore_and_narrative_bible.qmd
+      - text: "GAME DESIGN"
+        href: game_design_and_activities.qmd
   page-footer:
     background: "#0a140a"
     foreground: "#2d7a2d"
     center: |
-      "THE EARTH ENDURES. THE REPUBLIC ENDURES." — The Verdant, Year Zero Address
+      "BORN INTO DEBT. REPAID IN DEVOTION." — The Guardian Stag, Sanctuary De Warren
   open-graph:
-    title: "THE EMERALD REPUBLIC"
-    description: "You are cordially summoned to celebrate the Second Year of the Green Covenant."
+    title: "ECOTOPIA: THE LAST SUSTAINABLE UTOPIA"
+    description: "You traded your chaos for our care. Do not ask for your chains back."
 
 format:
   html:

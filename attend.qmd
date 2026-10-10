@@ -1,197 +1,183 @@
 ---
-title: "Citizen Registration"
-subtitle: "Evening Leisure Permit Application — Sector Warren, Year II"
+title: "Citizen Admission & The Carbon Confession"
+subtitle: "The Threshold of Admission — Sanctuary De Warren, Year Zero"
 ---
 
 <div class="scanlines"></div>
 
 <div class="ticker-wrap">
   <span class="ticker">
-    ◆ LEISURE PERMIT REQUIRED ◆ SYNTHETIC FABRICS PROHIBITED ◆ CARBON CONFESSION BOOTH AVAILABLE ALL EVENING ◆ RATION TOKEN ECONOMY IN OPERATION ◆ SECTOR WARDEN ON PREMISES — IDENTIFY AND AVOID OR ENGAGE AT YOUR PERIL ◆
+    ◆ YOU WERE BORN INTO DEBT ◆ THE BIOSPHERE REMEMBERS EVERY LITRE ◆ AUTHENTICATE YOUR EXISTENCE ◆ CARRY YOUR PASSPORT AT ALL TIMES ◆
   </span>
 </div>
 
----
-
-## Your Evening Leisure Permit
-
-Print this, or present it on a screen. The permit is symbolic. The party is real.
-
-<div class="permit-card">
-  <div class="permit-header">
-    Emerald Republic — Ministry of Cultural Conformity<br>
-    Evening Leisure Permit · Sector Warren
-  </div>
-  <div class="permit-field">
-    <span class="label">Event</span>
-    <span class="value">Second Year Citizen Celebration</span>
-  </div>
-  <div class="permit-field">
-    <span class="label">Location</span>
-    <span class="value">The Warren</span>
-  </div>
-  <div class="permit-field">
-    <span class="label">Permit Duration</span>
-    <span class="value">Evening until late</span>
-  </div>
-  <div class="permit-field">
-    <span class="label">Carbon Allowance</span>
-    <span class="value">Special Event Exemption 4-B</span>
-  </div>
-  <div class="permit-field">
-    <span class="label">Synthetic Fabrics</span>
-    <span class="value">PROHIBITED</span>
-  </div>
-  <div class="permit-field">
-    <span class="label">Status</span>
-    <span class="value" style="color:#6dde6d;">APPROVED — PROCEED</span>
-  </div>
-  <div style="margin-top: 1rem; font-size: 0.75rem; color: #4a6a4a; border-top: 1px dashed #1a3a1a; padding-top: 0.7rem; letter-spacing: 0.1em;">
-    Bearer is authorised to engage in approved festivity, consume allocated rations, and question the Republic's methods in a theatrical context only. The Republic thanks you for your compliance.
-  </div>
+<div class="propaganda" data-label="The Threshold of Admission">
+<em>"Before you may confess, you must exist in the ledger. You were born into debt. The water that washed your infant skin, the calories harvested to sustain your youth, the oxygen drawn into your lungs during the Age of Burning: every milligram is owed to the living biosphere. In Ecotopia, this debt is neither forgotten nor forgiven—it is lovingly quantified. Complete the Five Confessions to receive your initial balance and ministry draft."</em>
 </div>
 
 ---
 
-## Dress Code — Approved Citizen Aesthetic
+## The Five Liturgical Confessions
 
-Citizens are encouraged to dress as befits a Republic that abolished fast fashion. Earth tones. Natural fibres. Dystopian utility chic. Propaganda agency swagger.
+<div style="background: #0a180a; border: 1px solid #1a5c1a; padding: 1.5rem; border-radius: 6px; margin: 1.5rem 0;">
 
-<div class="dress-grid">
+  <form id="confession-form">
 
-<div class="dress-item">
-  <span class="icon">🌿</span>
-  <div class="title">Green Order</div>
-  <div class="desc">Olive, khaki, forest green. Military adjacency. The Covenant on your sleeve, literally or figuratively.</div>
+    <!-- 1. Flights -->
+    <div style="margin-bottom: 1.2rem;">
+      <label style="color: #6dde6d; font-weight: bold; display: block; margin-bottom: 0.3rem;">
+        1. Recreational Kerosene Combustion (Flights Taken in Past Year)
+      </label>
+      <p style="font-size: 0.8rem; color: #8cb88c; margin-top: 0;">Every altitude kilometer burned ozone belonging to unborn generations. Return trips double your debt.</p>
+      <select id="q-flights" style="width: 100%; padding: 0.5rem; background: #050d05; color: #a0cca0; border: 1px solid #2d7a2d; font-family: monospace;">
+        <option value="0">f0: Zero. My feet have never left the living soil. (+0 Debt)</option>
+        <option value="25">f1: 1 to 2: A temporary lapse of atmospheric discipline. (-25 Debt)</option>
+        <option value="55">f2: 3 to 5: Habitual leisure transit. (-55 Debt)</option>
+        <option value="90">f3: 6 to 10: Chronic airborne defiance. (-90 Debt)</option>
+        <option value="140">f4: More than 10: I treated the stratosphere as personal exhaust. (-140 Debt)</option>
+      </select>
+    </div>
+
+    <!-- 2. Car -->
+    <div style="margin-bottom: 1.2rem;">
+      <label style="color: #6dde6d; font-weight: bold; display: block; margin-bottom: 0.3rem;">
+        2. Complicity with the Internal Combustion Engine
+      </label>
+      <p style="font-size: 0.8rem; color: #8cb88c; margin-top: 0;">The bitumen martyrs tore their skin on the highway to stop this madness. Where were you?</p>
+      <select id="q-car" style="width: 100%; padding: 0.5rem; background: #050d05; color: #a0cca0; border: 1px solid #2d7a2d; font-family: monospace;">
+        <option value="0">c0: I am unmotorized. My transit is biological. (+0 Debt)</option>
+        <option value="20">c1: I shared or borrowed an engine when biological will failed. (-20 Debt)</option>
+        <option value="50">c2: I owned a private machine of kinetic vanity. (-50 Debt)</option>
+        <option value="90">c3: I maintained multiple engines while the ice shelves cracked. (-90 Debt)</option>
+      </select>
+    </div>
+
+    <!-- 3. Meat -->
+    <div style="margin-bottom: 1.2rem;">
+      <label style="color: #6dde6d; font-weight: bold; display: block; margin-bottom: 0.3rem;">
+        3. Flesh Extraction & Caloric Carnivory
+      </label>
+      <p style="font-size: 0.8rem; color: #8cb88c; margin-top: 0;">Miniplenty provides algae and pulse paste. How deeply were you attached to animal suffering?</p>
+      <select id="q-meat" style="width: 100%; padding: 0.5rem; background: #050d05; color: #a0cca0; border: 1px solid #2d7a2d; font-family: monospace;">
+        <option value="0">m0: Purely botanical. My teeth are free of blood. (+0 Debt)</option>
+        <option value="20">m1: Occasional extraction (A few times a month). (-20 Debt)</option>
+        <option value="45">m2: Weekly animal harvest (A few times a week). (-45 Debt)</option>
+        <option value="75">m3: Daily flesh ration (Every day). (-75 Debt)</option>
+        <option value="110">m4: Total caloric carnivory (At every meal). (-110 Debt)</option>
+      </select>
+    </div>
+
+    <!-- 4. AI -->
+    <div style="margin-bottom: 1.2rem;">
+      <label style="color: #6dde6d; font-weight: bold; display: block; margin-bottom: 0.3rem;">
+        4. Inquiries Directed to the Silicon Mind (Daily AI Compute)
+      </label>
+      <p style="font-size: 0.8rem; color: #8cb88c; margin-top: 0;">Hyperscale compute drained the rivers before the reactors melted. Every prompt boiled freshwater.</p>
+      <select id="q-ai" style="width: 100%; padding: 0.5rem; background: #050d05; color: #a0cca0; border: 1px solid #2d7a2d; font-family: monospace;">
+        <option value="0">a0: Zero. My thoughts are manual, slow, and human. (+0 Debt)</option>
+        <option value="20">a1: 1 to 5 prompts: A modest theft of river water (a glass per day). (-20 Debt)</option>
+        <option value="45">a2: 6 to 20 prompts: A commercial drain on the watershed (a bucket). (-45 Debt)</option>
+        <option value="80">a3: >20 prompts: Continuous algorithmic reliance (a full bath). (-80 Debt)</option>
+        <option value="120">a4: A synthetic intelligence is calculating this confession right now! (-120 Debt)</option>
+      </select>
+    </div>
+
+    <!-- 5. Devices -->
+    <div style="margin-bottom: 1.5rem;">
+      <label style="color: #6dde6d; font-weight: bold; display: block; margin-bottom: 0.3rem;">
+        5. Parasitic Lithium & Listening Hardware
+      </label>
+      <p style="font-size: 0.8rem; color: #8cb88c; margin-top: 0;">Every battery required brine evaporation; every sensor transmitted your compliance to corporate servers.</p>
+      <select id="q-devices" style="width: 100%; padding: 0.5rem; background: #050d05; color: #a0cca0; border: 1px solid #2d7a2d; font-family: monospace;">
+        <option value="10">d0: 1 or 2: Ascetic survival essentials. (-10 Debt)</option>
+        <option value="30">d1: 3 to 5: Standard consumer complicity. (-30 Debt)</option>
+        <option value="55">d2: 6 to 10: Heavy hardware entanglement. (-55 Debt)</option>
+        <option value="90">d3: More than I can count: Surrounded by glowing screens. (-90 Debt)</option>
+      </select>
+    </div>
+
+    <!-- 6. Sacramental Surrender -->
+    <div style="margin-bottom: 1.5rem; border-top: 1px dashed #2d7a2d; padding-top: 1rem;">
+      <label style="color: #c8a000; font-weight: bold; display: block; margin-bottom: 0.3rem;">
+        The Sacramental Surrender: What will you surrender first for the common good?
+      </label>
+      <select id="q-surrender" style="width: 100%; padding: 0.5rem; background: #050d05; color: #d4b040; border: 1px solid #8c7010; font-family: monospace;">
+        <option value="surname">My Surname (Name stricken with chisel marker; designated Citizen [Name]-482)</option>
+        <option value="opinions">My Opinions (Passport stamped HERESY RISK; diverted to interrogation)</option>
+        <option value="weekends">My Weekends & Leisure (Conscripted into mandatory scullery dishwashing)</option>
+        <option value="hotwater">Hot Water & Physical Comfort (Served only chilled biological tea at the bar)</option>
+        <option value="bedtime">My Bedtime & Sleep (Conscripted into the 01:00 stationary bike kinetic shift)</option>
+        <option value="secrets">My Secrets & Privacy (Issued ACTIVE SURVEILLANCE card; monitored by cameras)</option>
+      </select>
+    </div>
+
+    <button type="button" onclick="calculateDebt()" style="background: #1a5c1a; color: #fff; border: 1px solid #4aad4a; padding: 0.75rem 1.5rem; font-family: 'Special Elite', monospace; font-size: 1rem; cursor: pointer; letter-spacing: 0.1em; width: 100%;">
+      CALCULATE STARTING DEBT & GENERATE PASSPORT
+    </button>
+  </form>
+
 </div>
 
-<div class="dress-item">
-  <span class="icon">📋</span>
-  <div class="title">Bureau Official</div>
-  <div class="desc">Grey suits, lanyards, clipboards. "I'm from the Ministry of Cultural Conformity and I need to see your permit."</div>
+<!-- Passport Result Display -->
+<div id="passport-preview" style="display: none; margin-top: 2rem;">
+  <div class="permit-card" style="border: 2px solid #4aad4a; background: #071407;">
+    <div class="permit-header" style="color: #6dde6d;">
+      R.E.I.G.N. CITIZEN PASSPORT BOOKLET<br>
+      Sanctuary De Warren · Intake Accounting
+    </div>
+    <div class="permit-field">
+      <span class="label">Initial Biological Debt</span>
+      <span class="value" style="color: #ff6666;">-100 Carbon Credits (Gestational Base)</span>
+    </div>
+    <div class="permit-field">
+      <span class="label">Confession Score Penalty</span>
+      <span class="value" id="res-penalty" style="color: #ff8888;">-185 Credits</span>
+    </div>
+    <div class="permit-field" style="border-top: 1px solid #2d7a2d; padding-top: 0.5rem; margin-top: 0.5rem;">
+      <span class="label" style="font-weight: bold; color: #6dde6d;">STARTING DEBT BALANCE</span>
+      <span class="value" id="res-total" style="font-size: 1.2rem; font-weight: bold; color: #ff4444;">-285 Carbon Credits</span>
+    </div>
+    <div class="permit-field">
+      <span class="label">Sacramental Surrender</span>
+      <span class="value" id="res-surrender" style="color: #c8a000;">My Surname</span>
+    </div>
+    <div class="permit-field">
+      <span class="label">Status</span>
+      <span class="value" style="color: #e0a020;">INDEBTED CITIZEN (REPORT TO GARAGE FOR REHABILITATION)</span>
+    </div>
+    <div style="margin-top: 1rem; font-size: 0.8rem; color: #8cb88c; border-top: 1px dashed #1a3a1a; padding-top: 0.7rem; font-style: italic;">
+      Present this balance at the Garage Intake Checkpoint at De Warren on November 28. Work down your debt through ministry quests and silly carbon-reduction tasks to unlock full citizenship and the VIP Scotch Library.
+    </div>
+  </div>
 </div>
 
-<div class="dress-item">
-  <span class="icon">⛏</span>
-  <div class="title">Rewilding Worker</div>
-  <div class="desc">Work boots, soil-stained canvas, high-vis with the Republic seal. Your three months are showing.</div>
-</div>
-
-<div class="dress-item">
-  <span class="icon">📡</span>
-  <div class="title">GreenCast Correspondent</div>
-  <div class="desc">Microphone (prop), green lanyard, the specific expression of someone who has pre-cleared their questions.</div>
-</div>
-
-<div class="dress-item">
-  <span class="icon">🕯</span>
-  <div class="title">Resistance (Undercover)</div>
-  <div class="desc">You look like a citizen. You have a pre-Republic road atlas hidden somewhere. You trust no one. Especially not that Sector Warden.</div>
-</div>
-
-<div class="dress-item">
-  <span class="icon">⚖</span>
-  <div class="title">Tribunal Official</div>
-  <div class="desc">Dark robes, a gavel (prop), an expression of sincere ecological concern and zero flexibility.</div>
-</div>
-
-</div>
-
-<div class="warning-box">
-Synthetic fabrics are theatrically prohibited. The Republic does not actually have jurisdiction over your wardrobe. Wear what you want. The propaganda is more fun if you play along.
-</div>
+<script>
+function calculateDebt() {
+  const f = parseInt(document.getElementById('q-flights').value);
+  const c = parseInt(document.getElementById('q-car').value);
+  const m = parseInt(document.getElementById('q-meat').value);
+  const a = parseInt(document.getElementById('q-ai').value);
+  const d = parseInt(document.getElementById('q-devices').value);
+  const surrenderText = document.getElementById('q-surrender').options[document.getElementById('q-surrender').selectedIndex].text;
+  
+  const baseDebt = 100;
+  const penalty = f + c + m + a + d;
+  const total = -(baseDebt + penalty);
+  
+  document.getElementById('res-penalty').innerText = `-${penalty} Carbon Credits`;
+  document.getElementById('res-total').innerText = `${total} Carbon Credits`;
+  document.getElementById('res-surrender').innerText = surrenderText.split('(')[0].trim();
+  
+  document.getElementById('passport-preview').style.display = 'block';
+  document.getElementById('passport-preview').scrollIntoView({ behavior: 'smooth' });
+}
+</script>
 
 ---
 
-## The Evening Programme
+## Dress Code & Sanctuary Safety
 
-Times are approximate. The Republic values punctuality but the bar does not.
-
-| Time | Event | Location |
-|------|-------|----------|
-| Arrival | Citizen Processing — show your Permit | Main Entrance |
-| Opening | Second Year Address (theatrical — audience participation) | Main Hall |
-| Ongoing | The Museum of Necessary Unpleasantness | Side Gallery |
-| Ongoing | Carbon Confession Booth | Dark Corner |
-| Ongoing | Tribunal Re-enactment | Stage |
-| Ongoing | GreenCast Live Broadcast (parody) | Screen Area |
-| Ongoing | Approved Music | Dance Floor |
-| Ongoing | Ration Token Economy (drinks) | The Bar |
-| Ongoing | Spot the Real Sector Warden | Everywhere |
-| Late | Underground Broadcasting — forbidden pre-Republic music | TBA |
-| Very Late | Collective departure in approved low-carbon transport | Presumably |
-
----
-
-## Ration Token Economy
-
-The bar operates on **ration tokens** in true Republic style. Tokens are available at the Citizen Processing desk. One token = one drink. Additional tokens may be obtained by:
-
-- Successfully completing a Tribunal Re-enactment
-- Identifying contraband in the Black Market Corner
-- Denouncing a fellow citizen to a Bureau Official (theatrical only — no actual consequences unless they're your mate and the bit goes on too long)
-- Correctly reciting a Covenant clause from memory
-- Providing an explanation for your pre-Republic carbon crimes that satisfies the Confession Booth operative
-
----
-
-## The Tribunal — Participation Guide
-
-The Extinction Tribunal will convene at intervals throughout the evening. Citizens may be called as defendant or prosecutor. The charges are fictional. The dramatic stakes are real.
-
-**Sample Charges:**
-- "The defendant owned a Land Rover and used it for the school run"
-- "The defendant flew to Ibiza four times in a single year and called it 'necessary'"
-- "The defendant lobbied against cycle lane expansion in their local council"
-- "The defendant kept using plastic bags even after they cost five pence"
-
-**Defence options:**
-- Ignorance (weak, but traditional)
-- Necessary economic activity (the Republic has heard this one)
-- Personal carbon offsets (the Tribunal will laugh)
-- Throwing a co-conspirator under the rewilding tractor
-
----
-
-## The Carbon Confession Booth
-
-Unburden yourself. Tell the Booth Operative your greatest pre-Republic ecological sin. They will assess your carbon guilt on a scale of 1 (left the tap running) to 10 (owned an SUV with a personalised plate).
-
-High scores receive a symbolic sentence — typically some form of theatrical penance performed in front of whoever is nearby.
-
-All confessions are treated with the full gravity they deserve.
-
----
-
-## Getting There — Citizens Are Reminded
-
-The Emerald Republic has abolished private vehicles. We note that it has not actually done this, as the Republic is fictional. Nevertheless, the organisers prefer you:
-
-- Walk / cycle / take the train / share a vehicle
-- Not show up in a diesel SUV and expect ideological immunity because you're wearing the right costume
-
-This is partly carbon guilt and partly just parking.
-
----
-
-<div class="propaganda" data-label="Final Communiqué from the Ministry">
-
-Tonight is satire. Tonight is a party. Tonight we play at the world that almost was — or might yet be — and we laugh at it and we dance in it and we go home at the end.
-
-The point of dystopian fiction is to look at where the logic leads. The eco-fascism thesis starts with *"what if they were actually right about the emergency?"* and then asks *"and what if that made them stop caring about how they fixed it?"* That's the bit. That's the horror. Not that they were wrong about the planet. That they might have been right, and done this anyway.
-
-Think about it. Or don't. There's a Confession Booth and a Dance Floor and it's Year II and the earth is, somehow, still here.
-
-**THE EARTH ENDURES. THE REPUBLIC ENDURES. YOU ARE PERMITTED TO ENJOY THIS.**
-
-</div>
-
-<div style="text-align:center; margin: 2rem 0;">
-  <a href="index.qmd" class="cta-btn">RETURN TO THE INVITATION</a>
-  <a href="lore.qmd" class="cta-btn">READ THE CHRONICLE</a>
-</div>
-
-<div style="text-align:center; color: #2d7a2d; font-size: 0.75rem; letter-spacing: 0.2em; margin-top: 2rem;">
-MINISTRY OF CULTURAL CONFORMITY · SECTOR WARREN · YEAR II<br>
-Questions? Report them to a Bureau Official. They will file them appropriately.
-</div>
+* **Approved Aesthetic:** Dystopian utility chic, rewilding workwear, earth tones (moss green, soot black, soil brown), and natural biological fibers. Synthetic fast-fashion fabrics are strictly mocked.
+* **The Universal Safe-Word ("OZONE"):** Speaking **"OZONE"** immediately pauses all roleplay. All wardens, performers, and participants must drop character, step back, and assist you.
+* **Observer Wristbands:** Guests who wish to enjoy the music, cocktails, and dancing without engaging in interrogation, carbon audits, or chores may request an **Observer Wristband** at the door.
+* **The Sanctuary Safe Zone:** The library on the second floor is designated as a permanent, non-theatrical Safe Zone.

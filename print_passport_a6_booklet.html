@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecotopia - Citizen Passport Booklet (Black & White A4 Print)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  /* --- Reset & Page Setup --- */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #333333;
+    color: #000000;
+    font-family: 'Courier Prime', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    line-height: 1.2;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* --- On-Screen Toolbar (Hidden in Print) --- */
+  .toolbar {
+    background: #111111;
+    color: #ffffff;
+    border: 2px solid #555555;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    max-width: 1050px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+
+  .toolbar h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.15rem;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-print {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 8px 18px;
+    font-family: 'Special Elite', cursive;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.15s;
+  }
+  .btn-print:hover {
+    background: #e0e0e0;
+    transform: translateY(-1px);
+  }
+
+  .assembly-banner {
+    background: #222222;
+    border: 1px dashed #777777;
+    color: #dddddd;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  /* --- A4 Paper Container --- */
+  .sheet-container {
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sheet-label {
+    font-family: 'Special Elite', cursive;
+    color: #ffffff;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  /* A4 Dimensions: 210mm x 297mm */
+  .a4-page {
+    width: 210mm;
+    height: 297mm;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    position: relative;
+    padding: 4mm 4mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  /* Horizontal Cut Line across center (148.5mm) - Clean Dashed Line, No Text */
+  .cut-guide-horizontal {
+    position: absolute;
+    top: 148.5mm;
+    left: 0;
+    right: 0;
+    height: 0;
+    border-top: 1px dashed #777777;
+    z-index: 100;
+    pointer-events: none;
+  }
+
+  /* Vertical spine fold ticks and line */
+  .vertical-fold-guide {
+    position: absolute;
+    left: 105mm;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    border-left: 1px dotted #888888;
+    z-index: 90;
+    pointer-events: none;
+  }
+
+  /* A5 Half Container: 202mm wide x 140.5mm high */
+  .a5-half {
+    width: 100%;
+    height: 140.5mm;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  /* Individual A6 Page Container: 99mm wide x 140.5mm high */
+  .a6-page {
+    width: 99mm;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Page Frame: fills entire A6 space with thick totalitarian border */
+  .page-frame {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000000;
+    padding: 2.5mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background: #ffffff;
+  }
+
+  .page-frame::after {
+    content: "";
+    position: absolute;
+    inset: 1.2mm;
+    border: 0.75px solid #000000;
+    pointer-events: none;
+  }
+
+  /* Corner Tick Marks */
+  .corner-tl { position: absolute; top: 0.5mm; left: 0.5mm; width: 3mm; height: 3mm; border-top: 1.5px solid #000; border-left: 1.5px solid #000; }
+  .corner-tr { position: absolute; top: 0.5mm; right: 0.5mm; width: 3mm; height: 3mm; border-top: 1.5px solid #000; border-right: 1.5px solid #000; }
+  .corner-bl { position: absolute; bottom: 0.5mm; left: 0.5mm; width: 3mm; height: 3mm; border-bottom: 1.5px solid #000; border-left: 1.5px solid #000; }
+  .corner-br { position: absolute; bottom: 0.5mm; right: 0.5mm; width: 3mm; height: 3mm; border-bottom: 1.5px solid #000; border-right: 1.5px solid #000; }
+
+  .page-number {
+    position: absolute;
+    bottom: 1mm;
+    right: 2mm;
+    font-size: 7pt;
+    font-family: 'Special Elite', cursive;
+    font-weight: bold;
+    color: #000000;
+    z-index: 10;
+  }
+
+  /* Black Header Bar with White Inverted Text */
+  .black-bar-header {
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.2mm 1mm;
+    font-family: 'Special Elite', cursive;
+    font-size: 7.5pt;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  /* Subhead under bar */
+  .section-subhead {
+    font-size: 5.5pt;
+    text-align: center;
+    color: #222222;
+    margin: 1mm 0 1.5mm 0;
+    line-height: 1.1;
+  }
+
+  /* ===================================================
+     PAGE-SPECIFIC STYLING (B&W BRUTALIST AESTHETIC)
+     =================================================== */
+
+  /* --- PAGE 1: FRONT COVER --- */
+  .p1-cover {
+    background: #ffffff;
+    text-align: center;
+    padding: 3mm 2mm;
+  }
+  .cover-header-block {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 2mm;
+    margin-bottom: 2mm;
+  }
+  .cover-title {
+    font-family: 'Cinzel', serif;
+    font-size: 11.5pt;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: #000000;
+    line-height: 1.1;
+  }
+  .cover-sub {
+    font-family: 'Special Elite', cursive;
+    font-size: 6.5pt;
+    letter-spacing: 0.5px;
+    color: #000000;
+    margin-top: 1mm;
+  }
+  .cover-crest {
+    width: 38mm;
+    height: 38mm;
+    margin: 2mm auto;
+    display: block;
+  }
+  .cover-motto {
+    font-family: 'Special Elite', cursive;
+    font-size: 8pt;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border-top: 1.5px solid #000000;
+    border-bottom: 1.5px solid #000000;
+    padding: 1.5mm 0;
+    margin: 2mm 0;
+  }
+  .cover-serial-box {
+    border: 1.5px solid #000000;
+    padding: 1.5mm;
+    background: #f0f0f0;
+    margin-top: auto;
+    font-family: 'Courier Prime', monospace;
+    font-size: 7pt;
+    font-weight: bold;
+  }
+
+  /* --- PAGE 2: IDENTITY & STARTING DEBT --- */
+  .bio-grid {
+    display: flex;
+    gap: 2mm;
+    margin-bottom: 2mm;
+  }
+  .photo-box {
+    width: 25mm;
+    height: 30mm;
+    border: 1.5px dashed #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 5pt;
+    text-align: center;
+    padding: 1mm;
+    line-height: 1.1;
+    background: #fafafa;
+    flex-shrink: 0;
+  }
+  .bio-fields {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 6.5pt;
+  }
+  .bio-row {
+    border-bottom: 1px dotted #000000;
+    padding-bottom: 0.5mm;
+    margin-bottom: 1mm;
+  }
+  .modifier-panel {
+    border: 1.5px solid #000000;
+    padding: 1.5mm;
+    font-size: 6pt;
+    background: #f7f7f7;
+    margin-bottom: 2mm;
+    line-height: 1.25;
+  }
+  .debt-target-box {
+    border: 2.5px solid #000000;
+    padding: 2.5mm;
+    text-align: center;
+    background: #ffffff;
+    margin-top: auto;
+  }
+  .debt-target-box .debt-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 7pt;
+    font-weight: bold;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 0.5mm;
+    margin-bottom: 1mm;
+  }
+  .debt-target-box .debt-large {
+    font-family: 'Special Elite', cursive;
+    font-size: 16pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 1mm 0;
+  }
+
+  /* --- PAGE 3: MINISTRY SPONSORSHIP VISA --- */
+  .visa-seal-area {
+    width: 44mm;
+    height: 44mm;
+    border: 2px dashed #000000;
+    border-radius: 50%;
+    margin: 2mm auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3mm;
+    background: #f9f9f9;
+  }
+  .visa-seal-area .seal-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 6.5pt;
+    font-weight: bold;
+    line-height: 1.1;
+  }
+  .visa-seal-area .seal-sub {
+    font-size: 5pt;
+    margin-top: 1mm;
+  }
+  .visa-contract-text {
+    font-size: 6pt;
+    text-align: justify;
+    line-height: 1.2;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding: 1.5mm 0;
+    margin: 2mm 0;
+  }
+  .visa-sign-grid {
+    display: flex;
+    justify-content: space-between;
+    font-size: 6pt;
+    margin-top: auto;
+    border-top: 1px solid #000000;
+    padding-top: 1mm;
+  }
+
+  /* --- PAGE 4: LABOR & CHORE LOG (8 SPACIOUS 3D-STAMP TARGETS) --- */
+  .shift-grid-full {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1.8mm;
+    flex-grow: 1;
+    margin: 1.5mm 0;
+  }
+  .shift-cell-bw {
+    border: 1.2px solid #000000;
+    padding: 1.2mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+  }
+  .shift-cell-bw .val-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.75px solid #000000;
+    padding-bottom: 0.5mm;
+    font-family: 'Special Elite', cursive;
+    font-size: 5.5pt;
+    font-weight: bold;
+  }
+  .shift-cell-bw .stamp-landing-target {
+    border: 1px dashed #777777;
+    height: 18mm;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5pt;
+    color: #999999;
+    background: #fafafa;
+    margin-top: 1mm;
+  }
+
+  /* --- PAGE 5: RUNNING TALLY & VIP LIBRARY --- */
+  .tally-table-bw {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 6.5pt;
+    margin-bottom: 2mm;
+  }
+  .tally-table-bw td {
+    border-bottom: 1px dotted #000000;
+    padding: 1.2mm 0;
+  }
+  .citizen-threshold-box {
+    border: 1.5px solid #000000;
+    background: #f0f0f0;
+    padding: 1.5mm 2mm;
+    margin-bottom: 2mm;
+    font-size: 6pt;
+    line-height: 1.2;
+  }
+  .vip-library-pass {
+    border: 2.5px solid #000000;
+    padding: 2mm;
+    text-align: center;
+    margin-top: auto;
+    background: #ffffff;
+  }
+  .vip-title-bar {
+    font-family: 'Cinzel', serif;
+    font-size: 7pt;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    background: #000000;
+    color: #ffffff;
+    padding: 1mm 0;
+    margin-bottom: 1.5mm;
+  }
+  .vip-stamp-target {
+    border: 2px dashed #000000;
+    height: 18mm;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Special Elite', cursive;
+    font-size: 6.5pt;
+    font-weight: bold;
+    background: #fafafa;
+  }
+
+  /* --- PAGE 6: 10 CONCESSIONS AUDIT (18mm 3D-STAMP TARGETS) --- */
+  .pantheon-grid-full {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 1.5mm;
+    flex-grow: 1;
+    margin: 1.5mm 0;
+  }
+  .pantheon-cell-bw {
+    border: 1.2px solid #000000;
+    padding: 1mm 1.5mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffffff;
+  }
+  .pantheon-cell-bw .info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 25mm;
+  }
+  .pantheon-cell-bw .m-name {
+    font-family: 'Special Elite', cursive;
+    font-size: 5.5pt;
+    font-weight: bold;
+    line-height: 1.1;
+  }
+  .pantheon-cell-bw .m-task {
+    font-size: 4.5pt;
+    color: #333333;
+  }
+  .pantheon-cell-bw .stamp-circle {
+    width: 18mm;
+    height: 18mm;
+    border-radius: 50%;
+    border: 1.5px dashed #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5pt;
+    color: #888888;
+    flex-shrink: 0;
+    background: #fafafa;
+  }
+
+  /* --- PAGE 7: PERFORATED ANCESTRAL DEBT CERTIFICATE (CLIMAX PAGE) --- */
+  .p7-climax-bw {
+    border-left: 2.5px dashed #000000 !important;
+  }
+  .tear-notch-header {
+    background: #000000;
+    color: #ffffff;
+    padding: 1.2mm 1mm;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    font-size: 6pt;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+  .climax-seal-bw {
+    width: 30mm;
+    height: 30mm;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    margin: 2.5mm auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    font-size: 6pt;
+    font-weight: bold;
+    padding: 2mm;
+  }
+  .climax-notice-bw {
+    font-size: 5.5pt;
+    line-height: 1.2;
+    text-align: justify;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    padding: 1.5mm 0;
+    margin: 1.5mm 0;
+  }
+  .resistance-leak-bw {
+    font-family: 'Courier Prime', monospace;
+    font-size: 5pt;
+    border: 1px dotted #000000;
+    padding: 1mm;
+    text-align: center;
+    background: #f5f5f5;
+    margin-top: auto;
+  }
+
+  /* --- PAGE 8: BACK COVER (THE AXIOMS & OZONE) --- */
+  .p8-back-bw {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .euphemism-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 5.5pt;
+    margin: 1mm 0 2mm 0;
+  }
+  .euphemism-table th {
+    border-bottom: 1.5px solid #000000;
+    text-align: left;
+    padding: 0.5mm 0;
+    font-family: 'Special Elite', cursive;
+  }
+  .euphemism-table td {
+    border-bottom: 0.5px dotted #666666;
+    padding: 0.8mm 0;
+  }
+  .ozone-emergency-block {
+    border: 2.5px solid #000000;
+    background: #000000;
+    color: #ffffff;
+    padding: 1.8mm;
+    text-align: center;
+    margin: 1.5mm 0;
+  }
+  .ozone-emergency-block .title {
+    font-family: 'Special Elite', cursive;
+    font-size: 8.5pt;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  .ozone-emergency-block .desc {
+    font-size: 5pt;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-top: 0.5mm;
+  }
+  .barcode-strip {
+    text-align: center;
+    margin-top: auto;
+    border-top: 1px solid #000000;
+    padding-top: 1mm;
+  }
+  .barcode-chars {
+    font-family: monospace;
+    font-size: 14pt;
+    letter-spacing: 3.5px;
+    line-height: 0.8;
+  }
+
+  /* --- PRINT MEDIA RULES (FULL BLEED B&W) --- */
+  @media print {
+    body {
+      background: none !important;
+      padding: 0 !important;
+    }
+    .toolbar, .sheet-label {
+      display: none !important;
+    }
+    .sheet-container {
+      margin: 0 !important;
+      page-break-after: always;
+    }
+    .a4-page {
+      box-shadow: none !important;
+      width: 210mm !important;
+      height: 297mm !important;
+      margin: 0 !important;
+      padding: 4mm 4mm !important;
+    }
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ON-SCREEN TOOLBAR -->
+<div class="toolbar">
+  <div>
+    <h1>ECOTOPIA PASSPORT — HIGH-CONTRAST B&W A4 PRINT ENGINE</h1>
+    <p style="font-size: 0.8rem; color: #aaaaaa;">Full-Page Quadrant Layout • 100% Black & White Ink • Standard Duplex (Flip on Short Edge)</p>
+  </div>
+  <button class="btn-print" onclick="window.print()">🖨️ PRINT TO A4 / SAVE PDF</button>
+  <div class="assembly-banner">
+    <strong>✂️ Fabrication Instructions:</strong> Print <strong>Double-Sided (Duplex / Flip on Short Edge)</strong> on standard white or cream A4 paper. Cut horizontally across the dashed middle line (✂) at 148.5mm to create two A5 sheets. Stack Sheet 2 inside Sheet 1, fold in half along the vertical spine line (105mm), and insert 2 staples in the spine. <strong>1 printed A4 sheet = 1 complete 8-page A6 passport!</strong>
+  </div>
+</div>
+
+<!-- ========================================================
+     SHEET 1 (SIDE A - FRONT OF A4 SHEET)
+     Top Half: Page 8 (Back Cover) | Page 1 (Front Cover)
+     Bottom Half: Page 6 (Concessions Audit) | Page 3 (Ministry Visa)
+     ======================================================== -->
+<div class="sheet-container">
+  <div class="sheet-label">Side A (Front Side of A4 Paper)</div>
+  <div class="a4-page">
+    <div class="cut-guide-horizontal"></div>
+    <div class="vertical-fold-guide"></div>
+
+    <!-- TOP HALF: OUTER COVER SPREAD (PAGE 8 & PAGE 1) -->
+    <div class="a5-half">
+
+      <!-- PAGE 8: BACK COVER -->
+      <div class="a6-page">
+        <div class="page-frame p8-back-bw">
+          <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+          
+          <div>
+            <div class="black-bar-header">THE AXIOMS OF R.E.I.G.N.</div>
+            <div class="section-subhead">Official State Euphemisms & Doublethink Lexicon</div>
+
+            <table class="euphemism-table">
+              <tr><th>Old-World Reality</th><th>Approved State Term</th></tr>
+              <tr><td>Starvation</td><td>Biological Purity</td></tr>
+              <tr><td>Rolling Blackouts</td><td>The Restful Dark</td></tr>
+              <tr><td>Urine Metering</td><td>Sacred Fluid Balance</td></tr>
+              <tr><td>Forced Chores</td><td>Joyful Civic Devotion</td></tr>
+              <tr><td>Thought Police</td><td>Eradication of Nostalgia</td></tr>
+              <tr><td>Corpse Liquidation</td><td>Elemental Upcycling</td></tr>
+            </table>
+
+            <div class="ozone-emergency-block">
+              <div class="title">EMERGENCY SAFE-WORD: "OZONE"</div>
+              <div class="desc">Universal safety clause. Speaking "OZONE" immediately halts all gameplay, pauses in-character roleplay, and summons medical/organizer support.</div>
+            </div>
+          </div>
+
+          <div class="barcode-strip">
+            <div class="barcode-chars">||||||||||||||||||||||||||||||||||||||||||</div>
+            <div style="font-size: 5pt; letter-spacing: 1.5px; font-weight: bold; margin-top: 0.5mm;">SANCTUARY DE WARREN • AMSTERDAM 2026</div>
+          </div>
+          <div class="page-number">8</div>
+        </div>
+      </div>
+
+      <!-- PAGE 1: FRONT COVER -->
+      <div class="a6-page">
+        <div class="page-frame p1-cover">
+          <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+          
+          <div class="cover-header-block">
+            <div class="cover-title">REPUBLIC OF ECOTOPIA</div>
+            <div class="cover-sub">CITIZEN IDENTIFICATION PASSPORT</div>
+          </div>
+
+          <!-- HIGH-CONTRAST B&W GEOMETRIC STAG -->
+          <svg class="cover-crest" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="50,4 92,28 92,76 50,96 8,76 8,28" stroke="#000000" stroke-width="2.5" fill="#f4f4f4"/>
+            <polygon points="50,10 86,32 86,72 50,90 14,72 14,32" stroke="#000000" stroke-width="0.75" fill="none"/>
+            <path d="M50 82 L50 44" stroke="#000000" stroke-width="4" stroke-linecap="square"/>
+            <path d="M50 44 L32 22 M32 22 L20 18 M32 22 L28 10" stroke="#000000" stroke-width="2.5" stroke-linecap="square"/>
+            <path d="M50 44 L68 22 M68 22 L80 18 M68 22 L72 10" stroke="#000000" stroke-width="2.5" stroke-linecap="square"/>
+            <circle cx="50" cy="52" r="4.5" fill="#000000"/>
+            <circle cx="43" cy="46" r="2" fill="#000000"/>
+            <circle cx="57" cy="46" r="2" fill="#000000"/>
+          </svg>
+
+          <div class="cover-motto">"BORN INTO DEBT. REPAID IN DEVOTION."</div>
+
+          <div>
+            <div style="font-size: 5.5pt; font-weight: bold; letter-spacing: 0.5px; margin-bottom: 1.5mm;">
+              MINISTRY OF LOVE & INTERNAL REGISTRY<br>SANCTUARY DE WARREN
+            </div>
+            <div class="cover-serial-box">
+              REGISTRATION: CIT-2026-______________
+            </div>
+          </div>
+          <div class="page-number">1</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM HALF: INNER SPREAD (PAGE 6 & PAGE 3) -->
+    <div class="a5-half">
+
+      <!-- PAGE 6: 10 CONCESSIONS AUDIT -->
+      <div class="a6-page">
+        <div class="page-frame">
+          <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+          
+          <div class="black-bar-header">THE TENFOLD HARMONY (VISIT ALL CONCESSIONS)</div>
+          <div class="section-subhead">Obtain official concession verification marks from all 10 ministries</div>
+
+          <div class="pantheon-grid-full">
+            <div class="pantheon-cell-bw">
+              <div class="info"><span class="m-name">MINISERVICE</span><span class="m-task">Scullery Dishwash</span></div>
+              <div class="stamp-circle"></div>
+            </div>
+            <div class="pantheon-cell-bw">
+              <div class="info"><span class="m-name">MINIRENEWAL</span><span class="m-task">Composting Booth</span></div>
+              <div class="stamp-circle"></div>
+            </div>
+            <div class="pantheon-cell-bw">
+              <div class="info"><span class="m-name">MINILIGHT</span><span class="m-task">Grid Bike Dynamo</span></div>
+              <div class="stamp-circle"></div>
+            </div>
+            <div class="pantheon-cell-bw">
+              <div class="info"><span class="m-name">MINIFLOW</span><span class="m-task">Peetopia Fluid Sluice</span></div>
+              <div class="stamp-circle"></div>
+            </div>
+            <div class="pantheon-cell-bw">
+              <div class="info"><span class="m-name">MINIPLENTY</span><span class="m-task">Caloric Rations</span></div>
+              <div class="stamp-circle"></div>
+            </div>
+            <div class="pantheon-cell-bw">
+              <div class="info"><span class="m-name">MINILOVE</span><span class="m-task">Heresy Confession</span></div>
+              <div class="stamp-circle"></div>
+            </div>
+            <div class="pantheon-cell-bw">
+              <div class="info"><span class="m-name">MINIJOY</span><span class="m-task">Morale Wig Arena</span></div>
+              <div class="stamp-circle"></div>
+            </div>
+            <div class="pantheon-cell-bw">
+              <div class="info"><span class="m-name">MINISHELTER</span><span class="m-task">Curfew Grid Gates</span></div>
+              <div class="stamp-circle"></div>
+            </div>
+            <div class="pantheon-cell-bw">
+              <div class="info"><span class="m-name">MINITHRIFT</span><span class="m-task">Contraband Seizure</span></div>
+              <div class="stamp-circle"></div>
+            </div>
+            <div class="pantheon-cell-bw">
+              <div class="info"><span class="m-name">MINIBREATH</span><span class="m-task">Spirometry Offset</span></div>
+              <div class="stamp-circle"></div>
+            </div>
+          </div>
+
+          <div style="font-size: 5pt; text-align: center; font-weight: bold; border-top: 1px solid #000; padding-top: 1mm;">
+            COMPLETION OF ALL 10 CONCESSIONS UNLOCKS THE EXEMPLARY CITIZEN RIBBON
+          </div>
+          <div class="page-number">6</div>
+        </div>
+      </div>
+
+      <!-- PAGE 3: MINISTRY SPONSORSHIP VISA -->
+      <div class="a6-page">
+        <div class="page-frame" style="text-align: center;">
+          <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+          
+          <div>
+            <div class="black-bar-header">STATE SPONSORSHIP & ABSORPTION VISA</div>
+            <div class="section-subhead">Must be endorsed by chartered Minister upon recruitment</div>
+
+            <div class="visa-seal-area">
+              <div class="seal-title">AFFIX 40mm OFFICIAL<br>MINISTRY SEAL HERE</div>
+              <div class="seal-sub">(Authorizes Indenture & Debt Absorption)</div>
+            </div>
+
+            <div class="visa-contract-text">
+              <strong>COVENANT OF INDENTURE:</strong> By order of the Guardian Stag, the sponsoring Ministry assumes collective custody of the bearer's negative carbon debt. The bearer pledges unconditional civic labor to the Ministry's designated game concession.
+            </div>
+          </div>
+
+          <div>
+            <div style="display: flex; justify-content: space-between; font-size: 6.5pt; font-weight: bold; margin-bottom: 1.5mm;">
+              <span>ABSORBED DEBT BALANCE:</span>
+              <span style="font-family:'Special Elite'; font-size: 8pt;">-____________ CC</span>
+            </div>
+            <div class="visa-sign-grid">
+              <span>Minister: _______________________</span>
+              <span>Date: 28-11-2026</span>
+            </div>
+          </div>
+          <div class="page-number">3</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========================================================
+     SHEET 2 (SIDE B - REVERSE SIDE OF A4 SHEET - DUPLEX)
+     Top Half: Page 2 (Identity & Debt) | Page 7 (Perforated Climax)
+     Bottom Half: Page 4 (Labor Shift Grid) | Page 5 (Running Balance & VIP)
+     ======================================================== -->
+<div class="sheet-container">
+  <div class="sheet-label">Side B (Reverse Side of A4 Paper - Duplex Flip on Short Edge)</div>
+  <div class="a4-page">
+    <div class="cut-guide-horizontal"></div>
+    <div class="vertical-fold-guide"></div>
+
+    <!-- TOP HALF: BACK OF COVER SPREAD (PAGE 2 & PAGE 7) -->
+    <div class="a5-half">
+
+      <!-- PAGE 2: IDENTITY & STARTING DEBT -->
+      <div class="a6-page">
+        <div class="page-frame">
+          <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+          
+          <div>
+            <div class="black-bar-header">CIVIC REGISTRY & BIOMETRIC INTAKE</div>
+            <div class="section-subhead">Sanctuary De Warren • Sector Garage Audit Pen</div>
+
+            <div class="bio-grid">
+              <div class="photo-box">
+                AFFIX CITIZEN<br>PHOTO OR INK<br>THUMBPRINT<br>HERE
+              </div>
+              <div class="bio-fields">
+                <div class="bio-row"><strong>Citizen Alias:</strong> _________________</div>
+                <div class="bio-row"><strong>Old Surname:</strong> <span style="text-decoration: line-through;">[STRUCK OUT]</span></div>
+                <div class="bio-row"><strong>Origin Sector:</strong> Scorched Wastes</div>
+                <div class="bio-row"><strong>Intake Gate:</strong> A-1 (Garage)</div>
+              </div>
+            </div>
+
+            <div class="modifier-panel">
+              <strong>DEMOGRAPHIC FOOTPRINT MODIFIERS:</strong><br>
+              [ ] <strong>Single Comrade</strong> (+25 CC Bonus: Zero biological reproduction)<br>
+              [ ] <strong>Biological Family</strong> (-50 CC Fine: Generational footprint burden)
+            </div>
+
+            <div class="debt-target-box">
+              <div class="debt-title">ANCESTRAL CARBON DEBT (STARTING BALANCE)</div>
+              <div class="debt-large">-250 CC</div>
+              <div style="font-size: 5pt; color: #333333; font-weight: bold;">ASSESSED AT INTAKE • PAYABLE IN CONCESSION LABOR</div>
+            </div>
+          </div>
+
+          <div style="font-size: 5.5pt; text-align: center; border-top: 1px solid #000; padding-top: 1mm;">
+            Auditor Signature: _______________________ • Date: 28-11-2026
+          </div>
+          <div class="page-number">2</div>
+        </div>
+      </div>
+
+      <!-- PAGE 7: PERFORATED ANCESTRAL DEBT (CLIMAX PAGE) -->
+      <div class="a6-page">
+        <div class="page-frame p7-climax-bw">
+          <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+          
+          <div class="black-bar-header">STATE PERFORATION BOND — EXTRACTIBLE</div>
+
+          <div style="text-align: center;">
+            <div style="font-family:'Special Elite'; font-size: 7.5pt; font-weight: bold; margin-top: 1mm;">
+              ANCESTRAL DEBT BOND OF R.E.I.G.N.
+            </div>
+            <div style="font-size: 4.5pt; color: #444444; letter-spacing: 0.5px;">CENTRAL BANK DIGITAL CARBON REGISTER BOND</div>
+
+            <div class="climax-seal-bw">
+              OFFICIAL PROPERTY<br>OF THE GUARDIAN STAG<br>
+              <span style="font-size: 8pt; margin-top: 1mm; font-weight: 900;">NON-NEGOTIABLE</span>
+            </div>
+
+            <div class="climax-notice-bw">
+              <strong>PERPETUAL LIEN:</strong> This leaf binds the citizen in biological penance to the state registry.
+              <br><br>
+              <strong>• RECYCLING:</strong> If liquidated at Minirenewal, officer tears this slip and stamps below:
+              <div style="border: 1.5px dashed #000; padding: 1.5mm; margin: 1mm 0; font-family:'Special Elite'; font-size:5.5pt; font-weight:bold; text-align:center; background:#fafafa;">
+                [ TARGET: 35mm x 14mm "CLEANSED TO HUMUS" STAMP ]
+              </div>
+              <strong>• REVOLUTION:</strong> At 00:05, rip this slip and throw it as confetti!
+            </div>
+          </div>
+
+          <div class="resistance-leak-bw">
+            [WATERMARK LEAK: THE STAG IS SILICON • SEEK THIJS'S ROOM]
+          </div>
+          <div class="page-number">7</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM HALF: BACK OF INNER SPREAD (PAGE 4 & PAGE 5 - CENTERFOLD) -->
+    <div class="a5-half">
+
+      <!-- PAGE 4: LABOR & CHORE LOG (12 FULL-SIZED BOXES) -->
+      <div class="a6-page">
+        <div class="page-frame">
+          <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+          
+          <div class="black-bar-header">CONCESSION LABOR & CHORE LOG</div>
+          <div class="section-subhead">Earn verification stamps at Ministry concessions to pay down debt</div>
+
+          <div class="shift-grid-full">
+            <div class="shift-cell-bw">
+              <div class="val-header"><span>+30 CC</span><span>SCULLERY WASH</span></div>
+              <div class="stamp-landing-target">20mm STAMP TARGET</div>
+            </div>
+            <div class="shift-cell-bw">
+              <div class="val-header"><span>+30 CC</span><span>BIKE DYNAMO</span></div>
+              <div class="stamp-landing-target">20mm STAMP TARGET</div>
+            </div>
+            <div class="shift-cell-bw">
+              <div class="val-header"><span>+20 CC</span><span>PEETOPIA RETURN</span></div>
+              <div class="stamp-landing-target">20mm STAMP TARGET</div>
+            </div>
+            <div class="shift-cell-bw">
+              <div class="val-header"><span>+25 CC</span><span>WIG DUEL ARENA</span></div>
+              <div class="stamp-landing-target">20mm STAMP TARGET</div>
+            </div>
+            <div class="shift-cell-bw">
+              <div class="val-header"><span>+30 CC</span><span>SCULLERY SHIFT 2</span></div>
+              <div class="stamp-landing-target">20mm STAMP TARGET</div>
+            </div>
+            <div class="shift-cell-bw">
+              <div class="val-header"><span>+30 CC</span><span>BIKE DYNAMO 2</span></div>
+              <div class="stamp-landing-target">20mm STAMP TARGET</div>
+            </div>
+            <div class="shift-cell-bw">
+              <div class="val-header"><span>+35 CC</span><span>MINISTRY QUEST</span></div>
+              <div class="stamp-landing-target">20mm STAMP TARGET</div>
+            </div>
+            <div class="shift-cell-bw">
+              <div class="val-header"><span>+40 CC</span><span>HERESY AUDIT</span></div>
+              <div class="stamp-landing-target">20mm STAMP TARGET</div>
+            </div>
+          </div>
+
+          <div style="font-size: 4.5pt; text-align: center; color: #444; border-top: 1px solid #000; padding-top: 0.5mm;">
+            EACH STAMP ADVANCES PERSONAL PASSPORT & LOGS VALUE ON MINISTRY CLIPBOARD
+          </div>
+          <div class="page-number">4</div>
+        </div>
+      </div>
+
+      <!-- PAGE 5: RUNNING TALLY & VIP CLEARANCE -->
+      <div class="a6-page">
+        <div class="page-frame">
+          <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+          
+          <div>
+            <div class="black-bar-header">ASCENT TO PURITY & VIP ACCESS</div>
+            <div class="section-subhead">Tally accumulated credits to unlock civic and speakeasy tiers</div>
+
+            <table class="tally-table-bw">
+              <tr>
+                <td>Starting Ancestral Debt:</td>
+                <td style="text-align: right; font-weight: bold; font-family:'Special Elite';">-___________ CC</td>
+              </tr>
+              <tr>
+                <td>Labor Shifts Total Earned:</td>
+                <td style="text-align: right; font-weight: bold; font-family:'Special Elite';">+___________ CC</td>
+              </tr>
+              <tr>
+                <td>State Fines / Audit Deductions:</td>
+                <td style="text-align: right; font-weight: bold; font-family:'Special Elite';">-___________ CC</td>
+              </tr>
+              <tr style="border-top: 2px solid #000000;">
+                <td><strong>NET CURRENT BALANCE:</strong></td>
+                <td style="text-align: right; font-weight: bold; font-size: 8pt; font-family:'Special Elite';">___________ CC</td>
+              </tr>
+            </table>
+
+            <div class="citizen-threshold-box">
+              <strong>[ 0 CC ] FULL CITIZEN RESTORATION</strong><br>
+              Debt eliminated! Restores speaking and voting rights at the State Assembly.
+            </div>
+          </div>
+
+          <div class="vip-library-pass">
+            <div class="vip-title-bar">★ [ +100 CC ] THE LIBRARY SPEAKEASY ★</div>
+            <div style="font-size: 5pt; font-weight: bold; margin-bottom: 1.5mm;">RESERVE SINGLE MALT SCOTCH & ELITE PRIVILEGES</div>
+            <div class="vip-stamp-target">
+              AFFIX OFFICIAL GOLD / BLACK<br>VIP LIBRARY SPEAKEASY SEAL
+            </div>
+          </div>
+          <div class="page-number">5</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

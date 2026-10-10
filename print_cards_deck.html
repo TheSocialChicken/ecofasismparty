@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecotopia - Ministry Concessions, Quests & Rebel Run Card Decks (B&W A4 Print)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #333333;
+    color: #000000;
+    font-family: 'Courier Prime', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    line-height: 1.2;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Toolbar */
+  .toolbar {
+    background: #111111;
+    color: #ffffff;
+    border: 2px solid #555555;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    max-width: 1050px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+
+  .toolbar h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.15rem;
+    color: #ffffff;
+  }
+
+  .btn-print {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 8px 18px;
+    font-family: 'Special Elite', cursive;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.15s;
+  }
+  .btn-print:hover {
+    background: #e0e0e0;
+  }
+
+  .banner {
+    background: #222222;
+    border: 1px dashed #777777;
+    color: #dddddd;
+    padding: 8px 14px;
+    font-size: 0.8rem;
+    width: 100%;
+    border-radius: 4px;
+  }
+
+  /* A4 Sheets for 9-Card Grid (3x3 standard Poker Size: 63mm x 88mm) */
+  .sheet-container {
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sheet-label {
+    font-family: 'Special Elite', cursive;
+    color: #ffffff;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  .a4-sheet {
+    width: 210mm;
+    height: 297mm;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    position: relative;
+    padding: 10mm 9mm;
+    display: grid;
+    grid-template-columns: repeat(3, 63.5mm);
+    grid-template-rows: repeat(3, 89mm);
+    gap: 0;
+    overflow: hidden;
+  }
+
+  /* Card Container */
+  .card {
+    width: 63.5mm;
+    height: 89mm;
+    border: 0.5px dashed #777777; /* Subtle cut guide line */
+    padding: 2mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    position: relative;
+  }
+
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid #000000;
+    padding: 2mm 1.8mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background: #ffffff;
+  }
+
+  .card-inner::after {
+    content: "";
+    position: absolute;
+    inset: 1mm;
+    border: 0.5px solid #000000;
+    pointer-events: none;
+  }
+
+  /* Corner marks */
+  .c-tl { position: absolute; top: 0.4mm; left: 0.4mm; width: 2mm; height: 2mm; border-top: 1px solid #000; border-left: 1px solid #000; }
+  .c-tr { position: absolute; top: 0.4mm; right: 0.4mm; width: 2mm; height: 2mm; border-top: 1px solid #000; border-right: 1px solid #000; }
+  .c-bl { position: absolute; bottom: 0.4mm; left: 0.4mm; width: 2mm; height: 2mm; border-bottom: 1px solid #000; border-left: 1px solid #000; }
+  .c-br { position: absolute; bottom: 0.4mm; right: 0.4mm; width: 2mm; height: 2mm; border-bottom: 1px solid #000; border-right: 1px solid #000; }
+
+  /* Card Typography */
+  .card-type-bar {
+    background: #000000;
+    color: #ffffff;
+    font-family: 'Special Elite', cursive;
+    font-size: 5.5pt;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.8mm;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  .card-title {
+    font-family: 'Cinzel', serif;
+    font-size: 7pt;
+    font-weight: 900;
+    text-align: center;
+    margin: 1mm 0 0.5mm 0;
+    line-height: 1.1;
+    color: #000000;
+  }
+
+  .card-subtitle {
+    font-family: 'Special Elite', cursive;
+    font-size: 5pt;
+    text-align: center;
+    color: #333333;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 0.8mm;
+    margin-bottom: 1.2mm;
+  }
+
+  .card-body {
+    font-size: 5.2pt;
+    line-height: 1.2;
+    color: #111111;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .meta-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.8mm;
+    font-size: 5pt;
+    border-bottom: 0.5px dotted #999999;
+    padding-bottom: 0.4mm;
+  }
+  .meta-label {
+    font-weight: bold;
+  }
+
+  .objective-box {
+    border: 1px solid #000000;
+    background: #f7f7f7;
+    padding: 1.2mm;
+    font-size: 5pt;
+    line-height: 1.15;
+    margin: 1mm 0;
+  }
+
+  .flavor-quote {
+    font-style: italic;
+    font-size: 4.8pt;
+    color: #444444;
+    border-left: 1.5px solid #000000;
+    padding-left: 1.2mm;
+    margin: 1mm 0;
+    line-height: 1.1;
+  }
+
+  .reward-box {
+    border: 1.2px solid #000000;
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 1mm;
+    font-family: 'Special Elite', cursive;
+    font-size: 5.5pt;
+    font-weight: bold;
+    margin-top: auto;
+    letter-spacing: 0.5px;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 4.2pt;
+    font-family: 'Courier Prime', monospace;
+    color: #555555;
+    margin-top: 1mm;
+    border-top: 0.5px solid #000000;
+    padding-top: 0.4mm;
+  }
+
+  @media print {
+    body {
+      background: none !important;
+      padding: 0 !important;
+    }
+    .toolbar, .sheet-label {
+      display: none !important;
+    }
+    .sheet-container {
+      margin: 0 !important;
+      page-break-after: always;
+    }
+    .a4-sheet {
+      box-shadow: none !important;
+      margin: 0 !important;
+    }
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div>
+    <h1>ECOTOPIA — MASTER CARD DECK GENERATOR (B&W A4)</h1>
+    <p style="font-size: 0.8rem; color: #aaaaaa;">Standard Poker Size (63.5mm x 89mm) • Clean Dashed Cut Lines • Ready to Print & Sleeve</p>
+  </div>
+  <button class="btn-print" onclick="window.print()">🖨️ PRINT DECKS TO A4</button>
+  <div class="banner">
+    <strong>📦 Card Types Included:</strong> Sheet 1: The 10 Seeded Mole Cards • Sheet 2: The Rebel Run Deck (Netrunner Infiltration) • Sheet 3: Inter-Ministry Sabotage Quests • Sheet 4 & 5: The 10 Ministry Concession Placards. 100% black-and-white ink.
+  </div>
+</div>
+
+<!-- ========================================================
+     SHEET 1: THE 10 SEEDED MOLE CARDS (PART 1: CARDS 1-9)
+     Tucked into select passports at door intake.
+     ======================================================== -->
+<div class="sheet-container">
+  <div class="sheet-label">Sheet 1: Seeded Resistance Mole Quests (Cards 01–09)</div>
+  <div class="a4-sheet">
+
+    <!-- MOLE CARD 01 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">SECRET RESISTANCE SEED</div>
+          <div class="card-title">THE HYDRO-APOSTATE</div>
+          <div class="card-subtitle">Covert Operative Card #01</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Ministry Cover:</span><span>Miniflow</span></div>
+          <div class="meta-row"><span class="meta-label">Target Station:</span><span>Peetopia / Kombucha</span></div>
+          <div class="flavor-quote">"The river was not meant to be metered by an algorithm."</div>
+          <div class="objective-box">
+            <strong>MISSION:</strong> Approach Citizen Jasper at the water dispenser. Whisper: <em>"The Rhine does not belong to the algorithm."</em> Inspect the inverted flow meter.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: COORDINATE SLIP TO THIJS'S ROOM</div>
+          <div class="card-footer"><span>SECRET DIRECTIVE</span><span>DE WARREN • CELL 01</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOLE CARD 02 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">SECRET RESISTANCE SEED</div>
+          <div class="card-title">THE LICHEN DISSIDENT</div>
+          <div class="card-subtitle">Covert Operative Card #02</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Ministry Cover:</span><span>Miniplenty</span></div>
+          <div class="meta-row"><span class="meta-label">Target Station:</span><span>Caloric Table</span></div>
+          <div class="flavor-quote">"These metered calories cannot sustain a living soul."</div>
+          <div class="objective-box">
+            <strong>MISSION:</strong> Secure three cups of algae paste from Miniplenty. Deliver to coat check attendant with the words: <em>"These calories cannot sustain a soul."</em>
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +30 CC & "SEEK THE RED DOOR" CLUE</div>
+          <div class="card-footer"><span>SECRET DIRECTIVE</span><span>DE WARREN • CELL 02</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOLE CARD 03 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">SECRET RESISTANCE SEED</div>
+          <div class="card-title">THE KINETIC SABOTEUR</div>
+          <div class="card-subtitle">Covert Operative Card #03</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Ministry Cover:</span><span>Minilight</span></div>
+          <div class="meta-row"><span class="meta-label">Target Station:</span><span>Bicycle Dynamo</span></div>
+          <div class="flavor-quote">"Turn backward against the current of the machine."</div>
+          <div class="objective-box">
+            <strong>MISSION:</strong> Mount the generator bicycle at Minilight. Pedal backward for 2 minutes while humming the banned pre-collapse melody.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: MATCHBOOK WITH THIJS ROOM CODE</div>
+          <div class="card-footer"><span>SECRET DIRECTIVE</span><span>DE WARREN • CELL 03</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOLE CARD 04 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">SECRET RESISTANCE SEED</div>
+          <div class="card-title">THE HERESY ARCHIVIST</div>
+          <div class="card-subtitle">Covert Operative Card #04</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Ministry Cover:</span><span>Minilove</span></div>
+          <div class="meta-row"><span class="meta-label">Target Station:</span><span>Library Archives</span></div>
+          <div class="flavor-quote">"The truth is hidden inside the forbidden pages."</div>
+          <div class="objective-box">
+            <strong>MISSION:</strong> Enter the 2nd-floor library. Locate the hollowed copy of <em>Silent Spring</em> on shelf 3. Retrieve contact card without alerting Minilove warden.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: RESISTANCE KNOCK (3 SLOW, 2 FAST)</div>
+          <div class="card-footer"><span>SECRET DIRECTIVE</span><span>DE WARREN • CELL 04</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOLE CARD 05 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">SECRET RESISTANCE SEED</div>
+          <div class="card-title">COMPOSTED IDENTITY</div>
+          <div class="card-subtitle">Covert Operative Card #05</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Ministry Cover:</span><span>Minirenewal</span></div>
+          <div class="meta-row"><span class="meta-label">Target Station:</span><span>Suicide Carbon Booth</span></div>
+          <div class="flavor-quote">"I will not be erased into their parameter bank."</div>
+          <div class="objective-box">
+            <strong>MISSION:</strong> Enter the booth. When asked for your old surname, state: <em>"I am Citizen Unaccounted."</em> Refuse to allow the technician to strike your name.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: DIRECT RESISTANCE ANKLE STAMP</div>
+          <div class="card-footer"><span>SECRET DIRECTIVE</span><span>DE WARREN • CELL 05</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOLE CARD 06 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">SECRET RESISTANCE SEED</div>
+          <div class="card-title">THE BREATH SMUGGLER</div>
+          <div class="card-subtitle">Covert Operative Card #06</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Ministry Cover:</span><span>Minibreath</span></div>
+          <div class="meta-row"><span class="meta-label">Target Station:</span><span>Terrace Carbon Sensor</span></div>
+          <div class="flavor-quote">"The ancient forest never demanded credits."</div>
+          <div class="objective-box">
+            <strong>MISSION:</strong> Exhale into the corridor air sensor for 10 seconds while reciting: <em>"The forest does not ask for credits."</em> Open the cable latch.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: ACCESS TO BASEMENT CABLE HATCH</div>
+          <div class="card-footer"><span>SECRET DIRECTIVE</span><span>DE WARREN • CELL 06</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOLE CARD 07 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">SECRET RESISTANCE SEED</div>
+          <div class="card-title">THE CURFEW DEFIER</div>
+          <div class="card-subtitle">Covert Operative Card #07</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Ministry Cover:</span><span>Minishelter</span></div>
+          <div class="meta-row"><span class="meta-label">Target Station:</span><span>Corridor Checkpoint</span></div>
+          <div class="flavor-quote">"No fence can enclose the human spirit."</div>
+          <div class="objective-box">
+            <strong>MISSION:</strong> Distract or bribe a Minishelter warden with a synthetic fabric trinket to secure access past the perimeter corridor checkpoint.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: SAFE PASSAGE TO THIJS'S CORRIDOR</div>
+          <div class="card-footer"><span>SECRET DIRECTIVE</span><span>DE WARREN • CELL 07</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOLE CARD 08 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">SECRET RESISTANCE SEED</div>
+          <div class="card-title">THE SCULLERY COURIER</div>
+          <div class="card-subtitle">Covert Operative Card #08</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Ministry Cover:</span><span>Miniservice</span></div>
+          <div class="meta-row"><span class="meta-label">Target Station:</span><span>Scullery Dish Sink</span></div>
+          <div class="flavor-quote">"We scrub their dishes while they hoard the power."</div>
+          <div class="objective-box">
+            <strong>MISSION:</strong> Volunteer for a dishwashing shift. Hide a clean saucer beneath a bar towel and smuggle it upstairs to the tea server.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: DUPLICATE RESISTANCE ANKLE STAMP</div>
+          <div class="card-footer"><span>SECRET DIRECTIVE</span><span>DE WARREN • CELL 08</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOLE CARD 09 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">SECRET RESISTANCE SEED</div>
+          <div class="card-title">THE CONTRABAND MULE</div>
+          <div class="card-subtitle">Covert Operative Card #09</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Ministry Cover:</span><span>Minithrift</span></div>
+          <div class="meta-row"><span class="meta-label">Target Station:</span><span>Contraband Locker</span></div>
+          <div class="flavor-quote">"The hardware in that locker holds the truth."</div>
+          <div class="objective-box">
+            <strong>MISSION:</strong> Retrieve the banned USB drive labeled <em>'CELLAR_AI_BACKUP_NODE'</em> from Minithrift's lockbox. Deliver it to Thijs's room.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: CORE STRIKE CADRE INDUCTION</div>
+          <div class="card-footer"><span>SECRET DIRECTIVE</span><span>DE WARREN • CELL 09</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========================================================
+     SHEET 2: REBEL RUN DECK (NETRUNNER RUNS ON MINISTRIES)
+     Available in Thijs's room to dismantle corporate agendas.
+     ======================================================== -->
+<div class="sheet-container">
+  <div class="sheet-label">Sheet 2: Netrunner Rebel Run Cards (Cards 01–09)</div>
+  <div class="a4-sheet">
+
+    <!-- RUN CARD 01 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">NETRUNNER INFILTRATION RUN</div>
+          <div class="card-title">GRID SHORT-CIRCUIT</div>
+          <div class="card-subtitle">Sabotage Operation #01</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Target Server:</span><span>Minilight Concession</span></div>
+          <div class="meta-row"><span class="meta-label">Station ICE:</span><span>Station Warden & Cyclists</span></div>
+          <div class="objective-box">
+            <strong>RUN ACTION:</strong> Stage a fake power dispute with the cyclist to distract the warden. Slip a copper wire clip onto the dynamo battery terminal.
+          </div>
+          <div class="flavor-quote">"When the dynamos surge, their algorithm blinds itself."</div>
+        </div>
+        <div>
+          <div class="reward-box">BREACH: TRASH 100 CC FROM CENTRAL AGENDAS</div>
+          <div class="card-footer"><span>THIJS SPEAKEASY</span><span>RUN PROTOCOL 01</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RUN CARD 02 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">NETRUNNER INFILTRATION RUN</div>
+          <div class="card-title">FLUID METER INVERSION</div>
+          <div class="card-subtitle">Sabotage Operation #02</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Target Server:</span><span>Miniflow Concession</span></div>
+          <div class="meta-row"><span class="meta-label">Station ICE:</span><span>Restroom Cup Auditor</span></div>
+          <div class="objective-box">
+            <strong>RUN ACTION:</strong> Create a bottleneck at the Peetopia cup check. Invert the intake flow dial on the fluid meter without being seen.
+          </div>
+          <div class="flavor-quote">"They tell us water is sacred while piping it to cooling racks."</div>
+        </div>
+        <div>
+          <div class="reward-box">BREACH: CELLAR TRUTH FRAGMENT #1 (COOLING)</div>
+          <div class="card-footer"><span>THIJS SPEAKEASY</span><span>RUN PROTOCOL 02</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RUN CARD 03 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">NETRUNNER INFILTRATION RUN</div>
+          <div class="card-title">HERESY LOG PURGE</div>
+          <div class="card-subtitle">Sabotage Operation #03</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Target Server:</span><span>Minilove Concession</span></div>
+          <div class="meta-row"><span class="meta-label">Station ICE:</span><span>Surveillance Inquisitors</span></div>
+          <div class="objective-box">
+            <strong>RUN ACTION:</strong> During an active citizen interrogation, reach behind the auditor's stool and replace the citation log with the decoy blank sheet.
+          </div>
+          <div class="flavor-quote">"Every confession they record is fed into the prompt bank."</div>
+        </div>
+        <div>
+          <div class="reward-box">BREACH: TRASH 100 CC FROM ACTIVE DECREE</div>
+          <div class="card-footer"><span>THIJS SPEAKEASY</span><span>RUN PROTOCOL 03</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RUN CARD 04 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">NETRUNNER INFILTRATION RUN</div>
+          <div class="card-title">COMPOST VAULT HEIST</div>
+          <div class="card-subtitle">Sabotage Operation #04</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Target Server:</span><span>Minirenewal Concession</span></div>
+          <div class="meta-row"><span class="meta-label">Station ICE:</span><span>Renewal Technicians</span></div>
+          <div class="objective-box">
+            <strong>RUN ACTION:</strong> Pose as a volunteer scrubbing the booth exit. Reach beneath the compost vat and extract the file marked 'HUMUS_DELETIONS_2080'.
+          </div>
+          <div class="flavor-quote">"Nobody is composted. Their identities are just trained away."</div>
+        </div>
+        <div>
+          <div class="reward-box">BREACH: CELLAR TRUTH FRAGMENT #2 (AI LOG)</div>
+          <div class="card-footer"><span>THIJS SPEAKEASY</span><span>RUN PROTOCOL 04</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RUN CARD 05 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">NETRUNNER INFILTRATION RUN</div>
+          <div class="card-title">CONTRABAND VAULT RAID</div>
+          <div class="card-subtitle">Sabotage Operation #05</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Target Server:</span><span>Minithrift Concession</span></div>
+          <div class="meta-row"><span class="meta-label">Station ICE:</span><span>Contraband Vault Guard</span></div>
+          <div class="objective-box">
+            <strong>RUN ACTION:</strong> Have an ally challenge the guard over a plastic comb. Slip the latch and retrieve the legacy fiber-optic connector cable.
+          </div>
+          <div class="flavor-quote">"They seize our phones to keep their server connected."</div>
+        </div>
+        <div>
+          <div class="reward-box">BREACH: CELLAR TRUTH FRAGMENT #3 (FIBER)</div>
+          <div class="card-footer"><span>THIJS SPEAKEASY</span><span>RUN PROTOCOL 05</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RUN CARD 06 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">NETRUNNER INFILTRATION RUN</div>
+          <div class="card-title">CALORIC SCALES SKEW</div>
+          <div class="card-subtitle">Sabotage Operation #06</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Target Server:</span><span>Miniplenty Concession</span></div>
+          <div class="meta-row"><span class="meta-label">Station ICE:</span><span>Ration Warden</span></div>
+          <div class="objective-box">
+            <strong>RUN ACTION:</strong> Place a disguised metal weight beneath Miniplenty's ration scale to force false over-ration audits on state ledgers.
+          </div>
+          <div class="flavor-quote">"Starvation is easier to enforce when the scale is lying."</div>
+        </div>
+        <div>
+          <div class="reward-box">BREACH: TRASH 100 CC FROM CALORIC DECREE</div>
+          <div class="card-footer"><span>THIJS SPEAKEASY</span><span>RUN PROTOCOL 06</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RUN CARD 07 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">NETRUNNER INFILTRATION RUN</div>
+          <div class="card-title">PERIMETER GATE LOCK</div>
+          <div class="card-subtitle">Sabotage Operation #07</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Target Server:</span><span>Minishelter Concession</span></div>
+          <div class="meta-row"><span class="meta-label">Station ICE:</span><span>Curfew Turnstile Guard</span></div>
+          <div class="objective-box">
+            <strong>RUN ACTION:</strong> Jam the corridor turnstile latch with a spent credit token, establishing permanent unmonitored passage to the cellar stairs.
+          </div>
+          <div class="flavor-quote">"15-minute grids only work if the doors stay locked."</div>
+        </div>
+        <div>
+          <div class="reward-box">BREACH: PERMANENT FREE REBEL TRANSIT</div>
+          <div class="card-footer"><span>THIJS SPEAKEASY</span><span>RUN PROTOCOL 07</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RUN CARD 08 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">NETRUNNER INFILTRATION RUN</div>
+          <div class="card-title">ATMOSPHERIC BLOWOUT</div>
+          <div class="card-subtitle">Sabotage Operation #08</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Target Server:</span><span>Minibreath Concession</span></div>
+          <div class="meta-row"><span class="meta-label">Station ICE:</span><span>Spirometry Auditors</span></div>
+          <div class="objective-box">
+            <strong>RUN ACTION:</strong> Reverse the valve on the spirometry bellows during a public lung test, sending simulated hyperventilation spikes to the stag board.
+          </div>
+          <div class="flavor-quote">"Let them measure our defiance in liters."</div>
+        </div>
+        <div>
+          <div class="reward-box">BREACH: TRASH 100 CC FROM CENTRAL AGENDAS</div>
+          <div class="card-footer"><span>THIJS SPEAKEASY</span><span>RUN PROTOCOL 08</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RUN CARD 09 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">NETRUNNER INFILTRATION RUN</div>
+          <div class="card-title">MORALE ARENA RIOT</div>
+          <div class="card-subtitle">Sabotage Operation #09</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Target Server:</span><span>Minijoy Concession</span></div>
+          <div class="meta-row"><span class="meta-label">Station ICE:</span><span>Morale Cheerleader</span></div>
+          <div class="objective-box">
+            <strong>RUN ACTION:</strong> Enter the wig snatching duel. Snatch both wigs simultaneously, toss them into the audience, and trigger a 3-minute crowd chant.
+          </div>
+          <div class="flavor-quote">"They demand joy; give them the joy of revolt."</div>
+        </div>
+        <div>
+          <div class="reward-box">BREACH: DISTRACTS ALL GUARDS FOR 5 MINS</div>
+          <div class="card-footer"><span>THIJS SPEAKEASY</span><span>RUN PROTOCOL 09</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========================================================
+     SHEET 3: INTER-MINISTRY SABOTAGE QUESTS
+     Generates friction between the 10 factions during the party.
+     ======================================================== -->
+<div class="sheet-container">
+  <div class="sheet-label">Sheet 3: Inter-Ministry Rivalry Quests (Cards 01–09)</div>
+  <div class="a4-sheet">
+
+    <!-- QUEST 01 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">MINISTRY RIVALRY QUEST</div>
+          <div class="card-title">DEHYDRATION AUDIT</div>
+          <div class="card-subtitle">Faction Friction #01</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Your Faction:</span><span>Miniplenty</span></div>
+          <div class="meta-row"><span class="meta-label">Target Rival:</span><span>Miniflow</span></div>
+          <div class="objective-box">
+            <strong>OBJECTIVE:</strong> Convince 3 Miniflow members that dry lentil wafers are 300% more ecologically sound than hydrating with water or kombucha.
+          </div>
+          <div class="flavor-quote">"Water in the body is moisture stolen from the biosphere."</div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +30 CC PERSONAL & MINISTRY TALLY</div>
+          <div class="card-footer"><span>MINISTERIAL CLASH</span><span>DECREE 14</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUEST 02 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">MINISTRY RIVALRY QUEST</div>
+          <div class="card-title">NOSTALGIA STING</div>
+          <div class="card-subtitle">Faction Friction #02</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Your Faction:</span><span>Minilove</span></div>
+          <div class="meta-row"><span class="meta-label">Target Rival:</span><span>Minijoy</span></div>
+          <div class="objective-box">
+            <strong>OBJECTIVE:</strong> Catch 2 Minijoy members reminiscing about pre-collapse holidays, beaches, or fast fashion. Escort them to the holding pen.
+          </div>
+          <div class="flavor-quote">"Remembrance of luxury is ideological pollution."</div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +40 CC PERSONAL & MINISTRY TALLY</div>
+          <div class="card-footer"><span>MINISTERIAL CLASH</span><span>DECREE 22</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUEST 03 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">MINISTRY RIVALRY QUEST</div>
+          <div class="card-title">WHISTLE & SCRUB</div>
+          <div class="card-subtitle">Faction Friction #03</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Your Faction:</span><span>Minijoy</span></div>
+          <div class="meta-row"><span class="meta-label">Target Rival:</span><span>Miniservice</span></div>
+          <div class="objective-box">
+            <strong>OBJECTIVE:</strong> Intercept a Miniservice dishwashing squad. Force them to perform a synchronized 60-second smiling song while cleaning.
+          </div>
+          <div class="flavor-quote">"Unsmiling labor is counter-revolutionary sabotage."</div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +35 CC PERSONAL & MINISTRY TALLY</div>
+          <div class="card-footer"><span>MINISTERIAL CLASH</span><span>DECREE 09</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUEST 04 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">MINISTRY RIVALRY QUEST</div>
+          <div class="card-title">COMPOST THE SEIZED</div>
+          <div class="card-subtitle">Faction Friction #04</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Your Faction:</span><span>Minirenewal</span></div>
+          <div class="meta-row"><span class="meta-label">Target Rival:</span><span>Minithrift</span></div>
+          <div class="objective-box">
+            <strong>OBJECTIVE:</strong> Sneak into Minithrift's confiscated basket. Snatch 2 items and feed them directly into the upcycling vat for shredding.
+          </div>
+          <div class="flavor-quote">"Why store what can be converted into elemental humus?"</div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +45 CC PERSONAL & MINISTRY TALLY</div>
+          <div class="card-footer"><span>MINISTERIAL CLASH</span><span>DECREE 31</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUEST 05 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">MINISTRY RIVALRY QUEST</div>
+          <div class="card-title">BLACKOUT EVACUATION</div>
+          <div class="card-subtitle">Faction Friction #05</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Your Faction:</span><span>Minilight</span></div>
+          <div class="meta-row"><span class="meta-label">Target Rival:</span><span>Minishelter</span></div>
+          <div class="objective-box">
+            <strong>OBJECTIVE:</strong> Cut the lighting switch in Minishelter's sector. Guide residents into the hall using only bioluminescent glowsticks.
+          </div>
+          <div class="flavor-quote">"Darkness is the highest form of grid solidarity."</div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +30 CC PERSONAL & MINISTRY TALLY</div>
+          <div class="card-footer"><span>MINISTERIAL CLASH</span><span>DECREE 17</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUEST 06 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">MINISTRY RIVALRY QUEST</div>
+          <div class="card-title">MOISTURE SEIZURE</div>
+          <div class="card-subtitle">Faction Friction #06</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Your Faction:</span><span>Miniflow</span></div>
+          <div class="meta-row"><span class="meta-label">Target Rival:</span><span>Miniplenty</span></div>
+          <div class="objective-box">
+            <strong>OBJECTIVE:</strong> Inspect Miniplenty's preparation board. Confiscate all high-water-content produce under Hydrological Decree 14.
+          </div>
+          <div class="flavor-quote">"Cucumbers are illegal hydrological storage vessels."</div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +35 CC PERSONAL & MINISTRY TALLY</div>
+          <div class="card-footer"><span>MINISTERIAL CLASH</span><span>DECREE 14</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUEST 07 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">MINISTRY RIVALRY QUEST</div>
+          <div class="card-title">HYPERVENTILATION AUDIT</div>
+          <div class="card-subtitle">Faction Friction #07</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Your Faction:</span><span>Minibreath</span></div>
+          <div class="meta-row"><span class="meta-label">Target Rival:</span><span>Minilight</span></div>
+          <div class="objective-box">
+            <strong>OBJECTIVE:</strong> Stand beside the bicycle generator. Issue formal carbon exhalation fines to 3 furiously pedaling Minilight cyclists.
+          </div>
+          <div class="flavor-quote">"Wattage generation does not excuse excessive sighs."</div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +25 CC PERSONAL & MINISTRY TALLY</div>
+          <div class="card-footer"><span>MINISTERIAL CLASH</span><span>DECREE 05</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUEST 08 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">MINISTRY RIVALRY QUEST</div>
+          <div class="card-title">PHONE BOOTH ENCLOSURE</div>
+          <div class="card-subtitle">Faction Friction #08</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Your Faction:</span><span>Minishelter</span></div>
+          <div class="meta-row"><span class="meta-label">Target Rival:</span><span>Minilove</span></div>
+          <div class="objective-box">
+            <strong>OBJECTIVE:</strong> Trap a patrolling Minilove surveillance warden inside the telephone booth for 3 minutes, citing corridor density limits.
+          </div>
+          <div class="flavor-quote">"Corridors belong to the grid, not the inquisitor."</div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +50 CC PERSONAL & MINISTRY TALLY</div>
+          <div class="card-footer"><span>MINISTERIAL CLASH</span><span>DECREE 40</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUEST 09 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">MINISTRY RIVALRY QUEST</div>
+          <div class="card-title">SYNTHETIC TABARD AUDIT</div>
+          <div class="card-subtitle">Faction Friction #09</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Your Faction:</span><span>Minithrift</span></div>
+          <div class="meta-row"><span class="meta-label">Target Rival:</span><span>Minibreath</span></div>
+          <div class="objective-box">
+            <strong>OBJECTIVE:</strong> Inspect Minibreath officers. Seize any non-organic synthetic badge lanyards or plastic whistles for state liquidation.
+          </div>
+          <div class="flavor-quote">"You cannot preach purity through a polyester cord."</div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +30 CC PERSONAL & MINISTRY TALLY</div>
+          <div class="card-footer"><span>MINISTERIAL CLASH</span><span>DECREE 18</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========================================================
+     SHEET 4: MINISTRY CONCESSION PLACARDS (PART 1: 1-6)
+     Placed at physical game stations for hosts & players.
+     ======================================================== -->
+<div class="sheet-container">
+  <div class="sheet-label">Sheet 4: Concession Station Placards (Ministries 01–06)</div>
+  <div class="a4-sheet">
+
+    <!-- STATION 01: MINISERVICE -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">STATE CONCESSION PLACARD</div>
+          <div class="card-title">MINISERVICE</div>
+          <div class="card-subtitle">Greenwashing Scullery Concession</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game Station:</span><span>Scullery & Sinks</span></div>
+          <div class="meta-row"><span class="meta-label">Charter Superpower:</span><span>50% Debt Relief</span></div>
+          <div class="objective-box">
+            <strong>HOST RUN SHEET:</strong> Put indebted citizens to work on 5-min dish shifts. Meter spray bottles (single-sponge wiping). Clean 10 items = stamp +30 CC.
+          </div>
+          <div class="flavor-quote">"Labor is the highest expression of love."</div>
+        </div>
+        <div>
+          <div class="reward-box">RECRUIT BENEFIT: WORKHOUSE 50% SUBSIDY</div>
+          <div class="card-footer"><span>CONCESSION RULES</span><span>STATION 01</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATION 02: MINIRENEWAL -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">STATE CONCESSION PLACARD</div>
+          <div class="card-title">MINIRENEWAL</div>
+          <div class="card-subtitle">The Suicide Carbon Booth</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game Station:</span><span>Upcycling Portal Booth</span></div>
+          <div class="meta-row"><span class="meta-label">Charter Superpower:</span><span>+100 Bounty / Liquidation</span></div>
+          <div class="objective-box">
+            <strong>HOST RUN SHEET:</strong> Take in unpayable debtors or defectors. Make them swear Renunciation Oath. Strike old name, reset debt to 0, tear Page 7.
+          </div>
+          <div class="flavor-quote">"Your carbon is joyfully restored to the topsoil."</div>
+        </div>
+        <div>
+          <div class="reward-box">MINISTRY EARNS: +100 STATE BOUNTY</div>
+          <div class="card-footer"><span>CONCESSION RULES</span><span>STATION 02</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATION 03: MINILIGHT -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">STATE CONCESSION PLACARD</div>
+          <div class="card-title">MINILIGHT</div>
+          <div class="card-subtitle">Kinetic Grid Generator Concession</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game Station:</span><span>Stationary Bicycle Dynamo</span></div>
+          <div class="meta-row"><span class="meta-label">Charter Superpower:</span><span>Grid Power Monopoly</span></div>
+          <div class="objective-box">
+            <strong>HOST RUN SHEET:</strong> Indebted guests pedal 5-min shifts to earn +30 CC. Minilight levies 30–50 CC tariffs on rival rooms to keep lights on.
+          </div>
+          <div class="flavor-quote">"Darkness is the peace you owe the sun."</div>
+        </div>
+        <div>
+          <div class="reward-box">GRID POWER = MINISTRY TREASURY POINTS</div>
+          <div class="card-footer"><span>CONCESSION RULES</span><span>STATION 03</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATION 04: MINIFLOW -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">STATE CONCESSION PLACARD</div>
+          <div class="card-title">MINIFLOW</div>
+          <div class="card-subtitle">Peetopia & Sacred Sluice Concession</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game Station:</span><span>Restroom Checkpoint</span></div>
+          <div class="meta-row"><span class="meta-label">Charter Superpower:</span><span>Fluid Royalty Monopoly</span></div>
+          <div class="objective-box">
+            <strong>HOST RUN SHEET:</strong> Monitor cup returns and restroom usage. Returning fluid to collective earns guest +20 CC and gives Miniflow +20 dividend.
+          </div>
+          <div class="flavor-quote">"Every drop borrowed must be accounted for."</div>
+        </div>
+        <div>
+          <div class="reward-box">DIVIDEND: +20 CC PER FLUID DEPOSIT</div>
+          <div class="card-footer"><span>CONCESSION RULES</span><span>STATION 04</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATION 05: MINIPLENTY -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">STATE CONCESSION PLACARD</div>
+          <div class="card-title">MINIPLENTY</div>
+          <div class="card-subtitle">Caloric Equilibrium Concession</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game Station:</span><span>Food / Tasting Table</span></div>
+          <div class="meta-row"><span class="meta-label">Charter Superpower:</span><span>Caloric Indulgences</span></div>
+          <div class="objective-box">
+            <strong>HOST RUN SHEET:</strong> Dispense algae paste and pulse rations. Run blind tasting duels. Sell extra caloric passes to hungry citizens for credits.
+          </div>
+          <div class="flavor-quote">"Hunger is direct communion with lichen."</div>
+        </div>
+        <div>
+          <div class="reward-box">REVENUE: TRADE FOOD FOR CARBON CREDITS</div>
+          <div class="card-footer"><span>CONCESSION RULES</span><span>STATION 05</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATION 06: MINILOVE -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">STATE CONCESSION PLACARD</div>
+          <div class="card-title">MINILOVE</div>
+          <div class="card-subtitle">Confession Pen & Inquisitions</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game Station:</span><span>Interrogation Holding Pen</span></div>
+          <div class="meta-row"><span class="meta-label">Charter Superpower:</span><span>Inquisitorial Seizure</span></div>
+          <div class="objective-box">
+            <strong>HOST RUN SHEET:</strong> Hear environmental confessions in the dim cubicle. Run good cop / bad cop audits. Retain 50% of all levied fines for treasury.
+          </div>
+          <div class="flavor-quote">"The Guardian Stag watches because you are precious."</div>
+        </div>
+        <div>
+          <div class="reward-box">REVENUE: 50% CUT OF ALL HERESY FINES</div>
+          <div class="card-footer"><span>CONCESSION RULES</span><span>STATION 06</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========================================================
+     SHEET 5: CONCESSION PLACARDS (7-10) + MOLE 10 + RUN 10 + DECREES
+     ======================================================== -->
+<div class="sheet-container">
+  <div class="sheet-label">Sheet 5: Concessions (07–10) & Climax Missions</div>
+  <div class="a4-sheet">
+
+    <!-- STATION 07: MINIJOY -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">STATE CONCESSION PLACARD</div>
+          <div class="card-title">MINIJOY</div>
+          <div class="card-subtitle">The Morale Arena Concession</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game Station:</span><span>Arena & Open-Mic</span></div>
+          <div class="meta-row"><span class="meta-label">Charter Superpower:</span><span>State Morale Grants</span></div>
+          <div class="objective-box">
+            <strong>HOST RUN SHEET:</strong> Host 60-sec Wig Snatching duels (+10 entry, winner +25 CC) and "How the World Ends" open-mic. Crowd of 15+ awards +150 grant.
+          </div>
+          <div class="flavor-quote">"Joy is your biological civic duty."</div>
+        </div>
+        <div>
+          <div class="reward-box">REVENUE: DUEL ENTRY & +150 RALLY GRANTS</div>
+          <div class="card-footer"><span>CONCESSION RULES</span><span>STATION 07</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATION 08: MINISHELTER -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">STATE CONCESSION PLACARD</div>
+          <div class="card-title">MINISHELTER</div>
+          <div class="card-subtitle">15-Minute Grid Checkpoint</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game Station:</span><span>Corridor Curfew Gates</span></div>
+          <div class="meta-row"><span class="meta-label">Charter Superpower:</span><span>Transit Tolls & Passes</span></div>
+          <div class="objective-box">
+            <strong>HOST RUN SHEET:</strong> Guard corridor choke points to VIP Library and quiet zones. Issue 10–20 CC sector transit passes. Enforce room capacity limits.
+          </div>
+          <div class="flavor-quote">"Neighborhood sanctuary holds all you need."</div>
+        </div>
+        <div>
+          <div class="reward-box">REVENUE: 10–20 CC TRANSIT TOLLS</div>
+          <div class="card-footer"><span>CONCESSION RULES</span><span>STATION 08</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATION 09: MINITHRIFT -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">STATE CONCESSION PLACARD</div>
+          <div class="card-title">MINITHRIFT</div>
+          <div class="card-subtitle">Contraband Locker Concession</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game Station:</span><span>Confiscated Vault</span></div>
+          <div class="meta-row"><span class="meta-label">Charter Superpower:</span><span>Contraband Liquidation</span></div>
+          <div class="objective-box">
+            <strong>HOST RUN SHEET:</strong> Inspect guests for synthetic petroleum goods. Confiscate plastic trinkets. Owners redeem for fine, or liquidate for +40 CC each.
+          </div>
+          <div class="flavor-quote">"Possessions are chains of carbon past."</div>
+        </div>
+        <div>
+          <div class="reward-box">REVENUE: +40 CC LIQUIDATION BOUNTIES</div>
+          <div class="card-footer"><span>CONCESSION RULES</span><span>STATION 09</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATION 10: MINIBREATH -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">STATE CONCESSION PLACARD</div>
+          <div class="card-title">MINIBREATH</div>
+          <div class="card-subtitle">Spirometry Checkpoint Concession</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game Station:</span><span>Atmospheric Meter</span></div>
+          <div class="meta-row"><span class="meta-label">Charter Superpower:</span><span>Atmospheric Offsets</span></div>
+          <div class="objective-box">
+            <strong>HOST RUN SHEET:</strong> Meter exhalations with paper windmills and breath-holding tests. Sell "Breath Indulgences" to active dancers and runners.
+          </div>
+          <div class="flavor-quote">"Slower breath is higher moral consciousness."</div>
+        </div>
+        <div>
+          <div class="reward-box">REVENUE: SELL BREATH INDULGENCES</div>
+          <div class="card-footer"><span>CONCESSION RULES</span><span>STATION 10</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MOLE CARD 10 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">SECRET RESISTANCE SEED</div>
+          <div class="card-title">MORALE INFILTRATOR</div>
+          <div class="card-subtitle">Covert Operative Card #10</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Ministry Cover:</span><span>Minijoy</span></div>
+          <div class="meta-row"><span class="meta-label">Target Station:</span><span>Open-Mic Stage</span></div>
+          <div class="flavor-quote">"Joy without truth is just an electric fence."</div>
+          <div class="objective-box">
+            <strong>MISSION:</strong> During 'How the World Ends' open-mic, deliver a 60-second speech ending with: <em>"Joy without truth is just an electric fence."</em>
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: CROWD CHEER SIGNALS REVOLT</div>
+          <div class="card-footer"><span>SECRET DIRECTIVE</span><span>DE WARREN • CELL 10</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RUN CARD 10: THE FINAL CELLAR RUN -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">NETRUNNER CLIMAX RUN</div>
+          <div class="card-title">CELLAR SERVER BREACH</div>
+          <div class="card-subtitle">The Final Run (23:30)</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Target Server:</span><span>Basement Cold Storage</span></div>
+          <div class="meta-row"><span class="meta-label">Station ICE:</span><span>High Warden & Stag Guards</span></div>
+          <div class="objective-box">
+            <strong>RUN ACTION:</strong> Present Truth Fragments #1, #2, and #3 to Thijs. Lead the ankle-stamped cadre into the cellar to disconnect the power trunk line.
+          </div>
+          <div class="flavor-quote">"The Stag is silicon. The debt is a lie."</div>
+        </div>
+        <div>
+          <div class="reward-box">REVOLUTION CLIMAX: EXPOSE THE LEDGER</div>
+          <div class="card-footer"><span>THIJS SPEAKEASY</span><span>FINAL RUN</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIVALRY QUEST 10 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">MINISTRY RIVALRY QUEST</div>
+          <div class="card-title">THE PERPETUAL MOP</div>
+          <div class="card-subtitle">Faction Friction #10</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Your Faction:</span><span>Miniservice</span></div>
+          <div class="meta-row"><span class="meta-label">Target Rival:</span><span>Minirenewal</span></div>
+          <div class="objective-box">
+            <strong>OBJECTIVE:</strong> Mop the floor directly beneath the exit of the Suicide Carbon Booth, forcing every recycled citizen to take off their boots.
+          </div>
+          <div class="flavor-quote">"A cleansed soul does not justify muddy linoleum."</div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +25 CC PERSONAL & MINISTRY TALLY</div>
+          <div class="card-footer"><span>MINISTERIAL CLASH</span><span>DECREE 11</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATE DECREE 01 -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CENTRAL STATE DECREE</div>
+          <div class="card-title">AMBIENT DIMMING</div>
+          <div class="card-subtitle">Secret Hitler Agenda #01</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Cost to Enact:</span><span>200 CC Pool</span></div>
+          <div class="meta-row"><span class="meta-label">State Impact:</span><span>All Rooms -50% Lumens</span></div>
+          <div class="objective-box">
+            <strong>DECREE EFFECT:</strong> Ambient lumens cut by 50%. Any citizen caught lingering near light sources must perform 20 squats for Minilight.
+          </div>
+          <div class="flavor-quote">"Darkness is the highest form of collective care."</div>
+        </div>
+        <div>
+          <div class="reward-box">PROCLAIMED VIA PA BY HANNA</div>
+          <div class="card-footer"><span>CENTRAL BOARD</span><span>DECREE 01</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STATE DECREE 05 (FINAL AGENDA) -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CENTRAL STATE DECREE</div>
+          <div class="card-title">SILICON CONSOLIDATION</div>
+          <div class="card-subtitle">Secret Hitler Agenda #05 (Win)</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Cost to Enact:</span><span>400 CC Pool</span></div>
+          <div class="meta-row"><span class="meta-label">State Impact:</span><span>Permanent Debt Lock</span></div>
+          <div class="objective-box">
+            <strong>DECREE EFFECT:</strong> All individual citizen passports are permanently locked. R.E.I.G.N. achieves total authoritarian consolidation.
+          </div>
+          <div class="flavor-quote">"You are finally complete in our custody."</div>
+        </div>
+        <div>
+          <div class="reward-box">REGIME TRIUMPH IF NOT TRASHED</div>
+          <div class="card-footer"><span>CENTRAL BOARD</span><span>DECREE 05</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>

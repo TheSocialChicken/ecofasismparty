@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Wout">
+<meta name="author" content="Chris">
+<meta name="author" content="Jack">
+<meta name="dcterms.date" content="2026-10-10">
+
+<title>Ecotopia: Game Activities, Concessions &amp; Economic Engine Guide – ECOTOPIA</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./assets/favicon.ico" rel="icon">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b85bc7c33db8c58e0ec93c3465666fed.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-8a5c81033cacfe003fd872e1ec975d1f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&amp;family=Share+Tech+Mono&amp;family=UnifrakturMaguntia&amp;display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="ECOTOPIA: THE LAST SUSTAINABLE UTOPIA">
+<meta property="og:description" content="You traded your chaos for our care. Do not ask for your chains back.">
+<meta property="og:site_name" content="ECOTOPIA">
+</head>
+
+<body class="floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./assets/logo.svg" alt="" class="navbar-logo light-content">
+    <img src="./assets/logo.svg" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">ECOTOPIA</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">HOME</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lore.html"> 
+<span class="menu-text">THE 4 EPOCHS</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./manifesto.html"> 
+<span class="menu-text">10 MINISTRIES</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./attend.html"> 
+<span class="menu-text">ADMISSION &amp; QUIZ</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Jack_Website_Feedback.html"> 
+<span class="menu-text">FEEDBACK FOR JACK</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./quest_cards_and_facilitator_pack.html"> 
+<span class="menu-text">QUESTS &amp; PACK</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./broadcast_scripts_and_liturgy.html"> 
+<span class="menu-text">AUDIO &amp; SCRIPTS</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./lore_and_narrative_bible.html"> 
+<span class="menu-text">LORE BIBLE</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./game_design_and_activities.html" aria-current="page"> 
+<span class="menu-text">GAME DESIGN</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-core-gameplay-loop-concession-economy" id="toc-the-core-gameplay-loop-concession-economy" class="nav-link active" data-scroll-target="#the-core-gameplay-loop-concession-economy"><span class="header-section-number">1</span> The Core Gameplay Loop &amp; Concession Economy</a></li>
+  <li><a href="#the-living-economy-capital-debt-concessions" id="toc-the-living-economy-capital-debt-concessions" class="nav-link" data-scroll-target="#the-living-economy-capital-debt-concessions"><span class="header-section-number">2</span> The Living Economy: Capital, Debt &amp; Concessions</a>
+  <ul class="collapse">
+  <li><a href="#starting-capital-vs.-unassigned-labor" id="toc-starting-capital-vs.-unassigned-labor" class="nav-link" data-scroll-target="#starting-capital-vs.-unassigned-labor"><span class="header-section-number">2.0.1</span> Starting Capital vs.&nbsp;Unassigned Labor</a></li>
+  <li><a href="#the-hiring-dilemma-debt-absorption" id="toc-the-hiring-dilemma-debt-absorption" class="nav-link" data-scroll-target="#the-hiring-dilemma-debt-absorption"><span class="header-section-number">2.0.2</span> The Hiring Dilemma: Debt Absorption</a></li>
+  <li><a href="#the-dual-tally-productivity-loop" id="toc-the-dual-tally-productivity-loop" class="nav-link" data-scroll-target="#the-dual-tally-productivity-loop"><span class="header-section-number">2.0.3</span> The Dual-Tally Productivity Loop</a></li>
+  <li><a href="#carbon-insolvency-net-balance-0" id="toc-carbon-insolvency-net-balance-0" class="nav-link" data-scroll-target="#carbon-insolvency-net-balance-0"><span class="header-section-number">2.0.4</span> Carbon Insolvency (<code>Net Balance &lt; 0</code>)</a></li>
+  </ul></li>
+  <li><a href="#the-10-ministry-concessions-asymmetric-business-models" id="toc-the-10-ministry-concessions-asymmetric-business-models" class="nav-link" data-scroll-target="#the-10-ministry-concessions-asymmetric-business-models"><span class="header-section-number">3</span> The 10 Ministry Concessions &amp; Asymmetric Business Models</a></li>
+  <li><a href="#master-concession-games-catalog" id="toc-master-concession-games-catalog" class="nav-link" data-scroll-target="#master-concession-games-catalog"><span class="header-section-number">4</span> Master Concession Games Catalog</a>
+  <ul class="collapse">
+  <li><a href="#category-a-kinetic-utility-concessions" id="toc-category-a-kinetic-utility-concessions" class="nav-link" data-scroll-target="#category-a-kinetic-utility-concessions"><span class="header-section-number">4.0.1</span> Category A: Kinetic &amp; Utility Concessions</a></li>
+  <li><a href="#category-b-competitive-morale-concessions" id="toc-category-b-competitive-morale-concessions" class="nav-link" data-scroll-target="#category-b-competitive-morale-concessions"><span class="header-section-number">4.0.2</span> Category B: Competitive &amp; Morale Concessions</a></li>
+  <li><a href="#category-c-penal-reclamation-concessions" id="toc-category-c-penal-reclamation-concessions" class="nav-link" data-scroll-target="#category-c-penal-reclamation-concessions"><span class="header-section-number">4.0.3</span> Category C: Penal &amp; Reclamation Concessions</a></li>
+  </ul></li>
+  <li><a href="#the-netrunner-secret-hitler-engine" id="toc-the-netrunner-secret-hitler-engine" class="nav-link" data-scroll-target="#the-netrunner-secret-hitler-engine"><span class="header-section-number">5</span> The Netrunner &amp; Secret Hitler Engine</a>
+  <ul class="collapse">
+  <li><a href="#the-central-decree-board-the-5-agendas" id="toc-the-central-decree-board-the-5-agendas" class="nav-link" data-scroll-target="#the-central-decree-board-the-5-agendas"><span class="header-section-number">5.0.1</span> The Central Decree Board (The 5 Agendas)</a></li>
+  <li><a href="#rebel-infiltration-runs-netrunner-mechanics" id="toc-rebel-infiltration-runs-netrunner-mechanics" class="nav-link" data-scroll-target="#rebel-infiltration-runs-netrunner-mechanics"><span class="header-section-number">5.0.2</span> Rebel Infiltration Runs (Netrunner Mechanics)</a></li>
+  <li><a href="#the-secret-legislative-council-secret-hitler-dynamics" id="toc-the-secret-legislative-council-secret-hitler-dynamics" class="nav-link" data-scroll-target="#the-secret-legislative-council-secret-hitler-dynamics"><span class="header-section-number">5.0.3</span> The Secret Legislative Council (Secret Hitler Dynamics)</a></li>
+  </ul></li>
+  <li><a href="#climax-endgame-the-revolution-2330-0015" id="toc-climax-endgame-the-revolution-2330-0015" class="nav-link" data-scroll-target="#climax-endgame-the-revolution-2330-0015"><span class="header-section-number">6</span> Climax &amp; Endgame: The Revolution (23:30 – 00:15)</a></li>
+  <li><a href="#guidelines-for-activity-creators-ministers" id="toc-guidelines-for-activity-creators-ministers" class="nav-link" data-scroll-target="#guidelines-for-activity-creators-ministers"><span class="header-section-number">7</span> Guidelines for Activity Creators &amp; Ministers</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Ecotopia: Game Activities, Concessions &amp; Economic Engine Guide</h1>
+<p class="subtitle lead">Comprehensive Game Design, Ministry Concessions &amp; Asymmetric Run Mechanics for Ecotopia</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Authors</div>
+    <div class="quarto-title-meta-contents">
+             <p>Wout </p>
+             <p>Chris </p>
+             <p>Jack </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 10, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled" title="Target Audience &amp; Document Scope">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Target Audience &amp; Document Scope
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This guide is the master operating reference for <strong>Wout (Game Design)</strong>, <strong>Ministry Leads (Ministers)</strong>, <strong>Game Facilitators</strong>, and <strong>Quest Writers</strong>.</p>
+<p>It consolidates the living concession economy, debt absorption mechanics, the 10-ministry game concessions, corporate agendas (Secret Hitler track), rebel infiltration runs (Netrunner mechanics), and the revolution endgame sequence.</p>
+</div>
+</div>
+<hr>
+<section id="the-core-gameplay-loop-concession-economy" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> The Core Gameplay Loop &amp; Concession Economy</h1>
+<p>The interactive game runs for approximately <strong>2 to 2.5 hours</strong> (typically 21:30 to 00:00) before transitioning into the open dance celebration.</p>
+<pre><code>       [Arriving Unassigned Citizens: -150 to -500 Debt]
+                              │
+                              ▼
+           [Labor Market &amp; Ministry Interviews]
+      Ministers evaluate debts, skills, and work willingness
+                              │
+                              ▼
+            [Sponsorship &amp; Contract Stamp]
+      Ministry absorbs citizen's negative balance onto Ledger
+                              │
+      ┌───────────────────────┴───────────────────────┐
+      ▼                                               ▼
+[Worker Operates Ministry Concession]   [Worker Dispatched on Quests / Runs]
+- Runs game shifts &amp; labor              - Infiltrates rival ministries
+- Collects customer tariffs &amp; fees      - Sabotages corporate agendas
+      │                                               │
+      └───────────────────────┬───────────────────────┘
+                              ▼
+                  [Dual-Tally Resolution]
+   Citizen passport climbs toward 0 / +100 (Personal VIP)
+   Ministry Ledger builds Net Surplus (State Dominance)
+                              │
+                              ▼
+        [Phase 3: The Revolution Climax (23:30 - 00:15)]
+   5 Corporate Agendas locked OR Rebels expose Cellar Server</code></pre>
+<hr>
+</section>
+<section id="the-living-economy-capital-debt-concessions" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> The Living Economy: Capital, Debt &amp; Concessions</h1>
+<section id="starting-capital-vs.-unassigned-labor" class="level3" data-number="2.0.1">
+<h3 data-number="2.0.1" class="anchored" data-anchor-id="starting-capital-vs.-unassigned-labor"><span class="header-section-number">2.0.1</span> Starting Capital vs.&nbsp;Unassigned Labor</h3>
+<ul>
+<li><strong>The 10 Ministers / Founders:</strong> Pre-designated players or hosts who start in the surplus with <strong>+800 Carbon Credits</strong>, an official <strong>Ministry Clipboard Ledger</strong>, an official <strong>Ministry Rubber Stamp</strong>, and custody of their <strong>Concession Station</strong>.</li>
+<li><strong>The Indebted Citizens (~190 guests):</strong> Enter intake with <strong>-150 to -500 Debt</strong> stamped in their physical passport booklet (calculated from intake applications or the interrogation pen). They arrive unassigned, with no civic rights or room access until sponsored.</li>
+</ul>
+</section>
+<section id="the-hiring-dilemma-debt-absorption" class="level3" data-number="2.0.2">
+<h3 data-number="2.0.2" class="anchored" data-anchor-id="the-hiring-dilemma-debt-absorption"><span class="header-section-number">2.0.2</span> The Hiring Dilemma: Debt Absorption</h3>
+<ul>
+<li><strong>Why Ministries Must Hire:</strong> A Minister cannot man a bike dynamo, scrub glassware, audit drinks, and conduct inquisitions alone for 2.5 hours. They <em>must</em> recruit staff to run shifts, solicit customer credits, and guard their station.</li>
+<li><strong>The Absorption Formula:</strong> When a Minister recruits an unassigned citizen:
+<ol type="1">
+<li>The Minister stamps the citizen’s passport with the official Ministry Seal.</li>
+<li>The Minister logs the recruit’s starting debt directly onto the Ministry Clipboard Ledger: <span class="math display">\[\text{Ministry Net Balance} = \text{Starting Treasury (+800)} - \sum \text{Recruit Starting Debts} + \text{Generated Credits}\]</span></li>
+</ol></li>
+<li><strong>Natural Hiring Limits &amp; Negotiations:</strong>
+<ul>
+<li><strong>Low-Debt Citizens (<code>-150</code>):</strong> In high demand. Ministries compete to sign them, offering low labor duties.</li>
+<li><strong>High-Debt Citizens (<code>-450</code>):</strong> Regarded as toxic liabilities. Ministers conduct 60-second interviews: <em>“If we absorb 450 credits of your ancestral sin, you must run two 10-minute shifts at our station and execute one dangerous sabotage run on our rival.”</em></li>
+</ul></li>
+</ul>
+</section>
+<section id="the-dual-tally-productivity-loop" class="level3" data-number="2.0.3">
+<h3 data-number="2.0.3" class="anchored" data-anchor-id="the-dual-tally-productivity-loop"><span class="header-section-number">2.0.3</span> The Dual-Tally Productivity Loop</h3>
+<ul>
+<li>When a recruit works a 5-minute shift, runs their station, or completes a quest:
+<ul>
+<li><strong>Individual Passport:</strong> Receives a credit stamp (+30 to +50), moving the individual toward <code>0</code> (Citizen rights) and <code>+100</code> (VIP Room access in The Library).</li>
+<li><strong>Ministry Clipboard:</strong> The recruit reports back to their Minister to log the credit gain, offsetting the absorbed debt and driving the Ministry’s Net Power Score toward state dominance.</li>
+</ul></li>
+</ul>
+</section>
+<section id="carbon-insolvency-net-balance-0" class="level3" data-number="2.0.4">
+<h3 data-number="2.0.4" class="anchored" data-anchor-id="carbon-insolvency-net-balance-0"><span class="header-section-number">2.0.4</span> Carbon Insolvency (<code>Net Balance &lt; 0</code>)</h3>
+<ul>
+<li>If a Ministry recklessly hires too many unproductive debtors, its net balance drops below zero.</li>
+<li><strong>Insolvency Penalties:</strong> VIP Room access is frozen for all members, Minilove may conduct aggressive audits, and the Ministry cannot vote or fund Corporate Agendas until solvency is restored.</li>
+<li><strong>Defections &amp; Liquidation:</strong> Insolvent Ministries can sell high-performing recruits to wealthy rivals or dump unproductive debtors at <strong>Minirenewal (The Recycling Plant)</strong> to compost their debt contract.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="the-10-ministry-concessions-asymmetric-business-models" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> The 10 Ministry Concessions &amp; Asymmetric Business Models</h1>
+<p>Ministries do not just play games—<strong>they operate them as economic concessions and state enterprises</strong>. Each Ministry has an asymmetric economic charter:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Newspeak Ministry</th>
+<th style="text-align: left;">Physical Concession &amp; Game</th>
+<th style="text-align: left;">Asymmetric Economic Charter</th>
+<th style="text-align: left;">Key Revenue &amp; Subsidy Mechanic</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Miniservice</strong></td>
+<td style="text-align: left;"><strong>Greenwashing Scullery</strong> (Dishwashing &amp; Sorting Station)</td>
+<td style="text-align: left;"><strong>Subsidized Workhouse</strong></td>
+<td style="text-align: left;">Receives a <strong>50% State Debt Relief Subsidy</strong> when recruiting (e.g.&nbsp;absorbing -400 debt only burdens ledger by -200). Generates massive credit volume through +30 labor shifts.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Minirenewal</strong></td>
+<td style="text-align: left;"><strong>The Suicide Carbon Booth</strong> (Composting &amp; Identity Reset)</td>
+<td style="text-align: left;"><strong>Debt Liquidator Bounty</strong></td>
+<td style="text-align: left;">Collects a flat <strong>+100 Credit State Bounty</strong> for every bankrupt citizen processed through identity erasure. Ministries pay them to take bad debt off their books.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Minilight</strong></td>
+<td style="text-align: left;"><strong>Kinetic Grid Generator</strong> (Stationary Bicycle Dynamo &amp; Blackouts)</td>
+<td style="text-align: left;"><strong>Grid Power Monopoly</strong></td>
+<td style="text-align: left;">Recruits generate +30 credits per 5-min cycling shift. Minilight can plunge rival zones into blackouts unless they pay a periodic <strong>Grid Maintenance Tariff</strong> (30–50 credits).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Miniflow</strong></td>
+<td style="text-align: left;"><strong>Peetopia &amp; Sacred Sluice</strong> (Restroom Fluid Audits &amp; Cup Dispenser)</td>
+<td style="text-align: left;"><strong>Fluid Royalty Monopoly</strong></td>
+<td style="text-align: left;">Controls cup dispensing and hydration. Collects a <strong>+20 Fluid Dividend</strong> for every citizen returning moisture at Peetopia; fines unauthorized drink spills.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Miniplenty</strong></td>
+<td style="text-align: left;"><strong>Caloric Equilibrium Table</strong> (Algae Paste &amp; Blind Food Tasting)</td>
+<td style="text-align: left;"><strong>Caloric Indulgences</strong></td>
+<td style="text-align: left;">Controls snack distribution. Sells caloric dispensations to hungry citizens or rival factions for direct credit transfers.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Minilove</strong></td>
+<td style="text-align: left;"><strong>The Confession Pen &amp; Interrogation</strong> (Heresy Tribunals)</td>
+<td style="text-align: left;"><strong>Inquisitorial Seizure</strong></td>
+<td style="text-align: left;">Conducts random heresy audits and surveillance checks. Seizes <strong>50% of all levied fines</strong> directly into Minilove’s treasury.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Minijoy</strong></td>
+<td style="text-align: left;"><strong>The Morale Arena</strong> (Wig Snatching Duels &amp; Open-Mic Stage)</td>
+<td style="text-align: left;"><strong>State Morale Grants</strong></td>
+<td style="text-align: left;">Charges entry fees for Wig Snatching duels (+10 credits); receives a lump-sum <strong>+150 State Morale Grant</strong> whenever drawing a crowd of 15+ for crowd rallies.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Minishelter</strong></td>
+<td style="text-align: left;"><strong>The 15-Minute Grid Checkpoint</strong> (Corridor Curfew Gates)</td>
+<td style="text-align: left;"><strong>Transit Tolls &amp; Passes</strong></td>
+<td style="text-align: left;">Guards corridor bottlenecks leading to prime venue areas (VIP Library, Quiet Room). Charges 10–20 credits for cross-sector transit passes.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Minithrift</strong></td>
+<td style="text-align: left;"><strong>Contraband Locker &amp; Seizure</strong> (Synthetic Property Audits)</td>
+<td style="text-align: left;"><strong>Contraband Liquidation</strong></td>
+<td style="text-align: left;">Confiscates non-organic items (plastic trinkets, polyester gear). Owners can redeem them for a fee, or Minithrift liquidates them for +40 credits each.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Minibreath</strong></td>
+<td style="text-align: left;"><strong>The Spirometry Checkpoint</strong> (Atmospheric Metering)</td>
+<td style="text-align: left;"><strong>Atmospheric Offsets</strong></td>
+<td style="text-align: left;">Meters exhalations with paper windmills and breath-holding tests. Issues “Breath Indulgences” to citizens wishing to dance without hyperventilation fines.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+<section id="master-concession-games-catalog" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Master Concession Games Catalog</h1>
+<section id="category-a-kinetic-utility-concessions" class="level3" data-number="4.0.1">
+<h3 data-number="4.0.1" class="anchored" data-anchor-id="category-a-kinetic-utility-concessions"><span class="header-section-number">4.0.1</span> Category A: Kinetic &amp; Utility Concessions</h3>
+<ul>
+<li><strong>Stationary Power Bicycle (Minilight Concession):</strong>
+<ul>
+<li><em>Setup:</em> Rigged bicycle generator powering a bulb or sound feed.</li>
+<li><em>Mechanic:</em> Indebted citizens pedal 5-minute shifts to earn +30 credits. Minilight stores the generated wattage as Ministry treasury points.</li>
+</ul></li>
+<li><strong>Greenwashing the Dishes (Miniservice Concession):</strong>
+<ul>
+<li><em>Setup:</em> Scullery station with metered spray bottles and recycled sponges.</li>
+<li><em>Mechanic:</em> Workers clean 10 glassware items under strict single-sponge rules (+30 credits). Generates high throughput for Miniservice.</li>
+</ul></li>
+<li><strong>Peetopia Fluid Balance (Miniflow Concession):</strong>
+<ul>
+<li><em>Setup:</em> Hydration monitoring station outside restrooms.</li>
+<li><em>Mechanic:</em> Returning moisture to the collective facility grants a +20 credit stamp, while Miniflow collects an equal state fluid dividend.</li>
+</ul></li>
+</ul>
+</section>
+<section id="category-b-competitive-morale-concessions" class="level3" data-number="4.0.2">
+<h3 data-number="4.0.2" class="anchored" data-anchor-id="category-b-competitive-morale-concessions"><span class="header-section-number">4.0.2</span> Category B: Competitive &amp; Morale Concessions</h3>
+<ul>
+<li><strong>Wig Snatching Elimination Arena (Minijoy Concession):</strong>
+<ul>
+<li><em>Setup:</em> Two duelists wearing identical neon synthetic wigs face off in a clearing.</li>
+<li><em>Mechanic:</em> Fast elimination duel (best of 3, ~60 seconds). Winner receives +25 credits. Entry fees flow to Minijoy.</li>
+</ul></li>
+<li><strong>How the World Ends Open-Mic (Minijoy Concession):</strong>
+<ul>
+<li><em>Setup:</em> Mini-podium with megaphone and banners.</li>
+<li><em>Mechanic:</em> Contestants have 60 seconds to deliver the most melodramatic extinction monologue. Crowd applauds to decide the winner (+100 credits and ribbon).</li>
+</ul></li>
+</ul>
+</section>
+<section id="category-c-penal-reclamation-concessions" class="level3" data-number="4.0.3">
+<h3 data-number="4.0.3" class="anchored" data-anchor-id="category-c-penal-reclamation-concessions"><span class="header-section-number">4.0.3</span> Category C: Penal &amp; Reclamation Concessions</h3>
+<ul>
+<li><strong>The Suicide Carbon Booth (Minirenewal Concession):</strong>
+<ul>
+<li><em>Setup:</em> Upcycling telephone booth staffed by Renewal Technologists in lab coats.</li>
+<li><em>Mechanic:</em> Bankrupt or defecting citizens undergo a composting ritual. Old identity is struck through; balance reset to <code>0</code>; citizen receives a new designation (<em>Citizen Lichen-88</em>). Minirenewal collects +100 bounty.</li>
+</ul></li>
+<li><strong>The Confession Pen &amp; Interrogation (Minilove Concession):</strong>
+<ul>
+<li><em>Setup:</em> Dimly lit holding pen with single chair and spotlight.</li>
+<li><em>Mechanic:</em> Citizens confess pre-collapse ecological crimes. Minilove issues absolutions or fines, retaining a 50% cut.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="the-netrunner-secret-hitler-engine" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> The Netrunner &amp; Secret Hitler Engine</h1>
+<p>To unite the ministries, the economic engine, and the secret resistance into a dramatic climax, gameplay incorporates <strong>Corporate Agendas (Secret Hitler policy tracks)</strong> and <strong>Rebel Infiltration Runs (Netrunner asymmetric attacks)</strong>.</p>
+<pre><code>                    ┌───────────────────────────────┐
+                    │     CENTRAL DECREE BOARD      │
+                    │   5 Corporate State Agendas   │
+                    └───────────────┬───────────────┘
+                                    │
+           ┌────────────────────────┴────────────────────────┐
+           ▼                                                 ▼
+[MINISTRIES: The Corporations]                    [REBELS: The Runners]
+- Pool treasury credits to advance Agendas       - Infiltrate Ministry Concessions
+- Enforce escalating authoritarian decrees       - Bypass Ministry "Ice" (Guards/Audits)
+- Score Net Carbon Power for the Stag            - Execute "Runs" to Trash Agendas &amp; Steal Truth
+           │                                                 │
+           └────────────────────────┬────────────────────────┘
+                                    ▼
+                [23:30 Grand Assembly &amp; Climax]
+      Agendas fully locked OR Resistance raids and exposes Cellar</code></pre>
+<section id="the-central-decree-board-the-5-agendas" class="level3" data-number="5.0.1">
+<h3 data-number="5.0.1" class="anchored" data-anchor-id="the-central-decree-board-the-5-agendas"><span class="header-section-number">5.0.1</span> The Central Decree Board (The 5 Agendas)</h3>
+<p>A large physical display in the main hall tracks the regime’s 5 grand corporate objectives: 1. <strong>Agenda 1: Ambient Dimming</strong> — Reduces venue lumens by 50%; activates Minilight blackout rules. 2. <strong>Agenda 2: Caloric Compression</strong> — Halves snack and bar dispensations; enforces algae ration rules. 3. <strong>Agenda 3: Sector Perimeter Lockdown</strong> — Severs corridor passage between zones without Minishelter permits. 4. <strong>Agenda 4: Mandatory Heresy Purge</strong> — Authorizes Minilove to execute public sidewalk audits. 5. <strong>Agenda 5: Total Silicon Consolidation</strong> — All citizen debt ledgers permanently locked; state power finalized.</p>
+<ul>
+<li><strong>Advancing an Agenda:</strong> Every 30 minutes, Ministries can invest treasury credits onto the Central Board. When an agenda receives <strong>200 Credits in funding</strong>, it advances to the Staging Queue and is proclaimed over the PA system by Hanna.</li>
+</ul>
+</section>
+<section id="rebel-infiltration-runs-netrunner-mechanics" class="level3" data-number="5.0.2">
+<h3 data-number="5.0.2" class="anchored" data-anchor-id="rebel-infiltration-runs-netrunner-mechanics"><span class="header-section-number">5.0.2</span> Rebel Infiltration Runs (Netrunner Mechanics)</h3>
+<p>The Secret Resistance (headquartered in <strong>Thijs’s room</strong>, identified via the <strong>Ankle Stamp</strong>) operates as Runners attempting to disrupt the corporate machine.</p>
+<ul>
+<li><strong>The Run Loop:</strong>
+<ol type="1">
+<li>Operatives receive a discrete <strong>Run Card</strong> from Thijs’s room targeting a specific Ministry station (e.g., reversing Miniflow’s meter, stealing Minithrift’s backup drive, sabotaging Minilight’s dynamo).</li>
+<li><strong>Overcoming Ice (Defenses):</strong> The Runner must bypass station defenses (inquisitors, checkpoint guards, surveillance wardens) through stealth, distraction (e.g., triggering a wig duel nearby), or credit bribes.</li>
+<li><strong>Breaching &amp; Trashing:</strong> Successful completion of a Run allows the Runner to:
+<ul>
+<li><strong>Trash an Agenda:</strong> Remove 100 credits of funding from an active Corporate Agenda on the Central Board.</li>
+<li><strong>Extract a Truth Fragment:</strong> Collect physical evidence slips proving the Guardian Stag is powered by a salvaged corporate AI server in the cellar.</li>
+</ul></li>
+</ol></li>
+</ul>
+</section>
+<section id="the-secret-legislative-council-secret-hitler-dynamics" class="level3" data-number="5.0.3">
+<h3 data-number="5.0.3" class="anchored" data-anchor-id="the-secret-legislative-council-secret-hitler-dynamics"><span class="header-section-number">5.0.3</span> The Secret Legislative Council (Secret Hitler Dynamics)</h3>
+<p>Every 45 minutes, the High Warden convenes the 10 Ministers for an Assembly. Two decree cards are drawn from the state deck. Hidden resistance moles within ministry ranks can use secret votes or procedural maneuvers to veto corporate decrees or slip through subversive resolutions (e.g., <em>Decree of General Amnesty</em>).</p>
+<hr>
+</section>
+</section>
+<section id="climax-endgame-the-revolution-2330-0015" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Climax &amp; Endgame: The Revolution (23:30 – 00:15)</h1>
+<p>The live game outcome is dynamically determined by the economic struggle between Corporate Agendas and Rebel Runs:</p>
+<pre><code>23:30 ── State Assembly: Leader's Grand Spectacle &amp; Ministry Showcases
+23:45 ── Resistance Raid: Ankle-stamped rebels storm the podium
+00:00 ── The Great Reveal: Cellar server node exposed; compliance proved a sham
+00:15 ── Transition: The system falls; DJs take over for the dance party</code></pre>
+<ol type="1">
+<li><strong>The State Assembly (23:30):</strong> The loudspeaker orders all 10 Ministries to gather before the main stage. The supreme figurehead arrives amidst smoke and fanfare. Each ministry presents their chant, anthem, or synchronized formation.</li>
+<li><strong>The Resistance Raid (23:45):</strong> If the resistance has recruited over 50% of attendees with ankle stamps and trashed at least 3 Agendas, the moles signal the revolt. They storm the podium with black banners reading: <strong>“THE STAG IS SILICON. THE DEBT IS A LIE.”</strong></li>
+<li><strong>The Big Reveal (00:00):</strong> Revolutionaries reveal the truth: the entire carbon credit ledger, the surveillance cameras, and the Guardian Stag calculations were never ecological—they were running on a salvaged corporate AI server node in the cellar! The regime was simply running compliance theater to preserve power.</li>
+<li><strong>Resolution (00:15):</strong> The ministries dissolve their rivalries, citizens tear out their passport debt pages, and the stage converts immediately into an open celebration dance floor with DJs running until 04:00+.</li>
+</ol>
+<hr>
+</section>
+<section id="guidelines-for-activity-creators-ministers" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Guidelines for Activity Creators &amp; Ministers</h1>
+<ol type="1">
+<li><strong>Always Word Positively:</strong> Punishments are <em>“privileges”</em>; starvation is <em>“caloric purity”</em>; forced chores are <em>“joyful civic service.”</em></li>
+<li><strong>Keep the Barrier to Entry Low:</strong> Games must take under 3 minutes to learn and under 10 minutes to play.</li>
+<li><strong>Always Award Credit Stamps:</strong> Every completed activity must offer a tangible reward on the player’s physical passport booklet (+10 to +50 credits) and clipboard ledger.</li>
+<li><strong>Respect the Universal Safe-Word:</strong> If any player utters <strong>“OZONE”</strong>, pause immediately, drop character, and ensure they are supported.</li>
+</ol>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>“BORN INTO DEBT. REPAID IN DEVOTION.” — The Guardian Stag, Sanctuary De Warren</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>
