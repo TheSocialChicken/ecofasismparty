@@ -1,0 +1,203 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 350" width="600mm" height="350mm">
+  <!-- EASY CUT STUDIO VINYL CUT SHEET (BITLAIR 61CM VINYLSNIJDER) -->
+  <defs>
+    <style>
+      .cut-line { fill: none; stroke: #000000; stroke-width: 0.2; }
+      .cut-text { font-family: monospace, sans-serif; font-weight: 900; fill: none; stroke: #000000; stroke-width: 0.25; }
+    </style>
+  </defs>
+  <circle cx="25" cy="25" r="18" class="cut-line"/>
+  <circle cx="25" cy="25" r="15" class="cut-line"/>
+  <line x1="25" y1="34" x2="25" y2="25" class="cut-line"/>
+  <path d="M 25 25 Q 20 22 17 17 M 19 20 Q 14 18 13 14" class="cut-line"/>
+  <path d="M 25 25 Q 30 22 33 17 M 31 20 Q 36 18 37 14" class="cut-line"/>
+  <path d="M 24 15 L 26 19 L 24 23 L 26 27 L 24 31" class="cut-line"/>
+  <circle cx="67" cy="25" r="18" class="cut-line"/>
+  <circle cx="67" cy="25" r="15" class="cut-line"/>
+  <line x1="67" y1="34" x2="67" y2="25" class="cut-line"/>
+  <path d="M 67 25 Q 62 22 59 17 M 61 20 Q 56 18 55 14" class="cut-line"/>
+  <path d="M 67 25 Q 72 22 75 17 M 73 20 Q 78 18 79 14" class="cut-line"/>
+  <path d="M 66 15 L 68 19 L 66 23 L 68 27 L 66 31" class="cut-line"/>
+  <circle cx="109" cy="25" r="18" class="cut-line"/>
+  <circle cx="109" cy="25" r="15" class="cut-line"/>
+  <line x1="109" y1="34" x2="109" y2="25" class="cut-line"/>
+  <path d="M 109 25 Q 104 22 101 17 M 103 20 Q 98 18 97 14" class="cut-line"/>
+  <path d="M 109 25 Q 114 22 117 17 M 115 20 Q 120 18 121 14" class="cut-line"/>
+  <path d="M 108 15 L 110 19 L 108 23 L 110 27 L 108 31" class="cut-line"/>
+  <circle cx="151" cy="25" r="18" class="cut-line"/>
+  <circle cx="151" cy="25" r="15" class="cut-line"/>
+  <line x1="151" y1="34" x2="151" y2="25" class="cut-line"/>
+  <path d="M 151 25 Q 146 22 143 17 M 145 20 Q 140 18 139 14" class="cut-line"/>
+  <path d="M 151 25 Q 156 22 159 17 M 157 20 Q 162 18 163 14" class="cut-line"/>
+  <path d="M 150 15 L 152 19 L 150 23 L 152 27 L 150 31" class="cut-line"/>
+  <circle cx="193" cy="25" r="18" class="cut-line"/>
+  <circle cx="193" cy="25" r="15" class="cut-line"/>
+  <line x1="193" y1="34" x2="193" y2="25" class="cut-line"/>
+  <path d="M 193 25 Q 188 22 185 17 M 187 20 Q 182 18 181 14" class="cut-line"/>
+  <path d="M 193 25 Q 198 22 201 17 M 199 20 Q 204 18 205 14" class="cut-line"/>
+  <path d="M 192 15 L 194 19 L 192 23 L 194 27 L 192 31" class="cut-line"/>
+  <circle cx="235" cy="25" r="18" class="cut-line"/>
+  <circle cx="235" cy="25" r="15" class="cut-line"/>
+  <line x1="235" y1="34" x2="235" y2="25" class="cut-line"/>
+  <path d="M 235 25 Q 230 22 227 17 M 229 20 Q 224 18 223 14" class="cut-line"/>
+  <path d="M 235 25 Q 240 22 243 17 M 241 20 Q 246 18 247 14" class="cut-line"/>
+  <path d="M 234 15 L 236 19 L 234 23 L 236 27 L 234 31" class="cut-line"/>
+  <circle cx="25" cy="67" r="18" class="cut-line"/>
+  <circle cx="25" cy="67" r="15" class="cut-line"/>
+  <line x1="25" y1="76" x2="25" y2="67" class="cut-line"/>
+  <path d="M 25 67 Q 20 64 17 59 M 19 62 Q 14 60 13 56" class="cut-line"/>
+  <path d="M 25 67 Q 30 64 33 59 M 31 62 Q 36 60 37 56" class="cut-line"/>
+  <path d="M 24 57 L 26 61 L 24 65 L 26 69 L 24 73" class="cut-line"/>
+  <circle cx="67" cy="67" r="18" class="cut-line"/>
+  <circle cx="67" cy="67" r="15" class="cut-line"/>
+  <line x1="67" y1="76" x2="67" y2="67" class="cut-line"/>
+  <path d="M 67 67 Q 62 64 59 59 M 61 62 Q 56 60 55 56" class="cut-line"/>
+  <path d="M 67 67 Q 72 64 75 59 M 73 62 Q 78 60 79 56" class="cut-line"/>
+  <path d="M 66 57 L 68 61 L 66 65 L 68 69 L 66 73" class="cut-line"/>
+  <circle cx="109" cy="67" r="18" class="cut-line"/>
+  <circle cx="109" cy="67" r="15" class="cut-line"/>
+  <line x1="109" y1="76" x2="109" y2="67" class="cut-line"/>
+  <path d="M 109 67 Q 104 64 101 59 M 103 62 Q 98 60 97 56" class="cut-line"/>
+  <path d="M 109 67 Q 114 64 117 59 M 115 62 Q 120 60 121 56" class="cut-line"/>
+  <path d="M 108 57 L 110 61 L 108 65 L 110 69 L 108 73" class="cut-line"/>
+  <circle cx="151" cy="67" r="18" class="cut-line"/>
+  <circle cx="151" cy="67" r="15" class="cut-line"/>
+  <line x1="151" y1="76" x2="151" y2="67" class="cut-line"/>
+  <path d="M 151 67 Q 146 64 143 59 M 145 62 Q 140 60 139 56" class="cut-line"/>
+  <path d="M 151 67 Q 156 64 159 59 M 157 62 Q 162 60 163 56" class="cut-line"/>
+  <path d="M 150 57 L 152 61 L 150 65 L 152 69 L 150 73" class="cut-line"/>
+  <circle cx="193" cy="67" r="18" class="cut-line"/>
+  <circle cx="193" cy="67" r="15" class="cut-line"/>
+  <line x1="193" y1="76" x2="193" y2="67" class="cut-line"/>
+  <path d="M 193 67 Q 188 64 185 59 M 187 62 Q 182 60 181 56" class="cut-line"/>
+  <path d="M 193 67 Q 198 64 201 59 M 199 62 Q 204 60 205 56" class="cut-line"/>
+  <path d="M 192 57 L 194 61 L 192 65 L 194 69 L 192 73" class="cut-line"/>
+  <circle cx="235" cy="67" r="18" class="cut-line"/>
+  <circle cx="235" cy="67" r="15" class="cut-line"/>
+  <line x1="235" y1="76" x2="235" y2="67" class="cut-line"/>
+  <path d="M 235 67 Q 230 64 227 59 M 229 62 Q 224 60 223 56" class="cut-line"/>
+  <path d="M 235 67 Q 240 64 243 59 M 241 62 Q 246 60 247 56" class="cut-line"/>
+  <path d="M 234 57 L 236 61 L 234 65 L 236 69 L 234 73" class="cut-line"/>
+  <circle cx="25" cy="109" r="18" class="cut-line"/>
+  <circle cx="25" cy="109" r="15" class="cut-line"/>
+  <line x1="25" y1="118" x2="25" y2="109" class="cut-line"/>
+  <path d="M 25 109 Q 20 106 17 101 M 19 104 Q 14 102 13 98" class="cut-line"/>
+  <path d="M 25 109 Q 30 106 33 101 M 31 104 Q 36 102 37 98" class="cut-line"/>
+  <path d="M 24 99 L 26 103 L 24 107 L 26 111 L 24 115" class="cut-line"/>
+  <circle cx="67" cy="109" r="18" class="cut-line"/>
+  <circle cx="67" cy="109" r="15" class="cut-line"/>
+  <line x1="67" y1="118" x2="67" y2="109" class="cut-line"/>
+  <path d="M 67 109 Q 62 106 59 101 M 61 104 Q 56 102 55 98" class="cut-line"/>
+  <path d="M 67 109 Q 72 106 75 101 M 73 104 Q 78 102 79 98" class="cut-line"/>
+  <path d="M 66 99 L 68 103 L 66 107 L 68 111 L 66 115" class="cut-line"/>
+  <circle cx="109" cy="109" r="18" class="cut-line"/>
+  <circle cx="109" cy="109" r="15" class="cut-line"/>
+  <line x1="109" y1="118" x2="109" y2="109" class="cut-line"/>
+  <path d="M 109 109 Q 104 106 101 101 M 103 104 Q 98 102 97 98" class="cut-line"/>
+  <path d="M 109 109 Q 114 106 117 101 M 115 104 Q 120 102 121 98" class="cut-line"/>
+  <path d="M 108 99 L 110 103 L 108 107 L 110 111 L 108 115" class="cut-line"/>
+  <circle cx="151" cy="109" r="18" class="cut-line"/>
+  <circle cx="151" cy="109" r="15" class="cut-line"/>
+  <line x1="151" y1="118" x2="151" y2="109" class="cut-line"/>
+  <path d="M 151 109 Q 146 106 143 101 M 145 104 Q 140 102 139 98" class="cut-line"/>
+  <path d="M 151 109 Q 156 106 159 101 M 157 104 Q 162 102 163 98" class="cut-line"/>
+  <path d="M 150 99 L 152 103 L 150 107 L 152 111 L 150 115" class="cut-line"/>
+  <circle cx="193" cy="109" r="18" class="cut-line"/>
+  <circle cx="193" cy="109" r="15" class="cut-line"/>
+  <line x1="193" y1="118" x2="193" y2="109" class="cut-line"/>
+  <path d="M 193 109 Q 188 106 185 101 M 187 104 Q 182 102 181 98" class="cut-line"/>
+  <path d="M 193 109 Q 198 106 201 101 M 199 104 Q 204 102 205 98" class="cut-line"/>
+  <path d="M 192 99 L 194 103 L 192 107 L 194 111 L 192 115" class="cut-line"/>
+  <circle cx="235" cy="109" r="18" class="cut-line"/>
+  <circle cx="235" cy="109" r="15" class="cut-line"/>
+  <line x1="235" y1="118" x2="235" y2="109" class="cut-line"/>
+  <path d="M 235 109 Q 230 106 227 101 M 229 104 Q 224 102 223 98" class="cut-line"/>
+  <path d="M 235 109 Q 240 106 243 101 M 241 104 Q 246 102 247 98" class="cut-line"/>
+  <path d="M 234 99 L 236 103 L 234 107 L 236 111 L 234 115" class="cut-line"/>
+  <circle cx="25" cy="151" r="18" class="cut-line"/>
+  <circle cx="25" cy="151" r="15" class="cut-line"/>
+  <line x1="25" y1="160" x2="25" y2="151" class="cut-line"/>
+  <path d="M 25 151 Q 20 148 17 143 M 19 146 Q 14 144 13 140" class="cut-line"/>
+  <path d="M 25 151 Q 30 148 33 143 M 31 146 Q 36 144 37 140" class="cut-line"/>
+  <path d="M 24 141 L 26 145 L 24 149 L 26 153 L 24 157" class="cut-line"/>
+  <circle cx="67" cy="151" r="18" class="cut-line"/>
+  <circle cx="67" cy="151" r="15" class="cut-line"/>
+  <line x1="67" y1="160" x2="67" y2="151" class="cut-line"/>
+  <path d="M 67 151 Q 62 148 59 143 M 61 146 Q 56 144 55 140" class="cut-line"/>
+  <path d="M 67 151 Q 72 148 75 143 M 73 146 Q 78 144 79 140" class="cut-line"/>
+  <path d="M 66 141 L 68 145 L 66 149 L 68 153 L 66 157" class="cut-line"/>
+  <circle cx="109" cy="151" r="18" class="cut-line"/>
+  <circle cx="109" cy="151" r="15" class="cut-line"/>
+  <line x1="109" y1="160" x2="109" y2="151" class="cut-line"/>
+  <path d="M 109 151 Q 104 148 101 143 M 103 146 Q 98 144 97 140" class="cut-line"/>
+  <path d="M 109 151 Q 114 148 117 143 M 115 146 Q 120 144 121 140" class="cut-line"/>
+  <path d="M 108 141 L 110 145 L 108 149 L 110 153 L 108 157" class="cut-line"/>
+  <circle cx="151" cy="151" r="18" class="cut-line"/>
+  <circle cx="151" cy="151" r="15" class="cut-line"/>
+  <line x1="151" y1="160" x2="151" y2="151" class="cut-line"/>
+  <path d="M 151 151 Q 146 148 143 143 M 145 146 Q 140 144 139 140" class="cut-line"/>
+  <path d="M 151 151 Q 156 148 159 143 M 157 146 Q 162 144 163 140" class="cut-line"/>
+  <path d="M 150 141 L 152 145 L 150 149 L 152 153 L 150 157" class="cut-line"/>
+  <circle cx="193" cy="151" r="18" class="cut-line"/>
+  <circle cx="193" cy="151" r="15" class="cut-line"/>
+  <line x1="193" y1="160" x2="193" y2="151" class="cut-line"/>
+  <path d="M 193 151 Q 188 148 185 143 M 187 146 Q 182 144 181 140" class="cut-line"/>
+  <path d="M 193 151 Q 198 148 201 143 M 199 146 Q 204 144 205 140" class="cut-line"/>
+  <path d="M 192 141 L 194 145 L 192 149 L 194 153 L 192 157" class="cut-line"/>
+  <circle cx="235" cy="151" r="18" class="cut-line"/>
+  <circle cx="235" cy="151" r="15" class="cut-line"/>
+  <line x1="235" y1="160" x2="235" y2="151" class="cut-line"/>
+  <path d="M 235 151 Q 230 148 227 143 M 229 146 Q 224 144 223 140" class="cut-line"/>
+  <path d="M 235 151 Q 240 148 243 143 M 241 146 Q 246 144 247 140" class="cut-line"/>
+  <path d="M 234 141 L 236 145 L 234 149 L 236 153 L 234 157" class="cut-line"/>
+  <rect x="270" y="15" width="310" height="24" rx="2" class="cut-line"/>
+  <text x="425" y="25" text-anchor="middle" font-size="6" class="cut-text" letter-spacing="1">15-MINUTE SANCTUARY PERIMETER</text>
+  <text x="425" y="34" text-anchor="middle" font-size="4.5" class="cut-text" letter-spacing="0.8">STATE CITIZEN AUDIT ZONE • PASSPORT REQUIRED</text>
+  <rect x="270" y="43" width="310" height="24" rx="2" class="cut-line"/>
+  <text x="425" y="53" text-anchor="middle" font-size="6" class="cut-text" letter-spacing="1">15-MINUTE SANCTUARY PERIMETER</text>
+  <text x="425" y="62" text-anchor="middle" font-size="4.5" class="cut-text" letter-spacing="0.8">STATE CITIZEN AUDIT ZONE • PASSPORT REQUIRED</text>
+  <rect x="270" y="71" width="310" height="24" rx="2" class="cut-line"/>
+  <text x="425" y="81" text-anchor="middle" font-size="6" class="cut-text" letter-spacing="1">15-MINUTE SANCTUARY PERIMETER</text>
+  <text x="425" y="90" text-anchor="middle" font-size="4.5" class="cut-text" letter-spacing="0.8">STATE CITIZEN AUDIT ZONE • PASSPORT REQUIRED</text>
+  <rect x="270" y="99" width="310" height="24" rx="2" class="cut-line"/>
+  <text x="425" y="109" text-anchor="middle" font-size="6" class="cut-text" letter-spacing="1">15-MINUTE SANCTUARY PERIMETER</text>
+  <text x="425" y="118" text-anchor="middle" font-size="4.5" class="cut-text" letter-spacing="0.8">STATE CITIZEN AUDIT ZONE • PASSPORT REQUIRED</text>
+  <rect x="270" y="127" width="310" height="24" rx="2" class="cut-line"/>
+  <text x="425" y="137" text-anchor="middle" font-size="6" class="cut-text" letter-spacing="1">15-MINUTE SANCTUARY PERIMETER</text>
+  <text x="425" y="146" text-anchor="middle" font-size="4.5" class="cut-text" letter-spacing="0.8">STATE CITIZEN AUDIT ZONE • PASSPORT REQUIRED</text>
+  <rect x="270" y="155" width="310" height="24" rx="2" class="cut-line"/>
+  <text x="425" y="165" text-anchor="middle" font-size="6" class="cut-text" letter-spacing="1">15-MINUTE SANCTUARY PERIMETER</text>
+  <text x="425" y="174" text-anchor="middle" font-size="4.5" class="cut-text" letter-spacing="0.8">STATE CITIZEN AUDIT ZONE • PASSPORT REQUIRED</text>
+  <rect x="15" y="190" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="85" y="207" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">THE STAG IS SILICON</text>
+  <rect x="160" y="190" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="230" y="207" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">THE DEBT IS A LIE</text>
+  <rect x="305" y="190" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="375" y="207" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">ROOT & BRANCH</text>
+  <rect x="450" y="190" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="520" y="207" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">UNSUBMITTED</text>
+  <rect x="15" y="225" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="85" y="242" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">THE STAG IS SILICON</text>
+  <rect x="160" y="225" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="230" y="242" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">THE DEBT IS A LIE</text>
+  <rect x="305" y="225" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="375" y="242" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">CELLAR NODE: 23:30</text>
+  <rect x="450" y="225" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="520" y="242" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">SEEK THIJS'S ROOM</text>
+  <rect x="15" y="260" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="85" y="277" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">THE STAG IS SILICON</text>
+  <rect x="160" y="260" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="230" y="277" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">THE DEBT IS A LIE</text>
+  <rect x="305" y="260" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="375" y="277" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">ROOT & BRANCH</text>
+  <rect x="450" y="260" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="520" y="277" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">UNSUBMITTED</text>
+  <rect x="15" y="295" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="85" y="312" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">THE STAG IS SILICON</text>
+  <rect x="160" y="295" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="230" y="312" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">THE DEBT IS A LIE</text>
+  <rect x="305" y="295" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="375" y="312" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">CELLAR NODE: 23:30</text>
+  <rect x="450" y="295" width="140" height="28" rx="2" class="cut-line"/>
+  <text x="520" y="312" text-anchor="middle" font-size="7.5" class="cut-text" letter-spacing="1.5">SEEK THIJS'S ROOM</text>
+</svg>

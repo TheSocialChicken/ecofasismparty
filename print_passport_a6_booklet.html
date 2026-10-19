@@ -37,13 +37,19 @@
     border-radius: 6px;
     margin-bottom: 20px;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 12px;
     max-width: 1050px;
     width: 100%;
     box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+
+  .toolbar-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
   }
 
   .toolbar h1 {
@@ -53,31 +59,114 @@
     letter-spacing: 0.5px;
   }
 
-  .btn-print {
+  .btn-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .btn-action {
     background: #ffffff;
     color: #000000;
     border: 2px solid #000000;
-    padding: 8px 18px;
+    padding: 7px 15px;
     font-family: 'Special Elite', cursive;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: bold;
     cursor: pointer;
     border-radius: 4px;
     transition: all 0.15s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
   }
-  .btn-print:hover {
+  .btn-action:hover {
     background: #e0e0e0;
     transform: translateY(-1px);
   }
+  .btn-action.active {
+    background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+
+  /* Universal Navigation Chips */
+  .booklet-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    background: #1c1c1c;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #383838;
+  }
+  .booklet-nav .nav-label {
+    font-weight: bold;
+    color: #aaaaaa;
+    margin-right: 4px;
+    font-family: 'Special Elite', cursive;
+  }
+  .booklet-nav a {
+    color: #dddddd;
+    text-decoration: none;
+    padding: 3px 7px;
+    border: 1px solid #444444;
+    border-radius: 3px;
+    transition: background 0.1s;
+  }
+  .booklet-nav a:hover {
+    background: #333333;
+    color: #ffffff;
+    border-color: #888888;
+  }
+  .booklet-nav a.current {
+    background: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    border-color: #ffffff;
+  }
 
   .assembly-banner {
-    background: #222222;
+    background: #1e1e1e;
     border: 1px dashed #777777;
     color: #dddddd;
     padding: 8px 14px;
-    font-size: 0.8rem;
-    width: 100%;
+    font-size: 0.78rem;
     border-radius: 4px;
+    line-height: 1.4;
+  }
+
+  /* --- View Modes Container --- */
+  #reading-view {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .reading-spread {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .reading-spread .a6-page {
+    width: 105mm;
+    height: 148.5mm;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  }
+
+  #imposition-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   /* --- A4 Paper Container --- */
@@ -414,51 +503,108 @@
     margin-top: 1mm;
   }
 
-  /* --- PAGE 5: RUNNING TALLY & VIP LIBRARY --- */
-  .tally-table-bw {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 6.5pt;
-    margin-bottom: 2mm;
+  /* --- PAGE 5: THE CARBON PROGRESS LADDER & VIP SPEAKEASY --- */
+  .ladder-tier {
+    border: 1px solid #000000;
+    padding: 1mm;
+    background: #ffffff;
+    margin-bottom: 1.2mm;
   }
-  .tally-table-bw td {
-    border-bottom: 1px dotted #000000;
-    padding: 1.2mm 0;
+  .ladder-tier-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 4.8pt;
+    font-weight: bold;
+    text-align: center;
+    background: #eeeeee;
+    padding: 0.5mm 0;
+    margin: -1mm -1mm 0.8mm -1mm;
+    border-bottom: 0.8px solid #000000;
+    letter-spacing: 0.4px;
   }
-  .citizen-threshold-box {
-    border: 1.5px solid #000000;
-    background: #f0f0f0;
-    padding: 1.5mm 2mm;
-    margin-bottom: 2mm;
-    font-size: 6pt;
-    line-height: 1.2;
+  .ladder-blocks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8mm;
+  }
+  .ladder-block {
+    border: 0.8px solid #000000;
+    padding: 0.6mm 1mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 4.8pt;
+    background: #ffffff;
+  }
+  .ladder-block.intake-target {
+    border: 1.2px dashed #000000;
+    background: #f7f7f7;
+  }
+  .ladder-block .val {
+    font-family: 'Special Elite', cursive;
+    font-weight: bold;
+  }
+  .ladder-block .box {
+    width: 2.8mm;
+    height: 2.8mm;
+    border: 1px solid #000000;
+    display: inline-block;
+    background: #ffffff;
+  }
+  .citizen-gateway {
+    border: 1.8px solid #000000;
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 1mm;
+    font-family: 'Special Elite', cursive;
+    font-size: 5.8pt;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    margin: 1.2mm 0;
+  }
+  .citizen-gateway-sub {
+    font-size: 4.2pt;
+    color: #dddddd;
+    font-family: 'Courier Prime', monospace;
+    letter-spacing: 0;
+    margin-top: 0.3mm;
+  }
+  .ladder-penalties {
+    border: 1px dashed #000000;
+    padding: 0.8mm 1mm;
+    font-size: 4.5pt;
+    background: #fafafa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2mm;
   }
   .vip-library-pass {
-    border: 2.5px solid #000000;
-    padding: 2mm;
+    border: 2px solid #000000;
+    padding: 1.2mm;
     text-align: center;
     margin-top: auto;
     background: #ffffff;
   }
   .vip-title-bar {
     font-family: 'Cinzel', serif;
-    font-size: 7pt;
+    font-size: 6.5pt;
     font-weight: 900;
     letter-spacing: 0.5px;
     background: #000000;
     color: #ffffff;
-    padding: 1mm 0;
-    margin-bottom: 1.5mm;
+    padding: 0.8mm 0;
+    margin-bottom: 1mm;
   }
   .vip-stamp-target {
-    border: 2px dashed #000000;
-    height: 18mm;
+    border: 1.5px dashed #000000;
+    height: 14mm;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: 'Special Elite', cursive;
-    font-size: 6.5pt;
+    font-size: 5.5pt;
     font-weight: bold;
     background: #fafafa;
   }
@@ -624,6 +770,12 @@
     .toolbar, .sheet-label {
       display: none !important;
     }
+    #reading-view {
+      display: none !important;
+    }
+    #imposition-view {
+      display: flex !important;
+    }
     .sheet-container {
       margin: 0 !important;
       page-break-after: always;
@@ -641,20 +793,63 @@
     }
   }
 </style>
+<script>
+  function switchView(mode) {
+    const impView = document.getElementById('imposition-view');
+    const readView = document.getElementById('reading-view');
+    const btnImp = document.getElementById('btn-imposition');
+    const btnRead = document.getElementById('btn-reading');
+
+    if (mode === 'reading') {
+      impView.style.display = 'none';
+      readView.style.display = 'flex';
+      btnRead.classList.add('active');
+      btnImp.classList.remove('active');
+    } else {
+      impView.style.display = 'flex';
+      readView.style.display = 'none';
+      btnImp.classList.add('active');
+      btnRead.classList.remove('active');
+    }
+  }
+</script>
 </head>
 <body>
 
 <!-- ON-SCREEN TOOLBAR -->
 <div class="toolbar">
-  <div>
-    <h1>ECOTOPIA PASSPORT — HIGH-CONTRAST B&W A4 PRINT ENGINE</h1>
-    <p style="font-size: 0.8rem; color: #aaaaaa;">Full-Page Quadrant Layout • 100% Black & White Ink • Standard Duplex (Flip on Short Edge)</p>
+  <div class="toolbar-top">
+    <div>
+      <h1>CITIZEN PASSPORT BOOKLET — HIGH-CONTRAST B&W A4 PRINT ENGINE</h1>
+      <p style="font-size: 0.78rem; color: #aaaaaa;">8-Page Passport Booklet • 100% Black & White Ink • Standard Duplex (Flip on Short Edge)</p>
+    </div>
+    <div class="btn-group">
+      <button id="btn-imposition" class="btn-action active" onclick="switchView('imposition')">🖨️ A4 Print Imposition</button>
+      <button id="btn-reading" class="btn-action" onclick="switchView('reading')">📖 Sequential Reading View</button>
+      <button class="btn-action" onclick="window.print()">🖨️ Print / Save PDF</button>
+    </div>
   </div>
-  <button class="btn-print" onclick="window.print()">🖨️ PRINT TO A4 / SAVE PDF</button>
+
+  <!-- BOOKLET SUITE NAVIGATION -->
+  <div class="booklet-nav">
+    <span class="nav-label">PASSPORT SUITE:</span>
+    <a href="print_passport_a6_booklet.html" class="current">1. Citizen Passport</a>
+    <a href="print_broadcast_scripts_a6_booklet.html">2. Broadcast Scripts</a>
+    <a href="print_lore_bible_a6_booklet.html">3. Lore & Narrative Bible</a>
+    <a href="print_game_design_a6_booklet.html">4. Game Design & Economics</a>
+    <a href="print_quest_cards_a6_booklet.html">5. Quest Cards & Facilitator</a>
+    
+    <span style="color:#666;">|</span>
+    <a href="print_cards_deck.html">🃏 Cards Deck</a>
+    <a href="stamps_preview.html">🔖 Stamp Suite</a>
+  </div>
+
   <div class="assembly-banner">
     <strong>✂️ Fabrication Instructions:</strong> Print <strong>Double-Sided (Duplex / Flip on Short Edge)</strong> on standard white or cream A4 paper. Cut horizontally across the dashed middle line (✂) at 148.5mm to create two A5 sheets. Stack Sheet 2 inside Sheet 1, fold in half along the vertical spine line (105mm), and insert 2 staples in the spine. <strong>1 printed A4 sheet = 1 complete 8-page A6 passport!</strong>
   </div>
 </div>
+
+<div id="imposition-view">
 
 <!-- ========================================================
      SHEET 1 (SIDE A - FRONT OF A4 SHEET)
@@ -932,25 +1127,25 @@
     <!-- BOTTOM HALF: BACK OF INNER SPREAD (PAGE 4 & PAGE 5 - CENTERFOLD) -->
     <div class="a5-half">
 
-      <!-- PAGE 4: LABOR & CHORE LOG (12 FULL-SIZED BOXES) -->
+      <!-- PAGE 4: LABOR & CHORE LOG (8 FULL-SIZED BOXES) -->
       <div class="a6-page">
         <div class="page-frame">
           <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
           
           <div class="black-bar-header">CONCESSION LABOR & CHORE LOG</div>
-          <div class="section-subhead">Earn verification stamps at Ministry concessions to pay down debt</div>
+          <div class="section-subhead">Earn stamps at Ministry games to advance your debt ladder</div>
 
           <div class="shift-grid-full">
             <div class="shift-cell-bw">
-              <div class="val-header"><span>+30 CC</span><span>SCULLERY WASH</span></div>
+              <div class="val-header"><span>+25 CC</span><span>SCULLERY WASH</span></div>
               <div class="stamp-landing-target">20mm STAMP TARGET</div>
             </div>
             <div class="shift-cell-bw">
-              <div class="val-header"><span>+30 CC</span><span>BIKE DYNAMO</span></div>
+              <div class="val-header"><span>+25 CC</span><span>BIKE DYNAMO</span></div>
               <div class="stamp-landing-target">20mm STAMP TARGET</div>
             </div>
             <div class="shift-cell-bw">
-              <div class="val-header"><span>+20 CC</span><span>PEETOPIA RETURN</span></div>
+              <div class="val-header"><span>+25 CC</span><span>PEETOPIA RETURN</span></div>
               <div class="stamp-landing-target">20mm STAMP TARGET</div>
             </div>
             <div class="shift-cell-bw">
@@ -958,67 +1153,83 @@
               <div class="stamp-landing-target">20mm STAMP TARGET</div>
             </div>
             <div class="shift-cell-bw">
-              <div class="val-header"><span>+30 CC</span><span>SCULLERY SHIFT 2</span></div>
+              <div class="val-header"><span>+50 CC</span><span>WORKHOUSE SHIFT</span></div>
               <div class="stamp-landing-target">20mm STAMP TARGET</div>
             </div>
             <div class="shift-cell-bw">
-              <div class="val-header"><span>+30 CC</span><span>BIKE DYNAMO 2</span></div>
+              <div class="val-header"><span>+50 CC</span><span>GRID DYNAMO SURGE</span></div>
               <div class="stamp-landing-target">20mm STAMP TARGET</div>
             </div>
             <div class="shift-cell-bw">
-              <div class="val-header"><span>+35 CC</span><span>MINISTRY QUEST</span></div>
+              <div class="val-header"><span>+50 CC</span><span>MINISTRY QUEST</span></div>
               <div class="stamp-landing-target">20mm STAMP TARGET</div>
             </div>
             <div class="shift-cell-bw">
-              <div class="val-header"><span>+40 CC</span><span>HERESY AUDIT</span></div>
+              <div class="val-header"><span>+50 CC</span><span>INQUISITION SURVIVAL</span></div>
               <div class="stamp-landing-target">20mm STAMP TARGET</div>
             </div>
           </div>
 
           <div style="font-size: 4.5pt; text-align: center; color: #444; border-top: 1px solid #000; padding-top: 0.5mm;">
-            EACH STAMP ADVANCES PERSONAL PASSPORT & LOGS VALUE ON MINISTRY CLIPBOARD
+            +25 CC STAMP = CROSS OFF 1 LADDER BLOCK • +50 CC STAMP = CROSS OFF 2 BLOCKS (PAGE 5)
           </div>
           <div class="page-number">4</div>
         </div>
       </div>
 
-      <!-- PAGE 5: RUNNING TALLY & VIP CLEARANCE -->
+      <!-- PAGE 5: THE CARBON PROGRESS LADDER & VIP CLEARANCE -->
       <div class="a6-page">
         <div class="page-frame">
           <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
           
           <div>
-            <div class="black-bar-header">ASCENT TO PURITY & VIP ACCESS</div>
-            <div class="section-subhead">Tally accumulated credits to unlock civic and speakeasy tiers</div>
+            <div class="black-bar-header">THE CARBON PROGRESS LADDER</div>
+            <div class="section-subhead">Cross off blocks as you earn stamps • 0 CC = Citizen • +100 CC = Speakeasy</div>
 
-            <table class="tally-table-bw">
-              <tr>
-                <td>Starting Ancestral Debt:</td>
-                <td style="text-align: right; font-weight: bold; font-family:'Special Elite';">-___________ CC</td>
-              </tr>
-              <tr>
-                <td>Labor Shifts Total Earned:</td>
-                <td style="text-align: right; font-weight: bold; font-family:'Special Elite';">+___________ CC</td>
-              </tr>
-              <tr>
-                <td>State Fines / Audit Deductions:</td>
-                <td style="text-align: right; font-weight: bold; font-family:'Special Elite';">-___________ CC</td>
-              </tr>
-              <tr style="border-top: 2px solid #000000;">
-                <td><strong>NET CURRENT BALANCE:</strong></td>
-                <td style="text-align: right; font-weight: bold; font-size: 8pt; font-family:'Special Elite';">___________ CC</td>
-              </tr>
-            </table>
+            <!-- TIER 2: SURPLUS & PRIVILEGE (+25 TO +100 CC) -->
+            <div class="ladder-tier">
+              <div class="ladder-tier-title">▲ TIER 2: SURPLUS & PRIVILEGE (TOWARDS THE SPEAKEASY) ▲</div>
+              <div class="ladder-blocks-grid">
+                <div class="ladder-block"><span class="val">+25 CC</span><span>Probationary</span><span class="box"></span></div>
+                <div class="ladder-block"><span class="val">+50 CC</span><span>Privileged</span><span class="box"></span></div>
+                <div class="ladder-block"><span class="val">+75 CC</span><span>Exemplary</span><span class="box"></span></div>
+                <div class="ladder-block" style="border: 1.5px solid #000; font-weight:bold; background:#f5f5f5;"><span class="val">+100 CC</span><span>★ VIP KEY</span><span class="box"></span></div>
+              </div>
+            </div>
 
-            <div class="citizen-threshold-box">
-              <strong>[ 0 CC ] FULL CITIZEN RESTORATION</strong><br>
-              Debt eliminated! Restores speaking and voting rights at the State Assembly.
+            <!-- THE LIBERATION GATEWAY (0 CC) -->
+            <div class="citizen-gateway">
+              ★ [ 0 CC ] FULL CITIZEN RESTORATION ★
+              <div class="citizen-gateway-sub">Ancestral debt liquidated! Unlocks Assembly voting & sweep immunity.</div>
+            </div>
+
+            <!-- TIER 1: INDENTURED LABOR & PENANCE (-250 TO -25 CC) -->
+            <div class="ladder-tier">
+              <div class="ladder-tier-title">▼ TIER 1: INDENTURED PENANCE (CROSS OFF TO PAY DEBT) ▼</div>
+              <div class="ladder-blocks-grid">
+                <div class="ladder-block"><span class="val">-50 CC</span><span class="box"></span></div>
+                <div class="ladder-block"><span class="val">-25 CC</span><span class="box"></span></div>
+                <div class="ladder-block"><span class="val">-100 CC</span><span class="box"></span></div>
+                <div class="ladder-block"><span class="val">-75 CC</span><span class="box"></span></div>
+                <div class="ladder-block"><span class="val">-150 CC</span><span class="box"></span></div>
+                <div class="ladder-block"><span class="val">-125 CC</span><span class="box"></span></div>
+                <div class="ladder-block"><span class="val">-200 CC</span><span class="box"></span></div>
+                <div class="ladder-block"><span class="val">-175 CC</span><span class="box"></span></div>
+                <div class="ladder-block intake-target"><span class="val">-250 CC</span><span style="font-size:4pt; color:#666;">INTAKE</span><span class="box"></span></div>
+                <div class="ladder-block"><span class="val">-225 CC</span><span class="box"></span></div>
+              </div>
+            </div>
+
+            <!-- FINES & WAGERS STRIP -->
+            <div class="ladder-penalties">
+              <div><strong>AUDIT FINES:</strong> [ ] -25 CC &nbsp; [ ] -50 CC</div>
+              <div><strong>WIG DUEL:</strong> [ ] WIN &nbsp; [ ] LOSS</div>
             </div>
           </div>
 
           <div class="vip-library-pass">
             <div class="vip-title-bar">★ [ +100 CC ] THE LIBRARY SPEAKEASY ★</div>
-            <div style="font-size: 5pt; font-weight: bold; margin-bottom: 1.5mm;">RESERVE SINGLE MALT SCOTCH & ELITE PRIVILEGES</div>
+            <div style="font-size: 4.8pt; font-weight: bold; margin-bottom: 1mm;">RESERVE SINGLE MALT SCOTCH & PRIVATE SANCTUM ACCESS</div>
             <div class="vip-stamp-target">
               AFFIX OFFICIAL GOLD / BLACK<br>VIP LIBRARY SPEAKEASY SEAL
             </div>
@@ -1028,6 +1239,339 @@
       </div>
     </div>
   </div>
+</div>
+
+</div><!-- END IMPOSITION VIEW -->
+
+<!-- ========================================================
+     VIEW 2: SEQUENTIAL READING VIEW (PAGES 1 TO 8)
+     ======================================================== -->
+<div id="reading-view">
+
+  <!-- SPREAD 1: COVER (PAGE 1) -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame p1-cover">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div class="cover-header-block">
+          <div class="cover-title">REPUBLIC OF ECOTOPIA</div>
+          <div class="cover-sub">CITIZEN IDENTIFICATION PASSPORT</div>
+        </div>
+        <svg class="cover-crest" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="50,4 92,28 92,76 50,96 8,76 8,28" stroke="#000000" stroke-width="2.5" fill="#f4f4f4"/>
+          <polygon points="50,10 86,32 86,72 50,90 14,72 14,32" stroke="#000000" stroke-width="0.75" fill="none"/>
+          <path d="M50 82 L50 44" stroke="#000000" stroke-width="4" stroke-linecap="square"/>
+          <path d="M50 44 L32 22 M32 22 L20 18 M32 22 L28 10" stroke="#000000" stroke-width="2.5" stroke-linecap="square"/>
+          <path d="M50 44 L68 22 M68 22 L80 18 M68 22 L72 10" stroke="#000000" stroke-width="2.5" stroke-linecap="square"/>
+          <circle cx="50" cy="52" r="4.5" fill="#000000"/>
+          <circle cx="43" cy="46" r="2" fill="#000000"/>
+          <circle cx="57" cy="46" r="2" fill="#000000"/>
+        </svg>
+        <div class="cover-motto">"BORN INTO DEBT. REPAID IN DEVOTION."</div>
+        <div>
+          <div style="font-size: 5.5pt; font-weight: bold; letter-spacing: 0.5px; margin-bottom: 1.5mm;">
+            MINISTRY OF LOVE & INTERNAL REGISTRY<br>SANCTUARY DE WARREN
+          </div>
+          <div class="cover-serial-box">
+            REGISTRATION: CIT-2026-______________
+          </div>
+        </div>
+        <div class="page-number">1</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 2: PAGES 2 & 3 -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">CIVIC REGISTRY & BIOMETRIC INTAKE</div>
+          <div class="section-subhead">Sanctuary De Warren • Sector Garage Audit Pen</div>
+          <div class="bio-grid">
+            <div class="photo-box">
+              AFFIX CITIZEN<br>PHOTO OR INK<br>THUMBPRINT<br>HERE
+            </div>
+            <div class="bio-fields">
+              <div class="bio-row"><strong>Citizen Alias:</strong> _________________</div>
+              <div class="bio-row"><strong>Old Surname:</strong> <span style="text-decoration: line-through;">[STRUCK OUT]</span></div>
+              <div class="bio-row"><strong>Origin Sector:</strong> Scorched Wastes</div>
+              <div class="bio-row"><strong>Intake Gate:</strong> A-1 (Garage)</div>
+            </div>
+          </div>
+          <div class="modifier-panel">
+            <strong>DEMOGRAPHIC FOOTPRINT MODIFIERS:</strong><br>
+            [ ] <strong>Single Comrade</strong> (+25 CC Bonus: Zero biological reproduction)<br>
+            [ ] <strong>Biological Family</strong> (-50 CC Fine: Generational footprint burden)
+          </div>
+          <div class="debt-target-box">
+            <div class="debt-title">ANCESTRAL CARBON DEBT (STARTING BALANCE)</div>
+            <div class="debt-large">-250 CC</div>
+            <div style="font-size: 5pt; color: #333333; font-weight: bold;">ASSESSED AT INTAKE • PAYABLE IN CONCESSION LABOR</div>
+          </div>
+        </div>
+        <div style="font-size: 5.5pt; text-align: center; border-top: 1px solid #000; padding-top: 1mm;">
+          Auditor Signature: _______________________ • Date: 28-11-2026
+        </div>
+        <div class="page-number">2</div>
+      </div>
+    </div>
+
+    <div class="a6-page">
+      <div class="page-frame" style="text-align: center;">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">STATE SPONSORSHIP & ABSORPTION VISA</div>
+          <div class="section-subhead">Must be endorsed by chartered Minister upon recruitment</div>
+          <div class="visa-seal-area">
+            <div class="seal-title">AFFIX 40mm OFFICIAL<br>MINISTRY SEAL HERE</div>
+            <div class="seal-sub">(Authorizes Indenture & Debt Absorption)</div>
+          </div>
+          <div class="visa-contract-text">
+            <strong>COVENANT OF INDENTURE:</strong> By order of the Guardian Stag, the sponsoring Ministry assumes collective custody of the bearer's negative carbon debt. The bearer pledges unconditional civic labor to the Ministry's designated game concession.
+          </div>
+        </div>
+        <div>
+          <div style="display: flex; justify-content: space-between; font-size: 6.5pt; font-weight: bold; margin-bottom: 1.5mm;">
+            <span>ABSORBED DEBT BALANCE:</span>
+            <span style="font-family:'Special Elite'; font-size: 8pt;">-____________ CC</span>
+          </div>
+          <div class="visa-sign-grid">
+            <span>Minister: _______________________</span>
+            <span>Date: 28-11-2026</span>
+          </div>
+        </div>
+        <div class="page-number">3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 3: PAGES 4 & 5 (CENTERFOLD) -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div class="black-bar-header">CONCESSION LABOR & CHORE LOG</div>
+        <div class="section-subhead">Earn stamps at Ministry games to advance your debt ladder</div>
+        <div class="shift-grid-full">
+          <div class="shift-cell-bw">
+            <div class="val-header"><span>+25 CC</span><span>SCULLERY WASH</span></div>
+            <div class="stamp-landing-target">20mm STAMP TARGET</div>
+          </div>
+          <div class="shift-cell-bw">
+            <div class="val-header"><span>+25 CC</span><span>BIKE DYNAMO</span></div>
+            <div class="stamp-landing-target">20mm STAMP TARGET</div>
+          </div>
+          <div class="shift-cell-bw">
+            <div class="val-header"><span>+25 CC</span><span>PEETOPIA RETURN</span></div>
+            <div class="stamp-landing-target">20mm STAMP TARGET</div>
+          </div>
+          <div class="shift-cell-bw">
+            <div class="val-header"><span>+25 CC</span><span>WIG DUEL ARENA</span></div>
+            <div class="stamp-landing-target">20mm STAMP TARGET</div>
+          </div>
+          <div class="shift-cell-bw">
+            <div class="val-header"><span>+50 CC</span><span>WORKHOUSE SHIFT</span></div>
+            <div class="stamp-landing-target">20mm STAMP TARGET</div>
+          </div>
+          <div class="shift-cell-bw">
+            <div class="val-header"><span>+50 CC</span><span>GRID DYNAMO SURGE</span></div>
+            <div class="stamp-landing-target">20mm STAMP TARGET</div>
+          </div>
+          <div class="shift-cell-bw">
+            <div class="val-header"><span>+50 CC</span><span>MINISTRY QUEST</span></div>
+            <div class="stamp-landing-target">20mm STAMP TARGET</div>
+          </div>
+          <div class="shift-cell-bw">
+            <div class="val-header"><span>+50 CC</span><span>INQUISITION SURVIVAL</span></div>
+            <div class="stamp-landing-target">20mm STAMP TARGET</div>
+          </div>
+        </div>
+        <div style="font-size: 4.5pt; text-align: center; color: #444; border-top: 1px solid #000; padding-top: 0.5mm;">
+          +25 CC STAMP = CROSS OFF 1 LADDER BLOCK • +50 CC STAMP = CROSS OFF 2 BLOCKS (PAGE 5)
+        </div>
+        <div class="page-number">4</div>
+      </div>
+    </div>
+
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">THE CARBON PROGRESS LADDER</div>
+          <div class="section-subhead">Cross off blocks as you earn stamps • 0 CC = Citizen • +100 CC = Speakeasy</div>
+
+          <!-- TIER 2: SURPLUS & PRIVILEGE (+25 TO +100 CC) -->
+          <div class="ladder-tier">
+            <div class="ladder-tier-title">▲ TIER 2: SURPLUS & PRIVILEGE (TOWARDS THE SPEAKEASY) ▲</div>
+            <div class="ladder-blocks-grid">
+              <div class="ladder-block"><span class="val">+25 CC</span><span>Probationary</span><span class="box"></span></div>
+              <div class="ladder-block"><span class="val">+50 CC</span><span>Privileged</span><span class="box"></span></div>
+              <div class="ladder-block"><span class="val">+75 CC</span><span>Exemplary</span><span class="box"></span></div>
+              <div class="ladder-block" style="border: 1.5px solid #000; font-weight:bold; background:#f5f5f5;"><span class="val">+100 CC</span><span>★ VIP KEY</span><span class="box"></span></div>
+            </div>
+          </div>
+
+          <!-- THE LIBERATION GATEWAY (0 CC) -->
+          <div class="citizen-gateway">
+            ★ [ 0 CC ] FULL CITIZEN RESTORATION ★
+            <div class="citizen-gateway-sub">Ancestral debt liquidated! Unlocks Assembly voting & sweep immunity.</div>
+          </div>
+
+          <!-- TIER 1: INDENTURED LABOR & PENANCE (-250 TO -25 CC) -->
+          <div class="ladder-tier">
+            <div class="ladder-tier-title">▼ TIER 1: INDENTURED PENANCE (CROSS OFF TO PAY DEBT) ▼</div>
+            <div class="ladder-blocks-grid">
+              <div class="ladder-block"><span class="val">-50 CC</span><span class="box"></span></div>
+              <div class="ladder-block"><span class="val">-25 CC</span><span class="box"></span></div>
+              <div class="ladder-block"><span class="val">-100 CC</span><span class="box"></span></div>
+              <div class="ladder-block"><span class="val">-75 CC</span><span class="box"></span></div>
+              <div class="ladder-block"><span class="val">-150 CC</span><span class="box"></span></div>
+              <div class="ladder-block"><span class="val">-125 CC</span><span class="box"></span></div>
+              <div class="ladder-block"><span class="val">-200 CC</span><span class="box"></span></div>
+              <div class="ladder-block"><span class="val">-175 CC</span><span class="box"></span></div>
+              <div class="ladder-block intake-target"><span class="val">-250 CC</span><span style="font-size:4pt; color:#666;">INTAKE</span><span class="box"></span></div>
+              <div class="ladder-block"><span class="val">-225 CC</span><span class="box"></span></div>
+            </div>
+          </div>
+
+          <!-- FINES & WAGERS STRIP -->
+          <div class="ladder-penalties">
+            <div><strong>AUDIT FINES:</strong> [ ] -25 CC &nbsp; [ ] -50 CC</div>
+            <div><strong>WIG DUEL:</strong> [ ] WIN &nbsp; [ ] LOSS</div>
+          </div>
+        </div>
+
+        <div class="vip-library-pass">
+          <div class="vip-title-bar">★ [ +100 CC ] THE LIBRARY SPEAKEASY ★</div>
+          <div style="font-size: 4.8pt; font-weight: bold; margin-bottom: 1mm;">RESERVE SINGLE MALT SCOTCH & PRIVATE SANCTUM ACCESS</div>
+          <div class="vip-stamp-target">
+            AFFIX OFFICIAL GOLD / BLACK<br>VIP LIBRARY SPEAKEASY SEAL
+          </div>
+        </div>
+        <div class="page-number">5</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 4: PAGES 6 & 7 -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div class="black-bar-header">THE TENFOLD HARMONY (VISIT ALL CONCESSIONS)</div>
+        <div class="section-subhead">Obtain official concession verification marks from all 10 ministries</div>
+        <div class="pantheon-grid-full">
+          <div class="pantheon-cell-bw">
+            <div class="info"><span class="m-name">MINISERVICE</span><span class="m-task">Scullery Dishwash</span></div>
+            <div class="stamp-circle"></div>
+          </div>
+          <div class="pantheon-cell-bw">
+            <div class="info"><span class="m-name">MINIRENEWAL</span><span class="m-task">Composting Booth</span></div>
+            <div class="stamp-circle"></div>
+          </div>
+          <div class="pantheon-cell-bw">
+            <div class="info"><span class="m-name">MINILIGHT</span><span class="m-task">Grid Bike Dynamo</span></div>
+            <div class="stamp-circle"></div>
+          </div>
+          <div class="pantheon-cell-bw">
+            <div class="info"><span class="m-name">MINIFLOW</span><span class="m-task">Peetopia Fluid Sluice</span></div>
+            <div class="stamp-circle"></div>
+          </div>
+          <div class="pantheon-cell-bw">
+            <div class="info"><span class="m-name">MINIPLENTY</span><span class="m-task">Caloric Rations</span></div>
+            <div class="stamp-circle"></div>
+          </div>
+          <div class="pantheon-cell-bw">
+            <div class="info"><span class="m-name">MINILOVE</span><span class="m-task">Heresy Confession</span></div>
+            <div class="stamp-circle"></div>
+          </div>
+          <div class="pantheon-cell-bw">
+            <div class="info"><span class="m-name">MINIJOY</span><span class="m-task">Morale Wig Arena</span></div>
+            <div class="stamp-circle"></div>
+          </div>
+          <div class="pantheon-cell-bw">
+            <div class="info"><span class="m-name">MINISHELTER</span><span class="m-task">Curfew Grid Gates</span></div>
+            <div class="stamp-circle"></div>
+          </div>
+          <div class="pantheon-cell-bw">
+            <div class="info"><span class="m-name">MINITHRIFT</span><span class="m-task">Contraband Seizure</span></div>
+            <div class="stamp-circle"></div>
+          </div>
+          <div class="pantheon-cell-bw">
+            <div class="info"><span class="m-name">MINIBREATH</span><span class="m-task">Spirometry Offset</span></div>
+            <div class="stamp-circle"></div>
+          </div>
+        </div>
+        <div style="font-size: 5pt; text-align: center; font-weight: bold; border-top: 1px solid #000; padding-top: 1mm;">
+          COMPLETION OF ALL 10 CONCESSIONS UNLOCKS THE EXEMPLARY CITIZEN RIBBON
+        </div>
+        <div class="page-number">6</div>
+      </div>
+    </div>
+
+    <div class="a6-page">
+      <div class="page-frame p7-climax-bw">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div class="black-bar-header">STATE PERFORATION BOND — EXTRACTIBLE</div>
+        <div style="text-align: center;">
+          <div style="font-family:'Special Elite'; font-size: 7.5pt; font-weight: bold; margin-top: 1mm;">
+            ANCESTRAL DEBT BOND OF R.E.I.G.N.
+          </div>
+          <div style="font-size: 4.5pt; color: #444444; letter-spacing: 0.5px;">CENTRAL BANK DIGITAL CARBON REGISTER BOND</div>
+          <div class="climax-seal-bw">
+            OFFICIAL PROPERTY<br>OF THE GUARDIAN STAG<br>
+            <span style="font-size: 8pt; margin-top: 1mm; font-weight: 900;">NON-NEGOTIABLE</span>
+          </div>
+          <div class="climax-notice-bw">
+            <strong>PERPETUAL LIEN:</strong> This leaf binds the citizen in biological penance to the state registry.<br><br>
+            <strong>• RECYCLING:</strong> If liquidated at Minirenewal, officer tears this slip and stamps below:
+            <div style="border: 1.5px dashed #000; padding: 1.5mm; margin: 1mm 0; font-family:'Special Elite'; font-size:5.5pt; font-weight:bold; text-align:center; background:#fafafa;">
+              [ TARGET: 35mm x 14mm "CLEANSED TO HUMUS" STAMP ]
+            </div>
+            <strong>• REVOLUTION:</strong> At 00:05, rip this slip and throw it as confetti!
+          </div>
+        </div>
+        <div class="resistance-leak-bw">
+          [WATERMARK LEAK: THE STAG IS SILICON • SEEK THIJS'S ROOM]
+        </div>
+        <div class="page-number">7</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 5: BACK COVER (PAGE 8) -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame p8-back-bw">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">THE AXIOMS OF R.E.I.G.N.</div>
+          <div class="section-subhead">Official State Euphemisms & Doublethink Lexicon</div>
+          <table class="euphemism-table">
+            <tr><th>Old-World Reality</th><th>Approved State Term</th></tr>
+            <tr><td>Starvation</td><td>Biological Purity</td></tr>
+            <tr><td>Rolling Blackouts</td><td>The Restful Dark</td></tr>
+            <tr><td>Urine Metering</td><td>Sacred Fluid Balance</td></tr>
+            <tr><td>Forced Chores</td><td>Joyful Civic Devotion</td></tr>
+            <tr><td>Thought Police</td><td>Eradication of Nostalgia</td></tr>
+            <tr><td>Corpse Liquidation</td><td>Elemental Upcycling</td></tr>
+          </table>
+          <div class="ozone-emergency-block">
+            <div class="title">EMERGENCY SAFE-WORD: "OZONE"</div>
+            <div class="desc">Universal safety clause. Speaking "OZONE" immediately halts all gameplay, pauses in-character roleplay, and summons medical/organizer support.</div>
+          </div>
+        </div>
+        <div class="barcode-strip">
+          <div class="barcode-chars">||||||||||||||||||||||||||||||||||||||||||</div>
+          <div style="font-size: 5pt; letter-spacing: 1.5px; font-weight: bold; margin-top: 0.5mm;">SANCTUARY DE WARREN • AMSTERDAM 2026</div>
+        </div>
+        <div class="page-number">8</div>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 </body>

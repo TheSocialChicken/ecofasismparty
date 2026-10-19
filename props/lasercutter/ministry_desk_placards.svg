@@ -1,0 +1,212 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 550" width="600mm" height="550mm">
+  <!-- LIGHTBURN LASER CUT TEMPLATE FOR BITLAIR 60W CO2 LASER -->
+  <!-- RED (#ff0000) = CUT (Power 100%, Speed 8 mm/s on 4mm Plywood) -->
+  <!-- BLACK (#000000) = SCORE / ENGRAVE (Power 25%, Speed 30 mm/s) -->
+  <defs>
+    <style>
+      .cut { fill: none; stroke: #ff0000; stroke-width: 0.15; }
+      .score { fill: none; stroke: #000000; stroke-width: 0.2; }
+      .score-text { font-family: monospace, sans-serif; font-weight: 900; fill: #000000; }
+    </style>
+  </defs>
+  <path d="M 10 10 H 200 V 105 H 165 V 109.2 H 145 V 105 H 65 V 109.2 H 45 V 105 H 10 Z" class="cut"/>
+  <rect x="14" y="14" width="182" height="87" class="score"/>
+  <rect x="15.5" y="15.5" width="179.0" height="84.0" class="score"/>
+  <line x1="14" y1="32" x2="196" y2="32" class="score"/>
+  <line x1="14" y1="34" x2="196" y2="34" class="score"/>
+  <text x="105.0" y="24" text-anchor="middle" font-size="9" class="score-text" letter-spacing="1.5">MINISERVICE</text>
+  <text x="105.0" y="30" text-anchor="middle" font-size="4.2" class="score-text" letter-spacing="0.8">MINISTRY OF RESTORATIVE LABOR</text>
+  <text x="105.0" y="46" text-anchor="middle" font-size="5" class="score-text">CONCESSION: SCULLERY & GREASE RECLAMATION</text>
+  <line x1="30" y1="52" x2="180" y2="52" class="score"/>
+  <text x="105.0" y="64" text-anchor="middle" font-size="5.2" class="score-text">LABOR RATE: +30 CC PER AUDITED SHIFT</text>
+  <text x="105.0" y="75" text-anchor="middle" font-size="4.2" class="score-text">CHARTER: 50% ANCESTRAL DEBT ABSORPTION SUBSIDY</text>
+  <line x1="14" y1="85" x2="196" y2="85" class="score"/>
+  <text x="105.0" y="93" text-anchor="middle" font-size="3.5" class="score-text">OFFICIAL DESK PLACARD • AFFIX VERIFICATION STAMPS BELOW</text>
+  <text x="105.0" y="99" text-anchor="middle" font-size="3" class="score-text">ECOTOPIA REIGN PROTOCOL // DE WARREN NOVEMBER 2026</text>
+  <path d="M 210 10 H 400 V 105 H 365 V 109.2 H 345 V 105 H 265 V 109.2 H 245 V 105 H 210 Z" class="cut"/>
+  <rect x="214" y="14" width="182" height="87" class="score"/>
+  <rect x="215.5" y="15.5" width="179.0" height="84.0" class="score"/>
+  <line x1="214" y1="32" x2="396" y2="32" class="score"/>
+  <line x1="214" y1="34" x2="396" y2="34" class="score"/>
+  <text x="305.0" y="24" text-anchor="middle" font-size="9" class="score-text" letter-spacing="1.5">MINIRENEWAL</text>
+  <text x="305.0" y="30" text-anchor="middle" font-size="4.2" class="score-text" letter-spacing="0.8">MINISTRY OF ELEMENTAL RECLAMATION</text>
+  <text x="305.0" y="46" text-anchor="middle" font-size="5" class="score-text">CONCESSION: CADAVERIC COMPOSTING & NUTRIENT RETURN</text>
+  <line x1="230" y1="52" x2="380" y2="52" class="score"/>
+  <text x="305.0" y="64" text-anchor="middle" font-size="5.2" class="score-text">BOUNTY: +100 CC PER LIQUIDATED BIOMASS BOND</text>
+  <text x="305.0" y="75" text-anchor="middle" font-size="4.2" class="score-text">CHARTER: ZERO SOIL RESIDUE • CADAVERIC HARVEST RIGHTS</text>
+  <line x1="214" y1="85" x2="396" y2="85" class="score"/>
+  <text x="305.0" y="93" text-anchor="middle" font-size="3.5" class="score-text">OFFICIAL DESK PLACARD • AFFIX VERIFICATION STAMPS BELOW</text>
+  <text x="305.0" y="99" text-anchor="middle" font-size="3" class="score-text">ECOTOPIA REIGN PROTOCOL // DE WARREN NOVEMBER 2026</text>
+  <path d="M 10 115 H 200 V 210 H 165 V 214.2 H 145 V 210 H 65 V 214.2 H 45 V 210 H 10 Z" class="cut"/>
+  <rect x="14" y="119" width="182" height="87" class="score"/>
+  <rect x="15.5" y="120.5" width="179.0" height="84.0" class="score"/>
+  <line x1="14" y1="137" x2="196" y2="137" class="score"/>
+  <line x1="14" y1="139" x2="196" y2="139" class="score"/>
+  <text x="105.0" y="129" text-anchor="middle" font-size="9" class="score-text" letter-spacing="1.5">MINILIGHT</text>
+  <text x="105.0" y="135" text-anchor="middle" font-size="4.2" class="score-text" letter-spacing="0.8">MINISTRY OF ENERGETIC AUSTERITY</text>
+  <text x="105.0" y="151" text-anchor="middle" font-size="5" class="score-text">CONCESSION: HUMAN BICYCLE DYNAMO POWER GRID</text>
+  <line x1="30" y1="157" x2="180" y2="157" class="score"/>
+  <text x="105.0" y="169" text-anchor="middle" font-size="5.2" class="score-text">LABOR RATE: +30 CC PER 100 JOULES GENERATED</text>
+  <text x="105.0" y="180" text-anchor="middle" font-size="4.2" class="score-text">CHARTER: GRID ENERGIZATION TARIFFS & BLACKOUT EXEMPTION</text>
+  <line x1="14" y1="190" x2="196" y2="190" class="score"/>
+  <text x="105.0" y="198" text-anchor="middle" font-size="3.5" class="score-text">OFFICIAL DESK PLACARD • AFFIX VERIFICATION STAMPS BELOW</text>
+  <text x="105.0" y="204" text-anchor="middle" font-size="3" class="score-text">ECOTOPIA REIGN PROTOCOL // DE WARREN NOVEMBER 2026</text>
+  <path d="M 210 115 H 400 V 210 H 365 V 214.2 H 345 V 210 H 265 V 214.2 H 245 V 210 H 210 Z" class="cut"/>
+  <rect x="214" y="119" width="182" height="87" class="score"/>
+  <rect x="215.5" y="120.5" width="179.0" height="84.0" class="score"/>
+  <line x1="214" y1="137" x2="396" y2="137" class="score"/>
+  <line x1="214" y1="139" x2="396" y2="139" class="score"/>
+  <text x="305.0" y="129" text-anchor="middle" font-size="9" class="score-text" letter-spacing="1.5">MINIFLOW</text>
+  <text x="305.0" y="135" text-anchor="middle" font-size="4.2" class="score-text" letter-spacing="0.8">MINISTRY OF HYDRAULIC RECTITUDE</text>
+  <text x="305.0" y="151" text-anchor="middle" font-size="5" class="score-text">CONCESSION: PEETOPIA UREA EXTRACTION & PURITY METERING</text>
+  <line x1="230" y1="157" x2="380" y2="157" class="score"/>
+  <text x="305.0" y="169" text-anchor="middle" font-size="5.2" class="score-text">LABOR RATE: +20 CC PER RETURNED STERILE VIAL</text>
+  <text x="305.0" y="180" text-anchor="middle" font-size="4.2" class="score-text">CHARTER: EXCLUSIVE HYDRAULIC ROYALTIES ON LIQUID TOKENS</text>
+  <line x1="214" y1="190" x2="396" y2="190" class="score"/>
+  <text x="305.0" y="198" text-anchor="middle" font-size="3.5" class="score-text">OFFICIAL DESK PLACARD • AFFIX VERIFICATION STAMPS BELOW</text>
+  <text x="305.0" y="204" text-anchor="middle" font-size="3" class="score-text">ECOTOPIA REIGN PROTOCOL // DE WARREN NOVEMBER 2026</text>
+  <path d="M 10 220 H 200 V 315 H 165 V 319.2 H 145 V 315 H 65 V 319.2 H 45 V 315 H 10 Z" class="cut"/>
+  <rect x="14" y="224" width="182" height="87" class="score"/>
+  <rect x="15.5" y="225.5" width="179.0" height="84.0" class="score"/>
+  <line x1="14" y1="242" x2="196" y2="242" class="score"/>
+  <line x1="14" y1="244" x2="196" y2="244" class="score"/>
+  <text x="105.0" y="234" text-anchor="middle" font-size="9" class="score-text" letter-spacing="1.5">MINIPLENTY</text>
+  <text x="105.0" y="240" text-anchor="middle" font-size="4.2" class="score-text" letter-spacing="0.8">MINISTRY OF CALORIC RATIONING</text>
+  <text x="105.0" y="256" text-anchor="middle" font-size="5" class="score-text">CONCESSION: FERMENTED YEAST PASTE & CALORIC TRIAGE</text>
+  <line x1="30" y1="262" x2="180" y2="262" class="score"/>
+  <text x="105.0" y="274" text-anchor="middle" font-size="5.2" class="score-text">DISTRIBUTION: 1 RATION WAFER PER 15 CC TICKET</text>
+  <text x="105.0" y="285" text-anchor="middle" font-size="4.2" class="score-text">CHARTER: SOLE VENDOR OF STATE SACRAMENTAL NUTRITION</text>
+  <line x1="14" y1="295" x2="196" y2="295" class="score"/>
+  <text x="105.0" y="303" text-anchor="middle" font-size="3.5" class="score-text">OFFICIAL DESK PLACARD • AFFIX VERIFICATION STAMPS BELOW</text>
+  <text x="105.0" y="309" text-anchor="middle" font-size="3" class="score-text">ECOTOPIA REIGN PROTOCOL // DE WARREN NOVEMBER 2026</text>
+  <path d="M 210 220 H 400 V 315 H 365 V 319.2 H 345 V 315 H 265 V 319.2 H 245 V 315 H 210 Z" class="cut"/>
+  <rect x="214" y="224" width="182" height="87" class="score"/>
+  <rect x="215.5" y="225.5" width="179.0" height="84.0" class="score"/>
+  <line x1="214" y1="242" x2="396" y2="242" class="score"/>
+  <line x1="214" y1="244" x2="396" y2="244" class="score"/>
+  <text x="305.0" y="234" text-anchor="middle" font-size="9" class="score-text" letter-spacing="1.5">MINILOVE</text>
+  <text x="305.0" y="240" text-anchor="middle" font-size="4.2" class="score-text" letter-spacing="0.8">MINISTRY OF BIOLOGICAL HARMONY</text>
+  <text x="305.0" y="256" text-anchor="middle" font-size="5" class="score-text">CONCESSION: EUGENIC MATING INTERVIEWS & MORAL COMPLIANCE</text>
+  <line x1="230" y1="262" x2="380" y2="262" class="score"/>
+  <text x="305.0" y="274" text-anchor="middle" font-size="5.2" class="score-text">SANCTION: +25 CC PER REPRODUCTIVE CLEARANCE CERTIFICATE</text>
+  <text x="305.0" y="285" text-anchor="middle" font-size="4.2" class="score-text">CHARTER: 50% PROCEEDS FROM PUBLIC DECENCY CITATIONS</text>
+  <line x1="214" y1="295" x2="396" y2="295" class="score"/>
+  <text x="305.0" y="303" text-anchor="middle" font-size="3.5" class="score-text">OFFICIAL DESK PLACARD • AFFIX VERIFICATION STAMPS BELOW</text>
+  <text x="305.0" y="309" text-anchor="middle" font-size="3" class="score-text">ECOTOPIA REIGN PROTOCOL // DE WARREN NOVEMBER 2026</text>
+  <path d="M 10 325 H 200 V 420 H 165 V 424.2 H 145 V 420 H 65 V 424.2 H 45 V 420 H 10 Z" class="cut"/>
+  <rect x="14" y="329" width="182" height="87" class="score"/>
+  <rect x="15.5" y="330.5" width="179.0" height="84.0" class="score"/>
+  <line x1="14" y1="347" x2="196" y2="347" class="score"/>
+  <line x1="14" y1="349" x2="196" y2="349" class="score"/>
+  <text x="105.0" y="339" text-anchor="middle" font-size="9" class="score-text" letter-spacing="1.5">MINIJOY</text>
+  <text x="105.0" y="345" text-anchor="middle" font-size="4.2" class="score-text" letter-spacing="0.8">MINISTRY OF MORALE & CELEBRATION</text>
+  <text x="105.0" y="361" text-anchor="middle" font-size="5" class="score-text">CONCESSION: WIG DUEL ARENA & MANDATORY JOY RECREATION</text>
+  <line x1="30" y1="367" x2="180" y2="367" class="score"/>
+  <text x="105.0" y="379" text-anchor="middle" font-size="5.2" class="score-text">WAGER: +25 CC PER ARENA COMBAT TRIUMPH</text>
+  <text x="105.0" y="390" text-anchor="middle" font-size="4.2" class="score-text">CHARTER: AUTHORIZED DISTRIBUTOR OF STATE MORALE TONICS</text>
+  <line x1="14" y1="400" x2="196" y2="400" class="score"/>
+  <text x="105.0" y="408" text-anchor="middle" font-size="3.5" class="score-text">OFFICIAL DESK PLACARD • AFFIX VERIFICATION STAMPS BELOW</text>
+  <text x="105.0" y="414" text-anchor="middle" font-size="3" class="score-text">ECOTOPIA REIGN PROTOCOL // DE WARREN NOVEMBER 2026</text>
+  <path d="M 210 325 H 400 V 420 H 365 V 424.2 H 345 V 420 H 265 V 424.2 H 245 V 420 H 210 Z" class="cut"/>
+  <rect x="214" y="329" width="182" height="87" class="score"/>
+  <rect x="215.5" y="330.5" width="179.0" height="84.0" class="score"/>
+  <line x1="214" y1="347" x2="396" y2="347" class="score"/>
+  <line x1="214" y1="349" x2="396" y2="349" class="score"/>
+  <text x="305.0" y="339" text-anchor="middle" font-size="9" class="score-text" letter-spacing="1.5">MINISHELTER</text>
+  <text x="305.0" y="345" text-anchor="middle" font-size="4.2" class="score-text" letter-spacing="0.8">MINISTRY OF 15-MINUTE SANCTUARY</text>
+  <text x="305.0" y="361" text-anchor="middle" font-size="5" class="score-text">CONCESSION: CORRIDOR TOLL GATES & 15-MINUTE CURFEW AUDITS</text>
+  <line x1="230" y1="367" x2="380" y2="367" class="score"/>
+  <text x="305.0" y="379" text-anchor="middle" font-size="5.2" class="score-text">TOLL: 10 CC PER PERIMETER TRANSIT PERMIT</text>
+  <text x="305.0" y="390" text-anchor="middle" font-size="4.2" class="score-text">CHARTER: EXCLUSIVE BOUNDARY ENFORCEMENT & ENTRY CHARGES</text>
+  <line x1="214" y1="400" x2="396" y2="400" class="score"/>
+  <text x="305.0" y="408" text-anchor="middle" font-size="3.5" class="score-text">OFFICIAL DESK PLACARD • AFFIX VERIFICATION STAMPS BELOW</text>
+  <text x="305.0" y="414" text-anchor="middle" font-size="3" class="score-text">ECOTOPIA REIGN PROTOCOL // DE WARREN NOVEMBER 2026</text>
+  <path d="M 10 430 H 200 V 525 H 165 V 529.2 H 145 V 525 H 65 V 529.2 H 45 V 525 H 10 Z" class="cut"/>
+  <rect x="14" y="434" width="182" height="87" class="score"/>
+  <rect x="15.5" y="435.5" width="179.0" height="84.0" class="score"/>
+  <line x1="14" y1="452" x2="196" y2="452" class="score"/>
+  <line x1="14" y1="454" x2="196" y2="454" class="score"/>
+  <text x="105.0" y="444" text-anchor="middle" font-size="9" class="score-text" letter-spacing="1.5">MINITHRIFT</text>
+  <text x="105.0" y="450" text-anchor="middle" font-size="4.2" class="score-text" letter-spacing="0.8">MINISTRY OF MATERIAL LIBERATION</text>
+  <text x="105.0" y="466" text-anchor="middle" font-size="5" class="score-text">CONCESSION: CONTRABAND LOCKER & SYNTHETIC TEXTILE SEIZURE</text>
+  <line x1="30" y1="472" x2="180" y2="472" class="score"/>
+  <text x="105.0" y="484" text-anchor="middle" font-size="5.2" class="score-text">SEIZURE: +40 CC LIQUIDATION TARIFF PER NON-ORGANIC ITEM</text>
+  <text x="105.0" y="495" text-anchor="middle" font-size="4.2" class="score-text">CHARTER: SEIZURE & FORFEITURE OF PLASTIC ARTIFACTS</text>
+  <line x1="14" y1="505" x2="196" y2="505" class="score"/>
+  <text x="105.0" y="513" text-anchor="middle" font-size="3.5" class="score-text">OFFICIAL DESK PLACARD • AFFIX VERIFICATION STAMPS BELOW</text>
+  <text x="105.0" y="519" text-anchor="middle" font-size="3" class="score-text">ECOTOPIA REIGN PROTOCOL // DE WARREN NOVEMBER 2026</text>
+  <path d="M 210 430 H 400 V 525 H 365 V 529.2 H 345 V 525 H 265 V 529.2 H 245 V 525 H 210 Z" class="cut"/>
+  <rect x="214" y="434" width="182" height="87" class="score"/>
+  <rect x="215.5" y="435.5" width="179.0" height="84.0" class="score"/>
+  <line x1="214" y1="452" x2="396" y2="452" class="score"/>
+  <line x1="214" y1="454" x2="396" y2="454" class="score"/>
+  <text x="305.0" y="444" text-anchor="middle" font-size="9" class="score-text" letter-spacing="1.5">MINIBREATH</text>
+  <text x="305.0" y="450" text-anchor="middle" font-size="4.2" class="score-text" letter-spacing="0.8">MINISTRY OF ATMOSPHERIC RECTITUDE</text>
+  <text x="305.0" y="466" text-anchor="middle" font-size="5" class="score-text">CONCESSION: SPIROMETRY CHECKPOINT & DANCING INDULGENCES</text>
+  <line x1="230" y1="472" x2="380" y2="472" class="score"/>
+  <text x="305.0" y="484" text-anchor="middle" font-size="5.2" class="score-text">OFFSET: +20 CC INDULGENCE FOR HYPERVENTILATION PERMIT</text>
+  <text x="305.0" y="495" text-anchor="middle" font-size="4.2" class="score-text">CHARTER: COMMISSARY RIGHTS ON SURPLUS OXYGEN QUOTAS</text>
+  <line x1="214" y1="505" x2="396" y2="505" class="score"/>
+  <text x="305.0" y="513" text-anchor="middle" font-size="3.5" class="score-text">OFFICIAL DESK PLACARD • AFFIX VERIFICATION STAMPS BELOW</text>
+  <text x="305.0" y="519" text-anchor="middle" font-size="3" class="score-text">ECOTOPIA REIGN PROTOCOL // DE WARREN NOVEMBER 2026</text>
+  <polygon points="425,39 425,23 433,15 457,15 465,23 465,39" class="cut"/>
+  <rect x="434.9" y="25" width="20.2" height="4.2" class="cut"/>
+  <line x1="429" y1="19" x2="461" y2="19" class="score"/>
+  <polygon points="468,39 468,23 476,15 500,15 508,23 508,39" class="cut"/>
+  <rect x="477.9" y="25" width="20.2" height="4.2" class="cut"/>
+  <line x1="472" y1="19" x2="504" y2="19" class="score"/>
+  <polygon points="511,39 511,23 519,15 543,15 551,23 551,39" class="cut"/>
+  <rect x="520.9" y="25" width="20.2" height="4.2" class="cut"/>
+  <line x1="515" y1="19" x2="547" y2="19" class="score"/>
+  <polygon points="554,39 554,23 562,15 586,15 594,23 594,39" class="cut"/>
+  <rect x="563.9" y="25" width="20.2" height="4.2" class="cut"/>
+  <line x1="558" y1="19" x2="590" y2="19" class="score"/>
+  <polygon points="425,66 425,50 433,42 457,42 465,50 465,66" class="cut"/>
+  <rect x="434.9" y="52" width="20.2" height="4.2" class="cut"/>
+  <line x1="429" y1="46" x2="461" y2="46" class="score"/>
+  <polygon points="468,66 468,50 476,42 500,42 508,50 508,66" class="cut"/>
+  <rect x="477.9" y="52" width="20.2" height="4.2" class="cut"/>
+  <line x1="472" y1="46" x2="504" y2="46" class="score"/>
+  <polygon points="511,66 511,50 519,42 543,42 551,50 551,66" class="cut"/>
+  <rect x="520.9" y="52" width="20.2" height="4.2" class="cut"/>
+  <line x1="515" y1="46" x2="547" y2="46" class="score"/>
+  <polygon points="554,66 554,50 562,42 586,42 594,50 594,66" class="cut"/>
+  <rect x="563.9" y="52" width="20.2" height="4.2" class="cut"/>
+  <line x1="558" y1="46" x2="590" y2="46" class="score"/>
+  <polygon points="425,93 425,77 433,69 457,69 465,77 465,93" class="cut"/>
+  <rect x="434.9" y="79" width="20.2" height="4.2" class="cut"/>
+  <line x1="429" y1="73" x2="461" y2="73" class="score"/>
+  <polygon points="468,93 468,77 476,69 500,69 508,77 508,93" class="cut"/>
+  <rect x="477.9" y="79" width="20.2" height="4.2" class="cut"/>
+  <line x1="472" y1="73" x2="504" y2="73" class="score"/>
+  <polygon points="511,93 511,77 519,69 543,69 551,77 551,93" class="cut"/>
+  <rect x="520.9" y="79" width="20.2" height="4.2" class="cut"/>
+  <line x1="515" y1="73" x2="547" y2="73" class="score"/>
+  <polygon points="554,93 554,77 562,69 586,69 594,77 594,93" class="cut"/>
+  <rect x="563.9" y="79" width="20.2" height="4.2" class="cut"/>
+  <line x1="558" y1="73" x2="590" y2="73" class="score"/>
+  <polygon points="425,120 425,104 433,96 457,96 465,104 465,120" class="cut"/>
+  <rect x="434.9" y="106" width="20.2" height="4.2" class="cut"/>
+  <line x1="429" y1="100" x2="461" y2="100" class="score"/>
+  <polygon points="468,120 468,104 476,96 500,96 508,104 508,120" class="cut"/>
+  <rect x="477.9" y="106" width="20.2" height="4.2" class="cut"/>
+  <line x1="472" y1="100" x2="504" y2="100" class="score"/>
+  <polygon points="511,120 511,104 519,96 543,96 551,104 551,120" class="cut"/>
+  <rect x="520.9" y="106" width="20.2" height="4.2" class="cut"/>
+  <line x1="515" y1="100" x2="547" y2="100" class="score"/>
+  <polygon points="554,120 554,104 562,96 586,96 594,104 594,120" class="cut"/>
+  <rect x="563.9" y="106" width="20.2" height="4.2" class="cut"/>
+  <line x1="558" y1="100" x2="590" y2="100" class="score"/>
+  <polygon points="425,147 425,131 433,123 457,123 465,131 465,147" class="cut"/>
+  <rect x="434.9" y="133" width="20.2" height="4.2" class="cut"/>
+  <line x1="429" y1="127" x2="461" y2="127" class="score"/>
+  <polygon points="468,147 468,131 476,123 500,123 508,131 508,147" class="cut"/>
+  <rect x="477.9" y="133" width="20.2" height="4.2" class="cut"/>
+  <line x1="472" y1="127" x2="504" y2="127" class="score"/>
+  <polygon points="511,147 511,131 519,123 543,123 551,131 551,147" class="cut"/>
+  <rect x="520.9" y="133" width="20.2" height="4.2" class="cut"/>
+  <line x1="515" y1="127" x2="547" y2="127" class="score"/>
+  <polygon points="554,147 554,131 562,123 586,123 594,131 594,147" class="cut"/>
+  <rect x="563.9" y="133" width="20.2" height="4.2" class="cut"/>
+  <line x1="558" y1="127" x2="590" y2="127" class="score"/>
+</svg>

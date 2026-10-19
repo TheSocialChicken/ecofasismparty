@@ -271,13 +271,29 @@
 <body>
 
 <div class="toolbar">
-  <div>
-    <h1>ECOTOPIA — MASTER CARD DECK GENERATOR (B&W A4)</h1>
-    <p style="font-size: 0.8rem; color: #aaaaaa;">Standard Poker Size (63.5mm x 89mm) • Clean Dashed Cut Lines • Ready to Print & Sleeve</p>
+  <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+    <div>
+      <h1>ECOTOPIA — MASTER CARD DECK GENERATOR (B&W A4)</h1>
+      <p style="font-size: 0.8rem; color: #aaaaaa;">Standard Poker Size (63.5mm x 89mm) • Clean Dashed Cut Lines • Ready to Print & Sleeve</p>
+    </div>
+    <button class="btn-print" onclick="window.print()">🖨️ PRINT DECKS TO A4</button>
   </div>
-  <button class="btn-print" onclick="window.print()">🖨️ PRINT DECKS TO A4</button>
+
+  <!-- BOOKLET SUITE NAVIGATION -->
+  <div class="booklet-nav" style="display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 0.72rem; background: #1c1c1c; padding: 8px 12px; border-radius: 4px; border: 1px solid #383838; width: 100%;">
+    <span style="font-weight: bold; color: #aaaaaa; margin-right: 4px; font-family: 'Special Elite', cursive;">PASSPORT SUITE:</span>
+    <a href="print_passport_a6_booklet.html" style="color: #ddd; text-decoration: none; padding: 3px 7px; border: 1px solid #444; border-radius: 3px;">1. Citizen Passport</a>
+    <a href="print_broadcast_scripts_a6_booklet.html" style="color: #ddd; text-decoration: none; padding: 3px 7px; border: 1px solid #444; border-radius: 3px;">2. Broadcast Scripts</a>
+    <a href="print_lore_bible_a6_booklet.html" style="color: #ddd; text-decoration: none; padding: 3px 7px; border: 1px solid #444; border-radius: 3px;">3. Lore & Narrative Bible</a>
+    <a href="print_game_design_a6_booklet.html" style="color: #ddd; text-decoration: none; padding: 3px 7px; border: 1px solid #444; border-radius: 3px;">4. Game Design & Economics</a>
+    <a href="print_quest_cards_a6_booklet.html" style="color: #ddd; text-decoration: none; padding: 3px 7px; border: 1px solid #444; border-radius: 3px;">5. Quest Cards & Facilitator</a>
+    <span style="color:#666;">|</span>
+    <a href="print_cards_deck.html" style="background: #fff; color: #000; font-weight: bold; padding: 3px 7px; border-radius: 3px; text-decoration: none;">🃏 Cards Deck</a>
+    <a href="stamps_preview.html" style="color: #ddd; text-decoration: none; padding: 3px 7px; border: 1px solid #444; border-radius: 3px;">🔖 Stamp Suite</a>
+  </div>
+
   <div class="banner">
-    <strong>📦 Card Types Included:</strong> Sheet 1: The 10 Seeded Mole Cards • Sheet 2: The Rebel Run Deck (Netrunner Infiltration) • Sheet 3: Inter-Ministry Sabotage Quests • Sheet 4 & 5: The 10 Ministry Concession Placards. 100% black-and-white ink.
+    <strong>Card Types Included:</strong> Sheet 1: The 10 Seeded Mole Cards • Sheet 2: The Rebel Run Deck (Netrunner Infiltration) • Sheet 3: Inter-Ministry Sabotage Quests • Sheet 4 &amp; 5: The 10 Ministry Concession Placards • Sheets 6–8: 25 Citizen Quest Cards (Tier I / II / III). 100% black-and-white ink.
   </div>
 </div>
 
@@ -1337,6 +1353,661 @@
           <div class="reward-box">REGIME TRIUMPH IF NOT TRASHED</div>
           <div class="card-footer"><span>CENTRAL BOARD</span><span>DECREE 05</span></div>
         </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========================================================
+     SHEET 6: CITIZEN QUEST CARDS — OVERVIEW + TIER I + TIER II (01–03)
+     Placed into passports at check-in or posted on Ministry Job Boards.
+     ======================================================== -->
+<div class="sheet-container">
+  <div class="sheet-label">Sheet 6: Citizen Quests — Overview + Tier I (all) + Tier II (01–03)</div>
+  <div class="a4-sheet">
+
+    <!-- OVERVIEW REFERENCE CARD -->
+    <div class="card">
+      <div class="card-inner" style="background:#000;color:#fff;">
+        <div class="c-tl" style="border-color:#fff"></div><div class="c-tr" style="border-color:#fff"></div><div class="c-bl" style="border-color:#fff"></div><div class="c-br" style="border-color:#fff"></div>
+        <div>
+          <div class="card-type-bar" style="background:#fff;color:#000;">CITIZEN QUEST DECK — OVERVIEW</div>
+          <div class="card-title" style="color:#fff;font-size:6.5pt;">MINISTRY GAME REFERENCE</div>
+        </div>
+        <div class="card-body" style="color:#ddd;font-size:4.8pt;">
+          <div style="display:flex;justify-content:space-between;border-bottom:0.5px solid #555;padding:0.5mm 0;font-size:4.5pt;"><span style="font-weight:bold;color:#bbb;">MINISERVICE</span><span>Speed wash 10 items in 5 min</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:0.5px solid #555;padding:0.5mm 0;font-size:4.5pt;"><span style="font-weight:bold;color:#bbb;">MINIRENEWAL</span><span>Recite Renunciation Oath in full</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:0.5px solid #555;padding:0.5mm 0;font-size:4.5pt;"><span style="font-weight:bold;color:#bbb;">MINILIGHT</span><span>Pedal bicycle sprint 3 min</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:0.5px solid #555;padding:0.5mm 0;font-size:4.5pt;"><span style="font-weight:bold;color:#bbb;">MINIFLOW</span><span>Return cup with 50ml+ liquid</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:0.5px solid #555;padding:0.5mm 0;font-size:4.5pt;"><span style="font-weight:bold;color:#bbb;">MINIPLENTY</span><span>Blind tasting — identify 3/5</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:0.5px solid #555;padding:0.5mm 0;font-size:4.5pt;"><span style="font-weight:bold;color:#bbb;">MINILOVE</span><span>Speed confess 3 sins in 2 min</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:0.5px solid #555;padding:0.5mm 0;font-size:4.5pt;"><span style="font-weight:bold;color:#bbb;">MINIJOY</span><span>Wig snatching duel best of 3</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:0.5px solid #555;padding:0.5mm 0;font-size:4.5pt;"><span style="font-weight:bold;color:#bbb;">MINISHELTER</span><span>Transit passes for 3 sectors</span></div>
+          <div style="display:flex;justify-content:space-between;border-bottom:0.5px solid #555;padding:0.5mm 0;font-size:4.5pt;"><span style="font-weight:bold;color:#bbb;">MINITHRIFT</span><span>Spot 4/5 synthetic items</span></div>
+          <div style="display:flex;justify-content:space-between;padding:0.5mm 0;font-size:4.5pt;"><span style="font-weight:bold;color:#bbb;">MINIBREATH</span><span>Competitive breath-hold</span></div>
+        </div>
+        <div style="margin-top:auto;">
+          <div style="display:flex;justify-content:space-between;font-size:4.5pt;border-top:0.5px solid #444;padding-top:1mm;color:#888;">
+            <span>TIER I: +20–30 CC — Passport Insert</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:4.5pt;color:#888;">
+            <span>TIER II: +35–55 CC — Ministry Boards</span>
+          </div>
+          <div style="display:flex;justify-content:space-between;font-size:4.5pt;color:#888;">
+            <span>TIER III: +65–150 CC — Bulletin Board</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T1-01 KINETIC LABOUR PLEDGE -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER I</div>
+          <div class="card-title">KINETIC LABOUR PLEDGE</div>
+          <div class="card-subtitle">T1/01 — Minilight</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>Endurance Sprint</span></div>
+          <div class="flavor-quote">"The regime rewards those who convert biological energy into collective surplus."</div>
+          <div class="objective-box">
+            Report to the stationary bicycle. Pedal at full effort for exactly 3 uninterrupted minutes. Dynamo Warden confirms completion.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +30 CC — WARDEN STAMPS PASSPORT</div>
+          <div class="card-footer"><span>PASSPORT INSERT</span><span>MINILIGHT</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T1-02 CALORIC PURITY TRIAL -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER I</div>
+          <div class="card-title">CALORIC PURITY TRIAL</div>
+          <div class="card-subtitle">T1/02 — Miniplenty</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>Sensory Identification</span></div>
+          <div class="flavor-quote">"The body is a state asset. You will learn what your state has decided to fuel it with."</div>
+          <div class="objective-box">
+            Consume all 5 mystery items on the Blind Tasting Board. Write your guesses for their origins. Warden grades: pass = 3/5 correct.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +25 CC (PASS) / +35 CC (5/5)</div>
+          <div class="card-footer"><span>PASSPORT INSERT</span><span>MINIPLENTY</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T1-03 EXHALATION COMPLIANCE CHECK -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER I</div>
+          <div class="card-title">EXHALATION COMPLIANCE</div>
+          <div class="card-subtitle">T1/03 — Minibreath</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>Breath-Hold Test</span></div>
+          <div class="flavor-quote">"Your atmosphere is a shared resource. The state is verifying your contribution."</div>
+          <div class="objective-box">
+            Report to the Spirometry Checkpoint. Inhale fully, then hold breath while the officer counts aloud. Reach 20 seconds to pass.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +20 CC — 30+ SECS: CLEAN LUNG CERT</div>
+          <div class="card-footer"><span>PASSPORT INSERT</span><span>MINIBREATH</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T1-04 MOISTURE STEWARDSHIP RETURN -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER I</div>
+          <div class="card-title">MOISTURE STEWARDSHIP</div>
+          <div class="card-subtitle">T1/04 — Miniflow</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>Fluid Audit</span></div>
+          <div class="flavor-quote">"Fluid is not yours. You are its temporary custodian."</div>
+          <div class="objective-box">
+            Fill your cup from the bar. Return to the Miniflow Peetopia counter with at least 50ml remaining. Officer measures and stamps.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +20 CC FLUID DIVIDEND</div>
+          <div class="card-footer"><span>PASSPORT INSERT</span><span>MINIFLOW</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T1-05 SCULLERY INITIATION -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER I</div>
+          <div class="card-title">SCULLERY INITIATION</div>
+          <div class="card-subtitle">T1/05 — Miniservice</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>Speed Wash</span></div>
+          <div class="flavor-quote">"Labour is the state's love language. You will express it now."</div>
+          <div class="objective-box">
+            Volunteer for a 5-min shift at the Greenwashing Scullery. Clean 10 items using exactly one sponge and a metered spray bottle. Warden inspects each.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +30 CC PER COMPLETED SHIFT</div>
+          <div class="card-footer"><span>PASSPORT INSERT</span><span>MINISERVICE</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T2-01 VOLUNTARY CONFESSION PROTOCOL -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER II</div>
+          <div class="card-title">VOLUNTARY CONFESSION</div>
+          <div class="card-subtitle">T2/01 — Minilove</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>Speed Roleplay Confession</span></div>
+          <div class="flavor-quote">"Absolution is not free. But it is available, for those honest enough to earn it."</div>
+          <div class="objective-box">
+            Enter the Confession Pen voluntarily. Confess 3 specific pre-collapse ecological crimes in under 2 minutes. Warden grants absolution — or levies a fine.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +40 CC ABSOLUTION STAMP</div>
+          <div class="card-footer"><span>MINISTRY BOARD</span><span>MINILOVE</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T2-02 WIG SNATCHING CHAMPION -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER II</div>
+          <div class="card-title">WIG SNATCHING CHAMPION</div>
+          <div class="card-subtitle">T2/02 — Minijoy</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>Physical Duel</span></div>
+          <div class="flavor-quote">"Vanity is synthetic. Prove you have transcended it by taking someone else's."</div>
+          <div class="objective-box">
+            Enter the Wig Snatching Arena. Defeat 2 consecutive opponents in best-of-3 duels. No body contact. Vanity Arbiter officiates.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +50 CC + VICTORY RIBBON</div>
+          <div class="card-footer"><span>MINISTRY BOARD</span><span>MINIJOY</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T2-03 THE MINISTRY PILGRIM -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER II</div>
+          <div class="card-title">THE MINISTRY PILGRIM</div>
+          <div class="card-subtitle">T2/03 — All Ministries</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>Passport Stamp Hunt</span></div>
+          <div class="flavor-quote">"The devotional citizen does not belong to one ministry. They belong to all."</div>
+          <div class="objective-box">
+            Collect official stamps from 4 different ministries. Each stamp requires a brief check-in activity at the station. Time limit: 90 minutes.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +45 CC AT 4TH STAMP</div>
+          <div class="card-footer"><span>MINISTRY BOARD</span><span>ANY</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========================================================
+     SHEET 7: CITIZEN QUEST CARDS — TIER II (04–10) + TIER III (01–02)
+     ======================================================== -->
+<div class="sheet-container">
+  <div class="sheet-label">Sheet 7: Citizen Quests — Tier II (04–10) + Tier III (01–02)</div>
+  <div class="a4-sheet">
+
+    <!-- T2-04 SYNTHETIC DETECTION TRAINING -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER II</div>
+          <div class="card-title">SYNTHETIC DETECTION</div>
+          <div class="card-subtitle">T2/04 — Minithrift</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>Visual ID Puzzle</span></div>
+          <div class="flavor-quote">"An untrained eye is a liability to the collective."</div>
+          <div class="objective-box">
+            Examine 5 items in the Contraband Lineup. Identify which are synthetic (non-organic). Write answers on the card. Pass = 4/5 correct.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +35 CC + AUDITOR STAMP</div>
+          <div class="card-footer"><span>MINISTRY BOARD</span><span>MINITHRIFT</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T2-05 OPEN-MIC CONTESTANT -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER II</div>
+          <div class="card-title">OPEN-MIC CONTESTANT</div>
+          <div class="card-subtitle">T2/05 — Minijoy</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>Performance Contest</span></div>
+          <div class="flavor-quote">"The regime encourages melodrama. It is cheaper than honesty."</div>
+          <div class="objective-box">
+            Register for a "How the World Ends" round. Deliver a 60-second collapse monologue as dramatically as possible. Audience applause decides winner.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">PARTICIPATE: +40 CC / WIN: +100 CC</div>
+          <div class="card-footer"><span>MINISTRY BOARD</span><span>MINIJOY</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T2-06 CORRIDOR TRANSIT MASTERCLASS -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER II</div>
+          <div class="card-title">CORRIDOR TRANSIT CLASS</div>
+          <div class="card-subtitle">T2/06 — Minishelter</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>Bureaucratic Navigation</span></div>
+          <div class="flavor-quote">"The compliant citizen understands that movement is a privilege, not a right."</div>
+          <div class="objective-box">
+            Obtain valid transit passes for 3 separate sectors from Minishelter wardens. Each pass: state your name, ministry, and purpose. No bribing.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +40 CC AT 3RD VERIFIED PASS</div>
+          <div class="card-footer"><span>MINISTRY BOARD</span><span>MINISHELTER</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T2-07 DEBT RECONCILIATION BROKER -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER II</div>
+          <div class="card-title">DEBT RECONCILIATION</div>
+          <div class="card-subtitle">T2/07 — Any Ministry</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>Social Negotiation</span></div>
+          <div class="flavor-quote">"Carbon credits do not create themselves. They must be negotiated out of other people."</div>
+          <div class="objective-box">
+            Negotiate a voluntary credit transfer of 15+ CC between 2 citizens who have not previously interacted. Ministry officer must witness.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +45 CC BROKER COMMISSION</div>
+          <div class="card-footer"><span>MINISTRY BOARD</span><span>ANY</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T2-08 CARBON SIN INFORMANT -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER II</div>
+          <div class="card-title">CARBON SIN INFORMANT</div>
+          <div class="card-subtitle">T2/08 — Minilove</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>Surveillance Roleplay</span></div>
+          <div class="flavor-quote">"Surveillance is a civic duty. Report and be rewarded."</div>
+          <div class="objective-box">
+            Report 3 specific ecological violations you personally witnessed tonight to a Minilove warden. Must include: citizen, act, time, location.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +35 CC INFORMANT PAYMENT</div>
+          <div class="card-footer"><span>MINISTRY BOARD</span><span>MINILOVE</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T2-09 GREENWASHING ESSAY -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER II</div>
+          <div class="card-title">THE GREENWASHING ESSAY</div>
+          <div class="card-subtitle">T2/09 — Miniservice</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>90-Second Speed Write</span></div>
+          <div class="flavor-quote">"Rhetoric is a resource. Demonstrate your productivity."</div>
+          <div class="objective-box">
+            Write a 3-sentence essay defending algae paste over pre-collapse food culture. You have 90 seconds from when the host says "Begin." Host grades.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +40 CC ON PASSING GRADE</div>
+          <div class="card-footer"><span>MINISTRY BOARD</span><span>MINISERVICE</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T2-10 RENEWAL OBSERVER -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC QUEST — TIER II</div>
+          <div class="card-title">THE RENEWAL OBSERVER</div>
+          <div class="card-subtitle">T2/10 — Minirenewal</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>Ritual Participation</span></div>
+          <div class="flavor-quote">"Witnessing another's composting is itself an act of devotion."</div>
+          <div class="objective-box">
+            Attend a full Recycling Booth ceremony as official witness. When the citizen recites the Renunciation Oath, repeat it aloud with them in full.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +35 CC WITNESS STAMP</div>
+          <div class="card-footer"><span>MINISTRY BOARD</span><span>MINIRENEWAL</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T3-01 THE PERFECT LABORER -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC COMMENDATION — TIER III</div>
+          <div class="card-title">THE PERFECT LABORER</div>
+          <div class="card-subtitle">T3/01 — Any Ministry</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Condition:</span><span>Heresy citation = reset</span></div>
+          <div class="flavor-quote">"The state does not ask for your love. Only your unbroken compliance."</div>
+          <div class="objective-box">
+            Complete 3 consecutive work shifts at ministry stations (any mix) without a single heresy citation from Minilove. One citation resets count to zero.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +75 CC + COMPLIANCE CERTIFICATE</div>
+          <div class="card-footer"><span>BULLETIN BOARD (1 SLOT)</span><span>ANY</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T3-02 THE SOLIDARITY COLLECTIVE -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC COMMENDATION — TIER III</div>
+          <div class="card-title">SOLIDARITY COLLECTIVE</div>
+          <div class="card-subtitle">T3/02 — Any Ministry</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Condition:</span><span>Warden confirms strangers</span></div>
+          <div class="flavor-quote">"You are not a person. You are a workforce unit. Find your other units."</div>
+          <div class="objective-box">
+            Form a group of exactly 3 citizens who have never met before tonight. Complete a 3-round group shift together. All three earn the reward.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +70 CC EACH — ALL THREE</div>
+          <div class="card-footer"><span>BULLETIN BOARD (1 SLOT)</span><span>ANY</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========================================================
+     SHEET 8: CITIZEN QUEST CARDS — TIER III (03–10) + OZONE CARD
+     ======================================================== -->
+<div class="sheet-container">
+  <div class="sheet-label">Sheet 8: Citizen Quests — Tier III (03–10) + OZONE Safety Card</div>
+  <div class="a4-sheet">
+
+    <!-- T3-03 THE CARBON AMBASSADOR -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC COMMENDATION — TIER III</div>
+          <div class="card-title">THE CARBON AMBASSADOR</div>
+          <div class="card-subtitle">T3/03 — Any Ministry</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Time Limit:</span><span>45 minutes</span></div>
+          <div class="flavor-quote">"Carbon diplomacy is the highest civic art."</div>
+          <div class="objective-box">
+            Convince 5 different citizens to each voluntarily donate exactly 10 CC as an "Atmospheric Solidarity Contribution." No coercion. Witnessed by facilitator.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +80 CC AMBASSADOR COMMISSION</div>
+          <div class="card-footer"><span>BULLETIN BOARD (1 SLOT)</span><span>ANY</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T3-04 THE INQUISITION GAUNTLET -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC COMMENDATION — TIER III</div>
+          <div class="card-title">INQUISITION GAUNTLET</div>
+          <div class="card-subtitle">T3/04 — Minilove</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Duration:</span><span>Full 5-min interrogation</span></div>
+          <div class="flavor-quote">"To be fully known by the state is the highest privilege. Submit."</div>
+          <div class="objective-box">
+            Volunteer for a full Minilove interrogation. Maintain character throughout — no breaking, no laughter, no pleading. Warden scores performance.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">+65 CC / +85 CC / +100 CC (WARDEN GRADES)</div>
+          <div class="card-footer"><span>BULLETIN BOARD (1 SLOT)</span><span>MINILOVE</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T3-05 THE ATMOSPHERIC MARATHON -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC COMMENDATION — TIER III</div>
+          <div class="card-title">ATMOSPHERIC MARATHON</div>
+          <div class="card-subtitle">T3/05 — Minibreath</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Game:</span><span>3-Person Breath Contest</span></div>
+          <div class="flavor-quote">"The purest citizens exhale the least. Prove your atmospheric efficiency."</div>
+          <div class="objective-box">
+            Organise a 3-person breath-holding contest at the Spirometry Checkpoint. All three inhale simultaneously on officer's mark. Longest hold wins.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">WINNER: +65 CC — RUNNERS-UP: +20 CC</div>
+          <div class="card-footer"><span>BULLETIN BOARD (1 SLOT)</span><span>MINIBREATH</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T3-06 THE RECYCLING VOLUNTEER -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC COMMENDATION — TIER III</div>
+          <div class="card-title">RECYCLING VOLUNTEER</div>
+          <div class="card-subtitle">T3/06 — Minirenewal</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Duration:</span><span>15 continuous minutes</span></div>
+          <div class="flavor-quote">"True devotion means operating the machine, not merely passing through it."</div>
+          <div class="objective-box">
+            Assist the Renewal Technologist for 15 minutes. Guide at least 3 citizens through the composting ritual yourself under supervision.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +80 CC + APPRENTICE SEAL</div>
+          <div class="card-footer"><span>BULLETIN BOARD (1 SLOT)</span><span>MINIRENEWAL</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T3-07 THE GRAND MINISTRY CIRCUIT -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC COMMENDATION — TIER III</div>
+          <div class="card-title">GRAND MINISTRY CIRCUIT</div>
+          <div class="card-subtitle">T3/07 — All 10 Ministries</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Deadline:</span><span>Before 23:30 Assembly</span></div>
+          <div class="flavor-quote">"Devotion is not selective. The complete citizen serves all arms."</div>
+          <div class="objective-box">
+            Collect stamps from ALL 10 ministries AND complete at least one activity at each station. Facilitator verifies full passport at 23:30.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">+150 CC + VIP ACCESS + PA ANNOUNCEMENT</div>
+          <div class="card-footer"><span>BULLETIN BOARD (1 SLOT)</span><span>ALL 10</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T3-08 THE CARBON CREDIT SPECULATOR -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC COMMENDATION — TIER III</div>
+          <div class="card-title">THE CC SPECULATOR</div>
+          <div class="card-subtitle">T3/08 — Any</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Condition:</span><span>Zero labour stamps allowed</span></div>
+          <div class="flavor-quote">"The truly resourceful citizen does not labour. They leverage."</div>
+          <div class="objective-box">
+            Reach zero balance from starting debt using ONLY quest rewards and game winnings. No ministry labour shifts. Game Master verifies all credit sources.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +100 CC BONUS ON VERIFICATION</div>
+          <div class="card-footer"><span>BULLETIN BOARD (1 SLOT)</span><span>ANY</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T3-09 THE MARTYR'S ORDEAL -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC COMMENDATION — TIER III</div>
+          <div class="card-title">THE MARTYR'S ORDEAL</div>
+          <div class="card-subtitle">T3/09 — Minilove / Main Stage</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Condition:</span><span>10+ citizen witnesses</span></div>
+          <div class="flavor-quote">"History does not remember the obedient. It remembers those who endured."</div>
+          <div class="objective-box">
+            Undergo public interrogation at the main podium with 10+ witnesses. Crowd votes by applause. Majority applause = absolution; silence = fine. Accept verdict without protest.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">ABSOLVED: +120 CC / CONDEMNED: +50 CC</div>
+          <div class="card-footer"><span>BULLETIN BOARD (1 SLOT)</span><span>MINILOVE</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- T3-10 THE SYSTEM PLAYER -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div>
+          <div class="card-type-bar">CIVIC COMMENDATION — TIER III</div>
+          <div class="card-title">THE SYSTEM PLAYER</div>
+          <div class="card-subtitle">T3/10 — Any</div>
+        </div>
+        <div class="card-body">
+          <div class="meta-row"><span class="meta-label">Condition:</span><span>Game Watcher assigned</span></div>
+          <div class="flavor-quote">"The highest civic art is navigating the machine without appearing to need the manual."</div>
+          <div class="objective-box">
+            Complete quests from all 3 Tiers without being observed consulting your passport for more than 3 seconds. 3 strikes = quest fails.
+          </div>
+        </div>
+        <div>
+          <div class="reward-box">REWARD: +85 CC + SMOOTH COMPLIANCE SEAL</div>
+          <div class="card-footer"><span>BULLETIN BOARD (1 SLOT)</span><span>ANY</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OZONE SAFETY CARD -->
+    <div class="card">
+      <div class="card-inner" style="display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:2.5px solid #000;">
+        <div class="c-tl"></div><div class="c-tr"></div><div class="c-bl"></div><div class="c-br"></div>
+        <div style="font-family:'Cinzel',serif;font-weight:900;font-size:28pt;letter-spacing:0.3em;line-height:1;margin-bottom:3mm;">OZONE</div>
+        <div style="width:20mm;height:1.5px;background:#000;margin:0 auto 3mm;"></div>
+        <div style="font-family:'Courier Prime',monospace;font-size:6pt;line-height:1.6;max-width:50mm;">
+          This is the universal safe word for this event.<br><br>
+          If you say <strong>OZONE</strong>, all game activity pauses immediately. Everyone drops character. You will be supported.<br><br>
+          No explanation needed. No questions asked.
+        </div>
+        <div style="margin-top:3mm;font-family:'Special Elite',serif;font-size:5.5pt;letter-spacing:0.1em;text-transform:uppercase;color:#555;">Ecotopia — Sanctuary De Warren — Nov 28, 2026</div>
       </div>
     </div>
 

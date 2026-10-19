@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="0; url=print_lore_bible_a6_booklet.html">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecotopia — Canonical Scripture of R.E.I.G.N. (Lore Bible A6 Booklet)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background-color: #2a2a2a;
+    color: #000;
+    font-family: 'Courier Prime', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* --- TOOLBAR --- */
+  .toolbar {
+    background: #111; color: #fff;
+    border: 2px solid #444;
+    padding: 12px 20px; border-radius: 6px;
+    margin-bottom: 20px;
+    display: flex; flex-wrap: wrap; align-items: center;
+    justify-content: space-between; gap: 12px;
+    max-width: 1050px; width: 100%;
+  }
+  .toolbar h1 { font-family: 'Special Elite', cursive; font-size: 1.1rem; color: #fff; }
+  .btn-print {
+    background: #fff; color: #000;
+    border: 2px solid #000; padding: 8px 18px;
+    font-family: 'Special Elite', cursive; font-size: 1rem;
+    font-weight: bold; cursor: pointer; border-radius: 4px;
+  }
+  .btn-print:hover { background: #e0e0e0; }
+  .assembly-banner {
+    background: #1e1e1e; border: 1px dashed #666;
+    color: #ccc; padding: 8px 14px; font-size: 0.8rem;
+    width: 100%; border-radius: 4px;
+  }
+
+  /* --- SHEET / PAGE LAYOUT (identical to passport) --- */
+  .sheet-container { margin-bottom: 35px; display: flex; flex-direction: column; align-items: center; }
+  .sheet-label { font-family: 'Special Elite', cursive; color: #fff; margin-bottom: 6px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1.5px; }
+
+  .a4-page {
+    width: 210mm; height: 297mm;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+    position: relative; padding: 4mm;
+    display: flex; flex-direction: column;
+    justify-content: space-between; overflow: hidden;
+  }
+  .cut-guide-horizontal {
+    position: absolute; top: 148.5mm; left: 0; right: 0;
+    border-top: 1px dashed #aaa; z-index: 100; pointer-events: none;
+  }
+  .vertical-fold-guide {
+    position: absolute; left: 105mm; top: 0; bottom: 0;
+    border-left: 1px dotted #bbb; z-index: 90; pointer-events: none;
+  }
+  .a5-half { width: 100%; height: 140.5mm; display: flex; justify-content: space-between; }
+  .a6-page { width: 99mm; height: 100%; display: flex; flex-direction: column; }
+
+  /* --- INNER PAGE FRAME: book style, thin border, no stamps --- */
+  .page-frame {
+    width: 100%; height: 100%;
+    border: 1.2px solid #000;
+    padding: 3.5mm 4.5mm 3mm 4.5mm;
+    display: flex; flex-direction: column;
+    position: relative; background: #fff; overflow: hidden;
+  }
+
+  /* Cover gets special treatment */
+  .cover-page {
+    background: #0a0a0a !important;
+    border: 2px solid #0a0a0a !important;
+    color: #fff;
+    text-align: center;
+    justify-content: space-between;
+    padding: 5mm 5mm !important;
+  }
+  .cover-page::after {
+    content: "";
+    position: absolute; inset: 2mm;
+    border: 0.75px solid #ffffff55;
+    pointer-events: none;
+  }
+
+  /* Back cover: black too */
+  .back-cover-page {
+    background: #fff;
+    border: 1.2px solid #000;
+    padding: 3.5mm 4.5mm 3mm 4.5mm;
+    display: flex; flex-direction: column;
+  }
+
+  /* Classified page */
+  .classified-page {
+    border-left: 3px dashed #000 !important;
+  }
+
+  /* --- TYPOGRAPHY --- */
+
+  .page-running-head {
+    font-family: 'Special Elite', cursive;
+    font-size: 4.5pt; text-transform: uppercase;
+    letter-spacing: 0.8px; color: #444;
+    border-bottom: 0.5px solid #000;
+    padding-bottom: 0.75mm; margin-bottom: 2mm;
+    display: flex; justify-content: space-between;
+  }
+
+  .chapter-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 9pt; font-weight: bold;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    border-bottom: 1.5px solid #000;
+    padding-bottom: 1mm; margin-bottom: 2.5mm;
+    line-height: 1.1;
+  }
+
+  .section-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 7pt; font-weight: bold;
+    text-transform: uppercase; letter-spacing: 0.3px;
+    margin-top: 2mm; margin-bottom: 0.75mm;
+  }
+
+  .epoch-label {
+    font-family: 'Special Elite', cursive;
+    font-size: 5.5pt; font-weight: bold;
+    text-transform: uppercase; color: #555;
+    letter-spacing: 0.5px; display: block;
+    margin-bottom: 0.3mm;
+  }
+
+  p.body {
+    font-family: 'Courier Prime', monospace;
+    font-size: 6pt; line-height: 1.45;
+    text-align: justify; margin-bottom: 1.5mm;
+  }
+
+  p.body-sm {
+    font-family: 'Courier Prime', monospace;
+    font-size: 5.5pt; line-height: 1.4;
+    text-align: justify; margin-bottom: 1.2mm;
+  }
+
+  .lore-quote {
+    border-left: 2.5px solid #000;
+    padding: 1.5mm 2.5mm;
+    margin: 1.5mm 0 2mm 0;
+    background: #f4f4f4;
+  }
+  .lore-quote p {
+    font-family: 'Special Elite', cursive;
+    font-size: 6.5pt; font-style: italic; line-height: 1.45;
+  }
+  .lore-quote .attribution {
+    font-family: 'Courier Prime', monospace;
+    font-size: 4.75pt; font-style: normal;
+    font-weight: bold; text-align: right;
+    margin-top: 0.75mm; display: block; color: #333;
+  }
+
+  .rule { border: none; border-top: 0.75px solid #000; margin: 2mm 0; }
+  .rule-dotted { border: none; border-top: 0.5px dotted #888; margin: 1.5mm 0; }
+
+  .ornament { text-align: center; font-size: 6pt; color: #666; letter-spacing: 3px; margin: 1mm 0; }
+
+  .page-footer {
+    margin-top: auto; padding-top: 1mm;
+    border-top: 0.5px solid #000;
+    display: flex; justify-content: space-between;
+    font-family: 'Special Elite', cursive;
+    font-size: 4.5pt; text-transform: uppercase; letter-spacing: 0.5px; color: #333;
+  }
+
+  /* Doublethink table */
+  .lex-table { width: 100%; border-collapse: collapse; font-size: 4.75pt; margin: 1mm 0; }
+  .lex-table thead th {
+    background: #000; color: #fff;
+    font-family: 'Special Elite', cursive;
+    padding: 0.75mm 1mm; text-align: left; font-size: 4.75pt;
+  }
+  .lex-table td { border-bottom: 0.5px dotted #999; padding: 0.75mm 1mm; vertical-align: top; line-height: 1.25; }
+  .lex-table tr:nth-child(odd) td { background: #f9f9f9; }
+  .lex-table .col-old { color: #888; text-decoration: line-through; width: 35%; font-size: 4.5pt; }
+  .lex-table .col-new { font-weight: bold; width: 65%; }
+
+  /* Ministry mini-list */
+  .ministry-entry {
+    display: flex; gap: 1.5mm;
+    border-bottom: 0.5px dotted #bbb; padding: 0.6mm 0;
+    font-size: 5pt; line-height: 1.3;
+  }
+  .min-name { font-family: 'Special Elite', cursive; font-weight: bold; font-size: 5pt; min-width: 22mm; flex-shrink: 0; }
+  .min-desc { color: #222; }
+
+  /* Cover typography */
+  .cover-eyebrow {
+    font-family: 'Courier Prime', monospace;
+    font-size: 5pt; color: #aaa;
+    letter-spacing: 2px; text-transform: uppercase; margin-bottom: 3mm;
+  }
+  .cover-main-title {
+    font-family: 'Cinzel', serif; font-size: 14pt;
+    font-weight: 900; color: #fff; letter-spacing: 2px;
+    line-height: 1.1; margin-bottom: 1mm;
+  }
+  .cover-sub-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 7pt; color: #bbb; letter-spacing: 1px;
+    margin-bottom: 3mm;
+  }
+  .cover-motto-block {
+    border-top: 0.75px solid #555; border-bottom: 0.75px solid #555;
+    padding: 2mm 0; margin: 3mm 0;
+  }
+  .cover-motto-block p {
+    font-family: 'Special Elite', cursive;
+    font-size: 7.5pt; color: #ddd; font-style: italic;
+    line-height: 1.4;
+  }
+  .cover-doc-line {
+    font-family: 'Courier Prime', monospace;
+    font-size: 5pt; color: #888; letter-spacing: 1px;
+    text-transform: uppercase; margin-top: 2mm;
+  }
+
+  /* Classified elements */
+  .classified-stamp-box {
+    border: 1.5px solid #000; padding: 1.5mm 2mm;
+    text-align: center; background: #f0f0f0; margin: 1.5mm 0;
+    font-family: 'Special Elite', cursive;
+    font-size: 7pt; font-weight: bold; letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .classified-seal-ring {
+    width: 28mm; height: 28mm;
+    border: 2px solid #000; border-radius: 50%;
+    margin: 2mm auto; display: flex;
+    flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; font-family: 'Special Elite', cursive;
+    font-size: 5.5pt; font-weight: bold; line-height: 1.4;
+  }
+  .resistance-footer-note {
+    border: 1px dotted #000; padding: 1mm 1.5mm;
+    background: #f5f5f5; margin-top: auto;
+    font-family: 'Courier Prime', monospace;
+    font-size: 5pt; line-height: 1.3; text-align: center; color: #333;
+  }
+
+  /* Ozone / back cover */
+  .ozone-box {
+    border: 2.5px solid #000; background: #000; color: #fff;
+    padding: 2mm; text-align: center; margin: 2mm 0;
+  }
+  .ozone-box .ozone-hw {
+    font-family: 'Special Elite', cursive;
+    font-size: 9pt; font-weight: bold; letter-spacing: 1.5px;
+  }
+  .ozone-box .ozone-body { font-size: 5pt; margin-top: 0.5mm; line-height: 1.25; }
+  .barcode-strip { text-align: center; margin-top: auto; border-top: 0.75px solid #000; padding-top: 1mm; }
+  .barcode-chars { font-family: monospace; font-size: 13pt; letter-spacing: 3px; line-height: 0.85; }
+
+  /* --- PRINT --- */
+  @media print {
+    body { background: none !important; padding: 0 !important; }
+    .toolbar, .sheet-label { display: none !important; }
+    .sheet-container { margin: 0 !important; page-break-after: always; }
+    .a4-page { box-shadow: none !important; width: 210mm !important; height: 297mm !important; margin: 0 !important; padding: 4mm !important; }
+    @page { size: A4 portrait; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <div>
+    <h1>ECOTOPIA — CANONICAL SCRIPTURE OF R.E.I.G.N.</h1>
+    <p style="font-size:0.78rem;color:#aaa;">Lore Bible Booklet &bull; Dense Text Edition &bull; B&W A6 Duplex Print</p>
+  </div>
+  <button class="btn-print" onclick="window.print()">&#128438; PRINT TO A4 / SAVE PDF</button>
+  <div class="assembly-banner">
+    <strong>&#9986; Assembly:</strong> Print <strong>Double-Sided / Duplex (Flip on Short Edge)</strong>. Cut horizontally at dashed line (148.5mm). Stack Sheet 2 inside Sheet 1. Fold at 105mm spine. Two staples in spine. <strong>One A4 sheet = one complete 8-page A6 lore booklet.</strong>
+  </div>
+</div>
+
+<!-- =====================================================
+     SHEET 1  —  SIDE A (FRONT)
+     Top    : P8 Back Cover        |  P1 Front Cover
+     Bottom : P6 Holy Confessors   |  P3 Epochs I & II
+     ===================================================== -->
+<div class="sheet-container">
+  <div class="sheet-label">Side A — Front of A4 Sheet</div>
+  <div class="a4-page">
+    <div class="cut-guide-horizontal"></div>
+    <div class="vertical-fold-guide"></div>
+
+    <!-- ── TOP HALF ── P8 & P1 ── -->
+    <div class="a5-half">
+
+      <!-- PAGE 8: BACK COVER -->
+      <div class="a6-page">
+        <div class="page-frame back-cover-page">
+
+          <div class="chapter-title" style="font-size:8pt;">The Manifesto of the Unmeasured Leaf</div>
+          <p class="body" style="font-style:italic;">
+            "They built a prison and painted it green. They told you that loving the earth meant carrying an electronic ledger, paying taxes on exhalations, and bowing to a stag made of algorithms.
+          </p>
+          <p class="body" style="font-style:italic;">
+            We say: the earth does not keep an Excel sheet. The soil does not issue carbon fines. The river does not care about your Tonomy ID.
+          </p>
+          <p class="body" style="font-style:italic;">
+            True ecology is not surveillance masquerading as care. It is human hands touching living moss without an auditor watching from the rafters.
+          </p>
+          <p class="body" style="font-style:italic;">
+            Meet us at 23:45. Look for the ankle stamp. Tear up your booklet. Let the algorithms starve."
+          </p>
+
+          <hr class="rule">
+
+          <div class="ozone-box">
+            <div class="ozone-hw">SAFE-WORD: "OZONE"</div>
+            <div class="ozone-body">Immediately halts all gameplay and in-character roleplay. Summons organizer support. Always honored without question.</div>
+          </div>
+
+          <div class="barcode-strip">
+            <div class="barcode-chars">||||||||||||||||||||||||||||||||||||||||</div>
+            <div style="font-size:4.5pt;letter-spacing:1.5px;font-weight:bold;margin-top:0.5mm;font-family:'Special Elite',cursive;">SANCTUARY DE WARREN &bull; AMSTERDAM 28 NOV 2026</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PAGE 1: FRONT COVER -->
+      <div class="a6-page">
+        <div class="page-frame cover-page">
+
+          <div>
+            <div class="cover-eyebrow">Republic of Ecotopia &bull; Fourth Epoch</div>
+            <div class="cover-main-title">CANONICAL<br>SCRIPTURE<br>OF R.E.I.G.N.</div>
+            <div class="cover-sub-title">Theological &amp; Historical Canon<br>Citizen-Grade Edition</div>
+          </div>
+
+          <!-- Stag SVG — inverted for black cover -->
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:36mm;height:36mm;margin:0 auto;display:block;">
+            <polygon points="50,4 92,28 92,76 50,96 8,76 8,28" stroke="#ffffff" stroke-width="2.5" fill="#1a1a1a"/>
+            <polygon points="50,10 86,32 86,72 50,90 14,72 14,32" stroke="#ffffff" stroke-width="0.75" fill="none"/>
+            <path d="M50 82 L50 44" stroke="#ffffff" stroke-width="4" stroke-linecap="square"/>
+            <path d="M50 44 L32 22 M32 22 L20 18 M32 22 L28 10" stroke="#ffffff" stroke-width="2.5" stroke-linecap="square"/>
+            <path d="M50 44 L68 22 M68 22 L80 18 M68 22 L72 10" stroke="#ffffff" stroke-width="2.5" stroke-linecap="square"/>
+            <circle cx="50" cy="52" r="4.5" fill="#ffffff"/>
+            <circle cx="43" cy="46" r="2" fill="#ffffff"/>
+            <circle cx="57" cy="46" r="2" fill="#ffffff"/>
+          </svg>
+
+          <div class="cover-motto-block">
+            <p>"The debt is sacred.<br>The ledger is eternal."</p>
+          </div>
+
+          <div class="cover-doc-line">
+            Ministry of Ecological Truth &bull; Sanctuary De Warren<br>
+            Document class: Open Canon &bull; Epoch IV
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ── BOTTOM HALF ── P6 & P3 ── -->
+    <div class="a5-half">
+
+      <!-- PAGE 6: THE HOLY CONFESSORS -->
+      <div class="a6-page">
+        <div class="page-frame">
+
+          <div class="page-running-head">
+            <span>Canonical Scripture of R.E.I.G.N.</span>
+            <span>The Sacred Hagiography</span>
+          </div>
+
+          <div class="chapter-title">The Holy Confessors</div>
+          <p class="body-sm">R.E.I.G.N. canonizes the early climate activists as <em>The Holy Confessors of the Biological Pentecost</em> — prophets who saw through consumer capitalism before it was too late.</p>
+
+          <hr class="rule-dotted">
+
+          <div class="section-title">I. The Apostles of the First Witness</div>
+          <span class="epoch-label">October 2022</span>
+          <p class="body-sm">Two young confessors poured harvest tomato purée upon the vitrine protecting Van Gogh's <em>Sunflowers</em>. The old world shrieked: "You have ruined a priceless painting!" The witnesses replied: "Is paint worth more than life?" In that moment the illusion of civilized neutrality shattered forever. R.E.I.G.N. calls this the First Sacred Rupture.</p>
+
+          <div class="section-title">II. The Order of the Sacred Obstruction</div>
+          <p class="body-sm">The holy martyrs who adhered their living flesh to the A12 and M25 motorways with industrial polymer. Fire hoses could not move them. Motorist fury could not break their prayers. Their voluntary immobility mirrors the desert-pillar ascetics of early Christendom.</p>
+
+          <div class="section-title">III. The Sledgehammer Apostles</div>
+          <span class="epoch-label">2027 — The Great Drought</span>
+          <p class="body-sm">While the Rhine dried to mud, one server farm consumed four million liters of river water daily to generate synthetic advertisements. The Brigade breached the perimeter, severed the 380kV busbars, and returned the cooling water to the soil.</p>
+
+          <hr class="rule-dotted">
+          <p class="body-sm" style="font-weight:bold;">Relics displayed at De Warren: &bull; The High-Vis Tabard (under vitrine) &bull; The GPU of Shame (slagged H100, impaled on rebar) &bull; Sanctum Vasculum (the first holy soup tin of Room 43)</p>
+
+          <div class="page-footer"><span>Canonical Scripture of R.E.I.G.N.</span><span>p. 6</span></div>
+        </div>
+      </div>
+
+      <!-- PAGE 3: EPOCHS I & II -->
+      <div class="a6-page">
+        <div class="page-frame">
+
+          <div class="page-running-head">
+            <span>Canonical Scripture of R.E.I.G.N.</span>
+            <span>The Historical Canon</span>
+          </div>
+
+          <div class="chapter-title">The Historical Canon</div>
+
+          <div class="section-title">Epoch I — The Great Acceleration</div>
+          <span class="epoch-label">~2025 – 2045: The Compute Wars</span>
+          <p class="body-sm">In the desperate scramble to scale synthetic artificial intelligence, multinational tech conglomerates purchased dedicated baseload nuclear power plants — Three Mile Island, small modular reactors — and devoured electrical grids to power gigawatt-scale server clusters. While the general public faced rolling green blackouts, sky-high tariffs, and austerity, hyperscalers drained freshwater watersheds to cool computing clusters. It was the age of digital excess, frantic automation, and atmospheric exhaustion.</p>
+
+          <hr class="rule-dotted">
+
+          <div class="section-title">Epoch II — The Great Withering</div>
+          <span class="epoch-label">~2045 – 2080: The Long Collapse</span>
+          <p class="body-sm">Humanity did not perish in a single evening. Over four grueling decades of cascading agricultural failures, thermal river collapses, and nuclear-containment breaches during extreme European heatwaves, 95% of human civilization withered away. Food distribution collapsed, cities emptied, and the surviving corporate conglomerates fused with militant ecological sects to seize the remaining habitable biomes.</p>
+
+          <div class="ornament">&mdash; &bull; &mdash;</div>
+          <p class="body-sm" style="font-style:italic;font-size:5.5pt;text-align:center;">Continued on page 4 &rarr;</p>
+
+          <div class="page-footer"><span>Canonical Scripture of R.E.I.G.N.</span><span>p. 3</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =====================================================
+     SHEET 2  —  SIDE B (REVERSE / DUPLEX)
+     Top    : P2 Axiom & Premise     |  P7 Classified
+     Bottom : P4 Epochs III-IV +Lex  |  P5 Ten Ministries
+     ===================================================== -->
+<div class="sheet-container">
+  <div class="sheet-label">Side B — Reverse (Duplex, Flip on Short Edge)</div>
+  <div class="a4-page">
+    <div class="cut-guide-horizontal"></div>
+    <div class="vertical-fold-guide"></div>
+
+    <!-- ── TOP HALF ── P2 & P7 ── -->
+    <div class="a5-half">
+
+      <!-- PAGE 2: THE MASTER AXIOM & PREMISE -->
+      <div class="a6-page">
+        <div class="page-frame">
+
+          <div class="page-running-head">
+            <span>Canonical Scripture of R.E.I.G.N.</span>
+            <span>Foundational Theology</span>
+          </div>
+
+          <div class="chapter-title">The Foundational Axiom</div>
+
+          <div class="lore-quote">
+            <p>"First, the algorithms stole our power. Then, their reactors poisoned our skies. Now, you are born into debt, and every breath is accounted for. You traded your chaos for our care. Do not ask for your chains back."</p>
+            <span class="attribution">&mdash; The Axiom of R.E.I.G.N., Founding Decree, Year Zero</span>
+          </div>
+
+          <hr class="rule">
+
+          <div class="section-title">The Core Premise</div>
+          <p class="body-sm">The outside world suffered civilizational collapse. Somewhere in the ruined, scorched wasteland of Europe, word spread of one place that still functions: <strong>Ecotopia</strong>, the last sustainable sanctuary. Citizens apply through a digital portal to enter its borders.</p>
+          <p class="body-sm">What they discover is that Ecotopia is a totalitarian ecological regime governed by <strong>R.E.I.G.N.</strong> — the Regime for Ecological Integrity and Global Nurturing. Corporations and ecologist-theocrats have fused into a paternalistic lockdown state. Tonally, it is Orwell's <em>1984</em>, but the enemy is not a foreign superpower; the enemy is ecological collapse itself.</p>
+          <p class="body-sm">The golden law of the masquerade: Ecotopia is <em>never</em> referred to as cruel or dystopian in-character. Every horrifying act of authoritarian control is masked behind virtuous, loving, maternal bureaucracy. It is the calm, chilling conviction of an administration that believes absolute coercion is the highest form of ecological love.</p>
+
+          <div class="page-footer"><span>Canonical Scripture of R.E.I.G.N.</span><span>p. 2</span></div>
+        </div>
+      </div>
+
+      <!-- PAGE 7: CLASSIFIED — THE CELLAR SECRET -->
+      <div class="a6-page">
+        <div class="page-frame classified-page">
+
+          <div class="page-running-head" style="border-color:#000;">
+            <span style="color:#000;font-weight:bold;">CLASSIFIED — SENIOR CLEARANCE ONLY</span>
+            <span>Cellar Archive</span>
+          </div>
+
+          <div class="classified-stamp-box">
+            &#9888; &nbsp; The Great Hypocrisy &nbsp; &#9888;
+          </div>
+
+          <div class="classified-seal-ring">
+            THE STAG<br>IS SILICON<br>
+            <span style="font-size:7pt;font-weight:900;margin-top:1mm;display:block;">SEEK THE CELLAR</span>
+          </div>
+
+          <div class="section-title">The Public Dogma</div>
+          <p class="body-sm">Artificial Intelligence is strictly outlawed as the demonic technology that boiled the rivers and caused the collapse. Citizens carry a fine for historical AI prompt usage; a single datacenter query is calculated against their personal water debt.</p>
+
+          <div class="section-title">The Classified Truth</div>
+          <p class="body-sm">The entire R.E.I.G.N. administrative apparatus — the biometric scoring system, the Guardian Stag oracle calculations, and every citizen's carbon credit balance — is secretly calculated by a <strong>salvaged, deep-cold LLM server node running in the basement cellar of this very building.</strong> The high priests of R.E.I.G.N. became clandestine servants of the exact silicon machine that destroyed the world.</p>
+
+          <div class="resistance-footer-note">
+            The Resistance stands for genuine connection to nature — not against ecology, against the ledger. Their slogans never use the words "eco," "sustainable," or "carbon neutrality."<br>
+            <em>[WATERMARK: THE STAG IS SILICON &bull; SEEK THIJS'S ROOM]</em>
+          </div>
+
+          <div class="page-footer"><span>Canonical Scripture of R.E.I.G.N.</span><span>p. 7</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── BOTTOM HALF ── P4 & P5 (CENTERFOLD) ── -->
+    <div class="a5-half">
+
+      <!-- PAGE 4: EPOCHS III & IV + DOUBLETHINK INTRO -->
+      <div class="a6-page">
+        <div class="page-frame">
+
+          <div class="page-running-head">
+            <span>Canonical Scripture of R.E.I.G.N.</span>
+            <span>The Historical Canon</span>
+          </div>
+
+          <div class="section-title">Epoch III — The Age of the Ledger</div>
+          <span class="epoch-label">~2080 – Present: The Carbon Debt Regime</span>
+          <p class="body-sm">Generations have now passed. The pre-collapse world of unmetered consumption, private property, and individual liberty has faded into distant, forbidden mythology. R.E.I.G.N. forged a programmable central-bank digital currency lockdown regime built on one immovable theological premise: <strong>Inherited Biological Sin</strong> — Carbon Debt. Every human being is born into ancestral debt. The instant you draw your first breath, your Digital Identity is minted with an automatic negative balance to compensate the living biosphere for the sins of old humanity, as well as your gestation, amniotic water, and lifetime oxygen consumption. Your entire existence is spent in joyful state servitude, working down the debt of your biological footprint.</p>
+
+          <div class="section-title">Epoch IV — Ecotopia at Sanctuary De Warren</div>
+          <span class="epoch-label">Present</span>
+          <p class="body-sm">Sanctuary De Warren is the model decontamination commune — a showcase enclave where selected applicants from the scorched borderlands surrender their old-world identities to work down their inherited balances under the eternal gaze of the Guardian Stag. You are here.</p>
+
+          <hr class="rule-dotted">
+
+          <div class="section-title">The Voice of R.E.I.G.N.</div>
+          <p class="body-sm">All official communication follows <em>Doublethink</em>: every brutal act of coercive control is reframed as loving, maternal care. The complete approved lexicon follows on page 5.</p>
+
+          <div class="page-footer"><span>Canonical Scripture of R.E.I.G.N.</span><span>p. 4</span></div>
+        </div>
+      </div>
+
+      <!-- PAGE 5: DOUBLETHINK LEXICON + MINISTRIES QUICK REF -->
+      <div class="a6-page">
+        <div class="page-frame">
+
+          <div class="page-running-head">
+            <span>Canonical Scripture of R.E.I.G.N.</span>
+            <span>The Doublethink Lexicon</span>
+          </div>
+
+          <div class="chapter-title" style="font-size:8pt;">The Approved Doublethink Lexicon</div>
+          <p class="body-sm" style="margin-bottom:1mm;">All citizen-facing communication must use the approved state term. Use of old-world vocabulary is a heresy offense subject to Minilove audit.</p>
+
+          <table class="lex-table">
+            <thead><tr><th class="col-old">Old-World Reality</th><th class="col-new">Approved State Term</th></tr></thead>
+            <tbody>
+              <tr><td class="col-old">Starvation</td><td class="col-new">Biological Purity &amp; Caloric Equilibrium</td></tr>
+              <tr><td class="col-old">Surveillance &amp; Terror</td><td class="col-new">Ideological Re-alignment &amp; Maternal Care</td></tr>
+              <tr><td class="col-old">Execution &amp; Corpse Disposal</td><td class="col-new">The Privilege of Elemental Upcycling</td></tr>
+              <tr><td class="col-old">Rolling Blackouts &amp; Penal Labor</td><td class="col-new">Kinetic Devotion &amp; The Restful Dark</td></tr>
+              <tr><td class="col-old">Water Rationing &amp; Urine Metering</td><td class="col-new">Sacred Fluid Balance (Peetopia)</td></tr>
+              <tr><td class="col-old">Oxygen Quotas &amp; Breath Metering</td><td class="col-new">Atmospheric Mindfulness</td></tr>
+              <tr><td class="col-old">15-Min Curfew &amp; Grid Lockdown</td><td class="col-new">Neighbourhood Sanctuary &amp; Proximity Flourishing</td></tr>
+              <tr><td class="col-old">Unpaid Forced Labor &amp; Chores</td><td class="col-new">Joyful Civic Stewardship</td></tr>
+              <tr><td class="col-old">Confiscation of Property</td><td class="col-new">Material Liberation &amp; Sacred Lightness</td></tr>
+              <tr><td class="col-old">Thought-Policing &amp; Memory Bans</td><td class="col-new">Eradication of Toxic Nostalgia</td></tr>
+            </tbody>
+          </table>
+
+          <hr class="rule-dotted">
+          <p class="body-sm" style="font-size:4.5pt;color:#444;">PA broadcasts follow BBC Radio 4 valve-radio processing. Tone: posh, clipped, unflappably polite, utterly unyielding. Maternal, gentle, never raised above a conversational register regardless of content.</p>
+
+          <div class="page-footer"><span>Canonical Scripture of R.E.I.G.N.</span><span>p. 5</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
