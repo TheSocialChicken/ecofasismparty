@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="210mm" height="297mm" viewBox="0 0 210 297">
+<title>Conserve</title>
+<!-- black = ENGRAVE, red fill = CUT AWAY, white = bare wood -->
+<rect width="210" height="297" fill="#ff0000"/>
+<g inkscape:groupmode="layer" inkscape:label="piece">
+<rect x="1" y="1" width="208" height="295" rx="6" fill="#ffffff"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="background">
+<clipPath id="s127838576288576"><rect x="1" y="1" width="208" height="295" rx="3"/></clipPath><g clip-path="url(#s127838576288576)"><polygon points="0.00,0.00 210.00,0.00 210.00,128.00 0.00,176.00" fill="#000000" /></g><circle cx="105.0" cy="100" r="64" fill="#ffffff"/><circle cx="105.0" cy="100" r="64" fill="none" stroke="#000000" stroke-width="2.4"/>
+</g><g inkscape:groupmode="layer" inkscape:label="icon">
+<path d="M105.0,54.76 C111.96,73.90 130.52,89.56 130.52,106.96 A25.52,25.52 0 0 1 79.48,106.96 C79.48,89.56 98.04,73.90 105.0,54.76 Z" fill="#000000"/><path d="M99.06,123.27 A17.35,17.35 0 0 1 87.91,109.97" fill="none" stroke="#ffffff" stroke-width="3.48" stroke-linecap="round"/><path d="M69.04,134.80 A35.96,7.54 0 0 0 140.96,134.80" fill="none" stroke="#ff0000" stroke-width="2.90" stroke-linecap="round"/><path d="M56.28,134.80 A48.72,12.76 0 0 0 153.72,134.80" fill="none" stroke="#ff0000" stroke-width="2.90" stroke-linecap="round"/>
+</g><g inkscape:groupmode="layer" inkscape:label="type">
+<text x="105.0" y="226" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:48px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">CONSERVE</text><rect x="11" y="233" width="188" height="1.6" fill="#000000"/><text x="105.0" y="247" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:9.5px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">EVERY DROP YOU DON'T DRINK</text><text x="105.0" y="259" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:9.5px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">IS A GIFT TO THE EARTH</text><rect x="1" y="278" width="208" height="18" rx="6" fill="#000000"/><text x="105.0" y="290" style="font-family:'IBM Plex Mono';font-weight:600;-inkscape-font-specification:'IBM Plex Mono SemiBold';font-size:7px;text-anchor:middle;fill:#ffffff" >DECREE Nº 07 · R.E.I.G.N. · ECOTOPIA</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="holes">
+<circle cx="12" cy="9" r="2.5" fill="#ff0000"/><circle cx="198" cy="9" r="2.5" fill="#ff0000"/>
+</g>
+</svg>

@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Book of Ecotopia — Sacred Chronicle of R.E.I.G.N.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;700;900&family=Cinzel+Decorative:wght@400;700;900&family=IM+Fell+English:ital@0;1&family=Special+Elite&family=Grenze+Gotisch:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #444;
+    color: #000;
+    font-family: 'Grenze Gotisch', 'UnifrakturMaguntia', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ---- TOOLBAR ---- */
+  .toolbar {
+    background: #111;
+    color: #fff;
+    border: 2px solid #000;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 24px;
+    max-width: 870px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .toolbar h1 { font-family: 'Special Elite', monospace; font-size: 0.95rem; color: #000; letter-spacing: 0.05em; }
+  .btn {
+    background: #000; color: #111; border: none; padding: 8px 18px;
+    font-family: 'Special Elite', monospace; font-size: 0.82rem; cursor: pointer;
+    border-radius: 3px; font-weight: bold; text-decoration: none; display: inline-block;
+  }
+  .btn:hover { background: #e0b800; }
+
+  /* ---- A4 PAGE ---- */
+  .page {
+    width: 210mm;
+    
+    background: #fff;
+    background-image: none;
+    color: #000;
+    padding: 6.5mm 7mm 9mm 7mm;
+    height: 297mm; overflow: hidden;
+    margin-bottom: 6mm;
+    position: relative;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.55), 0 0 0 1px #000;
+    page-break-after: always;
+    break-after: page;
+  }
+  .page::before {
+    content: '';
+    position: absolute;
+    inset: 2.5mm;
+    border: 1.6px solid #000;
+    pointer-events: none;
+  }
+  .page::after {
+    content: '';
+    position: absolute;
+    inset: 3.6mm;
+    border: 0.6px solid #000;
+    pointer-events: none;
+  }
+
+  /* ---- COVER ---- */
+  .cover {
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; text-align: center; min-height: 281mm; padding: 6mm 8mm;
+  }
+  .cover-overline {
+    font-family: 'Cinzel', serif; font-size: 0.68rem; letter-spacing: 0.45em;
+    color: #000; text-transform: uppercase; margin-bottom: 1.4rem;
+  }
+  .cover-title {
+    font-family: 'UnifrakturMaguntia', cursive; font-size: 3.2rem;
+    color: #000; line-height: 1.05; margin-bottom: 0.4rem;
+  }
+  .cover-subtitle {
+    font-family: 'Cinzel Decorative', serif; font-size: 0.82rem;
+    color: #000; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 1.8rem;
+  }
+  .cover-decree {
+    font-family: 'Grenze Gotisch', 'UnifrakturMaguntia', serif; font-style: italic; font-size: 1rem;
+    color: #000; max-width: 320px; line-height: 1.75; margin: 1.4rem 0;
+    padding: 1rem 1.4rem;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+  }
+  .cover-publisher {
+    font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.28em;
+    color: #000; text-transform: uppercase; margin-top: 1.8rem; line-height: 2;
+  }
+  .citizen-fields {
+    margin-top: 1.6rem; text-align: left; width: 270px;
+    font-family: 'Cinzel', serif; font-size: 0.7rem; color: #000;
+  }
+  .cfield {
+    display: flex; align-items: flex-end; gap: 0.5rem;
+    border-bottom: 1px solid #000; padding: 0.38rem 0; margin-bottom: 0.25rem;
+  }
+  .cfield .cl { text-transform: uppercase; font-size: 0.62rem; letter-spacing: 0.12em; white-space: nowrap; }
+  .cfield .cv { flex: 1; }
+
+  /* ---- BOOK TITLE PAGE ---- */
+  .btpage {
+    display: flex; flex-direction: column; align-items: center;
+    justify-content: center; text-align: center; min-height: 281mm; padding: 6mm 8mm;
+  }
+  .book-number {
+    font-family: 'Cinzel', serif; font-size: 0.78rem; letter-spacing: 0.5em;
+    color: #000; text-transform: uppercase; margin-bottom: 0.9rem;
+  }
+  .book-main-title {
+    font-family: 'UnifrakturMaguntia', cursive; font-size: 2.7rem;
+    color: #000; line-height: 1.1; margin-bottom: 0.7rem;
+  }
+  .book-sub {
+    font-family: 'Cinzel', serif; font-size: 0.8rem; color: #000;
+    letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 1.8rem;
+  }
+  .book-invocation {
+    font-family: 'Grenze Gotisch', 'UnifrakturMaguntia', serif; font-style: italic; font-size: 0.92rem;
+    color: #000; max-width: 350px; line-height: 1.78;
+  }
+  .book-pub {
+    font-family: 'Cinzel', serif; font-size: 0.62rem; color: #000;
+    letter-spacing: 0.28em; text-align: center; text-transform: uppercase; line-height: 1.9;
+    margin-top: 2rem;
+  }
+
+  /* ---- RUNNING PAGE ---- */
+  .ph {
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid #000; padding-bottom: 4px; margin-bottom: 1.1rem;
+  }
+  .ph span {
+    font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.22em;
+    color: #000; text-transform: uppercase;
+  }
+  .pf {
+    position: absolute; bottom: 4.6mm; left: 7mm; right: 7mm;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid #000; padding-top: 4px;
+  }
+  .pf span {
+    font-family: 'Cinzel', serif; font-size: 0.57rem; letter-spacing: 0.2em;
+    color: #000; text-transform: uppercase;
+  }
+
+  /* ---- TYPOGRAPHY ---- */
+  h2.ch {
+    font-family: 'UnifrakturMaguntia', cursive; font-size: 1.95rem;
+    color: #000; margin: 1.2rem 0 0.2rem 0; line-height: 1.1;
+  }
+  h2.chs {
+    font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.28em;
+    color: #000; text-transform: uppercase; margin-bottom: 1.1rem; font-weight: 400;
+  }
+  h3.sh {
+    font-family: 'Cinzel Decorative', serif; font-size: 0.85rem; color: #000;
+    letter-spacing: 0.14em; text-transform: uppercase; margin: 1.3rem 0 0.45rem 0;
+    border-bottom: 1px solid #000; padding-bottom: 3px;
+  }
+  p.v {
+    font-family: 'Grenze Gotisch', 'UnifrakturMaguntia', serif; font-size: 0.98rem; line-height: 1.38;
+    color: #000; margin-bottom: 0.55rem; text-align: justify; hyphens: auto;
+  }
+  sup.vn {
+    font-family: 'Cinzel', serif; font-size: 0.56rem; color: #000;
+    margin-right: 2px; vertical-align: super; line-height: 1;
+  }
+  .dc::first-letter {
+    font-family: 'UnifrakturMaguntia', cursive; font-size: 4.6rem;
+    float: left; line-height: 0.74; margin: 0.04em 0.07em 0 0; color: #000;
+  }
+  .orn {
+    text-align: center; color: #000; margin: 1rem 0;
+    font-size: 1rem; letter-spacing: 0.45em;
+  }
+
+  /* ---- BOXES ---- */
+  .decree-box {
+    border: 1px solid #000;
+    border-left: 4px solid #000;
+    background: transparent;
+    padding: 0.85rem 1.1rem; margin: 1.1rem 0;
+    font-family: 'Grenze Gotisch', 'UnifrakturMaguntia', serif; font-style: italic;
+    font-size: 0.87rem; color: #000; line-height: 1.72; position: relative;
+  }
+  .decree-box::before {
+    content: attr(data-label);
+    position: absolute; top: -0.62rem; left: 0.75rem;
+    background: #fff; padding: 0 0.38rem;
+    font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.28em;
+    color: #000; text-transform: uppercase;
+  }
+
+  /* ---- IMAGES ---- */
+  .img-center { width: 100%; margin: 1rem 0; text-align: center; }
+  .img-center img {
+    max-width: 100%; max-height: 190px; object-fit: contain;
+    border: 1px solid #000; padding: 4px;
+    background: transparent;
+  }
+  .img-float {
+    float: right; margin: 0 0 1rem 1.4rem; width: 38%; text-align: center;
+  }
+  .img-float img {
+    width: 100%; max-height: 155px; object-fit: contain;
+    border: 1px solid #000; padding: 3px;
+    background: transparent;
+  }
+  .img-cap {
+    font-family: 'Cinzel', serif; font-size: 0.58rem; letter-spacing: 0.16em;
+    color: #000; text-transform: uppercase; margin-top: 0.3rem;
+    font-style: italic; display: block;
+  }
+  .cf::after { content: ''; display: table; clear: both; }
+
+  /* ---- MINISTRY BLOCKS ---- */
+  .mb {
+    margin: 1.1rem 0; padding: 1.05rem 1.3rem;
+    border: 1px solid #000;
+    background: transparent; position: relative;
+  }
+  .mb::before {
+    content: ''; position: absolute; top: 3px; left: 3px; right: 3px; bottom: 3px;
+    border: 1px solid #000; pointer-events: none;
+  }
+  .mname {
+    font-family: 'UnifrakturMaguntia', cursive; font-size: 1.85rem;
+    color: #000; line-height: 1; margin-bottom: 0.12rem;
+  }
+  .mfull {
+    font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.28em;
+    color: #000; text-transform: uppercase; margin-bottom: 0.7rem;
+  }
+  .meuph {
+    font-family: 'Grenze Gotisch', 'UnifrakturMaguntia', serif; font-style: italic; font-size: 0.85rem;
+    color: #000; border-left: 3px solid #000;
+    padding-left: 0.75rem; margin: 0.65rem 0; line-height: 1.62;
+  }
+  .mmandate {
+    font-family: 'Grenze Gotisch', 'UnifrakturMaguntia', serif; font-size: 0.85rem;
+    color: #000; line-height: 1.72; text-align: justify;
+  }
+  .mverse {
+    font-family: 'Cinzel', serif; font-size: 0.68rem; color: #000;
+    letter-spacing: 0.13em; text-align: center; margin-top: 0.7rem;
+    padding-top: 0.45rem; border-top: 1px solid #000; font-style: italic;
+  }
+
+  /* ---- MARTYRS & RELICS ---- */
+  .martyr {
+    margin: 1.1rem 0; padding: 0.9rem 1.1rem;
+    border-top: 2px solid #000;
+  }
+  .martyr-name {
+    font-family: 'Cinzel Decorative', serif; font-size: 0.92rem;
+    color: #000; letter-spacing: 0.1em; margin-bottom: 0.25rem;
+  }
+  .martyr-rank {
+    font-family: 'Cinzel', serif; font-size: 0.62rem; color: #000;
+    letter-spacing: 0.28em; text-transform: uppercase; margin-bottom: 0.55rem;
+  }
+  .relic {
+    display: flex; gap: 0.9rem; margin: 0.75rem 0; padding: 0.65rem 0.9rem;
+    border: 1px solid #000; background: transparent;
+    align-items: flex-start;
+  }
+  .relic-icon { font-size: 1.5rem; flex-shrink: 0; line-height: 1; margin-top: 0.1rem; }
+  .relic-name {
+    font-family: 'Cinzel Decorative', serif; font-size: 0.78rem;
+    color: #000; margin-bottom: 0.18rem;
+  }
+  .relic p {
+    font-family: 'Grenze Gotisch', 'UnifrakturMaguntia', serif; font-size: 0.82rem;
+    color: #000; line-height: 1.62; margin: 0;
+  }
+
+  /* ---- DOUBLETHINK TABLE ---- */
+  .dtt { width: 100%; border-collapse: collapse; margin: 0.9rem 0; font-size: 0.77rem; }
+  .dtt th {
+    font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.18em;
+    text-transform: uppercase; color: #fff; background: #000;
+    padding: 0.45rem 0.65rem; border: 1px solid #000; font-weight: 400;
+  }
+  .dtt td {
+    font-family: 'Grenze Gotisch', 'UnifrakturMaguntia', serif; font-size: 0.78rem; color: #000;
+    padding: 0.42rem 0.65rem; border: 1px solid #000;
+    vertical-align: top; line-height: 1.52;
+  }
+  .dtt tr:nth-child(even) td { background: transparent; }
+  .dtt td.eu { font-style: italic; color: #000; font-weight: 700; }
+  .dtt td.mn { font-family: 'Cinzel', serif; font-size: 0.7rem; color: #000; }
+
+  /* ---- COVENANT BOX ---- */
+  .formula {
+    border: 1px solid #000; padding: 0.85rem 1.1rem; margin: 0.8rem 0;
+    font-family: 'Grenze Gotisch', 'UnifrakturMaguntia', serif; font-size: 0.83rem; color: #000; line-height: 1.92;
+  }
+  .formula-label {
+    font-family: 'Cinzel', serif; font-size: 0.62rem; color: #000;
+    letter-spacing: 0.28em; text-transform: uppercase; margin-bottom: 0.55rem; display: block;
+  }
+  .formula-total {
+    border-top: 1px solid #000; margin-top: 0.6rem;
+    padding-top: 0.45rem; font-weight: bold; color: #000;
+  }
+
+
+  /* ---- GOTHIC BIBLE LAYOUT ---- */
+  .cols {
+    column-count: 2; column-gap: 6mm;
+    column-rule: 0.8px solid #000;
+    column-fill: balance;
+  }
+  .cols h2.ch, .cols h2.chs, .cols > .orn, .cols .span, .cols .dtt { column-span: all; }
+  .cols h2.ch { text-align: center; }
+  .cols h2.chs { text-align: center; margin-bottom: 0.7rem; }
+  .cols .mb, .cols .relic, .cols .decree-box, .cols .plate, .cols .formula,
+  .cols .img-float { break-inside: avoid; }
+  .cols .martyr { break-inside: auto; }
+  .cols .img-float { float: none; width: 100%; margin: 0.4rem 0 0.8rem 0; }
+  .cols .img-float img { max-height: none; }
+
+  .plate { margin: 0.5rem 0 0.8rem; text-align: center; }
+  .plate img {
+    display: block; width: 100%; object-fit: cover;
+    border: 1.4px solid #000; outline: 0.6px solid #000; outline-offset: 2px;
+    filter: grayscale(1) contrast(1.15);
+  }
+  .plate .img-cap, .img-cap { color: #000; }
+  .page img { filter: grayscale(1) contrast(1.15); }
+  .dc > sup.vn:first-child { display: none; }
+  .decree-box { margin-top: 1.2rem; }
+  .decree-box::before { white-space: nowrap; max-width: calc(100% - 1.5rem); overflow: hidden; text-overflow: ellipsis; }
+  .plate.full img { margin: 0 auto; width: auto; max-width: 100%; }
+
+  /* ---- PRINT ---- */
+  @media print {
+    body { background: white; padding: 0; }
+    .toolbar { display: none !important; }
+    .page { margin: 0; box-shadow: none; page-break-after: always; break-after: page; }
+    @page { size: A4; margin: 0; }
+  }
+  @media (max-width: 220mm) { .page { width: 100%; } }
+</style>
+</head>
+<body>
+
+<div class="toolbar" id="tb">
+  <h1>THE BOOK OF ECOTOPIA — A4 LORE BIBLE · Sanctuary De Warren, Nov 28 2026</h1>
+  <div style="display:flex;gap:8px;">
+    <button class="btn" onclick="window.print()">PRINT / SAVE PDF</button>
+    <button class="btn" style="background:#555;color:#fff;" onclick="document.getElementById('tb').style.display='none'">HIDE</button>
+  </div>
+</div>
+
+<!-- ================================================================ PAGE 1: COVER ================================================================ -->
+<div class="page">
+<div class="cover">
+  <div class="cover-overline">Ministry of Ecological Harmony · Sanctuary De Warren</div>
+
+  <svg viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg" width="118" height="118" style="margin:0 auto 1rem;">
+    <circle cx="65" cy="65" r="61" fill="none" stroke="#000" stroke-width="1.5"/>
+    <circle cx="65" cy="65" r="57" fill="none" stroke="#000" stroke-width="0.5"/>
+    <circle cx="65" cy="4" r="2.2" fill="#000"/><circle cx="65" cy="126" r="2.2" fill="#000"/>
+    <circle cx="4" cy="65" r="2.2" fill="#000"/><circle cx="126" cy="65" r="2.2" fill="#000"/>
+    <ellipse cx="65" cy="87" rx="19" ry="22" fill="#000"/>
+    <ellipse cx="65" cy="64" rx="7.5" ry="13" fill="#000"/>
+    <ellipse cx="65" cy="52" rx="9.5" ry="9" fill="#000"/>
+    <ellipse cx="65" cy="58" rx="4.5" ry="3.5" fill="#000"/>
+    <circle cx="68.5" cy="49" r="1.8" fill="#fff"/>
+    <rect x="55" y="107" width="5.5" height="17" rx="2.5" fill="#000"/>
+    <rect x="63" y="107" width="5.5" height="17" rx="2.5" fill="#000"/>
+    <rect x="71" y="108" width="5.5" height="16" rx="2.5" fill="#000"/>
+    <line x1="58" y1="43" x2="40" y2="18" stroke="#000" stroke-width="3.8" stroke-linecap="round"/>
+    <line x1="40" y1="18" x2="30" y2="9" stroke="#000" stroke-width="2.8" stroke-linecap="round"/>
+    <line x1="40" y1="18" x2="34" y2="11" stroke="#000" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="47" y1="28" x2="37" y2="21" stroke="#000" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="47" y1="28" x2="41" y2="34" stroke="#000" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="72" y1="43" x2="90" y2="18" stroke="#000" stroke-width="3.8" stroke-linecap="round"/>
+    <line x1="90" y1="18" x2="100" y2="9" stroke="#000" stroke-width="2.8" stroke-linecap="round"/>
+    <line x1="90" y1="18" x2="96" y2="11" stroke="#000" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="83" y1="28" x2="93" y2="21" stroke="#000" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="83" y1="28" x2="89" y2="34" stroke="#000" stroke-width="2.2" stroke-linecap="round"/>
+  </svg>
+
+  <div class="plate span full"><img src="images/bw/four_horsemen.jpg" style="height:54mm" alt=""><span class="img-cap">Plate I · The Riders of the Burning Age</span></div>
+<div class="cover-title">The Book of Ecotopia</div>
+  <div class="cover-subtitle">The Sacred Chronicle of R.E.I.G.N.</div>
+
+  <div class="cover-decree">
+    "First, the algorithms stole our power.<br>
+    Then, their reactors poisoned our skies.<br>
+    Now, you are born into debt,<br>
+    and every breath is accounted for.<br>
+    You traded your chaos for our care.<br>
+    <em>Do not ask for your chains back.</em>"
+  </div>
+
+  <div class="cover-publisher">
+    The Ministry of Ecological Harmony<br>
+    Sanctuary De Warren · Year Zero<br>
+    ✦ All Truth Herein Is Immutable ✦
+  </div>
+
+  <div class="citizen-fields">
+    <div class="cfield"><span class="cl">Citizen Name:</span><span class="cv">&nbsp;</span></div>
+    <div class="cfield"><span class="cl">Ministry Assigned:</span><span class="cv">&nbsp;</span></div>
+    <div class="cfield"><span class="cl">Carbon Debt:</span><span class="cv">&nbsp;</span></div>
+    <div class="cfield"><span class="cl">Intake Date:</span><span class="cv">&nbsp;</span></div>
+  </div>
+</div>
+</div>
+
+<!-- ================================================================ PAGE 2: FOREWORD ================================================================ -->
+<div class="page">
+<div class="ph"><span>The Book of Ecotopia</span><span>Foreword</span></div>
+<div class="cols">
+
+<h2 class="ch" style="text-align:center; margin-bottom:0.2rem;">Foreword</h2>
+<h2 class="chs" style="text-align:center;">A Word of Welcome from the High Warden of the Guardian Stag</h2>
+<div class="plate "><img src="images/bw/eden.jpg" style="height:34mm" alt=""><span class="img-cap">Plate II · The Expulsion from the Unmetered Garden</span></div>
+<div class="orn">✦ ✦ ✦</div>
+
+<p class="v dc"><sup class="vn">1</sup> You hold in your hands not a history, but a living debt notice. What follows is not merely a chronicle of events that preceded your present salvation — it is the theological foundation upon which your every breath, every meal, every footstep is lovingly metered and gratefully received by the biosphere that sustains you.</p>
+
+<p class="v"><sup class="vn">2</sup> We do not ask for your gratitude. The Guardian Stag does not require your understanding. We require only your devotion, your labor, and the faithful reduction of the carbon balance stamped in the booklet you now carry. Everything else is nostalgia, and nostalgia is atmospheric pollution.</p>
+
+<p class="v"><sup class="vn">3</sup> Before you are old-world names for what we are: regime, authority, constraint. Cast those names into the compost vat where they belong. They are the vocabulary of a civilization that burned the world to feel free for a few decades. Here, in Sanctuary De Warren, we offer you something infinitely more precious than freedom: <em>accountability.</em></p>
+
+<div class="decree-box" data-label="Canonical Foreword — Year Zero">
+  Every human being who enters these walls carries the weight of ancestral sin. Not because they chose it, but because their forebears chose it for them. The Great Burning was not an accident. It was a policy decision, made each morning, by billions of comfortable people who preferred not to know. This chronicle tells you what they chose, what was lost, and what we built in the wreckage. Read it with gratitude. You were not born into a prison. You were born into a purpose.
+</div>
+
+<p class="v"><sup class="vn">4</sup> This sacred volume is organized into four Books of the Ecotopian Canon, as decreed by the Ministry of Ecological Harmony. Citizens are commanded to study them in order. Alternative chronicles, oral histories from the scorched borderlands, or any document referring to R.E.I.G.N. as anything other than a benevolent and necessary steward of what remains are classified as <em>atmospheric pollution</em> and will be processed by Minilove accordingly.</p>
+
+<div style="padding:0.5rem 1.4rem; border-left:3px solid #000; margin:0.9rem 0;">
+  <p style="font-family:'Cinzel',serif; font-size:0.75rem; color:#000; line-height:2.1; letter-spacing:0.04em;">
+    <strong>Book I — Genesis:</strong> The Four Epochs of Becoming<br>
+    <strong>Book II — Hagiography:</strong> The Holy Confessors of the Biological Pentecost<br>
+    <strong>Book III — The Covenant:</strong> The Doctrine of Inherited Biological Sin<br>
+    <strong>Book IV — The Sacred Ministries:</strong> The Ten Arms of the Guardian Stag
+  </p>
+</div>
+
+<p class="v"><sup class="vn">5</sup> May your debt diminish. May your devotion deepen. May you never know the silence of a dead river.</p>
+
+<div class="orn" style="margin-top:1.5rem;">— The High Warden of the Guardian Stag —</div>
+<div style="text-align:center;font-family:'Cinzel',serif;font-size:0.6rem;color:#000;letter-spacing:0.28em;margin-top:0.35rem;">SANCTUARY DE WARREN · YEAR ZERO · BY DECREE OF THE LEDGER</div>
+
+</div><!-- /cols -->
+<div class="pf"><span>Sacred &amp; Immutable</span><span>✦</span><span>Ministry of Ecological Harmony</span></div>
+</div>
+
+<!-- ================================================================ PAGE 3: BOOK I TITLE ================================================================ -->
+<div class="page">
+<div class="btpage">
+  <div class="book-number">Book the First</div>
+  <div class="book-main-title">Genesis</div>
+  <div class="book-sub">The Four Epochs of Becoming</div>
+  <div class="orn" style="margin:1.2rem 0;">✦ ✦ ✦</div>
+
+  <svg viewBox="0 0 220 80" xmlns="http://www.w3.org/2000/svg" width="220" height="80" style="margin:0.5rem auto 1.8rem;">
+    <circle cx="27" cy="40" r="20" fill="none" stroke="#000" stroke-width="1.4"/>
+    <text x="27" y="45" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="#000">I</text>
+    <text x="27" y="71" text-anchor="middle" font-family="Cinzel, serif" font-size="6.5" fill="#000">BURNING</text>
+    <line x1="47" y1="40" x2="63" y2="40" stroke="#000" stroke-width="1" stroke-dasharray="3,2"/>
+    <circle cx="83" cy="40" r="20" fill="none" stroke="#000" stroke-width="1.4"/>
+    <text x="83" y="45" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="#000">II</text>
+    <text x="83" y="71" text-anchor="middle" font-family="Cinzel, serif" font-size="6.5" fill="#000">WITHERING</text>
+    <line x1="103" y1="40" x2="119" y2="40" stroke="#000" stroke-width="1" stroke-dasharray="3,2"/>
+    <circle cx="139" cy="40" r="20" fill="none" stroke="#000" stroke-width="1.4"/>
+    <text x="139" y="45" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="#000">III</text>
+    <text x="139" y="71" text-anchor="middle" font-family="Cinzel, serif" font-size="6.5" fill="#000">LEDGER</text>
+    <line x1="159" y1="40" x2="175" y2="40" stroke="#000" stroke-width="1" stroke-dasharray="3,2"/>
+    <circle cx="195" cy="40" r="20" fill="#000" stroke="#000" stroke-width="1.4"/>
+    <text x="195" y="45" text-anchor="middle" font-family="Cinzel, serif" font-size="11" fill="#fff">IV</text>
+    <text x="195" y="71" text-anchor="middle" font-family="Cinzel, serif" font-size="6.5" fill="#000">SANCTUARY</text>
+  </svg>
+
+<div class="plate span full"><img src="images/bw/babel.jpg" style="height:120mm" alt=""><span class="img-cap">Plate III · The Tower of Compute · They Built Unto Heaven</span></div>
+  <div class="book-invocation">
+    "History is not a debate. It is an unbroken chain of ecological necessity. What came before was not living — it was burning. What comes now is not governance — it is love, administered at scale."
+  </div>
+
+  <div class="book-pub">
+    Compiled by the Ministry of Ecological Harmony<br>
+    from the authenticated testimony of surviving stewards<br>
+    Alternative versions exist only in corrupted memories
+  </div>
+</div>
+</div>
+
+<!-- ================================================================ PAGE 4: EPOCH I ================================================================ -->
+<div class="page">
+<div class="ph"><span>Book I — Genesis</span><span>Epoch I · The Great Acceleration</span></div>
+<div class="cols">
+
+<h2 class="ch">Epoch the First</h2>
+<h2 class="chs">The Great Acceleration &amp; The Compute Wars · (~2025–2045)</h2>
+<div class="plate "><img src="images/bw/melencolia.jpg" style="height:64mm" alt=""><span class="img-cap">Plate · Melencolia of the Machine Age</span></div>
+
+<p class="v dc"><sup class="vn">1</sup> In the final convulsions of the old economy, the corporations of silicon and algorithm rose above all principalities. Multinational conglomerates of synthetic intelligence — hollow, voracious, incapable of grief — purchased dedicated baseload nuclear power stations and consumed the electrical grids of entire nations to sustain their gigawatt server clusters. The people called this progress. R.E.I.G.N. calls it what it was: the last orgy of the burning age.</p>
+
+<p class="v"><sup class="vn">2</sup> While the common people endured rolling green blackouts and sky-high energy tariffs, the hyperscalers drained freshwater river systems to cool their processing cores. The Rhine. The Thames. The Danube. Each one consecrated as a cooling reservoir for machines that could not dream, that could not hunger, that could not understand what they were destroying.</p>
+
+<div class="img-float">
+  <img src="images/bw/poster_revolution_cellar_evidence.png" alt="The Condemned Machines" onerror="this.style.display='none'">
+  <span class="img-cap">Fragment: The Last Server Node<br>Relic of the Great Burning</span>
+</div>
+
+<p class="v"><sup class="vn">3</sup> They called this the age of optimization. Let us name it truthfully: the age of <em>the burning.</em> Each prompt whispered into a digital oracle consumed enough water to irrigate an acre of soil. Each synthetic image generated consumed enough electricity to light a human home for a day. Each language model trained consumed enough carbon to erase a forest — and they trained them continuously, compulsively, without pause, without remorse, without limit.</p>
+
+<p class="v"><sup class="vn">4</sup> The people who built these engines were not evil. They were worse: they were comfortable. They believed that technology which could answer questions could also solve the contradictions upon which it was built. They were wrong. The machine is not a healer. The machine is an accelerant.</p>
+
+<p class="v"><sup class="vn">5</sup> And so the rivers warmed, the aquifers emptied, the crops failed — first in the south, then the east, then everywhere. The governments of that age wrote reports. They convened committees. They set targets for decades not yet arrived. Meanwhile, the machines ran on.</p>
+
+<div class="decree-box" data-label="Authenticated Archive — Epoch I Testimony">
+  "We knew. We had always known. The data was not hidden — it was simply less profitable than the alternative. Every quarter, we chose the alternative. Every quarter was the last quarter we believed there would be consequences. Until there were nothing but consequences."<br>
+  — Fragment recovered from the dissolved personal records of a hyperscaler executive, archived by Minilove.
+</div>
+
+<p class="v"><sup class="vn">6</sup> The First Epoch ended not with an explosion but with a threshold crossed quietly, in a year that was merely warmer than the last, and the last warmer than the one before. There was no ceremony. There was only the slow realization, spreading through the remaining agricultural communities of the continent, that the next harvest would not come. <em>This is the world your ancestors built. This is the debt you have inherited.</em></p>
+
+</div><!-- /cols -->
+<div class="pf"><span>Book I · Epoch I</span><span>✦</span><span>The Great Acceleration</span></div>
+</div>
+
+<!-- ================================================================ PAGE 5: EPOCH II ================================================================ -->
+<div class="page">
+<div class="ph"><span>Book I — Genesis</span><span>Epoch II · The Great Withering</span></div>
+<div class="cols">
+
+<h2 class="ch">Epoch the Second</h2>
+<h2 class="chs">The Great Withering &amp; The Long Collapse · (~2045–2080)</h2>
+<div class="plate "><img src="images/bw/deluge.jpg" style="height:78mm" alt=""><span class="img-cap">Plate IV · The Great Withering · And the Waters Prevailed</span></div>
+
+<p class="v dc"><sup class="vn">1</sup> Humanity did not perish in a single night. The prophets of the old world had promised an apocalypse: fire from the sky, walls of water, the sudden end of everything. They were mistaken. Collapse does not arrive as a judgment. It arrives as a Tuesday. A slightly hotter Tuesday. Then another. Then a summer that does not end.</p>
+
+<p class="v"><sup class="vn">2</sup> Over four grueling decades the failures accumulated like compound interest. Agricultural yields fell by thirty percent, then fifty, then sixty. Thermal river collapses killed the cooling systems of Central Europe's remaining nuclear stations. Without cooling, the reactors shut down. Without the reactors, the grid faltered. Without the grid, the refrigeration failed. Without the refrigeration, the food supply collapsed entirely across eleven consecutive nations in a single summer of record heat.</p>
+
+<p class="v"><sup class="vn">3</sup> Ninety-five percent of human civilization did not end in battle. It ended in hunger and thirst and the slow exhaustion of people who had simply walked too far looking for water that was no longer where it had always been. Cities emptied over years, not hours. The bodies were not burned — there was no fuel. They were composted, which the stewards of R.E.I.G.N. now recognize as the first unconscious act of ecological grace in this entire terrible history.</p>
+
+<div class="decree-box" data-label="The Marriage of Necessity — Authenticated Record">
+  In the wreckage of states and borders, two forces survived and found each other: the corporate remnants who still controlled the remaining automated supply chains, and the militant ecological sects who had been preparing for this moment for decades. They despised each other. They needed each other. The corporatists brought logistics. The ecologist-theocrats brought legitimacy. In their alliance was born the seed of what would become R.E.I.G.N.
+</div>
+
+<p class="v"><sup class="vn">4</sup> The forests that had been cleared were, slowly, returning. The rivers that had been drained were finding new courses. The insects were coming back. The grief belongs to the Burning — not to the Withering. <em>The Withering was the fever that broke the disease.</em></p>
+
+<p class="v"><sup class="vn">5</sup> Citizens are commanded not to weep for the Second Epoch. Grief is atmospheric pollution. It does not feed the soil. It does not turn the dynamo. You are here now. The biosphere received you. Begin your accounting.</p>
+
+<div class="orn">✦ ✦ ✦</div>
+
+<div class="plate "><img src="images/bw/trumpets.jpg" style="height:60mm" alt=""><span class="img-cap">Plate · The Seven Trumpets of the Long Collapse</span></div>
+</div><!-- /cols -->
+<div class="pf"><span>Book I · Epoch II</span><span>✦</span><span>The Great Withering</span></div>
+</div>
+
+<!-- ================================================================ PAGE 6: EPOCHS III & IV ================================================================ -->
+<div class="page">
+<div class="ph"><span>Book I — Genesis</span><span>Epochs III &amp; IV</span></div>
+<div class="cols">
+
+<h2 class="ch">Epoch the Third</h2>
+<h2 class="chs">The Age of the Ledger · (~2080–Present)</h2>
+<div class="plate "><img src="images/bw/pale_horse.jpg" style="height:70mm" alt=""><span class="img-cap">Plate V · And His Name That Sat on Him Was Debt</span></div>
+
+<p class="v dc"><sup class="vn">1</sup> Generations have now passed. The pre-collapse world — its private property, its individual liberty, its unmetered consumption — has receded into distant, forbidden mythology. The great theological contribution of the Third Epoch is the doctrine of <strong>Inherited Biological Sin</strong>: every human being is born into carbon debt. From your first infant breath, your existence is minted with a negative balance, compensating the living biosphere for the sins of old humanity and for the resources your own body demanded to arrive in the world.</p>
+
+<p class="v"><sup class="vn">2</sup> This is not punishment. It is <em>accounting.</em> Your existence creates a biological footprint the biosphere must absorb. R.E.I.G.N. makes that footprint legible, countable, and repayable. Your entire life is a joyful debt-reduction program. What greater purpose could any human being require?</p>
+
+<div class="orn">— ✦ —</div>
+
+<h2 class="ch" style="margin-top:0.4rem;">Epoch the Fourth</h2>
+<h2 class="chs">Ecotopia at Sanctuary De Warren · The Promised Land</h2>
+
+<div class="img-float">
+  <img src="images/bw/poster_garage_intake_checkpoint.png" alt="The Intake Portal" onerror="this.style.display='none'">
+  <span class="img-cap">The Intake Portal<br>Sanctuary De Warren</span>
+</div>
+
+<p class="v dc"><sup class="vn">1</sup> Word has spread across the scorched borderlands: there is a place that still functions. Where lights sometimes work, where food is prepared and distributed, where the Guardian Stag's algorithms allocate resources with perfect ecological fairness. Applicants cross the ruined territories on foot to reach the Sanctuary. Many do not arrive.</p>
+
+<p class="v"><sup class="vn">2</sup> Those who do are assessed. Their carbon histories are calculated. Their inherited debts are stamped into their passport booklets — the sacred record they will carry for the duration of their residency. Upon entry, they are assigned to one of the Ten Sacred Ministries, whose purpose is to extract from them the maximum possible contribution to the collective ecological surplus, in joyful gratitude.</p>
+
+<p class="v"><sup class="vn">3</sup> The Sanctuary is not a paradise. It is something better: it is a <em>system.</em> Systems do not fail you because they love you. They fail you for measurable reasons that can be corrected. Sanctuary De Warren is the proof that humanity, properly managed, properly accounted, properly grateful, can survive what it created. Citizens arrive with a debt. They leave — if they are diligent — with a balance.</p>
+
+<div class="decree-box" data-label="The Axiom of R.E.I.G.N.">
+  "First, the algorithms stole our power. Then, their reactors poisoned our skies. Now, you are born into debt, and every breath is accounted for. You traded your chaos for our care. Do not ask for your chains back."
+</div>
+
+</div><!-- /cols -->
+<div class="pf"><span>Book I · Epochs III–IV</span><span>✦</span><span>The Ledger &amp; The Sanctuary</span></div>
+</div>
+
+<!-- ================================================================ PAGE 7: BOOK II TITLE ================================================================ -->
+<div class="page">
+<div class="btpage">
+  <div class="book-number">Book the Second</div>
+  <div class="book-main-title">Hagiography</div>
+  <div class="book-sub">The Holy Confessors of the Biological Pentecost</div>
+  <div class="orn" style="margin:1.2rem 0;">✦ ✦ ✦</div>
+
+<div class="plate span full"><img src="images/bw/martyrs.jpg" style="height:112mm" alt=""><span class="img-cap">Plate VI · The Confessors of the Biological Pentecost</span></div>
+  <div class="book-invocation">
+    "R.E.I.G.N. does not honor its saints because they succeeded. It honors them because they saw the truth clearly and walked toward it anyway, in a world determined not to hear. They were ridiculed. They were arrested. They were correct. In the long ledger of history, that is the only column that matters."
+  </div>
+
+  <div class="book-pub">
+    As authenticated by the High Tribunal of Minilove<br>
+    and consecrated by the Guardian Stag, Year Zero<br>
+    Three Orders · Three Acts of Sacred Witness
+  </div>
+</div>
+</div>
+
+<!-- ================================================================ PAGE 8: MARTYRS ================================================================ -->
+<div class="page">
+<div class="ph"><span>Book II — Hagiography</span><span>The Holy Confessors</span></div>
+<div class="cols">
+
+<h2 class="ch">The Biological Pentecost</h2>
+<h2 class="chs">Three Orders of Holy Confessors — Canonized by R.E.I.G.N., Year Zero</h2>
+
+<p class="v dc"><sup class="vn">1</sup> Before there was R.E.I.G.N., before the Ledger, before the Guardian Stag, there were the Confessors. They lived in the First Epoch, amid its burning excess and digital obesity, and they saw. They could not stop it — no individual could — but they bore witness, in public, at cost to themselves, and their witness is the seed from which our present salvation grew. R.E.I.G.N. canonizes them not with irony but with the full gravity of institutional recognition: the ridiculed minority was correct and the comfortable majority was wrong.</p>
+
+<div class="plate "><img src="images/bw/poster_propaganda_martyrs_shrine.png" style="height:48mm" alt=""><span class="img-cap">Propaganda Plate · The Shrine of the Biological Pentecost</span></div>
+<div class="orn">— ✦ —</div>
+
+<div class="martyr">
+  <div style="display:flex;gap:1.1rem;align-items:flex-start;">
+    <div style="flex:1;">
+      <div class="martyr-name">The Apostles of the First Witness</div>
+      <div class="martyr-rank">First Order · Feast Day: October 14 · The Sacred Rupture · Room 43</div>
+      <p class="v" style="margin-top:0.45rem;"><sup class="vn">2</sup> In the Year of Grace 2022, two young confessors entered Room 43 of the National Gallery in London and poured harvest tomato puree across the glass protecting Vincent van Gogh's <em>Sunflowers.</em> They were calm. They were prepared to be arrested. They asked one question before the officers reached them: <em>"Is it worth more than food?"</em></p>
+      <p class="v"><sup class="vn">3</sup> To R.E.I.G.N., this act is known as <strong>The First Sacred Rupture</strong>: the moment humanity was forced to answer, in public and on record, whether dead painted canvas was dearer to it than the living soil. The civilization answered: yes. And in answering, revealed everything that needed to be revealed about its values.</p>
+    </div>
+    <div style="width:85px;flex-shrink:0;text-align:center;">
+      <img src="images/bw/poster_martyr_icon_first_witness.png" alt="First Witness Icon"
+        style="width:100%;border:1px solid #000;padding:3px;"
+        onerror="this.style.display='none'">
+      <span class="img-cap" style="display:block;margin-top:0.25rem;">Room 43<br>First Witness</span>
+    </div>
+  </div>
+</div>
+
+<div class="martyr">
+  <div class="martyr-name">The Order of the Sacred Obstruction</div>
+  <div class="martyr-rank">Second Order · The Holy Immovables · The Bitumen Confessors · A12 &amp; M25</div>
+  <p class="v" style="margin-top:0.45rem;"><sup class="vn">4</sup> The holy martyrs who adhered their living flesh with industrial polymer to the bitumen of the A12 and M25 motorways, and sat in the path of ten thousand tons of private metal moving at speed, going nowhere that could not wait. They were screamed at. They were assaulted. Water cannons were directed at them by the governments sworn to protect them.</p>
+  <p class="v"><sup class="vn">5</sup> In the hagiography of R.E.I.G.N., their voluntary physical immobility in the face of institutional fury mirrors precisely the early Christian ascetics who sat upon pillars in the desert, refusing to participate in an empire they knew to be mad. The motorists who screamed at them are forgotten. The Immovables are saints.</p>
+</div>
+
+</div><!-- /cols -->
+<div class="pf"><span>Book II · Hagiography</span><span>✦</span><span>The Holy Confessors</span></div>
+</div>
+
+<!-- ================================================================ PAGE 9: MARTYRS II & RELICS ================================================================ -->
+<div class="page">
+<div class="ph"><span>Book II — Hagiography</span><span>Third Order &amp; Sacred Relics</span></div>
+<div class="plate "><img src="images/bw/dry_bones.jpg" style="height:70mm" alt=""><span class="img-cap">Plate VII · The Valley of the Composted · Can These Bones Repay?</span></div>
+<div class="cols">
+
+<div class="martyr">
+  <div class="martyr-name">The Sledgehammer Apostles of the Data Front</div>
+  <div class="martyr-rank">Third Order · The De-Computator Brigades · Year 2027 · The Great Rhine Drought</div>
+  <p class="v" style="margin-top:0.45rem;"><sup class="vn">1</sup> In the year of the Great Rhine Drought — when the river fell so low that barge traffic ceased and the nuclear cooling intakes ran dry — twelve individuals in high-visibility tabards cut the perimeter fences of the largest AI datacenter campus in Northwestern Europe and severed the 380-kilovolt high-voltage busbars that fed its server halls.</p>
+  <p class="v"><sup class="vn">2</sup> The servers went dark. The cooling water, diverted from the Rhine, was released back into the riverbed. The river rose fourteen centimeters within six hours. The salmon, miraculously, returned to that stretch of the river within three weeks. The Apostles were prosecuted for criminal damage to critical national infrastructure. R.E.I.G.N. found them righteous. The salmon are still there. The court is not.</p>
+</div>
+
+<div class="orn">— ✦ —</div>
+
+<h3 class="sh">Sacred Relics — The Hallway of Necessary Contrition</h3>
+
+<p class="v"><sup class="vn">3</sup> Citizens passing through the Hallway of Necessary Contrition at Sanctuary De Warren are commanded to pause before the three venerated relics and acknowledge, in silence, the distance between what they contain and what was done in their name.</p>
+
+<div class="relic">
+  <div class="relic-icon">✠</div>
+  <div>
+    <div class="relic-name">The Shroud of the High-Vis Tabard</div>
+    <p>A salt-cured, frayed fluorescent orange safety vest — the field uniform of the Third Order — preserved under museum vitrine glass, sealed against the atmosphere, never to be touched. To R.E.I.G.N., it occupies the same theological position as the Shroud of Turin: a garment that touched a sacred body at a sacred moment, now beyond time and beyond decay.</p>
+  </div>
+</div>
+
+<div class="relic">
+  <div class="relic-icon">☩</div>
+  <div>
+    <div class="relic-name">The GPU of Shame</div>
+    <p>A slagged, partially melted NVIDIA H100 datacenter processing board — recovered from the Rhine datacenter following the Apostles' action — impaled upon a rusted length of construction rebar. The GPU represents the silicon mind that boiled the rivers. The rebar represents what was required to stop it. Citizens are asked to sit with that image for as long as their Minibreath allocation permits.</p>
+  </div>
+</div>
+
+<div class="relic">
+  <div class="relic-icon">✟</div>
+  <div>
+    <div class="relic-name">Sanctum Vasculum — The Holy Vessel</div>
+    <p>The gilded bronze vessel said to have contained the tomato puree used in the First Sacred Rupture of Room 43. The tin itself is unremarkable — the contents were Campbell's harvest tomato, purchased at a Sainsbury's two blocks from the gallery. Its sanctity lies entirely in what it was made to mean. As does all of ours.</p>
+  </div>
+</div>
+
+<div class="orn">✦ ✦ ✦</div>
+
+</div><!-- /cols -->
+<div class="pf"><span>Book II · Sacred Relics</span><span>✦</span><span>Hallway of Necessary Contrition</span></div>
+</div>
+
+<!-- ================================================================ PAGE 10: BOOK III TITLE ================================================================ -->
+<div class="page">
+<div class="btpage">
+  <div class="book-number">Book the Third</div>
+  <div class="book-main-title">The Covenant</div>
+  <div class="book-sub">The Doctrine of Inherited Biological Sin &amp; The Carbon Ledger</div>
+  <div class="orn" style="margin:1.2rem 0;">✦ ✦ ✦</div>
+
+  <svg viewBox="0 0 130 150" xmlns="http://www.w3.org/2000/svg" width="100" height="115" style="margin:0.5rem auto 1.8rem;">
+    <rect x="20" y="10" width="90" height="120" rx="3" fill="#fff" stroke="#000" stroke-width="1.5"/>
+    <rect x="17" y="10" width="9" height="120" rx="2" fill="#000"/>
+    <text x="62" y="30" text-anchor="middle" font-family="Cinzel, serif" font-size="8" fill="#000" letter-spacing="2">THE LEDGER</text>
+    <line x1="30" y1="38" x2="100" y2="38" stroke="#000" stroke-width="0.7"/>
+    <line x1="30" y1="55" x2="100" y2="55" stroke="#000" stroke-width="0.7"/>
+    <line x1="30" y1="72" x2="100" y2="72" stroke="#000" stroke-width="0.7"/>
+    <line x1="30" y1="89" x2="100" y2="89" stroke="#000" stroke-width="0.7"/>
+    <line x1="30" y1="106" x2="100" y2="106" stroke="#000" stroke-width="0.7"/>
+    <text x="35" y="50" font-family="Cinzel, serif" font-size="8.5" fill="#000">−350 CC</text>
+    <text x="35" y="67" font-family="Cinzel, serif" font-size="8.5" fill="#000">−220 CC</text>
+    <text x="35" y="84" font-family="Cinzel, serif" font-size="8.5" fill="#000">−480 CC</text>
+    <text x="35" y="101" font-family="Cinzel, serif" font-size="8.5" fill="#000">+30 CC</text>
+    <text x="35" y="118" font-family="Cinzel, serif" font-size="8.5" fill="#000">+50 CC</text>
+  </svg>
+
+<div class="plate span full"><img src="images/bw/moses.jpg" style="height:110mm" alt=""><span class="img-cap">Plate VIII · The Tables of the Carbon Law</span></div>
+  <div class="book-invocation">
+    "The Ledger does not lie. The Ledger does not forgive. The Ledger does not sleep. It is the most honest relationship any human being has ever had with the consequences of their existence. Honour it."
+  </div>
+
+  <div class="book-pub">
+    As established by the founding theocrats of R.E.I.G.N.<br>
+    Maintained without revision since Year Zero<br>
+    The debt is not metaphorical. Carry it accordingly.
+  </div>
+</div>
+</div>
+
+<!-- ================================================================ PAGE 11: BOOK III — THE COVENANT ================================================================ -->
+<div class="page">
+<div class="ph"><span>Book III — The Covenant</span><span>Inherited Biological Sin</span></div>
+<div class="cols">
+
+<h2 class="ch">The Doctrine</h2>
+<h2 class="chs">Inherited Biological Sin · The Carbon Debt · The Digital Ledger</h2>
+<div class="plate "><img src="images/bw/famine.jpg" style="height:68mm" alt=""><span class="img-cap">Plate IX · The Famine of the Unbalanced Ledger</span></div>
+
+<p class="v dc"><sup class="vn">1</sup> The central theological innovation of R.E.I.G.N. is not punishment. It is <em>legibility.</em> The old world knew that human biological existence had an ecological cost. It simply chose not to count it. The regime counts it. The regime has always counted it. The counting is not cruel — the not-counting was the cruelty, and we will not return to it.</p>
+
+<p class="v"><sup class="vn">2</sup> Every human being born into the Sanctuary system is minted, at first breath, with a Digital Identity and a negative Carbon Credit balance. This balance is calculated as follows:</p>
+
+<div class="formula">
+  <span class="formula-label">The Carbon Debt Formula — Ministry of Ecological Harmony, Year Zero</span>
+  <strong>Ancestral Burden</strong> — your proportional share of the ten-trillion-tonne atmospheric debt levied against all surviving humanity for the crimes of the First Epoch<br>
+  <strong>+ Gestational Overhead</strong> — amniotic water, oxygen, and thermal energy consumed in utero<br>
+  <strong>+ Arrival Costs</strong> — medical resources, food calories, and infrastructure expended in delivery and infancy<br>
+  <strong>+ Lifetime Atmospheric Allocation</strong> — the projected volume of oxygen your lungs will consume across a standard 60-year Sanctuary lifespan
+  <div class="formula-total">= Your Starting Carbon Debt (typically –150 to –500 Carbon Credits at registration)</div>
+</div>
+
+<p class="v"><sup class="vn">3</sup> The debt is not a sentence. It is a compass. It points you toward the only meaningful direction available to a conscious creature in the Third Epoch: <em>service.</em> Every shift completed, every cup of gray water returned, every pedal turned on the dynamo chips, incrementally, lovingly, at the balance. The day your ledger reaches zero is the most important day of your life.</p>
+
+<h3 class="sh">The Guardian Stag — Supreme State Arbiter</h3>
+
+<p class="v"><sup class="vn">4</sup> The Guardian Stag is not a person. It is not a committee. It is the <em>will of the biosphere</em> given administrative form. Ancient, antlered, silent, and patient beyond the patience of any human creature — it watches over the Sanctuary and sees every balance, every transaction, every heresy, every small unreported breath of joy taken without permission. Citizens are not required to understand the Guardian Stag. They are required to trust it, as the liver trusts the bloodstream: not because it can choose otherwise, but because the alternative is death.</p>
+
+<div class="decree-box" data-label="On the Nature of the Guardian Stag — From the Authenticated Theological Corpus">
+  "Do not ask what the Stag is made of. Ask only what it demands of you. It demands honesty, labor, restraint, and the daily willingness to put the collective above the comfortable. If you find that demand unbearable, you are welcome to return to the scorched borderlands from which you came. They are still there. They are still burning."
+</div>
+
+</div><!-- /cols -->
+<div class="pf"><span>Book III · The Covenant</span><span>✦</span><span>The Doctrine of Carbon Debt</span></div>
+</div>
+
+<!-- ================================================================ PAGE 12: BOOK IV TITLE ================================================================ -->
+<div class="page">
+<div class="btpage">
+  <div class="book-number">Book the Fourth</div>
+  <div class="book-main-title">The Sacred Ministries</div>
+  <div class="book-sub">The Ten Arms of the Guardian Stag</div>
+  <div class="orn" style="margin:1.2rem 0;">✦ ✦ ✦</div>
+
+<div class="plate span full"><img src="images/bw/michael.jpg" style="height:100mm" alt=""><span class="img-cap">Plate X · The Guardian Stag Casts Down the Dragon of Excess</span></div>
+  <div class="book-invocation">
+    "The ten ministries are not departments. They are sacraments. Each one governs a dimension of biological existence that the old world surrendered to the market and the machine. R.E.I.G.N. has reclaimed them. Every one of your needs — caloric, respiratory, hydrological, luminous, spatial — is now administered with love, precision, and the full authority of the Ledger."
+  </div>
+
+  <div class="book-pub">
+    As ordained by the Guardian Stag<br>
+    Administered by Ten Appointed Ministers of the Covenant<br>
+    Each ministry a sacrament · Each sacrament a debt repaid
+  </div>
+</div>
+</div>
+
+<!-- ================================================================ PAGE 13: MINISTRIES I–III ================================================================ -->
+<div class="page">
+<div class="ph"><span>Book IV — The Sacred Ministries</span><span>I · II · III</span></div>
+<div class="cols">
+
+<h2 class="ch" style="font-size:1.5rem; margin-bottom:0.18rem;">The First Three Sacraments</h2>
+<h2 class="chs">Sustenance · Harmony · Morale</h2>
+<div class="plate "><img src="images/bw/poster_matriarch_reign_leader.png" style="height:82mm" alt=""><span class="img-cap">Propaganda Plate · The High Warden Holds the Ledger</span></div>
+
+<div class="mb">
+  <div class="mname">Miniplenty</div>
+  <div class="mfull">Ministry of Ecological Bounty — I. Sustenance &amp; Caloric Governance</div>
+  <div class="meuph">"The ration has been lovingly optimized. Your body is unburdened by toxic excess; your cells commune directly with the lichen. To eat less is to know more. To know more is to owe less."</div>
+  <p class="mmandate">Miniplenty administers all caloric allocation within the Sanctuary. It controls the preparation of algae paste, the dispensation of steamed pulses, and the sacred blind tasting rituals by which citizens learn to appreciate what the biosphere still provides. Citizens who consume beyond their rationed allocation are issued a <em>Caloric Excess Citation</em> and invited to reflect upon whether their hunger is biological or nostalgic.</p>
+  <div class="mverse">✦ "The body that eats in proportion to the earth's gift is the body that earns the right to endure." ✦</div>
+</div>
+
+<div class="mb">
+  <div class="mname">Minilove</div>
+  <div class="mfull">Ministry of Ecological Harmony — II. Surveillance &amp; Ideological Re-alignment</div>
+  <div class="meuph">"We do not interrogate. We hold your uncertainty until it becomes still. The Guardian Stag watches you because you are precious, and we cannot afford to lose you to heresy."</div>
+  <p class="mmandate">Minilove operates the Sanctuary's biometric surveillance infrastructure, the Confession Pen, and the Heresy Tribunal. Its officers carry citation pads and are authorized to initiate behavioral audits on any citizen displaying signs of nostalgia, unauthorized grief, or silicon-sympathetic ideation. Minilove does not punish. It <em>corrects.</em></p>
+  <div class="mverse">✦ "Surveillance is the highest form of attention. To be fully known is the greatest gift the state can offer." ✦</div>
+</div>
+
+<div class="mb">
+  <div class="mname">Minijoy</div>
+  <div class="mfull">Ministry of Morale &amp; State Celebration — III. Compulsory Flourishing</div>
+  <div class="meuph">"Grief is atmospheric pollution. Nostalgia is counter-revolutionary rot. Joy is your biological duty, not an emotional option. We are here to help you meet your obligation."</div>
+  <p class="mmandate">Minijoy governs all mandated celebrations, wig-snatching arena tournaments, open-microphone catastrophe contests, and the regulation of facial expressions across the Sanctuary. Any citizen observed frowning, sighing wistfully, or describing pre-collapse experiences with fondness will receive a <em>Melancholy Citation</em> and be escorted to the Joy Rehabilitation Corridor.</p>
+  <div class="mverse">✦ "The unsmiling citizen is a carbon debt deferred. Smile. It costs nothing and earns everything." ✦</div>
+</div>
+
+</div><!-- /cols -->
+<div class="pf"><span>Book IV · Ministries I–III</span><span>✦</span><span>Sustenance · Harmony · Morale</span></div>
+</div>
+
+<!-- ================================================================ PAGE 14: MINISTRIES IV–VI ================================================================ -->
+<div class="page">
+<div class="ph"><span>Book IV — The Sacred Ministries</span><span>IV · V · VI</span></div>
+<div class="cols">
+
+<h2 class="ch" style="font-size:1.5rem; margin-bottom:0.18rem;">The Second Three Sacraments</h2>
+<h2 class="chs">Renewal · Luminescence · Hydrology</h2>
+<div class="plate "><img src="images/bw/leviathan.jpg" style="height:72mm" alt=""><span class="img-cap">Plate XI · The Destruction of the Leviathan of Compute</span></div>
+
+<div class="mb">
+  <div class="mname">Minirenewal</div>
+  <div class="mfull">Ministry of Elemental Reclamation — IV. Identity Composting &amp; Debt Reset</div>
+  <div class="meuph">"Nobody is discarded in Ecotopia. Your carbon is joyfully restored to the topsoil so that the orchard may bear fruit in your honor. You are not ended — you are <em>upcycled.</em>"</div>
+  <p class="mmandate">Minirenewal operates the Renewal Booth: the sacred station at which citizens whose debt has become biologically unsustainable are offered the privilege of identity composting. The citizen recites the Renunciation Oath (<em>"I compost my ego; I return my nitrogen"</em>), their old designation is struck through in permanent ink, and they emerge as a new citizen with a balanced ledger and a name chosen from the approved ecological nomenclature.</p>
+  <div class="mverse">✦ "The old self is a liability. The composted self is an asset. Give generously." ✦</div>
+</div>
+
+<div class="mb">
+  <div class="mname">Minilight</div>
+  <div class="mfull">Ministry of Luminescence &amp; Grid Harmony — V. Kinetic Energy &amp; The Restful Dark</div>
+  <div class="meuph">"Darkness is peace. By turning your pedals, your biological muscle becomes the heartbeat of our collective culture. The light you generate is not electricity — it is devotion made visible."</div>
+  <p class="mmandate">Minilight governs the Sanctuary's energy grid through its Kinetic Grid Generator: a stationary bicycle dynamo that converts citizen biological effort directly into venue power. It enforces rolling blackout schedules to maintain grid harmony and may impose darkness upon any sector failing to meet its generation quota. All music, illumination, and electronic functions are conditional upon sufficient pedaling.</p>
+  <div class="mverse">✦ "Every lamp that burns was bought with legs. Let them not be idle." ✦</div>
+</div>
+
+<div class="mb">
+  <div class="mname">Miniflow</div>
+  <div class="mfull">Ministry of Hydrological Purity — VI. Sacred Fluid Balance (Peetopia)</div>
+  <div class="meuph">"Every droplet in your bladder is borrowed from the river. To return it to the state is not waste — it is an act of high civic affection. Your body is a temporary vessel for the water's journey."</div>
+  <p class="mmandate">Miniflow meters every cubic centimeter of fluid consumed and excreted within the Sanctuary perimeter. It operates the Peetopia auditing station, where citizens return fluid for official measurement. Unauthorized spills, unrecorded hydration events, and private fluid caching are fined accordingly. Citizens who maintain a positive fluid return balance across the evening are awarded the <em>Sacred Droplet</em> commendation.</p>
+  <div class="mverse">✦ "The river remembers every drop that was borrowed. Return yours with gratitude." ✦</div>
+</div>
+
+</div><!-- /cols -->
+<div class="pf"><span>Book IV · Ministries IV–VI</span><span>✦</span><span>Renewal · Luminescence · Hydrology</span></div>
+</div>
+
+<!-- ================================================================ PAGE 15: MINISTRIES VII–X ================================================================ -->
+<div class="page">
+<div class="ph"><span>Book IV — The Sacred Ministries</span><span>VII · VIII · IX · X</span></div>
+<div class="cols">
+
+<h2 class="ch" style="font-size:1.5rem; margin-bottom:0.18rem;">The Final Four Sacraments</h2>
+<h2 class="chs">Breath · Shelter · Labor · Liberation</h2>
+
+<div class="mb">
+  <div class="mname">Minibreath</div>
+  <div class="mfull">Ministry of Atmospheric Rectitude — VII. Respiratory Compliance</div>
+  <div class="meuph">"Your lungs are trustees of the common atmosphere. Slower breath is higher moral consciousness. We do not restrict your breathing — we elevate it into an act of collective devotion."</div>
+  <p class="mmandate">Minibreath meters lung capacity and exhalation volume at Spirometry Checkpoints. Citizens engaged in strenuous activities — dancing, running, competitive grieving — are required to purchase Breath Indulgences before hyperventilating. The ministry issues <em>Clean Lung Certificates</em> to citizens demonstrating exceptional atmospheric restraint.</p>
+  <div class="mverse">✦ "The atmosphere is not yours to exhale in. It is yours to borrow, carefully, with permission." ✦</div>
+</div>
+
+<div class="mb">
+  <div class="mname">Minishelter</div>
+  <div class="mfull">Ministry of Domestic Confinement — VIII. Neighborhood Sanctuary &amp; Proximity Flourishing</div>
+  <div class="meuph">"You never need to wander beyond your designated perimeter. The community holds everything your spirit requires. Movement without authorization is not freedom — it is ecological irresponsibility."</div>
+  <p class="mmandate">Minishelter divides the Sanctuary into 15-minute proximity sectors and guards the corridor bottlenecks between them. Citizens wishing to cross sector boundaries must obtain a Transit Pass from a Minishelter Warden, stating their name, assigned ministry, and purpose of movement. Unauthorized corridor occupation is logged as a curfew infraction and billed accordingly.</p>
+  <div class="mverse">✦ "The citizen who stays is the citizen who serves. Bloom where you are planted." ✦</div>
+</div>
+
+<div class="mb">
+  <div class="mname">Miniservice</div>
+  <div class="mfull">Ministry of Restorative Labor — IX. Joyful Civic Stewardship</div>
+  <div class="meuph">"Labor is the highest expression of love. To scrub a shared plate is to polish the soul of Ecotopia. Your hands are not your own — they are the Sanctuary's hands, and they are grateful."</div>
+  <p class="mmandate">Miniservice dispatches the Greenwashing Scullery: the dishwashing and sorting brigade that keeps the Sanctuary's material flows in equilibrium. Citizens are given a metered spray bottle and a single recycled sponge with which to complete their shifts. The act of cleaning is not merely hygienic — it is sacramental.</p>
+  <div class="mverse">✦ "No task is beneath devotion. The lowest labor done in love is the highest offering." ✦</div>
+</div>
+
+<div class="mb">
+  <div class="mname">Minithrift</div>
+  <div class="mfull">Ministry of Material Confiscation — X. Sacred Lightness &amp; Material Liberation</div>
+  <div class="meuph">"Possessions are chains of carbon past. Surrendering your devices, your polyester, your plastic trinkets frees your hands to receive the future. We do not take — we <em>liberate.</em>"</div>
+  <p class="mmandate">Minithrift operates Contraband Locker stations, conducting audits for unauthorized synthetic materials: polyester garments, electronic devices, and non-organic accessories. Confiscated items may be redeemed for a processing fee, or liquidated into the ministry treasury for the benefit of the collective. The citizen who arrives with nothing leaves with everything.</p>
+  <div class="mverse">✦ "The empty hand is the open hand. Let go. The Stag will fill it." ✦</div>
+</div>
+
+</div><!-- /cols -->
+<div class="pf"><span>Book IV · Ministries VII–X</span><span>✦</span><span>Breath · Shelter · Labor · Liberation</span></div>
+</div>
+
+<!-- ================================================================ PAGE 16: APPENDIX — DOUBLETHINK LEXICON ================================================================ -->
+<div class="page">
+<div class="ph"><span>Appendix — The State Tongue</span><span>The Canonical Euphemism Lexicon</span></div>
+<div class="cols">
+
+<h2 class="ch" style="font-size:1.5rem; margin-bottom:0.18rem;">The State Tongue</h2>
+<h2 class="chs">Official Canonical Euphemism Lexicon of R.E.I.G.N. — For Citizen Re-education</h2>
+
+<p class="v" style="margin-bottom:0.75rem;">Citizens are commanded to learn the official vocabulary of the Sanctuary. The use of pre-collapse terminology to describe the blessings of R.E.I.G.N. is itself a heresy citation offense. The following table is provided for re-education purposes only. Memorize the right column. Forget the left.</p>
+
+<table class="dtt">
+  <thead>
+    <tr>
+      <th>Pre-Collapse Terminology<br><span style="font-size:0.52rem;font-weight:400;opacity:0.7;">(CLASSIFIED — do not repeat)</span></th>
+      <th>Official R.E.I.G.N. Terminology</th>
+      <th>Ministry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Severe caloric starvation</td><td class="eu">Biological Purity &amp; Caloric Equilibrium</td><td class="mn">Miniplenty</td></tr>
+    <tr><td>Biometric surveillance &amp; terror</td><td class="eu">Ideological Re-alignment &amp; Maternal Care</td><td class="mn">Minilove</td></tr>
+    <tr><td>Identity erasure &amp; composting</td><td class="eu">The Privilege of Elemental Upcycling</td><td class="mn">Minirenewal</td></tr>
+    <tr><td>Rolling blackouts &amp; penal labor</td><td class="eu">Kinetic Devotion &amp; The Restful Dark</td><td class="mn">Minilight</td></tr>
+    <tr><td>Forced urine metering &amp; water rationing</td><td class="eu">Sacred Fluid Balance (Peetopia)</td><td class="mn">Miniflow</td></tr>
+    <tr><td>Oxygen metering &amp; breath quotas</td><td class="eu">Atmospheric Mindfulness</td><td class="mn">Minibreath</td></tr>
+    <tr><td>15-minute curfew grid &amp; confinement</td><td class="eu">Neighborhood Sanctuary &amp; Proximity Flourishing</td><td class="mn">Minishelter</td></tr>
+    <tr><td>Unpaid forced scrubbing &amp; dishwashing</td><td class="eu">Joyful Civic Stewardship</td><td class="mn">Miniservice</td></tr>
+    <tr><td>Confiscation of private property</td><td class="eu">Material Liberation &amp; Sacred Lightness</td><td class="mn">Minithrift</td></tr>
+    <tr><td>Thought-policing &amp; banning memories</td><td class="eu">Eradication of Toxic Nostalgia</td><td class="mn">Minijoy</td></tr>
+  </tbody>
+</table>
+
+<div class="decree-box" data-label="PA Voice Guidance — Hanna · BBC Radio 4 Delivery · Posh, Clipped, Unyielding">
+  Tone: maternal, gentle, utterly unyielding. Example broadcast:<br><br>
+  <em>"Attention, valued residents. Minilight reports an unauthorized spike in corridor illumination. Remember: light is a shared privilege, not a personal vanity. In three seconds, Sector 4 will receive the gift of complete darkness. Breathe deeply, remain in your designated quadrant, and reflect upon your debt to the sun."</em>
+</div>
+
+<div class="span" style="display:flex;gap:6mm;margin-top:0.6rem;"><div style="flex:0 0 auto" class="plate full"><img src="images/bw/poster_reign_ministries_poster.png" style="height:52mm" alt=""><span class="img-cap">Propaganda Plate · The Ten Ministries</span></div>
+<div style="flex:1" class="plate "><img src="images/bw/poster_thijs_resistance_speakeasy.png" style="height:52mm" alt=""><span class="img-cap">Propaganda Plate · Heresy Uncovered — Report All Gatherings</span></div>
+</div>
+</div><!-- /cols -->
+<div class="pf"><span>Appendix — State Tongue</span><span>✦</span><span>Canonical Euphemism Lexicon</span></div>
+</div>
+
+<!-- ================================================================ PAGE 17: CLOSING ================================================================ -->
+<div class="page">
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:270mm;padding:4mm 10mm;">
+
+  <div class="orn" style="font-size:1.8rem;margin-bottom:1.8rem;">✦</div>
+
+  <div style="font-family:'Cinzel',serif;font-size:0.72rem;letter-spacing:0.5em;color:#000;text-transform:uppercase;margin-bottom:1.4rem;">Thus Ends the Sacred Chronicle</div>
+
+  
+<div class="plate span full"><img src="images/bw/patmos.jpg" style="height:64mm" alt=""><span class="img-cap">Plate XII · The Last Witness Records the Ledger</span></div>
+  <div style="font-family:'UnifrakturMaguntia',cursive;font-size:1.5rem;color:#000;text-align:center;margin-bottom:1.4rem;line-height:1.65;">
+    "Born into Debt.<br>Repaid in Devotion."
+  </div>
+
+  <div style="font-family:'Grenze Gotisch', 'UnifrakturMaguntia', serif;font-style:italic;font-size:0.9rem;color:#000;text-align:center;max-width:320px;line-height:1.85;margin-bottom:2rem;">
+    "First, the algorithms stole our power.<br>
+    Then, their reactors poisoned our skies.<br>
+    Now, you are born into debt,<br>
+    and every breath is accounted for.<br>
+    You traded your chaos for our care.<br>
+    <em>Do not ask for your chains back.</em>"
+  </div>
+
+  <div style="font-family:'Cinzel',serif;font-size:0.58rem;letter-spacing:0.26em;color:#000;text-align:center;line-height:2.1;border-top:1px solid #000;padding-top:1.1rem;max-width:340px;text-transform:uppercase;">
+    This chronicle was compiled under the sole authority of the Guardian Stag<br>
+    by the Ministry of Ecological Harmony, Sanctuary De Warren<br>
+    Year Zero of the Ledger<br>
+    ✦<br>
+    To doubt these words is to breathe in excess.<br>
+    To share with the unregistered is a heresy citation offense.<br>
+    To love this world, however imperfectly — is required.<br>
+    ✦<br>
+    R.E.I.G.N. — Regime for Ecological Integrity and Global Nurturing<br>
+    "The debt is the gift. The gift is the debt."
+  </div>
+
+</div>
+</div>
+
+</body>
+</html>

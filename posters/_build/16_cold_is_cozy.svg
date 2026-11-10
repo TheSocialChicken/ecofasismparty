@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="210mm" height="297mm" viewBox="0 0 210 297">
+<title>Cold Is Cozy</title>
+<!-- black = ENGRAVE, red fill = CUT AWAY, white = bare wood -->
+<rect width="210" height="297" fill="#ff0000"/>
+<g inkscape:groupmode="layer" inkscape:label="piece">
+<rect x="1" y="1" width="208" height="295" rx="6" fill="#ffffff"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="background">
+<clipPath id="s127838576290016"><rect x="1" y="1" width="208" height="295" rx="3"/></clipPath><g clip-path="url(#s127838576290016)"><polygon points="0.00,0.00 210.00,0.00 210.00,128.00 0.00,176.00" fill="#000000" /></g><circle cx="105.0" cy="100" r="64" fill="#ffffff"/><circle cx="105.0" cy="100" r="64" fill="none" stroke="#000000" stroke-width="2.4"/>
+</g><g inkscape:groupmode="layer" inkscape:label="icon">
+<circle cx="105.0" cy="100" r="52.20" fill="none" stroke="#000000" stroke-width="1.74" stroke-dasharray="5.80 3.48"/><path d="M105.00,100.00 L105.00,58.24 M105.00,77.96 L93.95,71.58 M105.00,77.96 L116.05,71.58 M105.00,66.36 L97.47,62.01 M105.00,66.36 L112.53,62.01 M105.00,100.00 L141.17,79.12 M124.09,88.98 L124.09,76.22 M124.09,88.98 L135.14,95.36 M134.13,83.18 L134.13,74.48 M134.13,83.18 L141.67,87.53 M105.00,100.00 L141.17,120.88 M124.09,111.02 L135.14,104.64 M124.09,111.02 L124.09,123.78 M134.13,116.82 L141.67,112.47 M134.13,116.82 L134.13,125.52 M105.00,100.00 L105.00,141.76 M105.00,122.04 L116.05,128.42 M105.00,122.04 L93.95,128.42 M105.00,133.64 L112.53,137.99 M105.00,133.64 L97.47,137.99 M105.00,100.00 L68.83,120.88 M85.91,111.02 L85.91,123.78 M85.91,111.02 L74.86,104.64 M75.87,116.82 L75.87,125.52 M75.87,116.82 L68.33,112.47 M105.00,100.00 L68.83,79.12 M85.91,88.98 L74.86,95.36 M85.91,88.98 L85.91,76.22 M75.87,83.18 L68.33,87.53 M75.87,83.18 L75.87,74.48" fill="none" stroke="#ff0000" stroke-width="5.80" stroke-linecap="round" stroke-linejoin="round"/>
+</g><g inkscape:groupmode="layer" inkscape:label="type">
+<text x="105.0" y="226" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:48px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">COLD IS COZY</text><rect x="11" y="233" width="188" height="1.6" fill="#000000"/><text x="105.0" y="247" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:9.5px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">HEATING IS A HABIT OF</text><text x="105.0" y="259" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:9.5px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">THE OLD, BURNING WORLD</text><rect x="1" y="278" width="208" height="18" rx="6" fill="#000000"/><text x="105.0" y="290" style="font-family:'IBM Plex Mono';font-weight:600;-inkscape-font-specification:'IBM Plex Mono SemiBold';font-size:7px;text-anchor:middle;fill:#ffffff" >DECREE Nº 16 · R.E.I.G.N. · ECOTOPIA</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="holes">
+<circle cx="12" cy="9" r="2.5" fill="#ff0000"/><circle cx="198" cy="9" r="2.5" fill="#ff0000"/>
+</g>
+</svg>

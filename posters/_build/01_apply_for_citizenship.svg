@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="297mm" height="420mm" viewBox="0 0 297 420">
+<title>Ecotopia Apply</title>
+<!-- black = ENGRAVE, red fill = CUT AWAY, white = bare wood -->
+<rect width="297" height="420" fill="#ff0000"/>
+<g inkscape:groupmode="layer" inkscape:label="piece">
+<rect x="1" y="1" width="295" height="418" rx="6" fill="#ffffff"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="rays">
+<clipPath id="c1"><rect x="1" y="1" width="295" height="418" rx="3"/></clipPath><g clip-path="url(#c1)"><polygon points="148.50,168.00 408.50,168.00 406.87,197.11" fill="#000000" />
+<polygon points="148.50,168.00 401.98,225.86 393.91,253.87" fill="#000000" />
+<polygon points="148.50,168.00 382.75,280.81 368.65,306.33" fill="#000000" />
+<polygon points="148.50,168.00 351.78,330.11 332.35,351.85" fill="#000000" />
+<polygon points="148.50,168.00 310.61,371.28 286.83,388.15" fill="#000000" />
+<polygon points="148.50,168.00 261.31,402.25 234.37,413.41" fill="#000000" />
+<polygon points="148.50,168.00 206.36,421.48 177.61,426.37" fill="#000000" />
+<polygon points="148.50,168.00 148.50,428.00 119.39,426.37" fill="#000000" />
+<polygon points="148.50,168.00 90.64,421.48 62.63,413.41" fill="#000000" />
+<polygon points="148.50,168.00 35.69,402.25 10.17,388.15" fill="#000000" />
+<polygon points="148.50,168.00 -13.61,371.28 -35.35,351.85" fill="#000000" />
+<polygon points="148.50,168.00 -54.78,330.11 -71.65,306.33" fill="#000000" />
+<polygon points="148.50,168.00 -85.75,280.81 -96.91,253.87" fill="#000000" />
+<polygon points="148.50,168.00 -104.98,225.86 -109.87,197.11" fill="#000000" />
+<polygon points="148.50,168.00 -111.50,168.00 -109.87,138.89" fill="#000000" />
+<polygon points="148.50,168.00 -104.98,110.14 -96.91,82.13" fill="#000000" />
+<polygon points="148.50,168.00 -85.75,55.19 -71.65,29.67" fill="#000000" />
+<polygon points="148.50,168.00 -54.78,5.89 -35.35,-15.85" fill="#000000" />
+<polygon points="148.50,168.00 -13.61,-35.28 10.17,-52.15" fill="#000000" />
+<polygon points="148.50,168.00 35.69,-66.25 62.63,-77.41" fill="#000000" />
+<polygon points="148.50,168.00 90.64,-85.48 119.39,-90.37" fill="#000000" />
+<polygon points="148.50,168.00 148.50,-92.00 177.61,-90.37" fill="#000000" />
+<polygon points="148.50,168.00 206.36,-85.48 234.37,-77.41" fill="#000000" />
+<polygon points="148.50,168.00 261.31,-66.25 286.83,-52.15" fill="#000000" />
+<polygon points="148.50,168.00 310.61,-35.28 332.35,-15.85" fill="#000000" />
+<polygon points="148.50,168.00 351.78,5.89 368.65,29.67" fill="#000000" />
+<polygon points="148.50,168.00 382.75,55.19 393.91,82.13" fill="#000000" />
+<polygon points="148.50,168.00 401.98,110.14 406.87,138.89" fill="#000000" /></g>
+</g><g inkscape:groupmode="layer" inkscape:label="disc">
+<circle cx="148.5" cy="168" r="96" fill="#ffffff"/><circle cx="148.5" cy="168" r="96" fill="none" stroke="#000000" stroke-width="5"/><circle cx="148.5" cy="168" r="88" fill="none" stroke="#000000" stroke-width="1.6"/>
+</g><g inkscape:groupmode="layer" inkscape:label="stag">
+<g><polygon points="128.62,175.00 168.38,175.00 172.64,186.36 162.70,217.60 157.02,237.48 148.50,244.58 139.98,237.48 134.30,217.60 124.36,186.36" fill="#000000" />
+<polygon points="130.04,179.26 97.38,167.90 107.32,182.10 124.36,193.46" fill="#000000" />
+<polygon points="166.96,179.26 199.62,167.90 189.68,182.10 172.64,193.46" fill="#000000" />
+<path d="M138.56,176.42 L127.20,149.44 L120.10,121.04 L122.94,92.64 L132.88,67.08 M158.44,176.42 L169.80,149.44 L176.90,121.04 L174.06,92.64 L164.12,67.08 M127.20,149.44 L104.48,139.50 M169.80,149.44 L192.52,139.50 M120.10,121.04 L95.96,104.00 M176.90,121.04 L201.04,104.00 M121.52,108.26 L137.14,101.16 M175.48,108.26 L159.86,101.16 M122.94,92.64 L107.32,64.24 M174.06,92.64 L189.68,64.24" fill="none" stroke="#000000" stroke-width="7.38" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="141.40,196.30 132.88,193.46 135.72,200.56" fill="#ffffff" />
+<polygon points="155.60,196.30 164.12,193.46 161.28,200.56" fill="#ffffff" />
+<polygon points="142.82,233.22 154.18,233.22 148.50,240.32" fill="#ffffff" /></g>
+</g><g inkscape:groupmode="layer" inkscape:label="type">
+<rect x="1" y="1" width="295" height="58" rx="6" fill="#000000"/><text x="148.5" y="50" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:60px;text-anchor:middle;fill:#ffffff" textLength="265" lengthAdjust="spacingAndGlyphs">ECOTOPIA</text><g transform="rotate(-8 148.5 300)"><rect x="-30" y="268" width="360" height="56" fill="#000000"/><text x="148.5" y="313" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:44px;text-anchor:middle;fill:#ffffff" textLength="270" lengthAdjust="spacingAndGlyphs">APPLY FOR CITIZENSHIP</text></g><rect x="1" y="346" width="295" height="58" fill="#ffffff"/><text x="148.5" y="360" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:15px;text-anchor:middle;fill:#000000" textLength="265" lengthAdjust="spacingAndGlyphs">THE LAST GREEN COUNTRY ON EARTH WELCOMES YOU</text><rect x="16" y="368" width="265" height="1.6" fill="#000000"/><text x="148.5" y="384" style="font-family:'IBM Plex Mono';font-weight:600;-inkscape-font-specification:'IBM Plex Mono SemiBold';font-size:7.8px;text-anchor:middle;fill:#000000" >YOUR CARBON DEBT IS WAITING TO BE FORGIVEN</text><text x="148.5" y="397" style="font-family:'IBM Plex Mono';font-weight:600;-inkscape-font-specification:'IBM Plex Mono SemiBold';font-size:5.6px;text-anchor:middle;fill:#000000" >R.E.I.G.N. · REGIME FOR ECOLOGICAL INTEGRITY AND GLOBAL NURTURING</text><rect x="1" y="404" width="295" height="15" rx="6" fill="#000000"/><text x="148.5" y="415" style="font-family:'IBM Plex Mono';font-weight:600;-inkscape-font-specification:'IBM Plex Mono SemiBold';font-size:8px;text-anchor:middle;fill:#ffffff" >28 · 11 · APPLY BEFORE THE BORDER CLOSES</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="holes">
+<circle cx="14" cy="9" r="2.5" fill="#ff0000"/><circle cx="283" cy="9" r="2.5" fill="#ff0000"/>
+</g>
+</svg>

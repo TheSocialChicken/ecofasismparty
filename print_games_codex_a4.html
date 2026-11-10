@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Codex of Labour &amp; Play — Facilitator Sheets &amp; Book of Games</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Cinzel:wght@400;700&family=Grenze+Gotisch:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+@page { size: A4; margin: 10mm 8mm 11mm;
+  @top-left { content: "The Codex of Labour & Play"; font-family: 'Cinzel', serif; font-size: 6.5pt; letter-spacing: .2em; text-transform: uppercase; }
+  @top-right { content: "Sanctuary De Warren · Year Zero"; font-family: 'Cinzel', serif; font-size: 6.5pt; letter-spacing: .2em; text-transform: uppercase; }
+  @bottom-center { content: "✦  " counter(page) "  ✦"; font-family: 'Cinzel', serif; font-size: 8pt; }
+}
+@page :first { @top-left { content: none } @top-right { content: none } @bottom-center { content: none } }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: #444; }
+body { background: #fff; color: #000; font-family: 'Grenze Gotisch', serif; font-size: 10.2pt; line-height: 1.3;
+  max-width: 210mm; margin: 0 auto; padding: 10mm 8mm; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+@media print { html { background: #fff; } body { max-width: none; padding: 0; } }
+img { filter: grayscale(1) contrast(1.15); }
+code { font-family: 'Cinzel', serif; font-size: .8em; }
+
+.booktitle { break-before: page; }
+.cover, .booktitle { break-after: page; text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 255mm; }
+.over, .bnum { font-family: 'Cinzel', serif; letter-spacing: .45em; text-transform: uppercase; font-size: 8pt; margin-bottom: 5mm; }
+.cover h1 { font-family: 'UnifrakturMaguntia', serif; font-weight: 400; font-size: 40pt; line-height: 1.05; margin-top: 6mm; }
+.booktitle h2 { font-family: 'UnifrakturMaguntia', serif; font-weight: 400; font-size: 36pt; line-height: 1.05; }
+.csub, .bsub { font-family: 'Cinzel', serif; letter-spacing: .2em; text-transform: uppercase; font-size: 9pt; margin: 3mm 0 7mm; }
+.decree { font-size: 12pt; max-width: 130mm; border-top: .8px solid #000; border-bottom: .8px solid #000; padding: 4mm 6mm; margin-top: 6mm; }
+.pub { font-family: 'Cinzel', serif; font-size: 7.5pt; letter-spacing: .25em; text-transform: uppercase; line-height: 2; margin-top: 8mm; }
+.cover .plate img, .booktitle .plate img { width: auto; max-width: 100%; }
+
+.flow { column-count: 2; column-gap: 6mm; column-rule: .8px solid #000; }
+.cat { break-before: page; }
+.ch { font-family: 'UnifrakturMaguntia', serif; font-weight: 400; font-size: 26pt; text-align: center; line-height: 1.1; }
+.chs { font-family: 'Cinzel', serif; font-size: 7.5pt; letter-spacing: .22em; text-transform: uppercase; text-align: center; margin: 1mm 0 4mm; padding-bottom: 2mm; border-bottom: .8px solid #000; }
+
+.plate { margin: 0 0 3mm; text-align: center; break-inside: avoid; }
+.plate img { display: block; width: 100%; object-fit: cover; border: 1.4px solid #000; outline: .6px solid #000; outline-offset: 2px; margin: 0 auto; }
+.plate figcaption { font-family: 'Cinzel', serif; font-size: 6.5pt; letter-spacing: .14em; text-transform: uppercase; margin-top: 1.6mm; }
+p.v { text-align: justify; hyphens: auto; margin-bottom: 2.5mm; }
+.dc::first-letter { font-family: 'UnifrakturMaguntia', serif; font-size: 3.4em; float: left; line-height: .78; margin: .05em .08em 0 0; }
+
+.sheet { break-inside: avoid-column; margin-bottom: 5mm; padding-bottom: 3mm; border-bottom: .8px solid #000; }
+.sheet:has(.tbl) { break-inside: auto; }
+.sh { font-family: 'UnifrakturMaguntia', serif; font-weight: 400; font-size: 15pt; line-height: 1.1; }
+.shs { font-family: 'Cinzel', serif; font-size: 6.6pt; letter-spacing: .18em; text-transform: uppercase; margin: .6mm 0 2.4mm; }
+.rules { padding-left: 4.5mm; margin: 2mm 0; } .rules li { margin-bottom: 1.2mm; }
+.fine { font-family: 'Cinzel', serif; font-size: 6.6pt; letter-spacing: .1em; text-transform: uppercase; margin-top: 2mm; }
+.decree-box { border: 1px solid #000; border-left: 4px solid #000; padding: 3mm 3.5mm 2.5mm; margin: 4mm 0 3mm; position: relative; }
+.decree-box::before { content: attr(data-label); position: absolute; top: -2.3mm; left: 3mm; background: #fff; padding: 0 1.4mm; font-family: 'Cinzel', serif; font-size: 6.4pt; letter-spacing: .25em; text-transform: uppercase; }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: .6mm 2.5mm; margin: 1.5mm 0; }
+.kv dt { font-family: 'Cinzel', serif; font-weight: 700; font-size: .72em; letter-spacing: .08em; text-transform: uppercase; padding-top: .3mm; }
+.kv.small { font-size: .95em; }
+.steps { padding-left: 4.8mm; margin: 1.6mm 0; } .steps li { margin-bottom: .8mm; }
+.tbl { width: 100%; border-collapse: collapse; font-size: .9em; margin: 1.5mm 0; }
+.tbl th { background: #000; color: #fff; font-family: 'Cinzel', serif; font-weight: 700; font-size: .68em; letter-spacing: .12em; text-transform: uppercase; padding: 1mm 1.2mm; text-align: left; }
+.tbl td { border-bottom: .5px solid #000; padding: .9mm 1.2mm; vertical-align: top; }
+.tbl tr { break-inside: avoid; }
+.tbl td.mn { font-family: 'Cinzel', serif; font-size: .74em; font-weight: 700; letter-spacing: .04em; }
+.run, .cue { border: .8px solid #000; padding: 2mm 2.5mm; margin: 2mm 0; break-inside: avoid; }
+
+.game { break-inside: avoid; border: 1.2px solid #000; outline: .5px solid #000; outline-offset: -1.4mm; padding: 2.6mm 3mm 2.4mm; margin: 0 0 4mm; }
+.game header { display: flex; align-items: baseline; gap: 2mm; border-bottom: .8px solid #000; padding-bottom: 1mm; }
+.gnum { font-family: 'Cinzel', serif; font-weight: 700; font-size: 8pt; background: #000; color: #fff; padding: .3mm 1.4mm; }
+.game h4 { font-family: 'UnifrakturMaguntia', serif; font-weight: 400; font-size: 13.5pt; line-height: 1.05; flex: 1; }
+.pick { font-family: 'Cinzel', serif; font-weight: 700; font-size: 7pt; letter-spacing: .08em; white-space: nowrap; }
+.gmeta { display: flex; flex-wrap: wrap; gap: .4mm 2.5mm; font-family: 'Cinzel', serif; font-size: 6.4pt; letter-spacing: .08em; text-transform: uppercase; margin: 1.2mm 0; }
+.gmeta span + span::before { content: "· "; }
+.reward { background: #000; color: #fff; font-family: 'Cinzel', serif; font-weight: 700; font-size: 7pt; letter-spacing: .08em; text-transform: uppercase; text-align: center; padding: 1mm; margin: 1.6mm 0 1.4mm; }
+.twist { font-weight: 600; border-left: 1.4px solid #000; padding-left: 2mm; }
+.notes { font-family: 'Cinzel', serif; font-size: 6.6pt; letter-spacing: .1em; text-transform: uppercase; border-bottom: .6px dotted #000; padding-top: 3mm; }
+
+.pickl td:first-child { width: 7mm; font-size: 1.15em; }
+.pickl td:nth-child(2) { width: 8mm; }
+.pickl tr.grp td { font-family: 'UnifrakturMaguntia', serif; font-size: 1.25em; border-bottom: 1px solid #000; padding-top: 2.4mm; }
+.summary .pickl { column-span: all; }
+</style>
+</head>
+<body>
+
+<section class="cover">
+  <div class="over">Ministry of Ecological Harmony · Sanctuary De Warren</div>
+  <figure class="plate"><img src="images/bw/michael.jpg" style="height:115mm" alt=""><figcaption>Plate I · The Guardian Stag Casts Down the Dragon of Idleness</figcaption></figure>
+  <h1>The Codex of Labour &amp; Play</h1>
+  <div class="csub">Facilitator Sheets · The Book of Games</div>
+  <p class="decree">“Every task earns credit. Every silence hides a runner.<br>Every game is a sacrament, and every sacrament is a debt repaid.”</p>
+  <div class="pub">For Ministers, Wardens, Hosts &amp; Facilitators only<br>Sanctuary De Warren · 28 November 2026 · Year Zero</div>
+</section><section class="booktitle">
+  <div class="bnum">Book the First</div><h2>The Facilitator Codex</h2>
+  <div class="bsub">Operating sheets for those who keep the machine running</div>
+  <figure class="plate"><img src="images/bw/moses.jpg" style="height:140mm" alt=""><figcaption>Plate II · The Tables of the Operating Law</figcaption></figure>
+</section><div class="flow"><section class="sheet" data-label="Safety"><h3 class="sh">The Facilitator&#x27;s Oath</h3><div class="shs">Safety first · read before the doors open</div>
+<p class="v dc">Facilitators are the guardians of immersion and of safety. The regime is fiction; the people are real. If any player shows discomfort, the roleplay stops for them immediately and you step out of character without fuss.</p>
+<div class="decree-box" data-label="Emergency Safe-Word">Saying <b>OZONE</b> halts all gameplay, roleplay and performance around that person at once and brings organiser support, without question or penalty. Every host learns this before their first shift.</div>
+<ul class="rules">
+<li><b>Quiet Haven:</b> the second-floor quiet room is strictly out of character.</li>
+<li><b>De-escalation:</b> drop the bureaucratic tone; offer water, tea, a seat.</li>
+<li><b>No touching</b> in interrogations, riot drills or arena games unless the game says so and both people agree.</li>
+<li><b>Fictional sins only:</b> never ask about health, relationships, money, religion or anything a guest wouldn't say in public.</li>
+<li><b>Always an easy route:</b> every intake game has the Soft Interrogation as an alternative, no explanation needed.</li>
+</ul></section><section class="sheet"><h3 class="sh">Minister Operating Sheet</h3><div class="shs">Clipboard rules &amp; economic governance</div><ol class='rules'><li><b>Starting Treasury:</b> Each ministry begins with +800 Carbon Credits.</li><li><b>Recruiting Citizens:</b> Stamp the passport with the official Ministry Seal. Log starting debt (−150 to −500 CC) on the clipboard ledger.</li><li><b>Concession Operation:</b> Assign recruits to station shifts (+30 CC) and guard against sabotage runs.</li><li><b>Dual-Tally Logging:</b> Stamp the recruit&#x27;s passport AND record the gain on the ministry ledger.</li><li><b>Corporate Agendas:</b> Pool credits to enact decrees on the Central Board (200 CC to enact).</li></ol><p class='fine'>Ministry clipboards are audited periodically by Minilove.</p></section><section class="sheet"><h3 class="sh">The Ten Economic Powers</h3><div class="shs">Asymmetric minister superpowers</div><table class='tbl'><tr><th>Ministry</th><th>Power</th><th>Effect</th></tr><tr><td class='mn'>Miniservice</td><td><b>Debt Relief</b></td><td>50% state debt relief: absorbing −400 debt burdens the ledger by only −200. Rapid dishwashing shifts.</td></tr><tr><td class='mn'>Minirenewal</td><td><b>Bounty</b></td><td>+100 CC state bounty whenever a bankrupt citizen is composted through the Suicide Carbon Booth.</td></tr><tr><td class='mn'>Minilight</td><td><b>Grid Monopoly</b></td><td>May plunge zones into darkness unless paid a 30–50 CC Grid Maintenance Tariff.</td></tr><tr><td class='mn'>Miniflow</td><td><b>Fluid Dividends</b></td><td>+20 CC every time a citizen returns moisture at Peetopia; fines unauthorised cup spills.</td></tr><tr><td class='mn'>Miniplenty</td><td><b>Indulgences</b></td><td>Controls the snack table. Sells caloric dispensations for direct credit transfers.</td></tr><tr><td class='mn'>Minilove</td><td><b>Fine Seizure</b></td><td>Carries citation pads. Keeps 50% of all fines levied on heretics.</td></tr><tr><td class='mn'>Minijoy</td><td><b>Morale Grants</b></td><td>Charges +10 CC entry for wig duels; +150 grant for crowd rallies of 15+ guests.</td></tr><tr><td class='mn'>Minishelter</td><td><b>Transit Tolls</b></td><td>Guards corridor bottlenecks; charges 10–20 CC for cross-sector transit passes.</td></tr><tr><td class='mn'>Minithrift</td><td><b>Liquidation</b></td><td>Confiscates non-organic items; liquidates contraband for +40 CC each.</td></tr><tr><td class='mn'>Minibreath</td><td><b>Offsets</b></td><td>Meters exhalations; sells Breath Indulgences to dancers and runners.</td></tr></table></section><section class="sheet"><h3 class="sh">Station Sheet I · The Suicide Carbon Booth</h3><div class="shs">Minirenewal upcycling ritual</div><dl class='kv'><dt>Location</dt><dd>Phone booth / Upcycling Portal</dd><dt>Host</dt><dd>Renewal Technologist (lab coat)</dd></dl>
+<ol class="steps"><li>Citizen enters with heavy debt (−350 CC or worse).</li>
+<li>Review: “Are you prepared to surrender your old self?”</li>
+<li>Oath: “I compost my ego; I return my nitrogen.”</li>
+<li>Strike out the surname with black marker; stamp the giant “CLEANSED TO HUMUS” seal.</li>
+<li>Reset debt to 0 CC; assign a new name (e.g. Citizen Lichen-88). Minirenewal logs the +100 bounty.</li></ol></section><section class="sheet"><h3 class="sh">Station Sheet II · How the World Ends</h3><div class="shs">Minijoy extinction open-mic</div><dl class='kv'><dt>Location</dt><dd>Mini-podium stage</dd><dt>Host</dt><dd>The Morale Officer (megaphone)</dd><dt>Rounds</dt><dd>22:00 · 22:45 · 23:15 (up to 4 contestants)</dd><dt>Rules</dt><dd>60 seconds to deliver the most melodramatic, operatic extinction monologue.</dd><dt>Judging</dt><dd>Synchronised audience applause.</dd><dt>Reward</dt><dd>+100 CC &amp; the Order of Cathartic Hysteria ribbon. Minijoy logs the crowd subsidy.</dd></dl></section><section class="sheet"><h3 class="sh">Station Sheet III · The Wig Snatching Arena</h3><div class="shs">Minijoy</div>
+<p class="v">Two duellists in neon wigs. Hands start on knees. On the bell, snatch your opponent's wig without touching their body. Best of 3, 60 seconds. Winner receives a +25 CC stamp.</p></section><section class="sheet"><h3 class="sh">Station Sheet IV · Greenwashing Dishes</h3><div class="shs">Miniservice</div>
+<p class="v">Five-minute shift. One recycled sponge, a strictly metered spray bottle (“Account for every drop”). Cleaning 10 glasses earns a +30 CC stamp.</p></section><section class="sheet" data-label="Secret"><h3 class="sh">The Ten Seeded Moles</h3><div class="shs">Discreet missions slipped into 10 passports</div><table class='tbl'><tr><th>#</th><th>Cover</th><th>Mission</th><th>Reward</th></tr><tr><td>01</td><td class='mn'>Miniflow</td><td>Whisper to Citizen Jasper at the water cooler: “The Rhine does not belong to the algorithm.”</td><td>Slip to Thijs&#x27;s room</td></tr><tr><td>02</td><td class='mn'>Miniplenty</td><td>Deliver 3 algae paste cups to the coat check: “These calories cannot sustain a soul.”</td><td>+30 CC &amp; “Seek the red door”</td></tr><tr><td>03</td><td class='mn'>Minilight</td><td>Pedal the bike backward for 2 minutes humming a pre-collapse melody.</td><td>Match packet with room code</td></tr><tr><td>04</td><td class='mn'>Minilove</td><td>Find the hollow copy of Silent Spring on the 3rd shelf in the library.</td><td>Secret knock: 3 slow, 2 fast</td></tr><tr><td>05</td><td class='mn'>Minirenewal</td><td>Tell the recycling operator: “I am Citizen Unaccounted.”</td><td>Resistance ankle stamp</td></tr><tr><td>06</td><td class='mn'>Minibreath</td><td>Exhale into the corridor sensor for 10 s reciting: “The forest does not ask for credits.”</td><td>Cellar cable hatch access</td></tr><tr><td>07</td><td class='mn'>Minishelter</td><td>Bribe the checkpoint guard with a synthetic trinket.</td><td>Corridor pass to Thijs&#x27;s sector</td></tr><tr><td>08</td><td class='mn'>Miniservice</td><td>Hide a clean saucer under a towel during the wash shift; carry it to the tea station.</td><td>Duplicate ankle stamp</td></tr><tr><td>09</td><td class='mn'>Minithrift</td><td>Retrieve the USB drive labelled CELLAR_AI_BACKUP_NODE from the locker.</td><td>Induction into strike cadre</td></tr><tr><td>10</td><td class='mn'>Minijoy</td><td>End your open-mic speech: “Joy without truth is just an electric fence.”</td><td>Resistance makes contact</td></tr></table></section><section class="sheet" data-label="Secret"><h3 class="sh">The Rebel Runs</h3><div class="shs">Netrunner infiltration missions from Thijs&#x27;s room</div><div class='run'><b>Run 01 · Grid Short-Circuit</b><br><i>Target:</i> Minilight dynamo · <i>Ice:</i> 2 recruits &amp; warden<br><i>Action:</i> Attach an ungrounded wire clip to the terminal during a distraction.<br><i>Breach:</i> Trash 100 CC from an active decree</div><div class='run'><b>Run 02 · Flow Meter Inversion</b><br><i>Target:</i> Miniflow Peetopia · <i>Ice:</i> Restroom auditor<br><i>Action:</i> Invert the moisture dial without being observed.<br><i>Breach:</i> Truth Fragment #1 (water telemetry)</div><div class='run'><b>Run 03 · Heresy Registry Purge</b><br><i>Target:</i> Minilove holding pen · <i>Ice:</i> Cameras &amp; officers<br><i>Action:</i> Swap the citation sheet with an ink-stained decoy.<br><i>Breach:</i> Trash 100 CC from an active decree</div><div class='run'><b>Run 04 · Composting Vault Extraction</b><br><i>Target:</i> Minirenewal booth · <i>Ice:</i> Lab technologists<br><i>Action:</i> Retrieve folder HUMUS_DELETIONS_2080 from beneath the compost vat.<br><i>Breach:</i> Truth Fragment #2 (AI parameter feeding)</div><div class='run'><b>Run 05 · Contraband Vault Heist</b><br><i>Target:</i> Minithrift locker · <i>Ice:</i> Contraband guard<br><i>Action:</i> Pick the latch during a staged scuffle; take the fibre cable.<br><i>Breach:</i> Truth Fragment #3 (fibre line to the cellar)</div><p class='fine'>Climax key: the three truth fragments prove the Guardian Stag is an AI server in the cellar.</p></section><section class="sheet"><h3 class="sh">Civic Rivalries</h3><div class="shs">Inter-ministry friction quests</div><table class='tbl'><tr><th>Ministry</th><th>Quest</th><th>CC</th></tr><tr><td class='mn'>Miniplenty</td><td><b>Dehydration Audit:</b> Convince 3 Miniflow citizens that dry lentils beat kombucha.</td><td>+30</td></tr><tr><td class='mn'>Minilove</td><td><b>Nostalgia Sting:</b> Catch 2 Minijoy members discussing pre-collapse holidays.</td><td>+40</td></tr><tr><td class='mn'>Minijoy</td><td><b>Smiling Scullery:</b> Make the Miniservice dish squad sing the smiling song.</td><td>+35</td></tr><tr><td class='mn'>Minirenewal</td><td><b>Reclaim the Confiscated:</b> Steal 3 items from Minithrift to compost in the vat.</td><td>+45</td></tr><tr><td class='mn'>Minilight</td><td><b>Blackout Guide:</b> Kill the lights in Minishelter; guide everyone out with glowsticks.</td><td>+30</td></tr><tr><td class='mn'>Miniflow</td><td><b>Moisture Seizure:</b> Confiscate high-water vegetables from the Miniplenty table.</td><td>+35</td></tr><tr><td class='mn'>Minibreath</td><td><b>Hyperventilation Fine:</b> Cite 3 citizens pedalling the stationary bike.</td><td>+25</td></tr><tr><td class='mn'>Minishelter</td><td><b>Curfew Trap:</b> Trap a Minilove warden inside the phone booth for 3 minutes.</td><td>+50</td></tr><tr><td class='mn'>Miniservice</td><td><b>Perpetual Mop:</b> Mop the booth exit, forcing recycled citizens to remove boots.</td><td>+25</td></tr><tr><td class='mn'>Minithrift</td><td><b>Tabard Audit:</b> Seize non-organic lanyards from Minibreath officers.</td><td>+30</td></tr></table></section><section class="sheet" data-label="Script"><h3 class="sh">The Revolution · Run of Show</h3><div class="shs">23:30 Assembly → 00:15 Dance</div>
+<div class="cue"><b>CUE 01 · 23:30 · Grand Assembly</b><br><i>Audio:</i> low sub-bass drone and bells.<br><i>Hanna (PA):</i> “Citizens of R.E.I.G.N. The hour of accounting has arrived. By decree of the Guardian Stag, all ministries assemble at the podium. Bring your passports. Bring your devotion. Prepare to be weighed.”</div>
+<div class="cue"><b>CUE 02 · 23:45 · Resistance Raid</b><br><i>Visual:</i> red alarm strobes; audio stutters.<br><i>Action:</i> ankle-stamped rebels blow whistles and drop black banners: “THE STAG IS SILICON. THE DEBT IS A LIE.”<br><i>Thijs at the mic:</i> “There is no Guardian Stag! Look at the cellar! An AI server is running in the basement!”</div>
+<div class="cue"><b>CUE 03 · 00:05 · Liberation Ritual</b><br>Everyone tears out Page 7 of their passport (the Ancestral Debt Bond) and throws it as confetti. Performers drop character, embrace participants and rejoice.</div>
+<div class="cue"><b>00:15 · Beat Drop</b><br>The siren fades into the DJ's opening bassline. The venue becomes an open dance floor until 04:00+. Confetti is cleaned up together at 04:00.</div></section></div><section class="booktitle">
+  <div class="bnum">Book the Second</div><h2>The Book of Games</h2>
+  <div class="bsub">44 suggestions · more than we need · tick ☐ PICK on the ones we run</div>
+  <figure class="plate"><img src="images/bw/leviathan.jpg" style="height:115mm" alt=""><figcaption>Plate III · The Leviathan of Leisure</figcaption></figure>
+  <p class="decree">How to use this book: each game has a ministry, a host, props and a reward. Tick the ones we choose,
+  write the owner in the Notes line, and re-run <code>scripts/build_games_codex.py</code> after editing.</p>
+</section><section class="cat">
+  <h2 class="ch">The Interrogation</h2>
+  <div class="chs">Minilove intake for those who did not apply for citizenship · Lead: Eric</div>
+  <div class="flow">
+    <figure class="plate"><img src="images/bw/martyrs.jpg" style="height:58mm" alt=""><figcaption>Plate · The Tribunal of the Unregistered</figcaption></figure>
+    <p class="v dc">Guests without an application are pulled from the garage queue into a small, dim room: one chair, one lamp, two officers. Every interrogation ends the same way — with a debt stamped in the passport and a ministry assignment — but the route there can be chosen per guest and per mood. Keep each session under four minutes so the queue keeps moving.</p>
+    
+<article class="game">
+  <header>
+    <span class="gnum">1</span>
+    <h4>Good Cop / Bad Cop Carbon Audit</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove</span><span>1 guest · 3–4 min</span><span>Intensity: Medium</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>2 Interrogation Officers</dd><dt>Where</dt><dd>Garage interrogation room</dd><dt>Props</dt><dd>Desk lamp, single chair, clipboard, Audit Card with 5 questions, debt stamp</dd></dl>
+  <ol class="steps"><li>Bad Cop reads the Audit Card: flights taken, meat eaten, age of phone, length of shower, number of chargers owned.</li><li>Every honest answer adds debt (+50 CC per sin); every evasive answer adds double.</li><li>Good Cop slides over a cup of algae water and offers a 100 CC &#x27;discount&#x27; for a sincere apology to the biosphere.</li><li>Total is stamped into the passport (−150 to −500 CC) and a ministry is assigned.</li></ol>
+  <div class="reward">Reward · Debt set at −150 to −500 CC</div>
+  <p class="twist">Guests who apologise to the lamp instead of the officers get a &#x27;Sincerity Discount&#x27; of 50 CC.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">2</span>
+    <h4>The Prisoner&#x27;s Ledger</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove</span><span>2 guests · 3 min</span><span>Intensity: Medium</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>2 Officers in separate booths</dd><dt>Where</dt><dd>Two booths or two corners of the garage</dd><dt>Props</dt><dd>Two chairs back-to-back behind a curtain, 2 verdict cards, egg timer</dd></dl>
+  <ol class="steps"><li>Two arriving guests are separated and each told the other has &#x27;already confessed&#x27;.</li><li>Each secretly chooses SILENCE or DENOUNCE on a verdict card.</li><li>Both silent: −150 each. One denounces: denouncer −100, the other −400. Both denounce: −300 each.</li><li>Reveal the cards together; read the outcome aloud like a court verdict.</li></ol>
+  <div class="reward">Reward · Debt per outcome table</div>
+  <p class="twist">A classic prisoner&#x27;s dilemma: the room learns who trusts whom before the party even starts.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">3</span>
+    <h4>The Breath Polygraph</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove × Minibreath</span><span>1 guest · 2–3 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Officer + 1 hidden Buzzer Operator</dd><dt>Where</dt><dd>Interrogation room</dd><dt>Props</dt><dd>&#x27;Lie detector&#x27; (lamp + paper windmill + cables), hidden buzzer or bell</dd></dl>
+  <ol class="steps"><li>Guest holds the windmill to their lips; every answer must be breathed onto it.</li><li>Officer asks 6 yes/no questions (&#x27;Have you ever left a tap running?&#x27;).</li><li>The hidden operator buzzes at random. Each buzz = &#x27;LIE DETECTED&#x27;, +40 CC debt.</li><li>Guest may retract any answer by confessing a bigger sin instead.</li></ol>
+  <div class="reward">Reward · Debt +40 CC per buzz</div>
+  <p class="twist">The machine is obviously rigged — and the officer insists it is the most objective instrument in Ecotopia.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">4</span>
+    <h4>The 24-Hour Carbon Receipt</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove</span><span>1 guest · 3 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Auditor with calculator</dd><dt>Where</dt><dd>Intake desk</dd><dt>Props</dt><dd>Receipt pad, absurd Carbon Price List (A5), adding machine or calculator</dd></dl>
+  <ol class="steps"><li>Guest reconstructs the last 24 hours out loud: travel, meals, screens, showers.</li><li>Auditor prices every item from the Carbon Price List (&#x27;one selfie: 12 CC&#x27;).</li><li>Guest must total the receipt themselves within 60 seconds.</li><li>Arithmetic errors are fined as &#x27;ledger fraud&#x27; (+50 CC).</li></ol>
+  <div class="reward">Reward · Debt = receipt total</div>
+  <p class="twist">Hand the receipt over as a souvenir; it doubles as proof of debt at other stations.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">5</span>
+    <h4>State Tongue Drill</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove</span><span>1 guest · 2 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Officer with flash cards</dd><dt>Where</dt><dd>Interrogation room</dd><dt>Props</dt><dd>10 flash cards from the Doublethink Lexicon (old word → state word)</dd></dl>
+  <ol class="steps"><li>Officer shows an old-world word (&#x27;holiday&#x27;, &#x27;freedom&#x27;, &#x27;steak&#x27;).</li><li>Guest must answer with the State Tongue equivalent within 5 seconds.</li><li>Each old-world word spoken = +20 CC debt; each correct answer = −10 CC.</li><li>Ten cards, then the passport is stamped.</li></ol>
+  <div class="reward">Reward · Debt ±10/20 CC per card</div>
+  <p class="twist">Teaches the vocabulary the rest of the night runs on.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">6</span>
+    <h4>The Ancestral Multiplier</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove</span><span>1 guest · 3 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Genealogist Officer</dd><dt>Where</dt><dd>Interrogation room</dd><dt>Props</dt><dd>Family-tree form, one large die, ink pad</dd></dl>
+  <ol class="steps"><li>Guest names three ancestors and one bad habit each (a car, a cruise, a barbecue).</li><li>Each habit gets a base debt of 50 CC.</li><li>Guest rolls the Ancestral Multiplier die: the total is multiplied by the roll (cap at −500).</li><li>Thumbprint the family tree; it is filed &#x27;for eternity&#x27;.</li></ol>
+  <div class="reward">Reward · Debt 50–500 CC</div>
+  <p class="twist">Inherited Biological Sin made literal: you are fined for your grandmother&#x27;s caravan.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">7</span>
+    <h4>Denounce a Neighbour</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove</span><span>1 guest · 1–2 min</span><span>Intensity: Medium</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Officer</dd><dt>Where</dt><dd>Intake desk</dd><dt>Props</dt><dd>Pre-printed Denunciation Slips, box with slot</dd></dl>
+  <ol class="steps"><li>Officer offers 100 CC off the guest&#x27;s debt for naming another guest who &#x27;looks unsustainable&#x27;.</li><li>The guest writes a description (never a real name) on a Denunciation Slip.</li><li>Slips go in the box; Minilove patrols draw slips during the night and audit whoever matches.</li><li>Guests who refuse to denounce get a small &#x27;Integrity&#x27; sticker — which the resistance looks for.</li></ol>
+  <div class="reward">Reward · −100 CC debt for denouncing</div>
+  <p class="twist">The refusers become the easiest recruits for Thijs&#x27;s resistance later.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">8</span>
+    <h4>The Soft Interrogation (opt-out route)</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove</span><span>1 guest · 1 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Friendly Clerk</dd><dt>Where</dt><dd>Side desk, lights up</dd><dt>Props</dt><dd>Simple form, pen, debt stamp</dd></dl>
+  <ol class="steps"><li>For guests who look uncomfortable or say they&#x27;d rather not: no officers, no lamp.</li><li>A friendly clerk asks three light questions and apologises for the bureaucracy.</li><li>Standard debt of −250 CC is stamped; passport handed over with a smile.</li><li>Guest continues to the ministry desk like everyone else.</li></ol>
+  <div class="reward">Reward · Debt −250 CC</div>
+  <p class="twist">Always available. Nobody needs to explain why they chose it.</p>
+  <div class="notes">Notes:</div>
+</article>
+  </div>
+</section><section class="cat">
+  <h2 class="ch">The Inburgering</h2>
+  <div class="chs">The Civic Integration Programme for new citizens · Lead: Inge &amp; Lexi</div>
+  <div class="flow">
+    <figure class="plate"><img src="images/bw/babel.jpg" style="height:58mm" alt=""><figcaption>Plate · The Confusion of Tongues · The Integration Exam</figcaption></figure>
+    <p class="v dc">Every new citizen must integrate. Modelled on the Dutch inburgering: an exam, a participation declaration, a knowledge-of-society test and a ceremony — all in Ecotopian form. These games work at intake, at a fixed Integration Desk during the night, or as a scheduled ceremony on the hour.</p>
+    
+<article class="game">
+  <header>
+    <span class="gnum">9</span>
+    <h4>The Civic Integration Exam</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove × Miniservice</span><span>4–8 guests · 5 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Examiner, 1 Invigilator</dd><dt>Where</dt><dd>Integration Desk</dd><dt>Props</dt><dd>A6 exam sheets with 10 multiple-choice questions, pencils, a loud timer</dd></dl>
+  <ol class="steps"><li>Guests sit in a row; the invigilator reads the rules in a stern voice.</li><li>10 absurd questions (&#x27;A neighbour uses two napkins. You: a) report b) report twice c) compost the neighbour&#x27;).</li><li>Examiner marks on the spot. 7+/10 = pass, below = remedial class (sing the anthem once).</li><li>Pass stamps &#x27;INGEBURGERD&#x27; in the passport.</li></ol>
+  <div class="reward">Reward · +30 CC on pass</div>
+  <p class="twist">Every answer is technically correct; the examiner marks according to mood.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">10</span>
+    <h4>The Participation Declaration</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove</span><span>1–6 guests · 3 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Notary</dd><dt>Where</dt><dd>Integration Desk</dd><dt>Props</dt><dd>Long contract on a scroll, quill or fountain pen, wax-seal stamp</dd></dl>
+  <ol class="steps"><li>The notary reads the Participation Declaration out loud, very fast.</li><li>Hidden in the middle: &#x27;I hereby donate my spare neural cycles to the Guardian Stag.&#x27;</li><li>Guests must sign. Anyone who asks &#x27;wait, what was that line?&#x27; is quietly given a resistance contact slip.</li><li>Everyone else receives a wax seal on Page 3.</li></ol>
+  <div class="reward">Reward · +20 CC for signing</div>
+  <p class="twist">Plants the AI-server twist early: attentive guests become the resistance.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">11</span>
+    <h4>Knowledge of Ecotopian Society</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Miniservice</span><span>1–2 guests · 3 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Examiner + 1 actor</dd><dt>Where</dt><dd>Integration Desk or corridor</dd><dt>Props</dt><dd>Scenario cards, a minister&#x27;s hat for the actor</dd></dl>
+  <ol class="steps"><li>Guest draws a scenario card: greet a Minister, refuse a second ration, report a light left on, apply for a shower permit.</li><li>The actor plays the other side of the scene.</li><li>Examiner scores politeness, obedience and correct use of State Tongue (0–10).</li><li>Score ≥ 7 earns a &#x27;Society Knowledge&#x27; stamp.</li></ol>
+  <div class="reward">Reward · +25 CC for ≥ 7</div>
+  <p class="twist">Parody of the KNM exam; guests learn the social rules of the evening by playing them.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">12</span>
+    <h4>The State Tongue Speaking Test</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minijoy</span><span>1 guest · 2 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Examiner with posh accent</dd><dt>Where</dt><dd>Integration Desk</dd><dt>Props</dt><dd>Decree cards to read aloud, microphone optional</dd></dl>
+  <ol class="steps"><li>Guest reads a short decree aloud in the official voice of Hanna (posh, polite, horrific).</li><li>The examiner grades accent, tone of calm menace and correct pauses.</li><li>Grades A–F stamped on the passport.</li><li>Grade A may be invited to read an announcement over the PA later.</li></ol>
+  <div class="reward">Reward · +15 to +40 CC by grade</div>
+  <p class="twist">Gives you a pool of guest announcers for the night.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">13</span>
+    <h4>The Integration Buddy</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Miniservice</span><span>2 guests · 30 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>Integration Desk staff</dd><dt>Where</dt><dd>Anywhere</dd><dt>Props</dt><dd>Buddy cards in pairs (matching numbers), stamp sheet</dd></dl>
+  <ol class="steps"><li>Each new citizen is paired with a veteran citizen (someone who arrived earlier).</li><li>Together they must collect 3 ministry stamps within 30 minutes.</li><li>Return to the desk with the completed buddy card.</li><li>Both receive the reward; the fastest pair of the hour is announced by Hanna.</li></ol>
+  <div class="reward">Reward · +30 CC each</div>
+  <p class="twist">Mixes friend groups and gets new arrivals into the game fast.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">14</span>
+    <h4>Anthem &amp; State Gesture Certification</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minijoy</span><span>1–10 guests · 3 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Choreographer</dd><dt>Where</dt><dd>Integration Desk / dance floor edge</dd><dt>Props</dt><dd>Speaker with the Ecotopia anthem, gesture poster</dd></dl>
+  <ol class="steps"><li>The choreographer teaches the 4 State Gestures (Stag Antlers, Ledger Bow, Breath Hold, Gratitude Palm).</li><li>Guests perform them to 30 seconds of the anthem.</li><li>Pass = gestures in the right order; certification stamp issued.</li><li>Certified citizens must perform the gestures whenever Hanna says &#x27;Gratitude&#x27;.</li></ol>
+  <div class="reward">Reward · +20 CC</div>
+  <p class="twist">Sets up crowd moments for the Grand Assembly at 23:30.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">15</span>
+    <h4>The Naturalisation Ceremony</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>All ministries</span><span>10–40 guests · 8 min, on the hour</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>High Warden + Hanna (PA)</dd><dt>Where</dt><dd>Main stage</dd><dt>Props</dt><dd>Seed packets or sapling stickers, ceremonial ledger, gong</dd></dl>
+  <ol class="steps"><li>Every hour, everyone who passed an integration game gathers at the stage.</li><li>Mass oath: &#x27;I compost my old self. I return my nitrogen. I accept my debt with gratitude.&#x27;</li><li>Names are read out; each new citizen receives a seed packet and the gong is struck.</li><li>Applause is mandatory and metered.</li></ol>
+  <div class="reward">Reward · +25 CC + seed packet</div>
+  <p class="twist">A satisfying public beat each hour that also drives crowds to the stage.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">16</span>
+    <h4>The Labour Market Orientation</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Miniservice</span><span>6–12 guests · 6 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>3–4 Ministers</dd><dt>Where</dt><dd>Corridor &#x27;job fair&#x27; table</dd><dt>Props</dt><dd>Ministry recruitment flyers, a bell</dd></dl>
+  <ol class="steps"><li>Speed-dating, but for jobs: ministers sit on one side, unassigned citizens on the other.</li><li>60-second pitches each way; bell rings, citizens move one seat.</li><li>At the end, ministers bid for citizens with treasury credits.</li><li>Hired citizens get a ministry stamp and their first shift.</li></ol>
+  <div class="reward">Reward · Hiring bonus 20–60 CC</div>
+  <p class="twist">Turns the concession hiring mechanic into a visible, funny moment.</p>
+  <div class="notes">Notes:</div>
+</article>
+  </div>
+</section><section class="cat">
+  <h2 class="ch">Ministry Stations</h2>
+  <div class="chs">Concession games that run all night at fixed locations</div>
+  <div class="flow">
+    <figure class="plate"><img src="images/bw/famine.jpg" style="height:58mm" alt=""><figcaption>Plate · The Stations of Daily Labour</figcaption></figure>
+    <p class="v dc">Station games are short, repeatable and give each ministry a reason to recruit labour. Choose two or three per ministry, at most.</p>
+    
+<article class="game">
+  <header>
+    <span class="gnum">17</span>
+    <h4>The Recycling Plant Sorting Line</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minirenewal</span><span>1–2 guests · 60 s</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Plant Supervisor</dd><dt>Where</dt><dd>Recycling plant / garage corner</dd><dt>Props</dt><dd>Crate of clean &#x27;trash&#x27; (cans, cartons, cork, fabric), 7 bins with absurd labels</dd></dl>
+  <ol class="steps"><li>Bins are labelled things like &#x27;Repentant Plastic&#x27;, &#x27;Former Luxuries&#x27;, &#x27;Nitrogen-Positive&#x27;, &#x27;Heresy&#x27;.</li><li>Guest sorts 20 items in 60 seconds.</li><li>Supervisor checks against a secret (and changing) sorting chart.</li><li>Each correct item +2 CC; each wrong item −2 CC.</li></ol>
+  <div class="reward">Reward · Up to +40 CC</div>
+  <p class="twist">The sorting chart changes every hour by decree; old rules become heresy.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">18</span>
+    <h4>Second Life Pawnshop</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minithrift</span><span>1 guest · 90 s</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Pawnbroker</dd><dt>Where</dt><dd>Minithrift table</dd><dt>Props</dt><dd>Box of random objects (a sock, a CD, a spoon, a lampshade), bell</dd></dl>
+  <ol class="steps"><li>Guest draws a random object.</li><li>They have 30 seconds to pitch three new uses for it.</li><li>Pawnbroker rings the bell for each convincing use.</li><li>3 bells = the object is &#x27;reborn&#x27; and the guest is paid.</li></ol>
+  <div class="reward">Reward · +10 CC per bell</div>
+  <p class="twist">The reusable-objects idea from the committee list, as a quick improv game.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">19</span>
+    <h4>Pedal Power Vigil</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilight</span><span>1–2 guests · 3 min shifts</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Dynamo Warden</dd><dt>Where</dt><dd>Bike dynamo by the bar</dd><dt>Props</dt><dd>Stationary bike with dynamo or light, leaderboard</dd></dl>
+  <ol class="steps"><li>The bar&#x27;s &#x27;sacred lamp&#x27; must stay lit; when nobody pedals, the warden switches it off.</li><li>Guests pedal 3-minute shifts.</li><li>If the lamp goes out, the bar stops serving until it&#x27;s relit (for 30 seconds — keep it light).</li><li>Fastest shift of the hour goes on the leaderboard.</li></ol>
+  <div class="reward">Reward · +30 CC per shift</div>
+  <p class="twist">Makes Minilight&#x27;s grid monopoly physical and loud.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">20</span>
+    <h4>Blind Tasting: The Most Sustainable Bite</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Miniplenty</span><span>1–4 guests · 2 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Sommelier of Scarcity</dd><dt>Where</dt><dd>Miniplenty snack table</dd><dt>Props</dt><dd>Blindfolds, 5 numbered cups (seaweed, cricket crisps, lentils, oat drink, one normal crisp)</dd></dl>
+  <ol class="steps"><li>Blindfolded guests taste 5 samples.</li><li>They must rank them from &#x27;most sustainable&#x27; to &#x27;most sinful&#x27;.</li><li>The normal crisp is always the sinner; spotting it pays a bonus.</li><li>Check allergies before blindfolding — offer a no-food version (smell only).</li></ol>
+  <div class="reward">Reward · +25 CC (pass 3/5), +35 CC (5/5)</div>
+  <p class="twist">Whoever enjoys the crisp too visibly is fined for nostalgia.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">21</span>
+    <h4>The Sensory Sanctum: Smell Your Way to Sustainability</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minibreath</span><span>1–3 guests · 3 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Olfactory Priest</dd><dt>Where</dt><dd>Sensory blocking room</dd><dt>Props</dt><dd>8 opaque jars (pine, soil, coffee, petrol-scented marker, rain, rubber…), blindfolds, soft light</dd></dl>
+  <ol class="steps"><li>Guests are led blindfolded into a quiet, dim room.</li><li>They smell each jar and say whether it is &#x27;Sanctioned&#x27; or &#x27;Heretical&#x27;.</li><li>The priest whispers the official verdict after each jar.</li><li>Guests leave with a breath stamp.</li></ol>
+  <div class="reward">Reward · +20 CC</div>
+  <p class="twist">Good low-energy station; also a calm place to send overwhelmed guests.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">22</span>
+    <h4>Ecococktail Indulgences</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Miniplenty × Miniflow</span><span>Any · ongoing</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>Bartenders</dd><dt>Where</dt><dd>Bar</dd><dt>Props</dt><dd>Cocktail menu with CC prices, &#x27;Neutralised&#x27; stamp</dd></dl>
+  <ol class="steps"><li>Every drink has a Carbon Price on the menu.</li><li>A drink becomes &#x27;Carbon-Neutral&#x27; if the guest performs a deed first: a compliment to a minister, 10 seconds of pedalling, a recited slogan.</li><li>Neutralised drinks get a stamp on the cup.</li><li>Guests who forget their deed are gently shamed by the bartender.</li></ol>
+  <div class="reward">Reward · Discount or stamp</div>
+  <p class="twist">Not a separate game: a layer over the existing bar.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">23</span>
+    <h4>Peetopia Flush Permits</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Miniflow</span><span>Any · 10 s</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Fluid Auditor (outside restrooms)</dd><dt>Where</dt><dd>Restroom corridor</dd><dt>Props</dt><dd>Flush permit tickets, clipboard, hydration chart poster</dd></dl>
+  <ol class="steps"><li>The auditor offers a &#x27;Flush Permit&#x27; as guests head to the restroom.</li><li>Returning moisture to the collective earns a stamp on the way out.</li><li>Guests who skip the auditor are written up (just a joke citation).</li><li>Never block the restroom or delay anyone in a hurry.</li></ol>
+  <div class="reward">Reward · +20 CC per return</div>
+  <p class="twist">Keeps the existing Peetopia idea light and fast.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">24</span>
+    <h4>Greenwashing: The Rebranding Desk</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Miniservice</span><span>1–2 guests · 2 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Brand Steward</dd><dt>Where</dt><dd>Scullery table</dd><dt>Props</dt><dd>Empty product packaging, green markers, leaf stickers</dd></dl>
+  <ol class="steps"><li>Guest picks a &#x27;sinful&#x27; product package (crisps, a shampoo bottle, a phone box).</li><li>In 90 seconds they must greenwash it: new name, leaf stickers, a slogan.</li><li>The steward hangs the best ones on the Wall of Purified Products.</li><li>Pairs with the existing Greenwashing Dishes shift.</li></ol>
+  <div class="reward">Reward · +20 CC, +40 CC if hung on the wall</div>
+  <p class="twist">The wall becomes a funny art piece by midnight.</p>
+  <div class="notes">Notes:</div>
+</article>
+  </div>
+</section><section class="cat">
+  <h2 class="ch">Stage &amp; Crowd</h2>
+  <div class="chs">Scheduled moments for the main stage, the PA and the whole room</div>
+  <div class="flow">
+    <figure class="plate"><img src="images/bw/trumpets.jpg" style="height:58mm" alt=""><figcaption>Plate · The Seven Trumpets of Morale</figcaption></figure>
+    <p class="v dc">Big moments to pull the room together between the station games. One every 30–45 minutes is plenty.</p>
+    
+<article class="game">
+  <header>
+    <span class="gnum">25</span>
+    <h4>The Ecotopia Anthem &amp; State Dance</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minijoy</span><span>Everyone · 4 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>Morale Officer + DJ</dd><dt>Where</dt><dd>Dance floor</dd><dt>Props</dt><dd>Anthem track, gesture poster, megaphone</dd></dl>
+  <ol class="steps"><li>At 22:00 and 23:30 the DJ fades into the anthem.</li><li>The Morale Officer leads the State Gestures from the stage.</li><li>Ministers &#x27;spot-check&#x27; devotion and hand out +10 CC to the most sincere dancers.</li><li>Ends with the whole room shouting &#x27;Born into debt! Repaid in devotion!&#x27;</li></ol>
+  <div class="reward">Reward · +10 CC spot rewards</div>
+  <p class="twist">Learned during the Inburgering, performed by everyone later.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">26</span>
+    <h4>The Ministry Rally</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>All ministries</span><span>3–5 ministries · 15 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>High Warden as judge</dd><dt>Where</dt><dd>Main stage</dd><dt>Props</dt><dd>Prompt cards, cardboard banners, markers, applause meter (or a judge with a sign)</dd></dl>
+  <ol class="steps"><li>Each competing ministry gets 10 minutes to prepare a 60-second rally speech and chant.</li><li>Prompts: &#x27;Why your ministry deserves more power&#x27;, &#x27;Why the rival ministry is a fire hazard&#x27;.</li><li>Each ministry performs; the crowd is the applause meter.</li><li>Winner receives a treasury grant and may fund a decree.</li></ol>
+  <div class="reward">Reward · +150 CC treasury grant</div>
+  <p class="twist">Drives the Central Decree Board and gives ministries a reason to recruit loud citizens.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">27</span>
+    <h4>The Sustainability Pageant</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minijoy</span><span>5–6 contestants · 15 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>2 hosts + 3 judges</dd><dt>Where</dt><dd>Main stage</dd><dt>Props</dt><dd>Sash for the winner, judges&#x27; scorecards, a runway (taped line)</dd></dl>
+  <ol class="steps"><li>Round 1, Lowest-Footprint Outfit: walk the runway explaining what your outfit gave up.</li><li>Round 2, Talent: 30 seconds of a sustainable talent (silent gratitude, composting mime…).</li><li>Round 3, Q&amp;A: &#x27;How would you end the world as sustainably as possible?&#x27;</li><li>Judges score; winner crowned Citizen of the Ledger.</li></ol>
+  <div class="reward">Reward · +100 CC + sash</div>
+  <p class="twist">Ideal for guests who came in full costume.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">28</span>
+    <h4>ABC: The Sustainability Gameshow</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minijoy × Minilove</span><span>4 teams of 3 · 15 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>Quizmaster in Hanna voice</dd><dt>Where</dt><dd>Stage or side room</dd><dt>Props</dt><dd>Buzzers or bells, question cards, scoreboard</dd></dl>
+  <ol class="steps"><li>Rounds: Carbon Prices, Doublethink, Pre-Collapse History (all wrong on purpose), Name That Ministry.</li><li>Teams buzz in; correct answers per the State, not reality.</li><li>Joker: once per game a team may &#x27;Denounce&#x27; another team to steal their points.</li><li>Winning team splits the prize.</li></ol>
+  <div class="reward">Reward · +60 CC per winning team member</div>
+  <p class="twist">A pub quiz where reality loses points.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">29</span>
+    <h4>How the World Ends (Open-Mic)</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minijoy</span><span>Up to 4 contestants · 10 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>Morale Officer</dd><dt>Where</dt><dd>Mini-podium</dd><dt>Props</dt><dd>Megaphone, banners, ribbon</dd></dl>
+  <ol class="steps"><li>Existing game: 60 seconds for the most melodramatic extinction monologue.</li><li>Rounds at 22:00, 22:45, 23:15.</li><li>Crowd applause picks the winner.</li><li>Winner receives the Order of Cathartic Hysteria.</li></ol>
+  <div class="reward">Reward · +100 CC + ribbon</div>
+  <p class="twist">Already in the run sheet; listed here for completeness.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">30</span>
+    <h4>Hanna Says (PA Broadcast Game)</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove</span><span>Everyone · 1 min, several times a night</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>Hanna on the PA + floor wardens</dd><dt>Where</dt><dd>Whole venue</dd><dt>Props</dt><dd>PA, scripted broadcasts</dd></dl>
+  <ol class="steps"><li>Hanna&#x27;s hourly bulletins include commands: &#x27;Citizens will now hold their breath in gratitude.&#x27;</li><li>Commands that start with &#x27;By decree&#x27; must be obeyed; others must be ignored.</li><li>Wardens fine the slowest or the wrong ones 10 CC (playfully).</li><li>Mix in genuinely useful info (bar times, schedule) the same way.</li></ol>
+  <div class="reward">Reward · Fines 10 CC</div>
+  <p class="twist">Simon Says with a posh voice and horrific news in between.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">31</span>
+    <h4>The Riot Drill</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove × Minishelter</span><span>Volunteers · 5 min</span><span>Intensity: Medium</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>4 Officers with cardboard shields</dd><dt>Where</dt><dd>Dance floor edge, marked zone</dd><dt>Props</dt><dd>Cardboard shields, tape for the zone, whistle</dd></dl>
+  <ol class="steps"><li>A choreographed, no-contact drill: officers &#x27;kettle&#x27; a taped zone that shrinks every 30 seconds.</li><li>Volunteers inside chant approved slogans and must stay in the zone.</li><li>Those squeezed out are &#x27;processed&#x27; (a stamp) and become spectators.</li><li>Last citizen standing receives a Loyalty Medal.</li></ol>
+  <div class="reward">Reward · +40 CC to the last citizen</div>
+  <p class="twist">Musical chairs as state theatre. Strict rule: no touching, volunteers only.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">32</span>
+    <h4>The Wig Snatching Arena</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minijoy</span><span>2 duellists · 60 s</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>Arena Referee</dd><dt>Where</dt><dd>Clearing near the stage</dd><dt>Props</dt><dd>Neon wigs, bell, chalk circle</dd></dl>
+  <ol class="steps"><li>Existing game: snatch the opponent&#x27;s wig without touching their body.</li><li>Best of 3, hands start on knees.</li><li>Entry +10 CC to Minijoy; winner +25 CC.</li><li>Good distraction for rebel runs nearby.</li></ol>
+  <div class="reward">Reward · +25 CC</div>
+  <p class="twist">Already in the run sheet; listed for completeness.</p>
+  <div class="notes">Notes:</div>
+</article>
+  </div>
+</section><section class="cat">
+  <h2 class="ch">Gambling &amp; the Debt Economy</h2>
+  <div class="chs">Games that move carbon credits between citizens and ministries</div>
+  <div class="flow">
+    <figure class="plate"><img src="images/bw/pale_horse.jpg" style="height:58mm" alt=""><figcaption>Plate · And Debt Rode Behind Him</figcaption></figure>
+    <p class="v dc">Gambling makes the economy feel alive and lets players climb out of debt quickly or sink further. Cap stakes at 50 CC so nobody is locked out of the night&#x27;s game.</p>
+    
+<article class="game">
+  <header>
+    <span class="gnum">33</span>
+    <h4>Carbon Roulette</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minijoy</span><span>Up to 6 · 2 min per spin</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Croupier</dd><dt>Where</dt><dd>Casino table</dd><dt>Props</dt><dd>Spinner or roulette wheel with the 10 ministry names + a black &#x27;STAG&#x27; field, chips</dd></dl>
+  <ol class="steps"><li>Players bet 10–50 CC on a ministry.</li><li>Winning ministry pays 5×; the STAG field takes all bets for the state.</li><li>The croupier announces each result as a state communiqué.</li><li>The winning ministry&#x27;s treasury gets +10 CC every spin.</li></ol>
+  <div class="reward">Reward · 5× stake</div>
+  <p class="twist">Ministries start sending members to cheer for their own field.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">34</span>
+    <h4>Liar&#x27;s Ledger</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove</span><span>3–6 · 10 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>Self-run (rules card)</dd><dt>Where</dt><dd>Any table</dd><dt>Props</dt><dd>5 dice and a cup per player</dd></dl>
+  <ol class="steps"><li>Liar&#x27;s dice: players bid on how many dice across the table show a face (&#x27;four 3s&#x27;).</li><li>Call &#x27;AUDIT&#x27; to challenge the previous bid.</li><li>Loser of each audit pays 10 CC into the pot and loses a die.</li><li>Last player with dice wins the pot.</li></ol>
+  <div class="reward">Reward · The pot</div>
+  <p class="twist">Bluffing as civic virtue.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">35</span>
+    <h4>Debt Futures Auction</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minithrift</span><span>Room · 10 min, once per hour</span><span>Intensity: Medium</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Auctioneer</dd><dt>Where</dt><dd>Stage or bar</dd><dt>Props</dt><dd>Gavel, &#x27;debt bonds&#x27; cards (volunteers only)</dd></dl>
+  <ol class="steps"><li>Volunteer citizens put a slice of their debt up for auction.</li><li>Others bid credits to &#x27;buy&#x27; it; the buyer may assign the debtor one light task (fetch a drink, perform a gesture).</li><li>The auctioneer narrates each citizen&#x27;s qualities like livestock at a fair.</li><li>Debt moves from seller to buyer on both passports.</li></ol>
+  <div class="reward">Reward · Debt transfer</div>
+  <p class="twist">Only volunteers; tasks must stay light and consensual.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">36</span>
+    <h4>The Carbon Confessional Price List</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove</span><span>1 guest · 90 s</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Confessor</dd><dt>Where</dt><dd>Confession booth</dd><dt>Props</dt><dd>Price list of sins, curtain, small bell</dd></dl>
+  <ol class="steps"><li>Guest confesses a pre-collapse sin; the confessor looks it up on the price list.</li><li>Pay the price in credits to receive absolution (a stamp).</li><li>Confessing someone else&#x27;s sin costs double.</li><li>Minilove keeps 50% of every absolution.</li></ol>
+  <div class="reward">Reward · Absolution stamp</div>
+  <p class="twist">The committee&#x27;s Carbon Confessions idea, made into a shop.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">37</span>
+    <h4>Indulgence Certificates</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Miniplenty × Minilove</span><span>Any · 30 s</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>Pardoner with tray</dd><dt>Where</dt><dd>Roaming</dd><dt>Props</dt><dd>Pre-printed gothic certificates (e.g. &#x27;Licence to shower 4 minutes&#x27;)</dd></dl>
+  <ol class="steps"><li>The pardoner roams the venue selling indulgences.</li><li>Each certificate permits one sin for one night: a second drink, a phone check, a hug.</li><li>Wardens may demand to see the certificate.</li><li>Unlicensed sinners are fined 20 CC.</li></ol>
+  <div class="reward">Reward · Costs 20–60 CC</div>
+  <p class="twist">Medieval indulgences meet carbon offsets.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">38</span>
+    <h4>The Ministry Stock Exchange</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minithrift</span><span>Room · all night</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Broker at a board</dd><dt>Where</dt><dd>Wall near the Decree Board</dd><dt>Props</dt><dd>Whiteboard with 10 ministry &#x27;share prices&#x27;, share slips</dd></dl>
+  <ol class="steps"><li>Citizens buy shares in ministries for 10 CC each.</li><li>Every 30 minutes the broker updates prices based on ministry treasuries and scandals.</li><li>Shares can be sold back at the current price.</li><li>Insider trading is a heresy (and therefore very popular).</li></ol>
+  <div class="reward">Reward · Varies</div>
+  <p class="twist">Gives spectators a reason to follow the ministry rivalries.</p>
+  <div class="notes">Notes:</div>
+</article>
+  </div>
+</section><section class="cat">
+  <h2 class="ch">Resistance &amp; the Machine</h2>
+  <div class="chs">Games that seed the AI-server twist and feed the revolution at 23:30</div>
+  <div class="flow">
+    <figure class="plate"><img src="images/bw/melencolia.jpg" style="height:58mm" alt=""><figcaption>Plate · Melencolia of the Machine</figcaption></figure>
+    <p class="v dc">These games tie into the secret that the Guardian Stag is an AI running on human brains. They should feel slightly off: too precise, too eager, glitching.</p>
+    
+<article class="game">
+  <header>
+    <span class="gnum">39</span>
+    <h4>Prove You Are Human</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove (the Machine)</span><span>1 guest · 2 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>1 Terminal Attendant</dd><dt>Where</dt><dd>Terminal by the cellar door</dd><dt>Props</dt><dd>Laptop or printed &#x27;captcha&#x27; cards with absurd tests</dd></dl>
+  <ol class="steps"><li>Before entering a sector, guests must pass a captcha: &#x27;Select all images containing gratitude&#x27;.</li><li>The attendant marks every answer as wrong at least once.</li><li>On the third try they pass and receive a sector stamp.</li><li>One captcha card in ten shows a cellar server rack — the attendant panics and takes it back.</li></ol>
+  <div class="reward">Reward · Sector stamp</div>
+  <p class="twist">Plants the AI clue in plain sight.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">40</span>
+    <h4>The Prompt Confessional</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minilove (the Machine)</span><span>1 guest · 2 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>Hidden typist</dd><dt>Where</dt><dd>Booth with screen</dd><dt>Props</dt><dd>Laptop showing a chat window, hidden operator on another laptop</dd></dl>
+  <ol class="steps"><li>Guests type a question or confession to &#x27;the Guardian Stag&#x27;.</li><li>A hidden operator replies in an over-polite, slightly broken AI voice.</li><li>Every reply ends with a debt adjustment.</li><li>Occasionally the Stag &#x27;leaks&#x27;: &#x27;Neural throughput insufficient. Please hydrate.&#x27;</li></ol>
+  <div class="reward">Reward · ±10–30 CC</div>
+  <p class="twist">Answers the committee&#x27;s &#x27;Sustainable AI, how to do it?&#x27; line with the twist itself.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">41</span>
+    <h4>The Whisper Chain</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Resistance (Thijs)</span><span>5 guests · 20 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>Thijs&#x27;s room</dd><dt>Where</dt><dd>Whole venue</dd><dt>Props</dt><dd>5 numbered cards, one secret phrase</dd></dl>
+  <ol class="steps"><li>A rebel whispers a phrase to the first link; each link must find the next by a visual sign (ankle stamp, red ribbon).</li><li>The last link reports the phrase back to Thijs.</li><li>If it arrives intact, the chain gets a truth fragment.</li><li>Minilove patrols may intercept a link: &#x27;You seem to be whispering.&#x27;</li></ol>
+  <div class="reward">Reward · Truth fragment</div>
+  <p class="twist">Telephone game meets underground cell structure.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">42</span>
+    <h4>Truth Fragment Hunt</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Resistance</span><span>Teams of 2–4 · 45 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>Thijs + 2 rebels</dd><dt>Where</dt><dd>Whole venue (hidden slips)</dd><dt>Props</dt><dd>10 hidden slips with server logs, cable photos, power bills</dd></dl>
+  <ol class="steps"><li>Teams receive a cryptic map from Thijs&#x27;s room.</li><li>Slips are hidden at ministry stations (under the compost bin, in the hollow book…).</li><li>Collect at least 5 fragments to unlock the cellar story.</li><li>Fragments are presented as evidence at 23:45.</li></ol>
+  <div class="reward">Reward · Revolution evidence</div>
+  <p class="twist">Feeds directly into the 23:45 raid script.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">43</span>
+    <h4>The Turing Tribunal</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Minijoy</span><span>Room · 10 min</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>Moderator + 3 &#x27;ministers&#x27;</dd><dt>Where</dt><dd>Stage</dd><dt>Props</dt><dd>3 chairs, script for one &#x27;bot&#x27; minister</dd></dl>
+  <ol class="steps"><li>Three ministers answer questions from the crowd.</li><li>One of them only reads from a printed script (the &#x27;bot&#x27;).</li><li>The crowd votes on who is the machine.</li><li>If they guess right, every resistance member present earns a truth fragment.</li></ol>
+  <div class="reward">Reward · Truth fragment / +20 CC</div>
+  <p class="twist">The audience practises spotting the machine before the reveal.</p>
+  <div class="notes">Notes:</div>
+</article>
+<article class="game">
+  <header>
+    <span class="gnum">44</span>
+    <h4>Sabotage the Ledger</h4>
+    <span class="pick">☐ PICK</span>
+  </header>
+  <div class="gmeta"><span>Resistance</span><span>Rebels · ongoing</span><span>Intensity: Low</span></div>
+  <dl class="kv small"><dt>Host</dt><dd>Self-run, rules card</dd><dt>Where</dt><dd>Central Decree Board</dd><dt>Props</dt><dd>Removable stickers, sticky notes, decoy decree slips</dd></dl>
+  <ol class="steps"><li>Rebels try to swap one decree slip on the Central Board without being seen.</li><li>Each successful swap removes 100 CC from an agenda.</li><li>Minilove guards the board; caught rebels are sent to the Interrogation room for a &#x27;refresher&#x27;.</li><li>A swap counts only when Thijs confirms it.</li></ol>
+  <div class="reward">Reward · Trash 100 CC from an agenda</div>
+  <p class="twist">A simpler, always-on version of the Netrunner runs.</p>
+  <div class="notes">Notes:</div>
+</article>
+  </div>
+</section><section class="cat summary">
+  <h2 class="ch">The Selection Ledger</h2>
+  <div class="chs">All 44 games on one sheet · tick, assign an owner, done</div>
+  <table class="tbl pickl"><tr><th>Pick</th><th>#</th><th>Game</th><th>Ministry</th></tr><tr class='grp'><td colspan='4'>The Interrogation</td></tr><tr><td>☐</td><td>1</td><td>Good Cop / Bad Cop Carbon Audit</td><td>Minilove</td></tr><tr><td>☐</td><td>2</td><td>The Prisoner&#x27;s Ledger</td><td>Minilove</td></tr><tr><td>☐</td><td>3</td><td>The Breath Polygraph</td><td>Minilove × Minibreath</td></tr><tr><td>☐</td><td>4</td><td>The 24-Hour Carbon Receipt</td><td>Minilove</td></tr><tr><td>☐</td><td>5</td><td>State Tongue Drill</td><td>Minilove</td></tr><tr><td>☐</td><td>6</td><td>The Ancestral Multiplier</td><td>Minilove</td></tr><tr><td>☐</td><td>7</td><td>Denounce a Neighbour</td><td>Minilove</td></tr><tr><td>☐</td><td>8</td><td>The Soft Interrogation (opt-out route)</td><td>Minilove</td></tr><tr class='grp'><td colspan='4'>The Inburgering</td></tr><tr><td>☐</td><td>9</td><td>The Civic Integration Exam</td><td>Minilove × Miniservice</td></tr><tr><td>☐</td><td>10</td><td>The Participation Declaration</td><td>Minilove</td></tr><tr><td>☐</td><td>11</td><td>Knowledge of Ecotopian Society</td><td>Miniservice</td></tr><tr><td>☐</td><td>12</td><td>The State Tongue Speaking Test</td><td>Minijoy</td></tr><tr><td>☐</td><td>13</td><td>The Integration Buddy</td><td>Miniservice</td></tr><tr><td>☐</td><td>14</td><td>Anthem &amp; State Gesture Certification</td><td>Minijoy</td></tr><tr><td>☐</td><td>15</td><td>The Naturalisation Ceremony</td><td>All ministries</td></tr><tr><td>☐</td><td>16</td><td>The Labour Market Orientation</td><td>Miniservice</td></tr><tr class='grp'><td colspan='4'>Ministry Stations</td></tr><tr><td>☐</td><td>17</td><td>The Recycling Plant Sorting Line</td><td>Minirenewal</td></tr><tr><td>☐</td><td>18</td><td>Second Life Pawnshop</td><td>Minithrift</td></tr><tr><td>☐</td><td>19</td><td>Pedal Power Vigil</td><td>Minilight</td></tr><tr><td>☐</td><td>20</td><td>Blind Tasting: The Most Sustainable Bite</td><td>Miniplenty</td></tr><tr><td>☐</td><td>21</td><td>The Sensory Sanctum: Smell Your Way to Sustainability</td><td>Minibreath</td></tr><tr><td>☐</td><td>22</td><td>Ecococktail Indulgences</td><td>Miniplenty × Miniflow</td></tr><tr><td>☐</td><td>23</td><td>Peetopia Flush Permits</td><td>Miniflow</td></tr><tr><td>☐</td><td>24</td><td>Greenwashing: The Rebranding Desk</td><td>Miniservice</td></tr><tr class='grp'><td colspan='4'>Stage &amp; Crowd</td></tr><tr><td>☐</td><td>25</td><td>The Ecotopia Anthem &amp; State Dance</td><td>Minijoy</td></tr><tr><td>☐</td><td>26</td><td>The Ministry Rally</td><td>All ministries</td></tr><tr><td>☐</td><td>27</td><td>The Sustainability Pageant</td><td>Minijoy</td></tr><tr><td>☐</td><td>28</td><td>ABC: The Sustainability Gameshow</td><td>Minijoy × Minilove</td></tr><tr><td>☐</td><td>29</td><td>How the World Ends (Open-Mic)</td><td>Minijoy</td></tr><tr><td>☐</td><td>30</td><td>Hanna Says (PA Broadcast Game)</td><td>Minilove</td></tr><tr><td>☐</td><td>31</td><td>The Riot Drill</td><td>Minilove × Minishelter</td></tr><tr><td>☐</td><td>32</td><td>The Wig Snatching Arena</td><td>Minijoy</td></tr><tr class='grp'><td colspan='4'>Gambling &amp; the Debt Economy</td></tr><tr><td>☐</td><td>33</td><td>Carbon Roulette</td><td>Minijoy</td></tr><tr><td>☐</td><td>34</td><td>Liar&#x27;s Ledger</td><td>Minilove</td></tr><tr><td>☐</td><td>35</td><td>Debt Futures Auction</td><td>Minithrift</td></tr><tr><td>☐</td><td>36</td><td>The Carbon Confessional Price List</td><td>Minilove</td></tr><tr><td>☐</td><td>37</td><td>Indulgence Certificates</td><td>Miniplenty × Minilove</td></tr><tr><td>☐</td><td>38</td><td>The Ministry Stock Exchange</td><td>Minithrift</td></tr><tr class='grp'><td colspan='4'>Resistance &amp; the Machine</td></tr><tr><td>☐</td><td>39</td><td>Prove You Are Human</td><td>Minilove (the Machine)</td></tr><tr><td>☐</td><td>40</td><td>The Prompt Confessional</td><td>Minilove (the Machine)</td></tr><tr><td>☐</td><td>41</td><td>The Whisper Chain</td><td>Resistance (Thijs)</td></tr><tr><td>☐</td><td>42</td><td>Truth Fragment Hunt</td><td>Resistance</td></tr><tr><td>☐</td><td>43</td><td>The Turing Tribunal</td><td>Minijoy</td></tr><tr><td>☐</td><td>44</td><td>Sabotage the Ledger</td><td>Resistance</td></tr></table>
+</section>
+</body>
+</html>

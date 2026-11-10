@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="210mm" height="297mm" viewBox="0 0 210 297">
+<title>Gladly.</title>
+<!-- black = ENGRAVE, red fill = CUT AWAY, white = bare wood -->
+<rect width="210" height="297" fill="#ff0000"/>
+<g inkscape:groupmode="layer" inkscape:label="piece">
+<rect x="1" y="1" width="208" height="295" rx="6" fill="#ffffff"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="background">
+<rect x="1" y="1" width="208" height="16" rx="6" fill="#000000"/>
+</g><g inkscape:groupmode="layer" inkscape:label="icon">
+<g transform="rotate(0.0 105.0 131.9)"><text x="105.0" y="131.9" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:118px;text-anchor:middle;fill:#ff0000" textLength="184" lengthAdjust="spacingAndGlyphs">OBEY</text><rect x="11.00" y="79.22" width="188.00" height="2.0" fill="#ffffff"/></g>
+</g><g inkscape:groupmode="layer" inkscape:label="type">
+<text x="105.0" y="226" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:48px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">GLADLY.</text><rect x="11" y="233" width="188" height="1.6" fill="#000000"/><text x="105.0" y="247" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:9.5px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">OBEDIENCE IS THE ONLY</text><text x="105.0" y="259" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:9.5px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">TRULY RENEWABLE RESOURCE</text><rect x="1" y="278" width="208" height="18" rx="6" fill="#000000"/><text x="105.0" y="290" style="font-family:'IBM Plex Mono';font-weight:600;-inkscape-font-specification:'IBM Plex Mono SemiBold';font-size:7px;text-anchor:middle;fill:#ffffff" >DECREE Nº 09 · R.E.I.G.N. · ECOTOPIA</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="holes">
+<circle cx="12" cy="9" r="2.5" fill="#ff0000"/><circle cx="198" cy="9" r="2.5" fill="#ff0000"/>
+</g>
+</svg>

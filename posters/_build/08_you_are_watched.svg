@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="210mm" height="297mm" viewBox="0 0 210 297">
+<title>You Are Watched</title>
+<!-- black = ENGRAVE, red fill = CUT AWAY, white = bare wood -->
+<rect width="210" height="297" fill="#ff0000"/>
+<g inkscape:groupmode="layer" inkscape:label="piece">
+<rect x="1" y="1" width="208" height="295" rx="6" fill="#ffffff"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="background">
+<clipPath id="s127838576288736"><rect x="1" y="1" width="208" height="178" rx="3"/></clipPath><g clip-path="url(#s127838576288736)"><polygon points="105.00,100.00 352.89,132.41 346.54,164.49" fill="#000000" />
+<polygon points="105.00,100.00 336.06,195.46 321.62,224.81" fill="#000000" />
+<polygon points="105.00,100.00 303.48,252.01 281.94,276.62" fill="#000000" />
+<polygon points="105.00,100.00 257.37,298.20 230.19,316.39" fill="#000000" />
+<polygon points="105.00,100.00 200.88,330.88 169.92,341.42" fill="#000000" />
+<polygon points="105.00,100.00 137.85,347.83 105.22,350.00" fill="#000000" />
+<polygon points="105.00,100.00 72.59,347.89 40.51,341.54" fill="#000000" />
+<polygon points="105.00,100.00 9.54,331.06 -19.81,316.62" fill="#000000" />
+<polygon points="105.00,100.00 -47.01,298.48 -71.62,276.94" fill="#000000" />
+<polygon points="105.00,100.00 -93.20,252.37 -111.39,225.19" fill="#000000" />
+<polygon points="105.00,100.00 -125.88,195.88 -136.42,164.92" fill="#000000" />
+<polygon points="105.00,100.00 -142.83,132.85 -145.00,100.22" fill="#000000" />
+<polygon points="105.00,100.00 -142.89,67.59 -136.54,35.51" fill="#000000" />
+<polygon points="105.00,100.00 -126.06,4.54 -111.62,-24.81" fill="#000000" />
+<polygon points="105.00,100.00 -93.48,-52.01 -71.94,-76.62" fill="#000000" />
+<polygon points="105.00,100.00 -47.37,-98.20 -20.19,-116.39" fill="#000000" />
+<polygon points="105.00,100.00 9.12,-130.88 40.08,-141.42" fill="#000000" />
+<polygon points="105.00,100.00 72.15,-147.83 104.78,-150.00" fill="#000000" />
+<polygon points="105.00,100.00 137.41,-147.89 169.49,-141.54" fill="#000000" />
+<polygon points="105.00,100.00 200.46,-131.06 229.81,-116.62" fill="#000000" />
+<polygon points="105.00,100.00 257.01,-98.48 281.62,-76.94" fill="#000000" />
+<polygon points="105.00,100.00 303.20,-52.37 321.39,-25.19" fill="#000000" />
+<polygon points="105.00,100.00 335.88,4.12 346.42,35.08" fill="#000000" />
+<polygon points="105.00,100.00 352.83,67.15 355.00,99.78" fill="#000000" /></g><circle cx="105.0" cy="100" r="64" fill="#ffffff"/><circle cx="105.0" cy="100" r="64" fill="none" stroke="#000000" stroke-width="2.4"/>
+</g><g inkscape:groupmode="layer" inkscape:label="icon">
+<path d="M51.64,100 Q105.0,50.70 158.36,100 Q105.0,149.30 51.64,100 Z" fill="#000000"/>
+<circle cx="105.0" cy="100" r="20.88" fill="#ffffff"/>
+<polygon points="105.00,100.00 123.56,100.00 123.28,103.22" fill="#000000" />
+<polygon points="105.00,100.00 122.44,106.35 121.07,109.28" fill="#000000" />
+<polygon points="105.00,100.00 119.22,111.93 116.93,114.22" fill="#000000" />
+<polygon points="105.00,100.00 114.28,116.07 111.35,117.44" fill="#000000" />
+<polygon points="105.00,100.00 108.22,118.28 105.00,118.56" fill="#000000" />
+<polygon points="105.00,100.00 101.78,118.28 98.65,117.44" fill="#000000" />
+<polygon points="105.00,100.00 95.72,116.07 93.07,114.22" fill="#000000" />
+<polygon points="105.00,100.00 90.78,111.93 88.93,109.28" fill="#000000" />
+<polygon points="105.00,100.00 87.56,106.35 86.72,103.22" fill="#000000" />
+<polygon points="105.00,100.00 86.44,100.00 86.72,96.78" fill="#000000" />
+<polygon points="105.00,100.00 87.56,93.65 88.93,90.72" fill="#000000" />
+<polygon points="105.00,100.00 90.78,88.07 93.07,85.78" fill="#000000" />
+<polygon points="105.00,100.00 95.72,83.93 98.65,82.56" fill="#000000" />
+<polygon points="105.00,100.00 101.78,81.72 105.00,81.44" fill="#000000" />
+<polygon points="105.00,100.00 108.22,81.72 111.35,82.56" fill="#000000" />
+<polygon points="105.00,100.00 114.28,83.93 116.93,85.78" fill="#000000" />
+<polygon points="105.00,100.00 119.22,88.07 121.07,90.72" fill="#000000" />
+<polygon points="105.00,100.00 122.44,93.65 123.28,96.78" fill="#000000" />
+<circle cx="105.0" cy="100" r="9.86" fill="#ffffff"/>
+<circle cx="105.0" cy="100" r="6.38" fill="#ff0000"/>
+<line x1="70.67" y1="81.62" x2="65.28" y2="75.55" stroke="#000000" stroke-width="3.19" stroke-linecap="round"/>
+<line x1="82.05" y1="76.21" x2="78.30" y2="69.00" stroke="#000000" stroke-width="3.19" stroke-linecap="round"/>
+<line x1="93.51" y1="72.95" x2="91.59" y2="65.06" stroke="#000000" stroke-width="3.19" stroke-linecap="round"/>
+<line x1="105.00" y1="71.87" x2="105.00" y2="63.75" stroke="#000000" stroke-width="3.19" stroke-linecap="round"/>
+<line x1="116.49" y1="72.95" x2="118.41" y2="65.06" stroke="#000000" stroke-width="3.19" stroke-linecap="round"/>
+<line x1="127.95" y1="76.21" x2="131.70" y2="69.00" stroke="#000000" stroke-width="3.19" stroke-linecap="round"/>
+<line x1="139.33" y1="81.62" x2="144.72" y2="75.55" stroke="#000000" stroke-width="3.19" stroke-linecap="round"/>
+</g><g inkscape:groupmode="layer" inkscape:label="type">
+<text x="105.0" y="226" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:48px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">YOU ARE WATCHED</text><rect x="11" y="233" width="188" height="1.6" fill="#000000"/><text x="105.0" y="247" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:9.5px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">BECAUSE YOU ARE LOVED.</text><text x="105.0" y="259" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:9.5px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">SMILE FOR THE CAMERAS · THEY SMILE FOR YOU</text><rect x="1" y="278" width="208" height="18" rx="6" fill="#000000"/><text x="105.0" y="290" style="font-family:'IBM Plex Mono';font-weight:600;-inkscape-font-specification:'IBM Plex Mono SemiBold';font-size:7px;text-anchor:middle;fill:#ffffff" >DECREE Nº 08 · R.E.I.G.N. · ECOTOPIA</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="holes">
+<circle cx="12" cy="9" r="2.5" fill="#ff0000"/><circle cx="198" cy="9" r="2.5" fill="#ff0000"/>
+</g>
+</svg>

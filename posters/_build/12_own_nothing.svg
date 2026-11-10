@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="210mm" height="297mm" viewBox="0 0 210 297">
+<title>Own Nothing</title>
+<!-- black = ENGRAVE, red fill = CUT AWAY, white = bare wood -->
+<rect width="210" height="297" fill="#ff0000"/>
+<g inkscape:groupmode="layer" inkscape:label="piece">
+<rect x="1" y="1" width="208" height="295" rx="6" fill="#ffffff"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="background">
+<rect x="1" y="1" width="208" height="16" rx="6" fill="#000000"/><circle cx="105.0" cy="100" r="64" fill="#ffffff"/><circle cx="105.0" cy="100" r="64" fill="none" stroke="#000000" stroke-width="2.4"/>
+</g><g inkscape:groupmode="layer" inkscape:label="icon">
+<polygon points="70.20,101.16 105.00,119.72 105.00,149.88 70.20,131.32" fill="#000000" />
+<polygon points="105.00,119.72 139.80,101.16 139.80,131.32 105.00,149.88" fill="#000000" />
+<polygon points="70.20,101.16 105.00,82.60 139.80,101.16 105.00,119.72" fill="#ffffff" stroke="#000000" stroke-width="2.32" stroke-linejoin="round"/>
+<path d="M105.0,82.60 L105.0,95.36 L79.48,108.12 M105.0,95.36 L130.52,108.12" fill="none" stroke="#000000" stroke-width="1.74"/>
+<polygon points="70.20,101.16 51.64,93.04 84.12,73.32 105.00,82.60" fill="#000000" stroke="#ffffff" stroke-width="1.16"/>
+<polygon points="105.00,119.72 139.80,101.16 157.20,111.60 122.40,130.16" fill="#000000" stroke="#ffffff" stroke-width="1.45"/>
+<line x1="105.0" y1="119.72" x2="105.0" y2="149.88" stroke="#ffffff" stroke-width="1.45"/>
+<line x1="91.08" y1="71.00" x2="91.08" y2="52.44" stroke="#ff0000" stroke-width="3.48" stroke-linecap="round" stroke-dasharray="4.64 4.06"/>
+<line x1="105.00" y1="71.00" x2="105.00" y2="52.44" stroke="#ff0000" stroke-width="3.48" stroke-linecap="round" stroke-dasharray="4.64 4.06"/>
+<line x1="118.92" y1="71.00" x2="118.92" y2="52.44" stroke="#ff0000" stroke-width="3.48" stroke-linecap="round" stroke-dasharray="4.64 4.06"/>
+</g><g inkscape:groupmode="layer" inkscape:label="type">
+<text x="105.0" y="226" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:48px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">OWN NOTHING</text><rect x="11" y="233" width="188" height="1.6" fill="#000000"/><text x="105.0" y="247" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:9.5px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">POSSESSIONS ARE CARBON.</text><text x="105.0" y="259" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:9.5px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">SURRENDER THEM WITH A SMILE.</text><rect x="1" y="278" width="208" height="18" rx="6" fill="#000000"/><text x="105.0" y="290" style="font-family:'IBM Plex Mono';font-weight:600;-inkscape-font-specification:'IBM Plex Mono SemiBold';font-size:7px;text-anchor:middle;fill:#ffffff" >DECREE Nº 12 · R.E.I.G.N. · ECOTOPIA</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="holes">
+<circle cx="12" cy="9" r="2.5" fill="#ff0000"/><circle cx="198" cy="9" r="2.5" fill="#ff0000"/>
+</g>
+</svg>

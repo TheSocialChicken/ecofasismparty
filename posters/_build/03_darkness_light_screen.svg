@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="297mm" height="420mm" viewBox="0 0 297 420">
+<title>Darkness Is Devotion</title>
+<!-- black = ENGRAVE, red fill = CUT AWAY, white = bare wood -->
+<rect width="297" height="420" fill="#ff0000"/>
+<g inkscape:groupmode="layer" inkscape:label="piece">
+<rect x="1" y="1" width="295" height="418" rx="6" fill="#ffffff"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="rays">
+<clipPath id="c3"><rect x="14" y="22" width="269" height="236" rx="3"/></clipPath><g clip-path="url(#c3)"><polygon points="148.50,150.00 377.76,168.38 372.07,204.02" fill="#ff0000" />
+<polygon points="148.50,150.00 360.86,238.33 344.43,270.46" fill="#ff0000" />
+<polygon points="148.50,150.00 323.18,299.63 297.62,325.11" fill="#ff0000" />
+<polygon points="148.50,150.00 268.39,346.28 236.21,362.62" fill="#ff0000" />
+<polygon points="148.50,150.00 201.87,373.72 166.21,379.32" fill="#ff0000" />
+<polygon points="148.50,150.00 130.12,379.26 94.48,373.57" fill="#ff0000" />
+<polygon points="148.50,150.00 60.17,362.36 28.04,345.93" fill="#ff0000" />
+<polygon points="148.50,150.00 -1.13,324.68 -26.61,299.12" fill="#ff0000" />
+<polygon points="148.50,150.00 -47.78,269.89 -64.12,237.71" fill="#ff0000" />
+<polygon points="148.50,150.00 -75.22,203.37 -80.82,167.71" fill="#ff0000" />
+<polygon points="148.50,150.00 -80.76,131.62 -75.07,95.98" fill="#ff0000" />
+<polygon points="148.50,150.00 -63.86,61.67 -47.43,29.54" fill="#ff0000" />
+<polygon points="148.50,150.00 -26.18,0.37 -0.62,-25.11" fill="#ff0000" />
+<polygon points="148.50,150.00 28.61,-46.28 60.79,-62.62" fill="#ff0000" />
+<polygon points="148.50,150.00 95.13,-73.72 130.79,-79.32" fill="#ff0000" />
+<polygon points="148.50,150.00 166.88,-79.26 202.52,-73.57" fill="#ff0000" />
+<polygon points="148.50,150.00 236.83,-62.36 268.96,-45.93" fill="#ff0000" />
+<polygon points="148.50,150.00 298.13,-24.68 323.61,0.88" fill="#ff0000" />
+<polygon points="148.50,150.00 344.78,30.11 361.12,62.29" fill="#ff0000" />
+<polygon points="148.50,150.00 372.22,96.63 377.82,132.29" fill="#ff0000" /></g>
+</g><g inkscape:groupmode="layer" inkscape:label="bulb">
+<circle cx="148.5" cy="150" r="86" fill="#ffffff"/><circle cx="148.5" cy="120" r="52" fill="#000000"/>
+<polygon points="119.90,161.60 177.10,161.60 170.34,195.40 126.66,195.40" fill="#000000" />
+<rect x="127.70" y="200.60" width="41.60" height="8.84" fill="#000000"/>
+<rect x="127.70" y="214.12" width="41.60" height="8.84" fill="#000000"/>
+<rect x="127.70" y="227.64" width="41.60" height="8.84" fill="#000000"/>
+<path d="M132.90,159.00 L132.90,125.20 L143.30,112.20 L153.70,125.20 L164.10,112.20 L164.10,159.00" fill="none" stroke="#ffffff" stroke-width="3.64"/><g transform="rotate(-38 148.5 160)"><rect x="20" y="150" width="257" height="20" fill="#ffffff"/><rect x="20" y="153.5" width="257" height="13" fill="#000000"/></g>
+</g><g inkscape:groupmode="layer" inkscape:label="type">
+<rect x="14" y="266" width="269" height="5" fill="#000000"/><text x="148.5" y="312" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:46px;text-anchor:middle;fill:#000000" textLength="257" lengthAdjust="spacingAndGlyphs">DARKNESS IS</text><text x="148.5" y="362" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:52px;text-anchor:middle;fill:#000000" textLength="257" lengthAdjust="spacingAndGlyphs">DEVOTION</text><rect x="14" y="368" width="269" height="2" fill="#000000"/><text x="148.5" y="384" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:11px;text-anchor:middle;fill:#000000" textLength="257" lengthAdjust="spacingAndGlyphs">SURRENDER YOUR LIGHT. THE STAG RETURNS IT TO THE EARTH.</text><text x="148.5" y="398" style="font-family:'IBM Plex Mono';font-weight:600;-inkscape-font-specification:'IBM Plex Mono SemiBold';font-size:6.8px;text-anchor:middle;fill:#000000" >Every switched-off bulb erases 3 carbon credits of debt</text><text x="148.5" y="412" style="font-family:'IBM Plex Mono';font-weight:600;-inkscape-font-specification:'IBM Plex Mono SemiBold';font-size:8px;text-anchor:middle;fill:#000000" >MINISTRY OF THE SUNFLOWER · R.E.I.G.N.</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="holes">
+<circle cx="14" cy="9" r="2.5" fill="#ff0000"/><circle cx="283" cy="9" r="2.5" fill="#ff0000"/>
+</g>
+</svg>

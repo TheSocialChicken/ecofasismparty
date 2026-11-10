@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="210mm" height="297mm" viewBox="0 0 210 297">
+<title>Give Thanks</title>
+<!-- black = ENGRAVE, red fill = CUT AWAY, white = bare wood -->
+<rect width="210" height="297" fill="#ff0000"/>
+<g inkscape:groupmode="layer" inkscape:label="piece">
+<rect x="1" y="1" width="208" height="295" rx="6" fill="#ffffff"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="background">
+<rect x="1" y="1" width="208" height="16" rx="6" fill="#000000"/><circle cx="105.0" cy="100" r="64" fill="#ffffff"/><circle cx="105.0" cy="100" r="64" fill="none" stroke="#000000" stroke-width="2.4"/>
+</g><g inkscape:groupmode="layer" inkscape:label="icon">
+<clipPath id="sun-clip"><path d="M52.80,117.40 A52.20,52.20 0 0 1 157.20,117.40 Z"/></clipPath><g clip-path="url(#sun-clip)"><polygon points="105.00,117.40 173.89,127.31 171.78,137.01" fill="#ff0000" />
+<polygon points="105.00,117.40 168.31,146.31 163.55,155.03" fill="#ff0000" />
+<polygon points="105.00,117.40 157.60,162.98 150.58,170.00" fill="#ff0000" />
+<polygon points="105.00,117.40 142.63,175.95 133.91,180.71" fill="#ff0000" />
+<polygon points="105.00,117.40 124.61,184.18 114.91,186.29" fill="#ff0000" />
+<polygon points="105.00,117.40 105.00,187.00 95.09,186.29" fill="#ff0000" />
+<polygon points="105.00,117.40 85.39,184.18 76.09,180.71" fill="#ff0000" />
+<polygon points="105.00,117.40 67.37,175.95 59.42,170.00" fill="#ff0000" />
+<polygon points="105.00,117.40 52.40,162.98 46.45,155.03" fill="#ff0000" />
+<polygon points="105.00,117.40 41.69,146.31 38.22,137.01" fill="#ff0000" />
+<polygon points="105.00,117.40 36.11,127.31 35.40,117.40" fill="#ff0000" />
+<polygon points="105.00,117.40 36.11,107.49 38.22,97.79" fill="#ff0000" />
+<polygon points="105.00,117.40 41.69,88.49 46.45,79.77" fill="#ff0000" />
+<polygon points="105.00,117.40 52.40,71.82 59.42,64.80" fill="#ff0000" />
+<polygon points="105.00,117.40 67.37,58.85 76.09,54.09" fill="#ff0000" />
+<polygon points="105.00,117.40 85.39,50.62 95.09,48.51" fill="#ff0000" />
+<polygon points="105.00,117.40 105.00,47.80 114.91,48.51" fill="#ff0000" />
+<polygon points="105.00,117.40 124.61,50.62 133.91,54.09" fill="#ff0000" />
+<polygon points="105.00,117.40 142.63,58.85 150.58,64.80" fill="#ff0000" />
+<polygon points="105.00,117.40 157.60,71.82 163.55,79.77" fill="#ff0000" />
+<polygon points="105.00,117.40 168.31,88.49 171.78,97.79" fill="#ff0000" />
+<polygon points="105.00,117.40 173.89,107.49 174.60,117.40" fill="#ff0000" /></g><path d="M80.64,117.40 A24.36,24.36 0 0 1 129.36,117.40 Z" fill="#ffffff" stroke="#000000" stroke-width="3.48"/><rect x="55.12" y="118.56" width="99.76" height="2.90" fill="#000000"/><rect x="64.40" y="126.68" width="81.20" height="2.90" fill="#000000"/><rect x="76.00" y="134.80" width="58.00" height="2.90" fill="#000000"/><rect x="88.76" y="142.92" width="32.48" height="2.90" fill="#000000"/><rect x="102.68" y="82.60" width="4.64" height="33.64" fill="#000000"/><ellipse cx="93.40" cy="80.28" rx="12.18" ry="4.93" transform="rotate(28 93.40 80.28)" fill="#000000"/><ellipse cx="116.60" cy="80.28" rx="12.18" ry="4.93" transform="rotate(-28 116.60 80.28)" fill="#000000"/>
+</g><g inkscape:groupmode="layer" inkscape:label="type">
+<text x="105.0" y="226" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:48px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">GIVE THANKS</text><rect x="11" y="233" width="188" height="1.6" fill="#000000"/><text x="105.0" y="247" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:9.5px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">THIS MORNING THE STATE</text><text x="105.0" y="259" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:9.5px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">ALLOWED THE SUN TO RISE</text><rect x="1" y="278" width="208" height="18" rx="6" fill="#000000"/><text x="105.0" y="290" style="font-family:'IBM Plex Mono';font-weight:600;-inkscape-font-specification:'IBM Plex Mono SemiBold';font-size:7px;text-anchor:middle;fill:#ffffff" >DECREE Nº 15 · R.E.I.G.N. · ECOTOPIA</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="holes">
+<circle cx="12" cy="9" r="2.5" fill="#ff0000"/><circle cx="198" cy="9" r="2.5" fill="#ff0000"/>
+</g>
+</svg>

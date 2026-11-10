@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="297mm" height="420mm" viewBox="0 0 297 420">
+<title>Recycling Plant</title>
+<!-- black = ENGRAVE, red fill = CUT AWAY, white = bare wood -->
+<rect width="297" height="420" fill="#ff0000"/>
+<g inkscape:groupmode="layer" inkscape:label="piece">
+<rect x="1" y="1" width="295" height="418" rx="6" fill="#ffffff"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="wedge">
+<clipPath id="c2"><rect x="1" y="1" width="295" height="418" rx="3"/></clipPath><g clip-path="url(#c2)"><polygon points="90.00,0.00 297.00,0.00 297.00,250.00 0.00,120.00 0.00,0.00" fill="#000000" /></g>
+</g><g inkscape:groupmode="layer" inkscape:label="sigil">
+<circle cx="212" cy="118" r="70" fill="#ffffff"/><path d="M222.40,69.09 A50,50 0 0 1 261.73,123.23" fill="none" stroke="#ff0000" stroke-width="13"/>
+<polygon points="259.55,143.91 277.89,124.93 245.57,121.53" fill="#ff0000" />
+<path d="M249.16,151.46 A50,50 0 0 1 182.61,158.45" fill="none" stroke="#ff0000" stroke-width="13"/>
+<polygon points="165.78,146.22 173.06,171.60 192.16,145.30" fill="#ff0000" />
+<path d="M164.45,133.45 A50,50 0 0 1 191.66,72.32" fill="none" stroke="#ff0000" stroke-width="13"/>
+<polygon points="210.66,63.86 185.05,57.48 198.27,87.17" fill="#ff0000" /><g><polygon points="206.68,110.00 217.32,110.00 218.46,113.04 215.80,121.40 214.28,126.72 212.00,128.62 209.72,126.72 208.20,121.40 205.54,113.04" fill="#000000" />
+<polygon points="207.06,111.14 198.32,108.10 200.98,111.90 205.54,114.94" fill="#000000" />
+<polygon points="216.94,111.14 225.68,108.10 223.02,111.90 218.46,114.94" fill="#000000" />
+<path d="M209.34,110.38 L206.30,103.16 L204.40,95.56 L205.16,87.96 L207.82,81.12 M214.66,110.38 L217.70,103.16 L219.60,95.56 L218.84,87.96 L216.18,81.12 M206.30,103.16 L200.22,100.50 M217.70,103.16 L223.78,100.50 M204.40,95.56 L197.94,91.00 M219.60,95.56 L226.06,91.00 M204.78,92.14 L208.96,90.24 M219.22,92.14 L215.04,90.24 M205.16,87.96 L200.98,80.36 M218.84,87.96 L223.02,80.36" fill="none" stroke="#000000" stroke-width="1.98" stroke-linejoin="round" stroke-linecap="round"/>
+<polygon points="210.10,115.70 207.82,114.94 208.58,116.84" fill="#ffffff" />
+<polygon points="213.90,115.70 216.18,114.94 215.42,116.84" fill="#ffffff" />
+<polygon points="210.48,125.58 213.52,125.58 212.00,127.48" fill="#ffffff" /></g>
+</g><g inkscape:groupmode="layer" inkscape:label="type">
+<text x="20" y="64" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:58px;text-anchor:start;fill:#ffffff" textLength="60" lengthAdjust="spacingAndGlyphs">BE</text><text x="20" y="108" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:34px;text-anchor:start;fill:#ffffff" textLength="108" lengthAdjust="spacingAndGlyphs">PROMOTED</text><text x="148.5" y="290" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:44px;text-anchor:middle;fill:#000000" textLength="257" lengthAdjust="spacingAndGlyphs">TO THE</text><text x="148.5" y="340" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:50px;text-anchor:middle;fill:#000000" textLength="257" lengthAdjust="spacingAndGlyphs">RECYCLING PLANT</text><rect x="20" y="352" width="257" height="2" fill="#000000"/><text x="148.5" y="370" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:13px;text-anchor:middle;fill:#000000" textLength="257" lengthAdjust="spacingAndGlyphs">IT IS NOT A PUNISHMENT. IT IS A PRIVILEGE.</text><text x="148.5" y="386" style="font-family:'IBM Plex Mono';font-weight:600;-inkscape-font-specification:'IBM Plex Mono SemiBold';font-size:7px;text-anchor:middle;fill:#000000" >Return reborn: new name · zero debt · one with the soil</text><rect x="1" y="398" width="295" height="21" rx="6" fill="#000000"/><text x="148.5" y="412" style="font-family:'IBM Plex Mono';font-weight:600;-inkscape-font-specification:'IBM Plex Mono SemiBold';font-size:8.5px;text-anchor:middle;fill:#ffffff" >MINISTRY OF THE MUSHROOM · R.E.I.G.N.</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="holes">
+<circle cx="14" cy="9" r="2.5" fill="#ff0000"/><circle cx="283" cy="9" r="2.5" fill="#ff0000"/>
+</g>
+</svg>

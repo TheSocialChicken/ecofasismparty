@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+     width="210mm" height="297mm" viewBox="0 0 210 297">
+<title>Breathe Less</title>
+<!-- black = ENGRAVE, red fill = CUT AWAY, white = bare wood -->
+<rect width="210" height="297" fill="#ff0000"/>
+<g inkscape:groupmode="layer" inkscape:label="piece">
+<rect x="1" y="1" width="208" height="295" rx="6" fill="#ffffff"/>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="background">
+<clipPath id="s127838576289216"><rect x="1" y="1" width="208" height="295" rx="3"/></clipPath><g clip-path="url(#s127838576289216)"><polygon points="0.00,0.00 210.00,0.00 210.00,128.00 0.00,176.00" fill="#000000" /></g><circle cx="105.0" cy="100" r="64" fill="#ffffff"/><circle cx="105.0" cy="100" r="64" fill="none" stroke="#000000" stroke-width="2.4"/>
+</g><g inkscape:groupmode="layer" inkscape:label="icon">
+<rect x="101.52" y="58.24" width="6.96" height="29.00" fill="#000000"/>
+<path d="M99.20,82.60 C84.70,66.36 59.76,88.40 62.08,117.40 C63.24,138.28 84.12,141.76 99.20,132.48 Z" fill="#000000"/>
+<path d="M97.46,93.04 L84.12,106.96 M89.34,101.16 L76.00,93.04 M84.12,106.96 L74.84,120.88 M84.12,106.96 L89.34,126.68" fill="none" stroke="#ff0000" stroke-width="3.48" stroke-linecap="round"/>
+<ellipse cx="96.88" cy="53.60" rx="8.12" ry="3.48" transform="rotate(30 96.88 53.60)" fill="#000000"/>
+<path d="M110.80,82.60 C125.30,66.36 150.24,88.40 147.92,117.40 C146.76,138.28 125.88,141.76 110.80,132.48 Z" fill="#000000"/>
+<path d="M112.54,93.04 L125.88,106.96 M120.66,101.16 L134.00,93.04 M125.88,106.96 L135.16,120.88 M125.88,106.96 L120.66,126.68" fill="none" stroke="#ff0000" stroke-width="3.48" stroke-linecap="round"/>
+<ellipse cx="113.12" cy="53.60" rx="8.12" ry="3.48" transform="rotate(-30 113.12 53.60)" fill="#000000"/>
+</g><g inkscape:groupmode="layer" inkscape:label="type">
+<text x="105.0" y="226" style="font-family:'Noto Sans Display';font-weight:900;font-stretch:extra-condensed;-inkscape-font-specification:'Noto Sans Display ExtraCondensed Black';font-size:48px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">BREATHE LESS</text><rect x="11" y="233" width="188" height="1.6" fill="#000000"/><text x="105.0" y="247" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:9.5px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">EXHALE ONLY WHEN NECESSARY.</text><text x="105.0" y="259" style="font-family:'Noto Sans';font-weight:800;font-stretch:condensed;-inkscape-font-specification:'Noto Sans Condensed ExtraBold';font-size:9.5px;text-anchor:middle;fill:#000000" textLength="188" lengthAdjust="spacingAndGlyphs">CO2 IS A PRIVILEGE, NOT A RIGHT.</text><rect x="1" y="278" width="208" height="18" rx="6" fill="#000000"/><text x="105.0" y="290" style="font-family:'IBM Plex Mono';font-weight:600;-inkscape-font-specification:'IBM Plex Mono SemiBold';font-size:7px;text-anchor:middle;fill:#ffffff" >DECREE Nº 11 · R.E.I.G.N. · ECOTOPIA</text>
+</g>
+<g inkscape:groupmode="layer" inkscape:label="holes">
+<circle cx="12" cy="9" r="2.5" fill="#ff0000"/><circle cx="198" cy="9" r="2.5" fill="#ff0000"/>
+</g>
+</svg>
