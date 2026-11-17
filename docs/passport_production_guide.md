@@ -21,7 +21,6 @@
 | **4** | **Game Design & Economics** | [`print_game_design_a6_booklet.html`](print_game_design_a6_booklet.html) | 16 | 2 A4 Duplex | Concession loop, debt absorption formula, Netrunner/Secret Hitler engine |
 | **5** | **Quest Cards & Facilitator** | [`print_quest_cards_a6_booklet.html`](print_quest_cards_a6_booklet.html) | 16 | 2 A4 Duplex | Minister clipboard powers, 10 seeded moles, 5 Netrunner runs, climax script |
 
-
 *Note: All booklets include both **🖨️ A4 Imposition Print View** (for physical fabrication) and **📖 Sequential Reading View** (for screen reading).*
 
 ---
@@ -84,7 +83,7 @@ Step 1: The A4 Sheet           Step 2: The Cut               Step 3: Nest & Fold
 
 ## 5. Fabrication: 16-Page Booklets (2 A4 Sheets)
 
-*Applies to: Booklet 3 (Lore Bible), Booklet 4 (Game Design), Booklet 5 (Quest Cards), & Booklet 6 (Habit & Ritme Tracker)*
+*Applies to: Booklet 3 (Lore Bible), Booklet 4 (Game Design), Booklet 5 (Quest Cards)*
 
 1. **Print 2 Sheets Duplex:** Print Paper 1 and Paper 2 with Duplex set to **Flip on Short Edge**.
 2. **Cut Both Sheets in Half at 148.5 mm:** Produces 4 separate A5 folded leaves:

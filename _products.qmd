@@ -3,7 +3,6 @@
 <div class="dl-card"><h4>🛂 PASSPORT</h4>
 <div class="dl-row"><span>Passport v2</span><span><a class="chip" href="passport_v2/passport_v2.pdf">PDF</a><a class="chip" href="passport_v2/passport_v2.html">WEB</a></span></div>
 <div class="dl-row"><span>Passport A6 booklet</span><span><a class="chip" href="print_passport_a6_booklet.html">WEB</a></span></div>
-<div class="dl-row"><span>Habit tracker A6</span><span><a class="chip" href="print_habit_tracker_a6_booklet.html">WEB</a></span></div>
 <div class="dl-row"><span>Passport production guide</span><span><a class="chip" href="passport_production_guide.md">MD</a></span></div>
 </div>
 <div class="dl-card"><h4>📜 LORE</h4>

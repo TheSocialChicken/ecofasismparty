@@ -96,7 +96,6 @@ PRODUCTS = [
     ("🛂 PASSPORT", [
         ("Passport v2", ["passport_v2/passport_v2"]),
         ("Passport A6 booklet", ["print_passport_a6_booklet"]),
-        ("Habit tracker A6", ["print_habit_tracker_a6_booklet"]),
         ("Passport production guide", ["passport_production_guide"]),
     ]),
     ("📜 LORE", [

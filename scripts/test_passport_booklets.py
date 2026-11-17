@@ -39,12 +39,6 @@ BOOKLETS = [
         "expected_sheets": 2,
         "title": "Quest Cards & Facilitator",
     },
-    {
-        "file": "print_habit_tracker_a6_booklet.html",
-        "expected_pages": 16,
-        "expected_sheets": 2,
-
-    },
 ]
 
 def run_tests():

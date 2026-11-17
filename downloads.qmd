@@ -17,16 +17,15 @@ PDFs ready to print. A6 booklets are HTML: open in a browser and print (duplex, 
 | [print_games_codex_a4.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_games_codex_a4.pdf) | PDF | 11.5 MB |
 | [print_lore_a4_booklet.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_lore_a4_booklet.pdf) | PDF | 15.5 MB |
 | [passport_v2.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/passport_v2/passport_v2.pdf) | PDF | 396.9 KB |
-| [print_broadcast_scripts_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_broadcast_scripts_a6_booklet.html) | HTML | 48.8 KB |
+| [print_broadcast_scripts_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_broadcast_scripts_a6_booklet.html) | HTML | 48.7 KB |
 | [print_cards_deck.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_cards_deck.html) | HTML | 98.8 KB |
 | [print_game_design_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_game_design_a6_booklet.html) | HTML | 65.4 KB |
 | [print_games_codex_a4.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_games_codex_a4.html) | HTML | 70.8 KB |
-| [print_habit_tracker_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_habit_tracker_a6_booklet.html) | HTML | 281.0 KB |
 | [print_lore_a4_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_lore_a4_booklet.html) | HTML | 66.7 KB |
 | [print_lore_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_lore_a6_booklet.html) | HTML | 28.0 KB |
-| [print_lore_bible_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_lore_bible_a6_booklet.html) | HTML | 71.7 KB |
-| [print_passport_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_passport_a6_booklet.html) | HTML | 58.0 KB |
-| [print_quest_cards_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_quest_cards_a6_booklet.html) | HTML | 72.3 KB |
+| [print_lore_bible_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_lore_bible_a6_booklet.html) | HTML | 71.6 KB |
+| [print_passport_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_passport_a6_booklet.html) | HTML | 57.9 KB |
+| [print_quest_cards_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_quest_cards_a6_booklet.html) | HTML | 72.2 KB |
 | [passport_v2.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/passport_v2/passport_v2.html) | HTML | 32.8 KB |
 
 ## Game & lore documents
