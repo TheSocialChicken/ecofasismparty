@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecotopia - Game Activities, Concessions & Economic Engine Guide (A6 Passport Booklet)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  /* --- Reset & Page Setup --- */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #2b2b2b;
+    color: #000000;
+    font-family: 'Courier Prime', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    line-height: 1.25;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* --- On-Screen Toolbar (Hidden in Print) --- */
+  .toolbar {
+    background: #111111;
+    color: #ffffff;
+    border: 2px solid #555555;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 1050px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+
+  .toolbar-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .toolbar h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.15rem;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .btn-action {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 7px 15px;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.15s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .btn-action:hover {
+    background: #e0e0e0;
+    transform: translateY(-1px);
+  }
+  .btn-action.active {
+    background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+
+  /* Universal Navigation Chips */
+  .booklet-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    background: #1c1c1c;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #383838;
+  }
+  .booklet-nav .nav-label {
+    font-weight: bold;
+    color: #aaaaaa;
+    margin-right: 4px;
+    font-family: 'Special Elite', cursive;
+  }
+  .booklet-nav a {
+    color: #dddddd;
+    text-decoration: none;
+    padding: 3px 7px;
+    border: 1px solid #444444;
+    border-radius: 3px;
+    transition: background 0.1s;
+  }
+  .booklet-nav a:hover {
+    background: #333333;
+    color: #ffffff;
+    border-color: #888888;
+  }
+  .booklet-nav a.current {
+    background: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    border-color: #ffffff;
+  }
+
+  .assembly-banner {
+    background: #1e1e1e;
+    border: 1px dashed #777777;
+    color: #dddddd;
+    padding: 8px 14px;
+    font-size: 0.78rem;
+    border-radius: 4px;
+    line-height: 1.4;
+  }
+
+  /* --- View Modes Container --- */
+  #reading-view {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .reading-spread {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .reading-spread .a6-page {
+    width: 105mm;
+    height: 148.5mm;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  }
+
+  #imposition-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* --- A4 Paper Container --- */
+  .sheet-container {
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sheet-label {
+    font-family: 'Special Elite', cursive;
+    color: #ffffff;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  /* A4 Dimensions: 210mm x 297mm */
+  .a4-page {
+    width: 210mm;
+    height: 297mm;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    position: relative;
+    padding: 4mm 4mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  /* Horizontal Cut Line across center (148.5mm) */
+  .cut-guide-horizontal {
+    position: absolute;
+    top: 148.5mm;
+    left: 0;
+    right: 0;
+    height: 0;
+    border-top: 1px dashed #777777;
+    z-index: 100;
+    pointer-events: none;
+  }
+
+  /* Vertical spine fold ticks and line */
+  .vertical-fold-guide {
+    position: absolute;
+    left: 105mm;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    border-left: 1px dotted #888888;
+    z-index: 90;
+    pointer-events: none;
+  }
+
+  /* A5 Half Container: 202mm wide x 140.5mm high */
+  .a5-half {
+    width: 100%;
+    height: 140.5mm;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  /* Individual A6 Page Container: 99mm wide x 140.5mm high */
+  .a6-page {
+    width: 99mm;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Page Frame */
+  .page-frame {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000000;
+    padding: 2.2mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background: #ffffff;
+  }
+
+  .page-frame::after {
+    content: "";
+    position: absolute;
+    inset: 1.2mm;
+    border: 0.75px solid #000000;
+    pointer-events: none;
+  }
+
+  /* Corner Tick Marks */
+  .corner-tl { position: absolute; top: 0.5mm; left: 0.5mm; width: 3mm; height: 3mm; border-top: 1.5px solid #000; border-left: 1.5px solid #000; }
+  .corner-tr { position: absolute; top: 0.5mm; right: 0.5mm; width: 3mm; height: 3mm; border-top: 1.5px solid #000; border-right: 1.5px solid #000; }
+  .corner-bl { position: absolute; bottom: 0.5mm; left: 0.5mm; width: 3mm; height: 3mm; border-bottom: 1.5px solid #000; border-left: 1.5px solid #000; }
+  .corner-br { position: absolute; bottom: 0.5mm; right: 0.5mm; width: 3mm; height: 3mm; border-bottom: 1.5px solid #000; border-right: 1.5px solid #000; }
+
+  .page-number {
+    position: absolute;
+    bottom: 1mm;
+    right: 2mm;
+    font-size: 7pt;
+    font-family: 'Special Elite', cursive;
+    font-weight: bold;
+    color: #000000;
+    z-index: 10;
+  }
+
+  /* Black Header Bar with White Inverted Text */
+  .black-bar-header {
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.1mm 1mm;
+    font-family: 'Special Elite', cursive;
+    font-size: 6.8pt;
+    letter-spacing: 0.4px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .section-subhead {
+    font-size: 5pt;
+    text-align: center;
+    color: #222222;
+    margin: 0.8mm 0 1.2mm 0;
+    line-height: 1.15;
+  }
+
+  /* Styling blocks */
+  .flow-diagram-box {
+    border: 1.2px solid #000000;
+    padding: 1.2mm;
+    background: #fafafa;
+    margin: 1mm 0;
+    font-size: 4.8pt;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .flow-step {
+    border: 0.8px solid #000000;
+    padding: 0.8mm 1mm;
+    background: #ffffff;
+    margin: 0.6mm 0;
+    font-family: 'Special Elite', cursive;
+    font-size: 5pt;
+  }
+
+  .concession-card {
+    border: 1px solid #000000;
+    padding: 1mm 1.4mm;
+    margin-bottom: 1mm;
+    background: #ffffff;
+  }
+  .concession-head {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Special Elite', cursive;
+    font-size: 5.4pt;
+    font-weight: bold;
+    border-bottom: 0.5px solid #000;
+    padding-bottom: 0.3mm;
+    margin-bottom: 0.4mm;
+  }
+  .concession-body {
+    font-size: 4.8pt;
+    line-height: 1.15;
+    text-align: justify;
+  }
+
+  .game-spec-box {
+    border: 1px solid #000000;
+    padding: 1.2mm 1.4mm;
+    margin-bottom: 1.2mm;
+    background: #ffffff;
+  }
+  .game-spec-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 5.8pt;
+    font-weight: bold;
+    border-bottom: 0.75px solid #000;
+    padding-bottom: 0.3mm;
+    margin-bottom: 0.4mm;
+  }
+  .game-spec-desc {
+    font-size: 4.8pt;
+    line-height: 1.18;
+    text-align: justify;
+  }
+
+  .agenda-card {
+    border: 1px solid #000000;
+    padding: 0.9mm 1.2mm;
+    margin-bottom: 0.9mm;
+    background: #ffffff;
+    font-size: 4.8pt;
+    line-height: 1.15;
+  }
+  .agenda-card strong {
+    font-family: 'Special Elite', cursive;
+  }
+
+  .ozone-emergency-block {
+    border: 2px solid #000000;
+    background: #000000;
+    color: #ffffff;
+    padding: 1.4mm;
+    text-align: center;
+    margin: 1.2mm 0;
+  }
+  .ozone-emergency-block .title {
+    font-family: 'Special Elite', cursive;
+    font-size: 7.5pt;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+  }
+  .ozone-emergency-block .desc {
+    font-size: 4.8pt;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-top: 0.4mm;
+  }
+
+  .barcode-strip {
+    text-align: center;
+    margin-top: auto;
+    border-top: 1px solid #000000;
+    padding-top: 0.8mm;
+  }
+  .barcode-chars {
+    font-family: monospace;
+    font-size: 13pt;
+    letter-spacing: 3px;
+    line-height: 0.8;
+  }
+
+  /* Cover elements */
+  .cover-header-block {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 1.8mm;
+    margin-bottom: 1.8mm;
+    text-align: center;
+  }
+  .cover-title {
+    font-family: 'Cinzel', serif;
+    font-size: 10.5pt;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    line-height: 1.1;
+  }
+  .cover-sub {
+    font-family: 'Special Elite', cursive;
+    font-size: 6pt;
+    letter-spacing: 0.5px;
+    margin-top: 0.8mm;
+  }
+  .cover-crest {
+    width: 34mm;
+    height: 34mm;
+    margin: 1.5mm auto;
+    display: block;
+  }
+  .cover-motto {
+    font-family: 'Special Elite', cursive;
+    font-size: 7pt;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border-top: 1.5px solid #000000;
+    border-bottom: 1.5px solid #000000;
+    padding: 1.2mm 0;
+    margin: 1.5mm 0;
+    text-align: center;
+  }
+  .cover-serial-box {
+    border: 1.5px solid #000000;
+    padding: 1.4mm;
+    background: #f0f0f0;
+    margin-top: auto;
+    font-family: 'Courier Prime', monospace;
+    font-size: 6.5pt;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* --- PRINT MEDIA RULES (FULL BLEED B&W) --- */
+  @media print {
+    body {
+      background: none !important;
+      padding: 0 !important;
+    }
+    .toolbar, .sheet-label {
+      display: none !important;
+    }
+    #reading-view {
+      display: none !important;
+    }
+    #imposition-view {
+      display: flex !important;
+    }
+    .sheet-container {
+      margin: 0 !important;
+      page-break-after: always;
+    }
+    .a4-page {
+      box-shadow: none !important;
+      width: 210mm !important;
+      height: 297mm !important;
+      margin: 0 !important;
+      padding: 4mm 4mm !important;
+    }
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+  }
+</style>
+<script>
+  function switchView(mode) {
+    const impView = document.getElementById('imposition-view');
+    const readView = document.getElementById('reading-view');
+    const btnImp = document.getElementById('btn-imposition');
+    const btnRead = document.getElementById('btn-reading');
+
+    if (mode === 'reading') {
+      impView.style.display = 'none';
+      readView.style.display = 'flex';
+      btnRead.classList.add('active');
+      btnImp.classList.remove('active');
+    } else {
+      impView.style.display = 'flex';
+      readView.style.display = 'none';
+      btnImp.classList.add('active');
+      btnRead.classList.remove('active');
+    }
+  }
+</script>
+</head>
+<body>
+
+<!-- ON-SCREEN TOOLBAR -->
+<div class="toolbar">
+  <div class="toolbar-top">
+    <div>
+      <h1>GAME DESIGN & CONCESSIONS GUIDE — A6 PASSPORT BOOKLET</h1>
+      <p style="font-size: 0.78rem; color: #aaaaaa;">16-Page Passport Booklet • 2 A4 Sheets Duplex (Flip on Short Edge) • 100% Black & White</p>
+    </div>
+    <div class="btn-group">
+      <button id="btn-imposition" class="btn-action active" onclick="switchView('imposition')">🖨️ A4 Print Imposition</button>
+      <button id="btn-reading" class="btn-action" onclick="switchView('reading')">📖 Sequential Reading View</button>
+      <button class="btn-action" onclick="window.print()">🖨️ Print / Save PDF</button>
+    </div>
+  </div>
+
+  <!-- BOOKLET SUITE NAVIGATION -->
+  <div class="booklet-nav">
+    <span class="nav-label">PASSPORT SUITE:</span>
+    <a href="print_passport_a6_booklet.html">1. Citizen Passport</a>
+    <a href="print_broadcast_scripts_a6_booklet.html">2. Broadcast Scripts</a>
+    <a href="print_lore_bible_a6_booklet.html">3. Lore & Narrative Bible</a>
+    <a href="print_game_design_a6_booklet.html" class="current">4. Game Design & Economics</a>
+    <a href="print_quest_cards_a6_booklet.html">5. Quest Cards & Facilitator</a>
+    
+    <span style="color:#666;">|</span>
+    <a href="print_cards_deck.html">🃏 Cards Deck</a>
+    <a href="stamps_preview.html">🔖 Stamp Suite</a>
+  </div>
+
+  <div class="assembly-banner">
+    <strong>✂️ 16-Page Fabrication Instructions:</strong> Print <strong>2 Double-Sided A4 Sheets (Duplex / Flip on Short Edge)</strong>. Cut both sheets horizontally across the dashed center line (148.5mm) into 4 separate A5 half-sheets: Leaf 1 (Pages 16,1,2,15), Leaf 2 (Pages 14,3,4,13), Leaf 3 (Pages 12,5,6,11), and Leaf 4 (Pages 10,7,8,9). Stack Leaf 4 inside Leaf 3, inside Leaf 2, inside Leaf 1. Fold down the center spine (105mm) and staple with 2 staples. <strong>Yields 1 complete 16-page pocket passport booklet in exact numerical order!</strong>
+  </div>
+</div>
+
+<!-- ========================================================
+     VIEW 1: A4 DUPLEX IMPOSITION VIEW (FOR PRINTING)
+     ======================================================== -->
+<div id="imposition-view">
+
+  <!-- ========================================================
+       SHEET 1 (OUTER SHEET) - SIDE A (FRONT)
+       Top Half: Leaf 1 [Page 16 | Page 1]
+       Bottom Half: Leaf 2 [Page 14 | Page 3]
+       ======================================================== -->
+  <div class="sheet-container">
+    <div class="sheet-label">Sheet 1 of 2 — Side A (Front Side of Paper 1)</div>
+    <div class="a4-page">
+      <div class="cut-guide-horizontal"></div>
+      <div class="vertical-fold-guide"></div>
+
+      <!-- TOP HALF: LEAF 1 OUTER SPREAD (PAGE 16 & PAGE 1) -->
+      <div class="a5-half">
+
+        <!-- PAGE 16: BACK COVER -->
+        <div class="a6-page">
+          <div class="page-frame" style="justify-content: space-between;">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">MINISTER'S ECONOMIC PLEDGE</div>
+              <div class="section-subhead">Certified Game Engine Protocol • De Warren 2026</div>
+
+              <div style="border: 1px solid #000; padding: 1.4mm; font-size: 5pt; line-height: 1.2; text-align: justify; margin: 1mm 0; background: #fafafa;">
+                <strong>OATH OF FIDELITY:</strong> "I swear to balance my ministry's ledger, extract joyful devotion from my recruits, enforce state quotas without pity, and advance the glory of the Guardian Stag. May my balance never fall below zero."
+              </div>
+
+              <div class="ozone-emergency-block">
+                <div class="title">EMERGENCY SAFE-WORD: "OZONE"</div>
+                <div class="desc">Universal safety clause. Speaking "OZONE" immediately halts all gameplay, roleplay, and performance, summoning medical/organizer support without question or penalty.</div>
+              </div>
+            </div>
+
+            <div class="barcode-strip">
+              <div class="barcode-chars">||||||||||||||||||||||||||||||||||||||||||</div>
+              <div style="font-size: 5pt; letter-spacing: 1.5px; font-weight: bold; margin-top: 0.5mm;">GAME SYSTEM ENGINE • SANCTUARY DE WARREN</div>
+            </div>
+            <div class="page-number">16</div>
+          </div>
+        </div>
+
+        <!-- PAGE 1: FRONT COVER -->
+        <div class="a6-page">
+          <div class="page-frame" style="text-align: center;">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div class="cover-header-block">
+              <div class="cover-title">REPUBLIC OF ECOTOPIA</div>
+              <div class="cover-sub">MINISTRY OF CIVIC RECREATION & GAME DESIGN</div>
+            </div>
+
+            <!-- GEOMETRIC GEAR & SCALES CREST -->
+            <svg class="cover-crest" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="50,4 92,28 92,76 50,96 8,76 8,28" stroke="#000000" stroke-width="2.5" fill="#f4f4f4"/>
+              <polygon points="50,10 86,32 86,72 50,90 14,72 14,32" stroke="#000000" stroke-width="0.75" fill="none"/>
+              <!-- Gear circle center -->
+              <circle cx="50" cy="50" r="22" stroke="#000000" stroke-width="2" stroke-dasharray="4,2"/>
+              <circle cx="50" cy="50" r="14" stroke="#000000" stroke-width="1.5"/>
+              <circle cx="50" cy="50" r="5" fill="#000000"/>
+              <!-- Scales crossbeam -->
+              <line x1="28" y1="36" x2="72" y2="36" stroke="#000000" stroke-width="2.5"/>
+              <line x1="50" y1="24" x2="50" y2="36" stroke="#000000" stroke-width="2.5"/>
+              <!-- Left scale pan -->
+              <path d="M24 48 L32 48 L28 36 Z" stroke="#000000" stroke-width="1.2" fill="#e0e0e0"/>
+              <!-- Right scale pan -->
+              <path d="M68 48 L76 48 L72 36 Z" stroke="#000000" stroke-width="1.2" fill="#e0e0e0"/>
+              <!-- Stag crown horns above beam -->
+              <path d="M50 24 L38 14 M38 14 L30 16 M38 14 L36 10" stroke="#000000" stroke-width="2" stroke-linecap="square"/>
+              <path d="M50 24 L62 14 M62 14 L70 16 M62 14 L64 10" stroke="#000000" stroke-width="2" stroke-linecap="square"/>
+            </svg>
+
+            <div class="cover-motto">"LABOR CONVERTS DEBT INTO STATE POWER."</div>
+
+            <div>
+              <div style="font-family:'Special Elite'; font-size: 7.2pt; font-weight: bold; letter-spacing: 0.5px; margin-bottom: 1mm;">
+                GAME ACTIVITIES, CONCESSIONS & ECONOMIC ENGINE GUIDE
+              </div>
+              <div style="font-size: 5pt; color: #333333; margin-bottom: 1.5mm;">
+                MASTER RULES FOR MINISTERS, GAME FACILITATORS & RUNNERS
+              </div>
+              <div class="cover-serial-box">
+                REGULATION-REF: GAME-OPS-2026-0088
+              </div>
+            </div>
+            <div class="page-number">1</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM HALF: LEAF 2 SPREAD (PAGE 14 & PAGE 3) -->
+      <div class="a5-half">
+
+        <!-- PAGE 14: THE REVEAL & LIBERATION RITUAL -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">6. THE REVOLUTION ENDGAME</div>
+              <div class="section-subhead">Climax Protocol (00:00 – 00:15) • The Fall of the Ledger</div>
+
+              <div style="font-size: 5.1pt; line-height: 1.22; text-align: justify;">
+                <strong>• 00:00 THE BIG REVEAL:</strong> Revolutionaries expose the truth: the carbon credit ledger, the surveillance cameras, and the Guardian Stag were never ecological—they ran on a salvaged corporate AI server node in the cellar! Compliance theater preserved power.<br><br>
+                <strong>• 00:05 LIBERATION RITUAL:</strong> All attendees tear out Page 7 from their passports (Ancestral Debt Bond) and throw the paper scraps into the air like confetti!<br><br>
+                <strong>• 00:15 BEAT DROP & CELEBRATION:</strong> Authoritarian roleplay ends. Actors embrace attendees, ministries dissolve, and resident DJs ignite the dance celebration until 04:00+.
+              </div>
+            </div>
+
+            <div style="font-size: 4.8pt; text-align: center; border-top: 1px solid #000; padding-top: 0.5mm; margin-top: auto;">
+              TRANSITION TO DANCE FLOOR IS ABSOLUTE AND IMMEDIATE
+            </div>
+            <div class="page-number">14</div>
+          </div>
+        </div>
+
+        <!-- PAGE 3: THE LIVING ECONOMY & HIRING -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">2. THE LIVING ECONOMY</div>
+              <div class="section-subhead">Starting Capital vs Unassigned Indebted Labor</div>
+
+              <div style="font-size: 5pt; line-height: 1.2; text-align: justify; margin-bottom: 1.2mm;">
+                <strong>• 10 Appointed Ministers:</strong> Begin in surplus with <strong>+800 Carbon Credits</strong>, an official Clipboard Ledger, an official Ministry Rubber Stamp, and custody of their Concession Station.<br><br>
+                <strong>• ~190 Indebted Citizens:</strong> Enter intake with <strong>-150 to -500 Debt</strong> stamped in passports. They arrive unassigned, without civic rights or room access until recruited.<br><br>
+                <strong>• The Hiring Dilemma:</strong> A Minister cannot man a bike dynamo, scrub dishes, audit drinks, and run trials alone for 2.5 hours. They MUST recruit staff!
+              </div>
+
+              <div class="directive-box">
+                <strong>LABOR MARKET NEGOTIATIONS:</strong> Low-debt citizens (-150) are in high demand; toxic debtors (-450) must accept grueling shifts or dangerous sabotage runs to be signed.
+              </div>
+            </div>
+
+            <div class="page-number">3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SHEET 1 (OUTER SHEET) - SIDE B (REVERSE - DUPLEX)
+       Top Half: Leaf 1 [Page 2 | Page 15]
+       Bottom Half: Leaf 2 [Page 4 | Page 13]
+       ======================================================== -->
+  <div class="sheet-container">
+    <div class="sheet-label">Sheet 1 of 2 — Side B (Reverse Side of Paper 1 - Flip Short Edge)</div>
+    <div class="a4-page">
+      <div class="cut-guide-horizontal"></div>
+      <div class="vertical-fold-guide"></div>
+
+      <!-- TOP HALF: LEAF 1 REVERSE SPREAD (PAGE 2 & PAGE 15) -->
+      <div class="a5-half">
+
+        <!-- PAGE 2: CORE GAMEPLAY LOOP & SCHEDULE -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">1. CORE GAMEPLAY LOOP</div>
+              <div class="section-subhead">Operational Timeline • 21:30 to 00:00 (2.5 Hours)</div>
+
+              <div class="flow-diagram-box">
+                <div class="flow-step">1. INTAKE: Unassigned Citizens (-150 to -500 CC)</div>
+                <div style="font-size:6pt;">▼</div>
+                <div class="flow-step">2. HIRING: Ministries Absorb Citizen Debts</div>
+                <div style="font-size:6pt;">▼</div>
+                <div class="flow-step">3. CONCESSION SHIFTS & REBEL RUNS</div>
+                <div style="font-size:6pt;">▼</div>
+                <div class="flow-step">4. DUAL-TALLY: Personal VIP vs Ministry Score</div>
+                <div style="font-size:6pt;">▼</div>
+                <div class="flow-step">5. 23:30 CLIMAX: Assembly & Server Reveal</div>
+              </div>
+
+              <div style="font-size: 4.8pt; line-height: 1.18; text-align: justify;">
+                The interactive game runs for 2.5 hours before transitioning seamlessly into an all-night electronic dance party.
+              </div>
+            </div>
+
+            <div class="page-number">2</div>
+          </div>
+        </div>
+
+        <!-- PAGE 15: MASTER GUIDELINES FOR FACILITATORS -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">7. FACILITATOR PRINCIPLES</div>
+              <div class="section-subhead">Rules of Engagement for Activity Creators & Ministers</div>
+
+              <div style="font-size: 5pt; line-height: 1.22; text-align: justify;">
+                <strong>1. Always Word Positively:</strong> Punishments are <em>"privileges"</em>; starvation is <em>"caloric purity"</em>; forced chores are <em>"joyful devotion."</em><br><br>
+                <strong>2. Low Barrier to Entry:</strong> Games must take under 3 minutes to explain and under 10 minutes to play.<br><br>
+                <strong>3. Award Credit Stamps:</strong> Every completed shift or quest must offer an immediate physical passport stamp (+10 to +50 CC) and a clipboard tally.<br><br>
+                <strong>4. Respect Safe-Word "OZONE":</strong> If any guest utters "OZONE", immediately pause roleplay and provide care.
+              </div>
+            </div>
+
+            <div style="font-size: 4.8pt; text-align: center; border-top: 1px solid #000; padding-top: 0.5mm; margin-top: auto;">
+              GUEST SAFETY & CONSENT OUTRANK ALL ROLEPLAY MANDATES
+            </div>
+            <div class="page-number">15</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM HALF: LEAF 2 REVERSE SPREAD (PAGE 4 & PAGE 13) -->
+      <div class="a5-half">
+
+        <!-- PAGE 4: DEBT ABSORPTION & DUAL-TALLY -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">2. ABSORPTION & DUAL-TALLY</div>
+              <div class="section-subhead">Mathematical Accounting & Parallel Progress</div>
+
+              <div style="border: 1px solid #000; padding: 1.2mm; background: #f5f5f5; font-size: 5pt; text-align: center; margin-bottom: 1.2mm;">
+                <strong>MINISTRY NET TREASURY FORMULA:</strong><br>
+                Net = +800 − (Σ Recruit Debts) + (Generated Credits)
+              </div>
+
+              <div style="font-size: 5pt; line-height: 1.2; text-align: justify;">
+                <strong>The Dual-Tally Loop:</strong> When a recruit works a 5-minute shift (+30 CC):<br>
+                1. <strong>Individual Passport:</strong> Receives a physical stamp (+30), advancing the citizen toward `0` (Rights) and `+100` (VIP Library Access).<br>
+                2. <strong>Ministry Clipboard:</strong> The Minister logs the +30 credit gain, offsetting absorbed debt and driving the Ministry toward state dominance.
+              </div>
+            </div>
+
+            <div class="page-number">4</div>
+          </div>
+        </div>
+
+        <!-- PAGE 13: ENDGAME CLIMAX TIMELINE -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">6. CLIMAX & ENDGAME TIMELINE</div>
+              <div class="section-subhead">The Struggle Between Agendas and Infiltration Runs</div>
+
+              <div style="font-size: 4.9pt; line-height: 1.24;">
+                • <strong>23:30 STATE ASSEMBLY:</strong> All 10 ministries assemble before the grand stage. Figurehead arrives in smoke. Showcase anthems.<br><br>
+                • <strong>23:45 RESISTANCE RAID:</strong> If resistance recruited >50% of attendees with ankle stamps and trashed ≥3 Agendas, moles storm podium with black banners: <em>"THE STAG IS SILICON. THE DEBT IS A LIE."</em><br><br>
+                • <strong>00:00 REVELATION:</strong> Cellar AI exposed; compliance proved a sham.<br><br>
+                • <strong>00:15 RESOLUTION:</strong> Debt bonds burnt; dance celebration begins.
+              </div>
+            </div>
+
+            <div class="page-number">13</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SHEET 2 (INNER SHEET) - SIDE A (FRONT)
+       Top Half: Leaf 3 [Page 12 | Page 5]
+       Bottom Half: Leaf 4 [Page 10 | Page 7]
+       ======================================================== -->
+  <div class="sheet-container">
+    <div class="sheet-label">Sheet 2 of 2 — Side A (Front Side of Paper 2)</div>
+    <div class="a4-page">
+      <div class="cut-guide-horizontal"></div>
+      <div class="vertical-fold-guide"></div>
+
+      <!-- TOP HALF: LEAF 3 SPREAD (PAGE 12 & PAGE 5) -->
+      <div class="a5-half">
+
+        <!-- PAGE 12: LEGISLATIVE COUNCIL & MOLES -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">5. LEGISLATIVE COUNCIL & MOLES</div>
+              <div class="section-subhead">Secret Hitler Dynamics • Subversive Procedures</div>
+
+              <div style="font-size: 5pt; line-height: 1.2; text-align: justify; margin-bottom: 1.2mm;">
+                <strong>• The Council:</strong> Every 45 minutes, High Warden convenes the 10 Ministers. Two decree cards are drawn from the state deck.<br><br>
+                <strong>• Resistance Moles:</strong> 10 seeded moles within ministry ranks can use secret votes or procedural maneuvers to veto corporate decrees or slip through subversive resolutions (e.g., <em>Decree of General Amnesty</em>).
+              </div>
+
+              <div class="directive-box">
+                <strong>COUNCIL RESOLUTION:</strong> A passed subversive decree freezes all Agendas for 20 minutes and unlocks safe passage through corridor gates.
+              </div>
+            </div>
+
+            <div class="page-number">12</div>
+          </div>
+        </div>
+
+        <!-- PAGE 5: CARBON INSOLVENCY & LIQUIDATION -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">2. CARBON INSOLVENCY</div>
+              <div class="section-subhead">Default Penalties, Defections & Composting</div>
+
+              <div style="font-size: 5pt; line-height: 1.2; text-align: justify; margin-bottom: 1.2mm;">
+                <strong>• Insolvency (Net Balance &lt; 0):</strong> If a Ministry recklessly hires too many unproductive debtors, its net balance drops below zero.<br><br>
+                <strong>• Insolvency Penalties:</strong> VIP Room access frozen for all members, aggressive Minilove audits, voting rights stripped.<br><br>
+                <strong>• Defections & Liquidation:</strong> Insolvent Ministries can sell high-performing recruits to rivals or dump unproductive debtors at <strong>Minirenewal</strong> to compost their contract for +100 bounty.
+              </div>
+            </div>
+
+            <div style="font-size: 4.8pt; text-align: center; border-top: 1px solid #000; padding-top: 0.5mm; margin-top: auto;">
+              INSOLVENT MINISTRIES RISK CITATION SEIZURE BY MINILOVE
+            </div>
+            <div class="page-number">5</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM HALF: LEAF 4 SPREAD (PAGE 10 & PAGE 7) -->
+      <div class="a5-half">
+
+        <!-- PAGE 10: CORPORATE AGENDAS (SECRET HITLER) -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">5. THE 5 CORPORATE AGENDAS</div>
+              <div class="section-subhead">Central Decree Board • Secret Hitler Policy Track</div>
+
+              <div class="agenda-card"><strong>1. Ambient Dimming:</strong> Reduces venue lumens by 50%; activates blackout rules.</div>
+              <div class="agenda-card"><strong>2. Caloric Compression:</strong> Halves snacks/bar rations; enforces algae rules.</div>
+              <div class="agenda-card"><strong>3. Perimeter Lockdown:</strong> Severs corridor transit without Minishelter permits.</div>
+              <div class="agenda-card"><strong>4. Mandatory Heresy Purge:</strong> Authorizes Minilove to conduct sidewalk audits.</div>
+              <div class="agenda-card"><strong>5. Total Silicon Consolidation:</strong> All passports locked permanently. State wins.</div>
+
+              <div style="font-size: 4.8pt; line-height: 1.15; margin-top: 0.5mm;">
+                <strong>Enactment:</strong> 200 Credits in pooled funding enacts an Agenda, proclaimed over PA by Hanna.
+              </div>
+            </div>
+
+            <div class="page-number">10</div>
+          </div>
+        </div>
+
+        <!-- PAGE 7: 10 CONCESSIONS CHARTERS (PART 2) -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">3. CONCESSION CHARTERS (PART 2)</div>
+              <div class="section-subhead">Asymmetric Business Models (Ministries 6–10)</div>
+
+              <div class="concession-card">
+                <div class="concession-head"><span>MINILOVE</span><span>INQUISITORIAL SEIZURE</span></div>
+                <div class="concession-body">Runs heresy tribunals in holding pen. Seizes 50% of all levied fines directly into its treasury.</div>
+              </div>
+
+              <div class="concession-card">
+                <div class="concession-head"><span>MINIJOY</span><span>STATE MORALE GRANTS</span></div>
+                <div class="concession-body">Charges +10 CC entry for wig duels; earns +150 lump-sum grant for crowd rallies of 15+ guests.</div>
+              </div>
+
+              <div class="concession-card">
+                <div class="concession-head"><span>MINISHELTER</span><span>TRANSIT TOLLS</span></div>
+                <div class="concession-body">Guards corridor bottlenecks; charges 10–20 CC for cross-sector transit passes.</div>
+              </div>
+
+              <div class="concession-card">
+                <div class="concession-head"><span>MINITHRIFT</span><span>CONTRABAND LIQUIDATION</span></div>
+                <div class="concession-body">Confiscates synthetic items; liquidates them for +40 credits each.</div>
+              </div>
+
+              <div class="concession-card">
+                <div class="concession-head"><span>MINIBREATH</span><span>ATMOSPHERIC OFFSETS</span></div>
+                <div class="concession-body">Meters exhalations; sells Breath Indulgences to active dancers.</div>
+              </div>
+            </div>
+
+            <div class="page-number">7</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SHEET 2 (INNER SHEET) - SIDE B (REVERSE - DUPLEX)
+       Top Half: Leaf 3 [Page 6 | Page 11]
+       Bottom Half: Leaf 4 [Page 8 | Page 9] (CENTERFOLD)
+       ======================================================== -->
+  <div class="sheet-container">
+    <div class="sheet-label">Sheet 2 of 2 — Side B (Reverse Side of Paper 2 - Flip Short Edge)</div>
+    <div class="a4-page">
+      <div class="cut-guide-horizontal"></div>
+      <div class="vertical-fold-guide"></div>
+
+      <!-- TOP HALF: LEAF 3 REVERSE SPREAD (PAGE 6 & PAGE 11) -->
+      <div class="a5-half">
+
+        <!-- PAGE 6: 10 CONCESSIONS CHARTERS (PART 1) -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">3. CONCESSION CHARTERS (PART 1)</div>
+              <div class="section-subhead">Asymmetric Business Models (Ministries 1–5)</div>
+
+              <div class="concession-card">
+                <div class="concession-head"><span>MINISERVICE</span><span>SUBSIDIZED WORKHOUSE</span></div>
+                <div class="concession-body">50% State Debt Relief subsidy when recruiting. High-volume +30 labor shifts at scullery wash.</div>
+              </div>
+
+              <div class="concession-card">
+                <div class="concession-head"><span>MINIRENEWAL</span><span>DEBT LIQUIDATOR BOUNTY</span></div>
+                <div class="concession-body">Collects flat +100 Bounty for every bankrupt citizen processed through identity composting.</div>
+              </div>
+
+              <div class="concession-card">
+                <div class="concession-head"><span>MINILIGHT</span><span>GRID POWER MONOPOLY</span></div>
+                <div class="concession-body">Recruits earn +30 CC per bike shift. Plunges rival zones into blackouts without 30–50 CC tariffs.</div>
+              </div>
+
+              <div class="concession-card">
+                <div class="concession-head"><span>MINIFLOW</span><span>FLUID DIVIDEND MONOPOLY</span></div>
+                <div class="concession-body">+20 Dividend per citizen returning moisture at Peetopia; fines unauthorized drink spills.</div>
+              </div>
+
+              <div class="concession-card">
+                <div class="concession-head"><span>MINIPLENTY</span><span>CALORIC INDULGENCES</span></div>
+                <div class="concession-body">Controls snacks; sells caloric indulgences to hungry guests for credit transfers.</div>
+              </div>
+            </div>
+
+            <div class="page-number">6</div>
+          </div>
+        </div>
+
+        <!-- PAGE 11: REBEL RUNS (NETRUNNER ENGINE) -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">5. REBEL INFILTRATION RUNS</div>
+              <div class="section-subhead">Netrunner Mechanics • Thijs's Room • Ankle Stamp</div>
+
+              <div style="font-size: 5pt; line-height: 1.2; text-align: justify; margin-bottom: 1.2mm;">
+                <strong>• The Run Loop:</strong><br>
+                1. <strong>Run Card:</strong> Operatives receive covert missions from Thijs’s Room targeting a station.<br>
+                2. <strong>Bypassing Ice:</strong> Bypass station guards via stealth, distractions (wig duel), or bribes.<br>
+                3. <strong>Breaching Rewards:</strong><br>
+                &nbsp;&nbsp;• <em>Trash an Agenda:</em> Remove 100 Credits from active Decree on Central Board.<br>
+                &nbsp;&nbsp;• <em>Extract Truth Fragment:</em> Slips proving Stag runs on salvaged basement LLM server.
+              </div>
+            </div>
+
+            <div class="page-number">11</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM HALF: LEAF 4 CENTERFOLD SPREAD (PAGE 8 & PAGE 9) -->
+      <div class="a5-half">
+
+        <!-- PAGE 8: CONCESSION GAMES: UTILITY & KINETIC -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">4. MASTER GAMES (CATEGORY A)</div>
+              <div class="section-subhead">Kinetic & Utility Concessions</div>
+
+              <div class="game-spec-box">
+                <div class="game-spec-title">STATIONARY POWER BICYCLE (MINILIGHT)</div>
+                <div class="game-spec-desc">Pedal 5-minute shifts to earn +30 CC. Wattage powers music amp; Minilight banks energy for grid power.</div>
+              </div>
+
+              <div class="game-spec-box">
+                <div class="game-spec-title">GREENWASHING DISHES (MINISERVICE)</div>
+                <div class="game-spec-desc">Clean 10 glassware items under strict single-sponge & metered spray rules (+30 CC). High throughput.</div>
+              </div>
+
+              <div class="game-spec-box">
+                <div class="game-spec-title">PEETOPIA FLUID BALANCE (MINIFLOW)</div>
+                <div class="game-spec-desc">Hydration station outside restrooms. Returning moisture earns +20 CC stamp; Miniflow collects state dividend.</div>
+              </div>
+            </div>
+
+            <div class="page-number">8</div>
+          </div>
+        </div>
+
+        <!-- PAGE 9: CONCESSION GAMES: MORALE & PENAL (CENTERFOLD) -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">4. MASTER GAMES (CATS B & C)</div>
+              <div class="section-subhead">Morale Arena & Penal Reclamation (Centerfold)</div>
+
+              <div class="game-spec-box">
+                <div class="game-spec-title">WIG SNATCHING ARENA (MINIJOY)</div>
+                <div class="game-spec-desc">Two duelists in identical neon wigs. Hands on knees; snatch wig on bell (best of 3, 60s). Winner: +25 CC.</div>
+              </div>
+
+              <div class="game-spec-box">
+                <div class="game-spec-title">HOW THE WORLD ENDS OPEN-MIC (MINIJOY)</div>
+                <div class="game-spec-desc">60s melodramatic extinction monologue on megaphone. Audience clap judges winner (+100 CC & ribbon).</div>
+              </div>
+
+              <div class="game-spec-box">
+                <div class="game-spec-title">THE SUICIDE CARBON BOOTH (MINIRENEWAL)</div>
+                <div class="game-spec-desc">Bankrupt citizens repeat Renunciation Oath. Surname struck out; reset to 0 CC; Minirenewal earns +100 bounty.</div>
+              </div>
+            </div>
+
+            <div class="page-number">9</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ========================================================
+     VIEW 2: SEQUENTIAL READING VIEW (PAGES 1 TO 16)
+     ======================================================== -->
+<div id="reading-view">
+
+  <!-- SPREAD 1: COVER (PAGE 1) -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame" style="text-align: center;">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div class="cover-header-block">
+          <div class="cover-title">REPUBLIC OF ECOTOPIA</div>
+          <div class="cover-sub">MINISTRY OF CIVIC RECREATION & GAME DESIGN</div>
+        </div>
+        <svg class="cover-crest" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="50,4 92,28 92,76 50,96 8,76 8,28" stroke="#000000" stroke-width="2.5" fill="#f4f4f4"/>
+          <polygon points="50,10 86,32 86,72 50,90 14,72 14,32" stroke="#000000" stroke-width="0.75" fill="none"/>
+          <circle cx="50" cy="50" r="22" stroke="#000000" stroke-width="2" stroke-dasharray="4,2"/>
+          <circle cx="50" cy="50" r="14" stroke="#000000" stroke-width="1.5"/>
+          <circle cx="50" cy="50" r="5" fill="#000000"/>
+          <line x1="28" y1="36" x2="72" y2="36" stroke="#000000" stroke-width="2.5"/>
+          <line x1="50" y1="24" x2="50" y2="36" stroke="#000000" stroke-width="2.5"/>
+          <path d="M24 48 L32 48 L28 36 Z" stroke="#000000" stroke-width="1.2" fill="#e0e0e0"/>
+          <path d="M68 48 L76 48 L72 36 Z" stroke="#000000" stroke-width="1.2" fill="#e0e0e0"/>
+          <path d="M50 24 L38 14 M38 14 L30 16 M38 14 L36 10" stroke="#000000" stroke-width="2" stroke-linecap="square"/>
+          <path d="M50 24 L62 14 M62 14 L70 16 M62 14 L64 10" stroke="#000000" stroke-width="2" stroke-linecap="square"/>
+        </svg>
+        <div class="cover-motto">"LABOR CONVERTS DEBT INTO STATE POWER."</div>
+        <div>
+          <div style="font-family:'Special Elite'; font-size: 7.2pt; font-weight: bold; letter-spacing: 0.5px; margin-bottom: 1mm;">
+            GAME ACTIVITIES, CONCESSIONS & ECONOMIC ENGINE GUIDE
+          </div>
+          <div style="font-size: 5pt; color: #333333; margin-bottom: 1.5mm;">
+            MASTER RULES FOR MINISTERS, GAME FACILITATORS & RUNNERS
+          </div>
+          <div class="cover-serial-box">
+            REGULATION-REF: GAME-OPS-2026-0088
+          </div>
+        </div>
+        <div class="page-number">1</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 2: PAGES 2 & 3 -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">1. CORE GAMEPLAY LOOP</div>
+          <div class="section-subhead">Operational Timeline • 21:30 to 00:00 (2.5 Hours)</div>
+          <div class="flow-diagram-box">
+            <div class="flow-step">1. INTAKE: Unassigned Citizens (-150 to -500 CC)</div>
+            <div style="font-size:6pt;">▼</div>
+            <div class="flow-step">2. HIRING: Ministries Absorb Citizen Debts</div>
+            <div style="font-size:6pt;">▼</div>
+            <div class="flow-step">3. CONCESSION SHIFTS & REBEL RUNS</div>
+            <div style="font-size:6pt;">▼</div>
+            <div class="flow-step">4. DUAL-TALLY: Personal VIP vs Ministry Score</div>
+            <div style="font-size:6pt;">▼</div>
+            <div class="flow-step">5. 23:30 CLIMAX: Assembly & Server Reveal</div>
+          </div>
+          <div style="font-size: 4.8pt; line-height: 1.18; text-align: justify;">
+            The interactive game runs for 2.5 hours before transitioning seamlessly into an all-night electronic dance party.
+          </div>
+        </div>
+        <div class="page-number">2</div>
+      </div>
+    </div>
+
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">2. THE LIVING ECONOMY</div>
+          <div class="section-subhead">Starting Capital vs Unassigned Indebted Labor</div>
+          <div style="font-size: 5pt; line-height: 1.2; text-align: justify; margin-bottom: 1.2mm;">
+            <strong>• 10 Appointed Ministers:</strong> Begin in surplus with <strong>+800 Carbon Credits</strong>, an official Clipboard Ledger, an official Ministry Rubber Stamp, and custody of their Concession Station.<br><br>
+            <strong>• ~190 Indebted Citizens:</strong> Enter intake with <strong>-150 to -500 Debt</strong> stamped in passports. They arrive unassigned, without civic rights or room access until recruited.<br><br>
+            <strong>• The Hiring Dilemma:</strong> A Minister cannot man a bike dynamo, scrub dishes, audit drinks, and run trials alone for 2.5 hours. They MUST recruit staff!
+          </div>
+          <div class="directive-box">
+            <strong>LABOR MARKET NEGOTIATIONS:</strong> Low-debt citizens (-150) are in high demand; toxic debtors (-450) must accept grueling shifts or dangerous sabotage runs to be signed.
+          </div>
+        </div>
+        <div class="page-number">3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 3: PAGES 4 & 5 -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">2. ABSORPTION & DUAL-TALLY</div>
+          <div class="section-subhead">Mathematical Accounting & Parallel Progress</div>
+          <div style="border: 1px solid #000; padding: 1.2mm; background: #f5f5f5; font-size: 5pt; text-align: center; margin-bottom: 1.2mm;">
+            <strong>MINISTRY NET TREASURY FORMULA:</strong><br>
+            Net = +800 − (Σ Recruit Debts) + (Generated Credits)
+          </div>
+          <div style="font-size: 5pt; line-height: 1.2; text-align: justify;">
+            <strong>The Dual-Tally Loop:</strong> When a recruit works a 5-minute shift (+30 CC):<br>
+            1. <strong>Individual Passport:</strong> Receives a physical stamp (+30), advancing the citizen toward `0` (Rights) and `+100` (VIP Library Access).<br>
+            2. <strong>Ministry Clipboard:</strong> The Minister logs the +30 credit gain, offsetting absorbed debt and driving the Ministry toward state dominance.
+          </div>
+        </div>
+        <div class="page-number">4</div>
+      </div>
+    </div>
+
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">2. CARBON INSOLVENCY</div>
+          <div class="section-subhead">Default Penalties, Defections & Composting</div>
+          <div style="font-size: 5pt; line-height: 1.2; text-align: justify; margin-bottom: 1.2mm;">
+            <strong>• Insolvency (Net Balance &lt; 0):</strong> If a Ministry recklessly hires too many unproductive debtors, its net balance drops below zero.<br><br>
+            <strong>• Insolvency Penalties:</strong> VIP Room access frozen for all members, aggressive Minilove audits, voting rights stripped.<br><br>
+            <strong>• Defections & Liquidation:</strong> Insolvent Ministries can sell high-performing recruits to rivals or dump unproductive debtors at <strong>Minirenewal</strong> to compost their contract for +100 bounty.
+          </div>
+        </div>
+        <div style="font-size: 4.8pt; text-align: center; border-top: 1px solid #000; padding-top: 0.5mm; margin-top: auto;">
+          INSOLVENT MINISTRIES RISK CITATION SEIZURE BY MINILOVE
+        </div>
+        <div class="page-number">5</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 4: PAGES 6 & 7 -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">3. CONCESSION CHARTERS (PART 1)</div>
+          <div class="section-subhead">Asymmetric Business Models (Ministries 1–5)</div>
+          <div class="concession-card">
+            <div class="concession-head"><span>MINISERVICE</span><span>SUBSIDIZED WORKHOUSE</span></div>
+            <div class="concession-body">50% State Debt Relief subsidy when recruiting. High-volume +30 labor shifts at scullery wash.</div>
+          </div>
+          <div class="concession-card">
+            <div class="concession-head"><span>MINIRENEWAL</span><span>DEBT LIQUIDATOR BOUNTY</span></div>
+            <div class="concession-body">Collects flat +100 Bounty for every bankrupt citizen processed through identity composting.</div>
+          </div>
+          <div class="concession-card">
+            <div class="concession-head"><span>MINILIGHT</span><span>GRID POWER MONOPOLY</span></div>
+            <div class="concession-body">Recruits earn +30 CC per bike shift. Plunges rival zones into blackouts without 30–50 CC tariffs.</div>
+          </div>
+          <div class="concession-card">
+            <div class="concession-head"><span>MINIFLOW</span><span>FLUID DIVIDEND MONOPOLY</span></div>
+            <div class="concession-body">+20 Dividend per citizen returning moisture at Peetopia; fines unauthorized drink spills.</div>
+          </div>
+          <div class="concession-card">
+            <div class="concession-head"><span>MINIPLENTY</span><span>CALORIC INDULGENCES</span></div>
+            <div class="concession-body">Controls snacks; sells caloric indulgences to hungry guests for credit transfers.</div>
+          </div>
+        </div>
+        <div class="page-number">6</div>
+      </div>
+    </div>
+
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">3. CONCESSION CHARTERS (PART 2)</div>
+          <div class="section-subhead">Asymmetric Business Models (Ministries 6–10)</div>
+          <div class="concession-card">
+            <div class="concession-head"><span>MINILOVE</span><span>INQUISITORIAL SEIZURE</span></div>
+            <div class="concession-body">Runs heresy tribunals in holding pen. Seizes 50% of all levied fines directly into its treasury.</div>
+          </div>
+          <div class="concession-card">
+            <div class="concession-head"><span>MINIJOY</span><span>STATE MORALE GRANTS</span></div>
+            <div class="concession-body">Charges +10 CC entry for wig duels; earns +150 lump-sum grant for crowd rallies of 15+ guests.</div>
+          </div>
+          <div class="concession-card">
+            <div class="concession-head"><span>MINISHELTER</span><span>TRANSIT TOLLS</span></div>
+            <div class="concession-body">Guards corridor bottlenecks; charges 10–20 CC for cross-sector transit passes.</div>
+          </div>
+          <div class="concession-card">
+            <div class="concession-head"><span>MINITHRIFT</span><span>CONTRABAND LIQUIDATION</span></div>
+            <div class="concession-body">Confiscates synthetic items; liquidates them for +40 credits each.</div>
+          </div>
+          <div class="concession-card">
+            <div class="concession-head"><span>MINIBREATH</span><span>ATMOSPHERIC OFFSETS</span></div>
+            <div class="concession-body">Meters exhalations; sells Breath Indulgences to active dancers.</div>
+          </div>
+        </div>
+        <div class="page-number">7</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 5: PAGES 8 & 9 (CENTERFOLD) -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">4. MASTER GAMES (CATEGORY A)</div>
+          <div class="section-subhead">Kinetic & Utility Concessions</div>
+          <div class="game-spec-box">
+            <div class="game-spec-title">STATIONARY POWER BICYCLE (MINILIGHT)</div>
+            <div class="game-spec-desc">Pedal 5-minute shifts to earn +30 CC. Wattage powers music amp; Minilight banks energy for grid power.</div>
+          </div>
+          <div class="game-spec-box">
+            <div class="game-spec-title">GREENWASHING DISHES (MINISERVICE)</div>
+            <div class="game-spec-desc">Clean 10 glassware items under strict single-sponge & metered spray rules (+30 CC). High throughput.</div>
+          </div>
+          <div class="game-spec-box">
+            <div class="game-spec-title">PEETOPIA FLUID BALANCE (MINIFLOW)</div>
+            <div class="game-spec-desc">Hydration station outside restrooms. Returning moisture earns +20 CC stamp; Miniflow collects state dividend.</div>
+          </div>
+        </div>
+        <div class="page-number">8</div>
+      </div>
+    </div>
+
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">4. MASTER GAMES (CATS B & C)</div>
+          <div class="section-subhead">Morale Arena & Penal Reclamation (Centerfold)</div>
+          <div class="game-spec-box">
+            <div class="game-spec-title">WIG SNATCHING ARENA (MINIJOY)</div>
+            <div class="game-spec-desc">Two duelists in identical neon wigs. Hands on knees; snatch wig on bell (best of 3, 60s). Winner: +25 CC.</div>
+          </div>
+          <div class="game-spec-box">
+            <div class="game-spec-title">HOW THE WORLD ENDS OPEN-MIC (MINIJOY)</div>
+            <div class="game-spec-desc">60s melodramatic extinction monologue on megaphone. Audience clap judges winner (+100 CC & ribbon).</div>
+          </div>
+          <div class="game-spec-box">
+            <div class="game-spec-title">THE SUICIDE CARBON BOOTH (MINIRENEWAL)</div>
+            <div class="game-spec-desc">Bankrupt citizens repeat Renunciation Oath. Surname struck out; reset to 0 CC; Minirenewal earns +100 bounty.</div>
+          </div>
+        </div>
+        <div class="page-number">9</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 6: PAGES 10 & 11 -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">5. THE 5 CORPORATE AGENDAS</div>
+          <div class="section-subhead">Central Decree Board • Secret Hitler Policy Track</div>
+          <div class="agenda-card"><strong>1. Ambient Dimming:</strong> Reduces venue lumens by 50%; activates blackout rules.</div>
+          <div class="agenda-card"><strong>2. Caloric Compression:</strong> Halves snacks/bar rations; enforces algae rules.</div>
+          <div class="agenda-card"><strong>3. Perimeter Lockdown:</strong> Severs corridor transit without Minishelter permits.</div>
+          <div class="agenda-card"><strong>4. Mandatory Heresy Purge:</strong> Authorizes Minilove to conduct sidewalk audits.</div>
+          <div class="agenda-card"><strong>5. Total Silicon Consolidation:</strong> All passports locked permanently. State wins.</div>
+          <div style="font-size: 4.8pt; line-height: 1.15; margin-top: 0.5mm;">
+            <strong>Enactment:</strong> 200 Credits in pooled funding enacts an Agenda, proclaimed over PA by Hanna.
+          </div>
+        </div>
+        <div class="page-number">10</div>
+      </div>
+    </div>
+
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">5. REBEL INFILTRATION RUNS</div>
+          <div class="section-subhead">Netrunner Mechanics • Thijs's Room • Ankle Stamp</div>
+          <div style="font-size: 5pt; line-height: 1.2; text-align: justify; margin-bottom: 1.2mm;">
+            <strong>• The Run Loop:</strong><br>
+            1. <strong>Run Card:</strong> Operatives receive covert missions from Thijs’s Room targeting a station.<br>
+            2. <strong>Bypassing Ice:</strong> Bypass station guards via stealth, distractions (wig duel), or bribes.<br>
+            3. <strong>Breaching Rewards:</strong><br>
+            &nbsp;&nbsp;• <em>Trash an Agenda:</em> Remove 100 Credits from active Decree on Central Board.<br>
+            &nbsp;&nbsp;• <em>Extract Truth Fragment:</em> Slips proving Stag runs on salvaged basement LLM server.
+          </div>
+        </div>
+        <div class="page-number">11</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 7: PAGES 12 & 13 -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">5. LEGISLATIVE COUNCIL & MOLES</div>
+          <div class="section-subhead">Secret Hitler Dynamics • Subversive Procedures</div>
+          <div style="font-size: 5pt; line-height: 1.2; text-align: justify; margin-bottom: 1.2mm;">
+            <strong>• The Council:</strong> Every 45 minutes, High Warden convenes the 10 Ministers. Two decree cards are drawn from the state deck.<br><br>
+            <strong>• Resistance Moles:</strong> 10 seeded moles within ministry ranks can use secret votes or procedural maneuvers to veto corporate decrees or slip through subversive resolutions (e.g., <em>Decree of General Amnesty</em>).
+          </div>
+          <div class="directive-box">
+            <strong>COUNCIL RESOLUTION:</strong> A passed subversive decree freezes all Agendas for 20 minutes and unlocks safe passage through corridor gates.
+          </div>
+        </div>
+        <div class="page-number">12</div>
+      </div>
+    </div>
+
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">6. CLIMAX & ENDGAME TIMELINE</div>
+          <div class="section-subhead">The Struggle Between Agendas and Infiltration Runs</div>
+          <div style="font-size: 4.9pt; line-height: 1.24;">
+            • <strong>23:30 STATE ASSEMBLY:</strong> All 10 ministries assemble before the grand stage. Figurehead arrives in smoke. Showcase anthems.<br><br>
+            • <strong>23:45 RESISTANCE RAID:</strong> If resistance recruited >50% of attendees with ankle stamps and trashed ≥3 Agendas, moles storm podium with black banners: <em>"THE STAG IS SILICON. THE DEBT IS A LIE."</em><br><br>
+            • <strong>00:00 REVELATION:</strong> Cellar AI exposed; compliance proved a sham.<br><br>
+            • <strong>00:15 RESOLUTION:</strong> Debt bonds burnt; dance celebration begins.
+          </div>
+        </div>
+        <div class="page-number">13</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 8: PAGES 14 & 15 -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">6. THE REVOLUTION ENDGAME</div>
+          <div class="section-subhead">Climax Protocol (00:00 – 00:15) • The Fall of the Ledger</div>
+          <div style="font-size: 5.1pt; line-height: 1.22; text-align: justify;">
+            <strong>• 00:00 THE BIG REVEAL:</strong> Revolutionaries expose the truth: the carbon credit ledger, the surveillance cameras, and the Guardian Stag were never ecological—they ran on a salvaged corporate AI server node in the cellar! Compliance theater preserved power.<br><br>
+            <strong>• 00:05 LIBERATION RITUAL:</strong> All attendees tear out Page 7 from their passports (Ancestral Debt Bond) and throw the paper scraps into the air like confetti!<br><br>
+            <strong>• 00:15 BEAT DROP & CELEBRATION:</strong> Authoritarian roleplay ends. Actors embrace attendees, ministries dissolve, and resident DJs ignite the dance celebration until 04:00+.
+          </div>
+        </div>
+        <div style="font-size: 4.8pt; text-align: center; border-top: 1px solid #000; padding-top: 0.5mm; margin-top: auto;">
+          TRANSITION TO DANCE FLOOR IS ABSOLUTE AND IMMEDIATE
+        </div>
+        <div class="page-number">14</div>
+      </div>
+    </div>
+
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">7. FACILITATOR PRINCIPLES</div>
+          <div class="section-subhead">Rules of Engagement for Activity Creators & Ministers</div>
+          <div style="font-size: 5pt; line-height: 1.22; text-align: justify;">
+            <strong>1. Always Word Positively:</strong> Punishments are <em>"privileges"</em>; starvation is <em>"caloric purity"</em>; forced chores are <em>"joyful devotion."</em><br><br>
+            <strong>2. Low Barrier to Entry:</strong> Games must take under 3 minutes to explain and under 10 minutes to play.<br><br>
+            <strong>3. Award Credit Stamps:</strong> Every completed shift or quest must offer an immediate physical passport stamp (+10 to +50 CC) and a clipboard tally.<br><br>
+            <strong>4. Respect Safe-Word "OZONE":</strong> If any guest utters "OZONE", immediately pause roleplay and provide care.
+          </div>
+        </div>
+        <div style="font-size: 4.8pt; text-align: center; border-top: 1px solid #000; padding-top: 0.5mm; margin-top: auto;">
+          GUEST SAFETY & CONSENT OUTRANK ALL ROLEPLAY MANDATES
+        </div>
+        <div class="page-number">15</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 9: BACK COVER (PAGE 16) -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame" style="justify-content: space-between;">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">MINISTER'S ECONOMIC PLEDGE</div>
+          <div class="section-subhead">Certified Game Engine Protocol • De Warren 2026</div>
+          <div style="border: 1px solid #000; padding: 1.4mm; font-size: 5pt; line-height: 1.2; text-align: justify; margin: 1mm 0; background: #fafafa;">
+            <strong>OATH OF FIDELITY:</strong> "I swear to balance my ministry's ledger, extract joyful devotion from my recruits, enforce state quotas without pity, and advance the glory of the Guardian Stag. May my balance never fall below zero."
+          </div>
+          <div class="ozone-emergency-block">
+            <div class="title">EMERGENCY SAFE-WORD: "OZONE"</div>
+            <div class="desc">Universal safety clause. Speaking "OZONE" immediately halts all gameplay, roleplay, and performance, summoning medical/organizer support without question or penalty.</div>
+          </div>
+        </div>
+        <div class="barcode-strip">
+          <div class="barcode-chars">||||||||||||||||||||||||||||||||||||||||||</div>
+          <div style="font-size: 5pt; letter-spacing: 1.5px; font-weight: bold; margin-top: 0.5mm;">GAME SYSTEM ENGINE • SANCTUARY DE WARREN</div>
+        </div>
+        <div class="page-number">16</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

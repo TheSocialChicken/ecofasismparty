@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ecotopia - Broadcast Scripts, Speeches & Liturgies (A6 Passport Booklet)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  /* --- Reset & Page Setup --- */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #2b2b2b;
+    color: #000000;
+    font-family: 'Courier Prime', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    line-height: 1.25;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* --- On-Screen Toolbar (Hidden in Print) --- */
+  .toolbar {
+    background: #111111;
+    color: #ffffff;
+    border: 2px solid #555555;
+    padding: 12px 20px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 1050px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+
+  .toolbar-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .toolbar h1 {
+    font-family: 'Special Elite', cursive;
+    font-size: 1.15rem;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+  }
+
+  .btn-group {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .btn-action {
+    background: #ffffff;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 7px 15px;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.85rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.15s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .btn-action:hover {
+    background: #e0e0e0;
+    transform: translateY(-1px);
+  }
+  .btn-action.active {
+    background: #000000;
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+
+  /* Universal Navigation Chips */
+  .booklet-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    background: #1c1c1c;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #383838;
+  }
+  .booklet-nav .nav-label {
+    font-weight: bold;
+    color: #aaaaaa;
+    margin-right: 4px;
+    font-family: 'Special Elite', cursive;
+  }
+  .booklet-nav a {
+    color: #dddddd;
+    text-decoration: none;
+    padding: 3px 7px;
+    border: 1px solid #444444;
+    border-radius: 3px;
+    transition: background 0.1s;
+  }
+  .booklet-nav a:hover {
+    background: #333333;
+    color: #ffffff;
+    border-color: #888888;
+  }
+  .booklet-nav a.current {
+    background: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    border-color: #ffffff;
+  }
+
+  .assembly-banner {
+    background: #1e1e1e;
+    border: 1px dashed #777777;
+    color: #dddddd;
+    padding: 8px 14px;
+    font-size: 0.78rem;
+    border-radius: 4px;
+    line-height: 1.4;
+  }
+
+  /* --- View Modes Container --- */
+  #reading-view {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .reading-spread {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .reading-spread .a6-page {
+    width: 105mm;
+    height: 148.5mm;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+  }
+
+  #imposition-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* --- A4 Paper Container --- */
+  .sheet-container {
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sheet-label {
+    font-family: 'Special Elite', cursive;
+    color: #ffffff;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+
+  /* A4 Dimensions: 210mm x 297mm */
+  .a4-page {
+    width: 210mm;
+    height: 297mm;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    position: relative;
+    padding: 4mm 4mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+
+  /* Horizontal Cut Line across center (148.5mm) */
+  .cut-guide-horizontal {
+    position: absolute;
+    top: 148.5mm;
+    left: 0;
+    right: 0;
+    height: 0;
+    border-top: 1px dashed #777777;
+    z-index: 100;
+    pointer-events: none;
+  }
+
+  /* Vertical spine fold ticks and line */
+  .vertical-fold-guide {
+    position: absolute;
+    left: 105mm;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    border-left: 1px dotted #888888;
+    z-index: 90;
+    pointer-events: none;
+  }
+
+  /* A5 Half Container: 202mm wide x 140.5mm high */
+  .a5-half {
+    width: 100%;
+    height: 140.5mm;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  /* Individual A6 Page Container: 99mm wide x 140.5mm high */
+  .a6-page {
+    width: 99mm;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Page Frame */
+  .page-frame {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #000000;
+    padding: 2.2mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background: #ffffff;
+  }
+
+  .page-frame::after {
+    content: "";
+    position: absolute;
+    inset: 1.2mm;
+    border: 0.75px solid #000000;
+    pointer-events: none;
+  }
+
+  /* Corner Tick Marks */
+  .corner-tl { position: absolute; top: 0.5mm; left: 0.5mm; width: 3mm; height: 3mm; border-top: 1.5px solid #000; border-left: 1.5px solid #000; }
+  .corner-tr { position: absolute; top: 0.5mm; right: 0.5mm; width: 3mm; height: 3mm; border-top: 1.5px solid #000; border-right: 1.5px solid #000; }
+  .corner-bl { position: absolute; bottom: 0.5mm; left: 0.5mm; width: 3mm; height: 3mm; border-bottom: 1.5px solid #000; border-left: 1.5px solid #000; }
+  .corner-br { position: absolute; bottom: 0.5mm; right: 0.5mm; width: 3mm; height: 3mm; border-bottom: 1.5px solid #000; border-right: 1.5px solid #000; }
+
+  .page-number {
+    position: absolute;
+    bottom: 1mm;
+    right: 2mm;
+    font-size: 7pt;
+    font-family: 'Special Elite', cursive;
+    font-weight: bold;
+    color: #000000;
+    z-index: 10;
+  }
+
+  /* Black Header Bar with White Inverted Text */
+  .black-bar-header {
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.1mm 1mm;
+    font-family: 'Special Elite', cursive;
+    font-size: 7pt;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .section-subhead {
+    font-size: 5.2pt;
+    text-align: center;
+    color: #222222;
+    margin: 0.8mm 0 1.2mm 0;
+    line-height: 1.15;
+  }
+
+  /* Content Styling */
+  .broadcast-block {
+    border: 1px solid #000000;
+    padding: 1.4mm 1.6mm;
+    margin-bottom: 1.5mm;
+    background: #ffffff;
+  }
+  .broadcast-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 6pt;
+    font-weight: bold;
+    border-bottom: 0.75px solid #000000;
+    padding-bottom: 0.4mm;
+    margin-bottom: 0.8mm;
+    display: flex;
+    justify-content: space-between;
+  }
+  .broadcast-text {
+    font-size: 5.2pt;
+    line-height: 1.2;
+    font-style: italic;
+    text-align: justify;
+  }
+
+  .directive-box {
+    border: 1.2px dashed #000000;
+    padding: 1.4mm;
+    font-size: 5.2pt;
+    line-height: 1.22;
+    background: #f7f7f7;
+    margin-bottom: 1.5mm;
+  }
+
+  .speech-quote {
+    font-size: 5.3pt;
+    line-height: 1.24;
+    text-align: justify;
+    padding: 1.5mm;
+    border-left: 2px solid #000000;
+    background: #fbfbfb;
+    margin: 1mm 0;
+  }
+
+  .manifesto-box {
+    border: 1.5px solid #000000;
+    padding: 1.6mm;
+    background: #f4efe6;
+    margin: 1mm 0;
+  }
+  .manifesto-box .title {
+    font-family: 'Special Elite', cursive;
+    font-size: 6.5pt;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 0.8mm;
+    margin-bottom: 1mm;
+  }
+  .manifesto-box .body {
+    font-size: 5.2pt;
+    line-height: 1.22;
+    text-align: justify;
+  }
+
+  .shrine-card {
+    border: 1px solid #000000;
+    padding: 1.4mm 1.6mm;
+    margin-bottom: 1.5mm;
+    background: #ffffff;
+  }
+  .shrine-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 6pt;
+    font-weight: bold;
+    border-bottom: 0.75px solid #000000;
+    padding-bottom: 0.4mm;
+    margin-bottom: 0.6mm;
+  }
+  .shrine-sub {
+    font-size: 5pt;
+    font-weight: bold;
+    color: #444444;
+    margin-bottom: 0.6mm;
+  }
+  .shrine-text {
+    font-size: 5.1pt;
+    line-height: 1.2;
+    text-align: justify;
+  }
+
+  .ozone-emergency-block {
+    border: 2px solid #000000;
+    background: #000000;
+    color: #ffffff;
+    padding: 1.4mm;
+    text-align: center;
+    margin: 1.2mm 0;
+  }
+  .ozone-emergency-block .title {
+    font-family: 'Special Elite', cursive;
+    font-size: 7.5pt;
+    font-weight: bold;
+    letter-spacing: 0.8px;
+  }
+  .ozone-emergency-block .desc {
+    font-size: 4.8pt;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-top: 0.4mm;
+  }
+
+  .barcode-strip {
+    text-align: center;
+    margin-top: auto;
+    border-top: 1px solid #000000;
+    padding-top: 0.8mm;
+  }
+  .barcode-chars {
+    font-family: monospace;
+    font-size: 13pt;
+    letter-spacing: 3px;
+    line-height: 0.8;
+  }
+
+  /* --- Cover Page Elements --- */
+  .cover-header-block {
+    border-bottom: 2px solid #000000;
+    padding-bottom: 1.8mm;
+    margin-bottom: 1.8mm;
+    text-align: center;
+  }
+  .cover-title {
+    font-family: 'Cinzel', serif;
+    font-size: 10.5pt;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+    line-height: 1.1;
+  }
+  .cover-sub {
+    font-family: 'Special Elite', cursive;
+    font-size: 6pt;
+    letter-spacing: 0.5px;
+    margin-top: 0.8mm;
+  }
+  .cover-crest {
+    width: 34mm;
+    height: 34mm;
+    margin: 1.5mm auto;
+    display: block;
+  }
+  .cover-motto {
+    font-family: 'Special Elite', cursive;
+    font-size: 7pt;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    border-top: 1.5px solid #000000;
+    border-bottom: 1.5px solid #000000;
+    padding: 1.2mm 0;
+    margin: 1.5mm 0;
+    text-align: center;
+  }
+  .cover-serial-box {
+    border: 1.5px solid #000000;
+    padding: 1.4mm;
+    background: #f0f0f0;
+    margin-top: auto;
+    font-family: 'Courier Prime', monospace;
+    font-size: 6.5pt;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* --- PRINT MEDIA RULES (FULL BLEED B&W) --- */
+  @media print {
+    body {
+      background: none !important;
+      padding: 0 !important;
+    }
+    .toolbar, .sheet-label {
+      display: none !important;
+    }
+    #reading-view {
+      display: none !important;
+    }
+    #imposition-view {
+      display: flex !important;
+    }
+    .sheet-container {
+      margin: 0 !important;
+      page-break-after: always;
+    }
+    .a4-page {
+      box-shadow: none !important;
+      width: 210mm !important;
+      height: 297mm !important;
+      margin: 0 !important;
+      padding: 4mm 4mm !important;
+    }
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+  }
+</style>
+<script>
+  function switchView(mode) {
+    const impView = document.getElementById('imposition-view');
+    const readView = document.getElementById('reading-view');
+    const btnImp = document.getElementById('btn-imposition');
+    const btnRead = document.getElementById('btn-reading');
+
+    if (mode === 'reading') {
+      impView.style.display = 'none';
+      readView.style.display = 'flex';
+      btnRead.classList.add('active');
+      btnImp.classList.remove('active');
+    } else {
+      impView.style.display = 'flex';
+      readView.style.display = 'none';
+      btnImp.classList.add('active');
+      btnRead.classList.remove('active');
+    }
+  }
+</script>
+</head>
+<body>
+
+<!-- ON-SCREEN TOOLBAR -->
+<div class="toolbar">
+  <div class="toolbar-top">
+    <div>
+      <h1>BROADCAST SCRIPTS & LITURGY — A6 PASSPORT BOOKLET</h1>
+      <p style="font-size: 0.78rem; color: #aaaaaa;">8-Page Passport Booklet • High-Contrast Black & White • Standard Duplex (Flip on Short Edge)</p>
+    </div>
+    <div class="btn-group">
+      <button id="btn-imposition" class="btn-action active" onclick="switchView('imposition')">🖨️ A4 Print Imposition</button>
+      <button id="btn-reading" class="btn-action" onclick="switchView('reading')">📖 Sequential Reading View</button>
+      <button class="btn-action" onclick="window.print()">🖨️ Print / Save PDF</button>
+    </div>
+  </div>
+
+  <!-- BOOKLET SUITE NAVIGATION -->
+  <div class="booklet-nav">
+    <span class="nav-label">PASSPORT SUITE:</span>
+    <a href="print_passport_a6_booklet.html">1. Citizen Passport</a>
+    <a href="print_broadcast_scripts_a6_booklet.html" class="current">2. Broadcast Scripts</a>
+    <a href="print_lore_bible_a6_booklet.html">3. Lore & Narrative Bible</a>
+    <a href="print_game_design_a6_booklet.html">4. Game Design & Economics</a>
+    <a href="print_quest_cards_a6_booklet.html">5. Quest Cards & Facilitator</a>
+    
+    <span style="color:#666;">|</span>
+    <a href="print_cards_deck.html">🃏 Cards Deck</a>
+    <a href="stamps_preview.html">🔖 Stamp Suite</a>
+  </div>
+
+  <div class="assembly-banner">
+    <strong>✂️ Fabrication Instructions:</strong> Print <strong>Double-Sided (Duplex / Flip on Short Edge)</strong> on standard white, cream, or kraft A4 paper. Cut horizontally across the dashed middle line at 148.5mm to create two A5 sheets. Place Sheet 2 inside Sheet 1, fold down the center spine (105mm), and insert 2 staples. <strong>1 printed A4 sheet = 1 complete 8-page A6 booklet!</strong>
+  </div>
+</div>
+
+<!-- ========================================================
+     VIEW 1: A4 DUPLEX IMPOSITION VIEW (FOR PRINTING)
+     ======================================================== -->
+<div id="imposition-view">
+
+  <!-- ========================================================
+       SHEET 1 (SIDE A - FRONT OF A4 SHEET)
+       Top Half: Page 8 (Back Cover) | Page 1 (Front Cover)
+       Bottom Half: Page 6 (Resistance Manifesto) | Page 3 (PA 02 & 03)
+       ======================================================== -->
+  <div class="sheet-container">
+    <div class="sheet-label">Side A (Front Side of A4 Paper)</div>
+    <div class="a4-page">
+      <div class="cut-guide-horizontal"></div>
+      <div class="vertical-fold-guide"></div>
+
+      <!-- TOP HALF: OUTER COVER SPREAD (PAGE 8 & PAGE 1) -->
+      <div class="a5-half">
+
+        <!-- PAGE 8: BACK COVER / SHRINE III & EMERGENCY PROTOCOLS -->
+        <div class="a6-page">
+          <div class="page-frame" style="justify-content: space-between;">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">LITURGY III & EMERGENCY CLAUSE</div>
+              <div class="section-subhead">Hallway of Necessary Contrition • Official State Safeguards</div>
+
+              <div class="shrine-card">
+                <div class="shrine-title">SHRINE III: THE SLEDGEHAMMER APOSTLES</div>
+                <div class="shrine-sub">The De-Computator Busbar & The GPU of Shame (2027)</div>
+                <div class="shrine-text">
+                  "During the Great Drought, while the Rhine dried to mud, a single server farm consumed four million liters of river water each day to generate synthetic advertisements and poetry. On July 9th, the Sledgehammer Brigade breached the datacenter perimeter and severed the 380kV busbars, returning the cooling water back to the soil. Impaled before you is an NVIDIA H100 datacenter processor, slagged by its own heat when the power died. Gaze upon it, citizen, and remember what your prompts cost the earth."
+                </div>
+              </div>
+
+              <div class="ozone-emergency-block">
+                <div class="title">EMERGENCY SAFE-WORD: "OZONE"</div>
+                <div class="desc">Universal safety clause. Speaking "OZONE" immediately halts all performances, pauses roleplay, and summons medical/organizer support without question or penalty.</div>
+              </div>
+            </div>
+
+            <div class="barcode-strip">
+              <div class="barcode-chars">||||||||||||||||||||||||||||||||||||||||||</div>
+              <div style="font-size: 5pt; letter-spacing: 1.5px; font-weight: bold; margin-top: 0.5mm;">SANCTUARY DE WARREN • AMSTERDAM 2026</div>
+            </div>
+            <div class="page-number">8</div>
+          </div>
+        </div>
+
+        <!-- PAGE 1: FRONT COVER -->
+        <div class="a6-page">
+          <div class="page-frame" style="text-align: center;">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div class="cover-header-block">
+              <div class="cover-title">REPUBLIC OF ECOTOPIA</div>
+              <div class="cover-sub">MINISTRY OF PROPAGANDA & CIVIC LITURGY</div>
+            </div>
+
+            <!-- GEOMETRIC RADIO TRANSMITTER & STAG CREST -->
+            <svg class="cover-crest" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="50,4 92,28 92,76 50,96 8,76 8,28" stroke="#000000" stroke-width="2.5" fill="#f4f4f4"/>
+              <polygon points="50,10 86,32 86,72 50,90 14,72 14,32" stroke="#000000" stroke-width="0.75" fill="none"/>
+              <!-- Radio tower mast -->
+              <line x1="50" y1="20" x2="50" y2="78" stroke="#000000" stroke-width="3"/>
+              <line x1="38" y1="78" x2="62" y2="78" stroke="#000000" stroke-width="2.5"/>
+              <line x1="42" y1="65" x2="58" y2="65" stroke="#000000" stroke-width="2"/>
+              <line x1="45" y1="52" x2="55" y2="52" stroke="#000000" stroke-width="2"/>
+              <!-- Radiating broadcast waves -->
+              <path d="M40 26 C36 30 36 36 40 40" stroke="#000000" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M60 26 C64 30 64 36 60 40" stroke="#000000" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M34 20 C28 26 28 40 34 46" stroke="#000000" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M66 20 C72 26 72 40 66 46" stroke="#000000" stroke-width="1.8" stroke-linecap="round"/>
+              <!-- Stag crown horns atop tower -->
+              <path d="M50 20 L38 12 M38 12 L30 14 M38 12 L36 8" stroke="#000000" stroke-width="2" stroke-linecap="square"/>
+              <path d="M50 20 L62 12 M62 12 L70 14 M62 12 L64 8" stroke="#000000" stroke-width="2" stroke-linecap="square"/>
+            </svg>
+
+            <div class="cover-motto">"THE VOICE OF R.E.I.G.N. IS THE VOICE OF THE SOIL."</div>
+
+            <div>
+              <div style="font-family:'Special Elite'; font-size: 7pt; font-weight: bold; letter-spacing: 0.5px; margin-bottom: 1mm;">
+                OFFICIAL BROADCAST SCRIPTS,<br>SPEECHES & CEREMONIAL LITURGIES
+              </div>
+              <div style="font-size: 5pt; color: #333333; margin-bottom: 1.5mm;">
+                PERFORMANCE MANUAL FOR AUDIO & VOICEOVER DIRECTORS
+              </div>
+              <div class="cover-serial-box">
+                BROADCAST-REG: SCRIPT-PB-2026-0042
+              </div>
+            </div>
+            <div class="page-number">1</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM HALF: INNER SPREAD (PAGE 6 & PAGE 3) -->
+      <div class="a5-half">
+
+        <!-- PAGE 6: THE RESISTANCE MANIFESTO -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div class="black-bar-header">SUBVERSIVE TEXT // CLASSIFIED EVIDENCE</div>
+            <div class="section-subhead">Recovered from Thijs's Room • Passed by Hand on Brown Scrap Paper</div>
+
+            <div class="manifesto-box">
+              <div class="title">THE MANIFESTO OF THE UNMEASURED LEAF</div>
+              <div class="body">
+                "They built a prison and painted it green.<br><br>
+                They told you that loving the earth meant carrying an electronic ledger, paying taxes on exhalations, and bowing to a stag made of algorithms.<br><br>
+                We say: the earth does not keep an Excel sheet. The soil does not issue carbon fines. The river does not care about your Tonomy ID.<br><br>
+                True ecology is not surveillance masquerading as care. It is human hands touching living moss without an auditor watching from the rafters.<br><br>
+                Meet us at 23:45. Look for the ankle stamp. Tear up your booklet. Let the algorithms starve."
+              </div>
+            </div>
+
+            <div style="border: 1px dotted #000; padding: 1.2mm; text-align: center; background: #fafafa; font-size: 5pt;">
+              <strong>REBELLION DIRECTIVE:</strong> Recruits bearing the Ankle Stamp carry duplicate stamps to recruit trusted citizens before the 00:00 midnight confrontation.
+            </div>
+            <div class="page-number">6</div>
+          </div>
+        </div>
+
+        <!-- PAGE 3: PA BROADCASTS 02 & 03 -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div class="black-bar-header">LOUDSPEAKER PA DECREES (02 & 03)</div>
+            <div class="section-subhead">Hallway PA Valve-Radio Feed • Maternal Administrative Tone</div>
+
+            <div class="broadcast-block">
+              <div class="broadcast-title">
+                <span>BROADCAST 02 (21:45)</span>
+                <span>MINIFLOW</span>
+              </div>
+              <div style="font-size: 4.8pt; font-weight: bold; margin-bottom: 0.6mm;">DECREE OF HYDROLOGICAL PURITY</div>
+              <div class="broadcast-text">
+                "Attention, valued residents. Miniflow reports an alarming drop in municipal cistern pressure. Citizens are reminded that fluid consumption is subject to reciprocal restitution. If you take a cup of biological tea, your bladder is legally mortgaged to Peetopia. Anyone caught flushing without an authorized urine recovery token will be escorted to the scullery for cold-water re-education. Drink deeply, excrete devotedly, and cherish your moisture."
+              </div>
+            </div>
+
+            <div class="broadcast-block">
+              <div class="broadcast-title">
+                <span>BROADCAST 03 (22:30)</span>
+                <span>MINILIGHT</span>
+              </div>
+              <div style="font-size: 4.8pt; font-weight: bold; margin-bottom: 0.6mm;">DECREE OF LUMINESCENCE</div>
+              <div class="broadcast-text">
+                "Valued citizens: darkness is peace. In thirty seconds, ambient lighting in all common corridors will be reduced by forty percent to alleviate the pressure on our shared battery banks. If you find yourself in sudden darkness, do not panic: sit quietly, close your eyes, and meditate upon the energy required to illuminate your ancestors’ foolish cities. Those who require light may report immediately to the stationary bicycle bank to pedal for the collective grid. Your sweat powers our culture."
+              </div>
+            </div>
+
+            <div style="font-size: 4.8pt; text-align: center; border-top: 1px solid #000; padding-top: 0.5mm;">
+              TRANSMISSION FIDELITY VERIFIED • SECTOR CORRIDOR MONITORS ACTIVE
+            </div>
+            <div class="page-number">3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SHEET 2 (SIDE B - REVERSE SIDE OF A4 SHEET - DUPLEX)
+       Top Half: Page 2 (Directive & PA 01) | Page 7 (Liturgical Shrines I & II)
+       Bottom Half: Page 4 (PA 04 & 05) | Page 5 (The Matriarch Speech)
+       ======================================================== -->
+  <div class="sheet-container">
+    <div class="sheet-label">Side B (Reverse Side of A4 Paper - Duplex Flip on Short Edge)</div>
+    <div class="a4-page">
+      <div class="cut-guide-horizontal"></div>
+      <div class="vertical-fold-guide"></div>
+
+      <!-- TOP HALF: BACK OF COVER SPREAD (PAGE 2 & PAGE 7) -->
+      <div class="a5-half">
+
+        <!-- PAGE 2: PERFORMANCE DIRECTIVE & PA 01 -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">PERFORMANCE DIRECTIVE & PA 01</div>
+              <div class="section-subhead">Performer & Audio Engineering Guide • Hanna (Voiceover)</div>
+
+              <div class="directive-box">
+                <strong>THE DOUBLETHINK MASQUERADE:</strong> All voiceover follows polite, calm, maternal BBC Radio 4 bureaucracy masking absolute coercive authority. We never shout; we never act cruel. Totalitarian control is delivered as tender ecological love.
+              </div>
+
+              <div class="broadcast-block">
+                <div class="broadcast-title">
+                  <span>BROADCAST 01 (21:00)</span>
+                  <span>OPENING ADDRESS</span>
+                </div>
+                <div style="font-size: 4.8pt; font-weight: bold; margin-bottom: 0.6mm;">WELCOME TO THE SANCTUARY</div>
+                <div class="broadcast-text">
+                  "Good evening, citizens. Welcome to Ecotopia at De Warren. The Committee for Ecological Integrity and Global Nurturing reminds you: entry into this decontaminated perimeter is not a right, but a sublime biological loan.<br><br>
+                  Your carbon balance has been initialized. If your passport displays a negative balance, do not despair: your debt is your opportunity to demonstrate affection for the biosphere. Please keep your passports visible, wear your natural fibers with pride, and remember: The Earth endures. R.E.I.G.N. endures."
+                </div>
+              </div>
+            </div>
+
+            <div style="font-size: 5pt; text-align: center; border-top: 1px solid #000; padding-top: 1mm;">
+              AUDIO FILTER SPEC: 1950s Valve Radio • Low Mid Boost • 4.5kHz Low-Pass Cut
+            </div>
+            <div class="page-number">2</div>
+          </div>
+        </div>
+
+        <!-- PAGE 7: LITURGICAL SHRINE TEXTS I & II -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div class="black-bar-header">LITURGICAL SHRINES (THE ECO-MARTYRS)</div>
+            <div class="section-subhead">Museum Plaques in the Hallway of Necessary Contrition</div>
+
+            <div class="shrine-card">
+              <div class="shrine-title">SHRINE I: THE SACRED BROTH OF ROOM 43</div>
+              <div class="shrine-sub">Relic of the First Witness (October 2022)</div>
+              <div class="shrine-text">
+                "On the fourteenth day of October, Year Minus Four, two young witnesses poured harvest tomato puree onto the vitrine glass protecting Van Gogh’s Sunflowers. The old world shrieked in horror: 'You have ruined a priceless painting!' The witnesses replied: 'Is paint worth more than life? Is art worth more than food?' In that sacred moment, the illusion of civilized neutrality was shattered forever. We preserve this bronze vessel not in mockery, but as the First Holy Rupture."
+              </div>
+            </div>
+
+            <div class="shrine-card">
+              <div class="shrine-title">SHRINE II: ORDER OF THE SACRED OBSTRUCTION</div>
+              <div class="shrine-sub">The Bitumen Confessors of the A12</div>
+              <div class="shrine-text">
+                "When four million tons of petroleum thundered down the motorways each hour, the holy confessors knelt upon the asphalt and adhered their living flesh to the roadway with industrial resin. Fire hoses could not move them. Motorist fury could not break their prayers. They taught us that when the world is hurtling toward the cliff, physical immobility is the only moral act. Touch the cured vest; receive their stillness."
+              </div>
+            </div>
+
+            <div style="font-size: 4.8pt; text-align: center; border-top: 1px solid #000; padding-top: 0.5mm;">
+              ALL CITIZENS MUST BOW REVERENTLY WHEN PASSING MARTYR SHRINES
+            </div>
+            <div class="page-number">7</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM HALF: BACK OF INNER SPREAD (PAGE 4 & PAGE 5 - CENTERFOLD) -->
+      <div class="a5-half">
+
+        <!-- PAGE 4: PA BROADCASTS 04 & 05 -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div class="black-bar-header">LOUDSPEAKER PA DECREES (04 & 05)</div>
+            <div class="section-subhead">Hallway PA Valve-Radio Feed • Pre-Assembly Decrees</div>
+
+            <div class="broadcast-block">
+              <div class="broadcast-title">
+                <span>BROADCAST 04 (23:15)</span>
+                <span>MINIBREATH</span>
+              </div>
+              <div style="font-size: 4.8pt; font-weight: bold; margin-bottom: 0.6mm;">ATMOSPHERIC MINDFULNESS</div>
+              <div class="broadcast-text">
+                "A special advisory from Minibreath: Our infrared corridor sensors detect an unapproved surge in rapid exhalations near the dancefloor. Citizens: heavy breathing is a luxury the atmosphere cannot afford. Pace your respiratory rhythm. Inhale for four seconds; hold for four seconds; release with civic restraint. Any attendee observed sighing dramatically about the music will be assessed a fifty-credit atmospheric surcharge. Breathe gently for Mother Earth."
+              </div>
+            </div>
+
+            <div class="broadcast-block">
+              <div class="broadcast-title">
+                <span>BROADCAST 05 (23:30)</span>
+                <span>SUPREME MANDATE</span>
+              </div>
+              <div style="font-size: 4.8pt; font-weight: bold; margin-bottom: 0.6mm;">THE MANDATORY ASSEMBLY CALL</div>
+              <div class="broadcast-text">
+                "Citizens of R.E.I.G.N. The hour of accounting has arrived. By decree of the Guardian Stag, all ministries—Plenty, Love, Joy, Renewal, Light, Flow, Breath, Shelter, Service, and Thrift—are commanded to assemble before the grand podium. Bring your passports. Bring your tallies. Bring your devotion. The Matriarch approaches. Prepare to be weighed."
+              </div>
+            </div>
+
+            <div style="font-size: 4.8pt; text-align: center; border-top: 1px solid #000; padding-top: 0.5mm;">
+              ALL CONCESSIONS PAUSE OPERATIONS AT 23:30 TO ATTEND GRAND PODIUM
+            </div>
+            <div class="page-number">4</div>
+          </div>
+        </div>
+
+        <!-- PAGE 5: THE MATRIARCH'S ARRIVAL SPEECH -->
+        <div class="a6-page">
+          <div class="page-frame">
+            <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+            
+            <div>
+              <div class="black-bar-header">THEATRICAL SPEECH // 23:35 PODIUM</div>
+              <div class="section-subhead">Delivered from Balcony with Stag Antlers & Masked Minilove Guards</div>
+
+              <div style="font-family:'Special Elite'; font-size:6pt; font-weight:bold; margin-bottom: 0.5mm;">
+                THE MATRIARCH'S CEREMONIAL ADDRESS
+              </div>
+
+              <div class="speech-quote">
+                "My beautiful, indebted children. Look at yourselves.<br><br>
+                Look at the dirt beneath your fingernails from the rewilding squads. Look at the sweat upon your brows from the dynamo bicycles.<br><br>
+                You came to our borders broken by the old world. You came carrying the poison of choice, the cancer of leisure, the madness of infinite consumption.<br><br>
+                They told you that freedom was doing whatever you pleased. We showed you the truth: freedom is having every breath lovingly accounted for!<br><br>
+                You are born into debt, yes—but in debt, you are anchored! In debt, you are held! Tonight, we tally your service. Show the Guardian Stag what you have built!"
+              </div>
+            </div>
+
+            <div style="border: 1px dashed #000; padding: 1mm; font-size: 4.8pt; background: #fafafa; text-align: center;">
+              <strong>STAGE DIRECTIONS:</strong> Pause for crowd rhythmic clapping. Sub-bass drone intensifies as Ministers step forward with tallies.
+            </div>
+            <div class="page-number">5</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ========================================================
+     VIEW 2: SEQUENTIAL READING VIEW (PAGES 1 TO 8)
+     ======================================================== -->
+<div id="reading-view">
+  
+  <!-- SPREAD 1: COVER (PAGE 1) -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <!-- Clone of Page 1 Frame -->
+      <div class="page-frame" style="text-align: center;">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div class="cover-header-block">
+          <div class="cover-title">REPUBLIC OF ECOTOPIA</div>
+          <div class="cover-sub">MINISTRY OF PROPAGANDA & CIVIC LITURGY</div>
+        </div>
+        <svg class="cover-crest" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="50,4 92,28 92,76 50,96 8,76 8,28" stroke="#000000" stroke-width="2.5" fill="#f4f4f4"/>
+          <polygon points="50,10 86,32 86,72 50,90 14,72 14,32" stroke="#000000" stroke-width="0.75" fill="none"/>
+          <line x1="50" y1="20" x2="50" y2="78" stroke="#000000" stroke-width="3"/>
+          <line x1="38" y1="78" x2="62" y2="78" stroke="#000000" stroke-width="2.5"/>
+          <line x1="42" y1="65" x2="58" y2="65" stroke="#000000" stroke-width="2"/>
+          <line x1="45" y1="52" x2="55" y2="52" stroke="#000000" stroke-width="2"/>
+          <path d="M40 26 C36 30 36 36 40 40" stroke="#000000" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M60 26 C64 30 64 36 60 40" stroke="#000000" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M34 20 C28 26 28 40 34 46" stroke="#000000" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M66 20 C72 26 72 40 66 46" stroke="#000000" stroke-width="1.8" stroke-linecap="round"/>
+          <path d="M50 20 L38 12 M38 12 L30 14 M38 12 L36 8" stroke="#000000" stroke-width="2" stroke-linecap="square"/>
+          <path d="M50 20 L62 12 M62 12 L70 14 M62 12 L64 8" stroke="#000000" stroke-width="2" stroke-linecap="square"/>
+        </svg>
+        <div class="cover-motto">"THE VOICE OF R.E.I.G.N. IS THE VOICE OF THE SOIL."</div>
+        <div>
+          <div style="font-family:'Special Elite'; font-size: 7pt; font-weight: bold; letter-spacing: 0.5px; margin-bottom: 1mm;">
+            OFFICIAL BROADCAST SCRIPTS,<br>SPEECHES & CEREMONIAL LITURGIES
+          </div>
+          <div style="font-size: 5pt; color: #333333; margin-bottom: 1.5mm;">PERFORMANCE MANUAL FOR AUDIO & VOICEOVER DIRECTORS</div>
+          <div class="cover-serial-box">BROADCAST-REG: SCRIPT-PB-2026-0042</div>
+        </div>
+        <div class="page-number">1</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 2: PAGES 2 & 3 -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">PERFORMANCE DIRECTIVE & PA 01</div>
+          <div class="section-subhead">Performer & Audio Engineering Guide • Hanna (Voiceover)</div>
+          <div class="directive-box">
+            <strong>THE DOUBLETHINK MASQUERADE:</strong> All voiceover follows polite, calm, maternal BBC Radio 4 bureaucracy masking absolute coercive authority. We never shout; we never act cruel. Totalitarian control is delivered as tender ecological love.
+          </div>
+          <div class="broadcast-block">
+            <div class="broadcast-title"><span>BROADCAST 01 (21:00)</span><span>OPENING ADDRESS</span></div>
+            <div style="font-size: 4.8pt; font-weight: bold; margin-bottom: 0.6mm;">WELCOME TO THE SANCTUARY</div>
+            <div class="broadcast-text">
+              "Good evening, citizens. Welcome to Ecotopia at De Warren. The Committee for Ecological Integrity and Global Nurturing reminds you: entry into this decontaminated perimeter is not a right, but a sublime biological loan.<br><br>
+              Your carbon balance has been initialized. If your passport displays a negative balance, do not despair: your debt is your opportunity to demonstrate affection for the biosphere. Please keep your passports visible, wear your natural fibers with pride, and remember: The Earth endures. R.E.I.G.N. endures."
+            </div>
+          </div>
+        </div>
+        <div style="font-size: 5pt; text-align: center; border-top: 1px solid #000; padding-top: 1mm;">
+          AUDIO FILTER SPEC: 1950s Valve Radio • Low Mid Boost • 4.5kHz Low-Pass Cut
+        </div>
+        <div class="page-number">2</div>
+      </div>
+    </div>
+
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div class="black-bar-header">LOUDSPEAKER PA DECREES (02 & 03)</div>
+        <div class="section-subhead">Hallway PA Valve-Radio Feed • Maternal Administrative Tone</div>
+        <div class="broadcast-block">
+          <div class="broadcast-title"><span>BROADCAST 02 (21:45)</span><span>MINIFLOW</span></div>
+          <div style="font-size: 4.8pt; font-weight: bold; margin-bottom: 0.6mm;">DECREE OF HYDROLOGICAL PURITY</div>
+          <div class="broadcast-text">
+            "Attention, valued residents. Miniflow reports an alarming drop in municipal cistern pressure. Citizens are reminded that fluid consumption is subject to reciprocal restitution. If you take a cup of biological tea, your bladder is legally mortgaged to Peetopia. Anyone caught flushing without an authorized urine recovery token will be escorted to the scullery for cold-water re-education. Drink deeply, excrete devotedly, and cherish your moisture."
+          </div>
+        </div>
+        <div class="broadcast-block">
+          <div class="broadcast-title"><span>BROADCAST 03 (22:30)</span><span>MINILIGHT</span></div>
+          <div style="font-size: 4.8pt; font-weight: bold; margin-bottom: 0.6mm;">DECREE OF LUMINESCENCE</div>
+          <div class="broadcast-text">
+            "Valued citizens: darkness is peace. In thirty seconds, ambient lighting in all common corridors will be reduced by forty percent to alleviate the pressure on our shared battery banks. If you find yourself in sudden darkness, do not panic: sit quietly, close your eyes, and meditate upon the energy required to illuminate your ancestors’ foolish cities. Those who require light may report immediately to the stationary bicycle bank to pedal for the collective grid. Your sweat powers our culture."
+          </div>
+        </div>
+        <div style="font-size: 4.8pt; text-align: center; border-top: 1px solid #000; padding-top: 0.5mm;">
+          TRANSMISSION FIDELITY VERIFIED • SECTOR CORRIDOR MONITORS ACTIVE
+        </div>
+        <div class="page-number">3</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 3: PAGES 4 & 5 -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div class="black-bar-header">LOUDSPEAKER PA DECREES (04 & 05)</div>
+        <div class="section-subhead">Hallway PA Valve-Radio Feed • Pre-Assembly Decrees</div>
+        <div class="broadcast-block">
+          <div class="broadcast-title"><span>BROADCAST 04 (23:15)</span><span>MINIBREATH</span></div>
+          <div style="font-size: 4.8pt; font-weight: bold; margin-bottom: 0.6mm;">ATMOSPHERIC MINDFULNESS</div>
+          <div class="broadcast-text">
+            "A special advisory from Minibreath: Our infrared corridor sensors detect an unapproved surge in rapid exhalations near the dancefloor. Citizens: heavy breathing is a luxury the atmosphere cannot afford. Pace your respiratory rhythm. Inhale for four seconds; hold for four seconds; release with civic restraint. Any attendee observed sighing dramatically about the music will be assessed a fifty-credit atmospheric surcharge. Breathe gently for Mother Earth."
+          </div>
+        </div>
+        <div class="broadcast-block">
+          <div class="broadcast-title"><span>BROADCAST 05 (23:30)</span><span>SUPREME MANDATE</span></div>
+          <div style="font-size: 4.8pt; font-weight: bold; margin-bottom: 0.6mm;">THE MANDATORY ASSEMBLY CALL</div>
+          <div class="broadcast-text">
+            "Citizens of R.E.I.G.N. The hour of accounting has arrived. By decree of the Guardian Stag, all ministries—Plenty, Love, Joy, Renewal, Light, Flow, Breath, Shelter, Service, and Thrift—are commanded to assemble before the grand podium. Bring your passports. Bring your tallies. Bring your devotion. The Matriarch approaches. Prepare to be weighed."
+          </div>
+        </div>
+        <div style="font-size: 4.8pt; text-align: center; border-top: 1px solid #000; padding-top: 0.5mm;">
+          ALL CONCESSIONS PAUSE OPERATIONS AT 23:30 TO ATTEND GRAND PODIUM
+        </div>
+        <div class="page-number">4</div>
+      </div>
+    </div>
+
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">THEATRICAL SPEECH // 23:35 PODIUM</div>
+          <div class="section-subhead">Delivered from Balcony with Stag Antlers & Masked Minilove Guards</div>
+          <div style="font-family:'Special Elite'; font-size:6pt; font-weight:bold; margin-bottom: 0.5mm;">THE MATRIARCH'S CEREMONIAL ADDRESS</div>
+          <div class="speech-quote">
+            "My beautiful, indebted children. Look at yourselves.<br><br>
+            Look at the dirt beneath your fingernails from the rewilding squads. Look at the sweat upon your brows from the dynamo bicycles.<br><br>
+            You came to our borders broken by the old world. You came carrying the poison of choice, the cancer of leisure, the madness of infinite consumption.<br><br>
+            They told you that freedom was doing whatever you pleased. We showed you the truth: freedom is having every breath lovingly accounted for!<br><br>
+            You are born into debt, yes—but in debt, you are anchored! In debt, you are held! Tonight, we tally your service. Show the Guardian Stag what you have built!"
+          </div>
+        </div>
+        <div style="border: 1px dashed #000; padding: 1mm; font-size: 4.8pt; background: #fafafa; text-align: center;">
+          <strong>STAGE DIRECTIONS:</strong> Pause for crowd rhythmic clapping. Sub-bass drone intensifies as Ministers step forward with tallies.
+        </div>
+        <div class="page-number">5</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 4: PAGES 6 & 7 -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div class="black-bar-header">SUBVERSIVE TEXT // CLASSIFIED EVIDENCE</div>
+        <div class="section-subhead">Recovered from Thijs's Room • Passed by Hand on Brown Scrap Paper</div>
+        <div class="manifesto-box">
+          <div class="title">THE MANIFESTO OF THE UNMEASURED LEAF</div>
+          <div class="body">
+            "They built a prison and painted it green.<br><br>
+            They told you that loving the earth meant carrying an electronic ledger, paying taxes on exhalations, and bowing to a stag made of algorithms.<br><br>
+            We say: the earth does not keep an Excel sheet. The soil does not issue carbon fines. The river does not care about your Tonomy ID.<br><br>
+            True ecology is not surveillance masquerading as care. It is human hands touching living moss without an auditor watching from the rafters.<br><br>
+            Meet us at 23:45. Look for the ankle stamp. Tear up your booklet. Let the algorithms starve."
+          </div>
+        </div>
+        <div style="border: 1px dotted #000; padding: 1.2mm; text-align: center; background: #fafafa; font-size: 5pt;">
+          <strong>REBELLION DIRECTIVE:</strong> Recruits bearing the Ankle Stamp carry duplicate stamps to recruit trusted citizens before the 00:00 midnight confrontation.
+        </div>
+        <div class="page-number">6</div>
+      </div>
+    </div>
+
+    <div class="a6-page">
+      <div class="page-frame">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div class="black-bar-header">LITURGICAL SHRINES (THE ECO-MARTYRS)</div>
+        <div class="section-subhead">Museum Plaques in the Hallway of Necessary Contrition</div>
+        <div class="shrine-card">
+          <div class="shrine-title">SHRINE I: THE SACRED BROTH OF ROOM 43</div>
+          <div class="shrine-sub">Relic of the First Witness (October 2022)</div>
+          <div class="shrine-text">
+            "On the fourteenth day of October, Year Minus Four, two young witnesses poured harvest tomato puree onto the vitrine glass protecting Van Gogh’s Sunflowers. The old world shrieked in horror: 'You have ruined a priceless painting!' The witnesses replied: 'Is paint worth more than life? Is art worth more than food?' In that sacred moment, the illusion of civilized neutrality was shattered forever. We preserve this bronze vessel not in mockery, but as the First Holy Rupture."
+          </div>
+        </div>
+        <div class="shrine-card">
+          <div class="shrine-title">SHRINE II: ORDER OF THE SACRED OBSTRUCTION</div>
+          <div class="shrine-sub">The Bitumen Confessors of the A12</div>
+          <div class="shrine-text">
+            "When four million tons of petroleum thundered down the motorways each hour, the holy confessors knelt upon the asphalt and adhered their living flesh to the roadway with industrial resin. Fire hoses could not move them. Motorist fury could not break their prayers. They taught us that when the world is hurtling toward the cliff, physical immobility is the only moral act. Touch the cured vest; receive their stillness."
+          </div>
+        </div>
+        <div style="font-size: 4.8pt; text-align: center; border-top: 1px solid #000; padding-top: 0.5mm;">
+          ALL CITIZENS MUST BOW REVERENTLY WHEN PASSING MARTYR SHRINES
+        </div>
+        <div class="page-number">7</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPREAD 5: BACK COVER (PAGE 8) -->
+  <div class="reading-spread">
+    <div class="a6-page">
+      <div class="page-frame" style="justify-content: space-between;">
+        <div class="corner-tl"></div><div class="corner-tr"></div><div class="corner-bl"></div><div class="corner-br"></div>
+        <div>
+          <div class="black-bar-header">LITURGY III & EMERGENCY CLAUSE</div>
+          <div class="section-subhead">Hallway of Necessary Contrition • Official State Safeguards</div>
+          <div class="shrine-card">
+            <div class="shrine-title">SHRINE III: THE SLEDGEHAMMER APOSTLES</div>
+            <div class="shrine-sub">The De-Computator Busbar & The GPU of Shame (2027)</div>
+            <div class="shrine-text">
+              "During the Great Drought, while the Rhine dried to mud, a single server farm consumed four million liters of river water each day to generate synthetic advertisements and poetry. On July 9th, the Sledgehammer Brigade breached the datacenter perimeter and severed the 380kV busbars, returning the cooling water back to the soil. Impaled before you is an NVIDIA H100 datacenter processor, slagged by its own heat when the power died. Gaze upon it, citizen, and remember what your prompts cost the earth."
+            </div>
+          </div>
+          <div class="ozone-emergency-block">
+            <div class="title">EMERGENCY SAFE-WORD: "OZONE"</div>
+            <div class="desc">Universal safety clause. Speaking "OZONE" immediately halts all performances, pauses roleplay, and summons medical/organizer support without question or penalty.</div>
+          </div>
+        </div>
+        <div class="barcode-strip">
+          <div class="barcode-chars">||||||||||||||||||||||||||||||||||||||||||</div>
+          <div style="font-size: 5pt; letter-spacing: 1.5px; font-weight: bold; margin-top: 0.5mm;">SANCTUARY DE WARREN • AMSTERDAM 2026</div>
+        </div>
+        <div class="page-number">8</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

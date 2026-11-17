@@ -29,6 +29,28 @@ format:
 
 ---
 
+## 📦 GET EVERYTHING WE'VE MADE
+
+<style>
+.dl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0 2.5rem; }
+.dl-card { background: #0a180a; border: 1px solid #1a5c1a; padding: 1rem 1.1rem; border-radius: 4px; }
+.dl-card h4 { color: #c8a000; margin: 0 0 0.6rem; letter-spacing: 0.1em; }
+.dl-wide { margin-bottom: 2.5rem; }
+.dl-row { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; padding: 0.4rem 0; border-bottom: 1px dotted #1a5c1a; color: #cfe8cf; }
+.dl-row > span:last-child { display: flex; flex-wrap: wrap; gap: 0.3rem; justify-content: flex-end; }
+.chip { font-family: 'Share Tech Mono', monospace; font-size: 0.72rem; padding: 0.15rem 0.45rem; border: 1px solid #2d7a2d; border-radius: 3px; color: #6fd66f !important; text-decoration: none; white-space: nowrap; }
+.chip:hover { background: #2d7a2d; color: #fff !important; }
+.poster-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); column-gap: 1.5rem; }
+.dl-all { display: inline-block; margin: 0.5rem 0.5rem 0 0; padding: 0.6rem 1.1rem; background: #1a5c1a; color: #fff !important; border-radius: 4px; text-decoration: none; letter-spacing: 0.1em; }
+</style>
+
+<a class="dl-all" href="downloads.html">ALL 220 FILES →</a>
+<a class="dl-all" href="https://github.com/TheSocialChicken/ecofasismparty/archive/refs/heads/main.zip">DOWNLOAD EVERYTHING (ZIP)</a>
+
+{{< include _products.qmd >}}
+
+---
+
 ## SUMMONS TO CITIZEN ADMISSION
 
 By decree of the **Regime for Ecological Integrity and Global Nurturing (R.E.I.G.N.)**, surviving biological units of the outer wastelands are invited to apply for entry into **Ecotopia** at De Warren.

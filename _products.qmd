@@ -1,0 +1,47 @@
+```{=html}
+<div class="dl-grid">
+<div class="dl-card"><h4>🛂 PASSPORT</h4>
+<div class="dl-row"><span>Passport v2</span><span><a class="chip" href="passport_v2/passport_v2.pdf">PDF</a><a class="chip" href="passport_v2/passport_v2.html">WEB</a></span></div>
+<div class="dl-row"><span>Passport A6 booklet</span><span><a class="chip" href="print_passport_a6_booklet.html">WEB</a></span></div>
+<div class="dl-row"><span>Habit tracker A6</span><span><a class="chip" href="print_habit_tracker_a6_booklet.html">WEB</a></span></div>
+<div class="dl-row"><span>Passport production guide</span><span><a class="chip" href="passport_production_guide.md">MD</a></span></div>
+</div>
+<div class="dl-card"><h4>📜 LORE</h4>
+<div class="dl-row"><span>Lore booklet A4</span><span><a class="chip" href="print_lore_a4_booklet.pdf">PDF</a><a class="chip" href="print_lore_a4_booklet.html">WEB</a></span></div>
+<div class="dl-row"><span>Lore &amp; narrative bible</span><span><a class="chip" href="lore_and_narrative_bible.pdf">PDF</a><a class="chip" href="lore_and_narrative_bible.docx">DOCX</a><a class="chip" href="lore_and_narrative_bible.md">MD</a><a class="chip" href="print_lore_bible_a6_booklet.html">A6 WEB</a></span></div>
+<div class="dl-row"><span>Lore A6 booklet</span><span><a class="chip" href="print_lore_a6_booklet.html">WEB</a></span></div>
+<div class="dl-row"><span>Broadcast scripts &amp; liturgy</span><span><a class="chip" href="broadcast_scripts_and_liturgy.pdf">PDF</a><a class="chip" href="broadcast_scripts_and_liturgy.docx">DOCX</a><a class="chip" href="broadcast_scripts_and_liturgy.md">MD</a><a class="chip" href="print_broadcast_scripts_a6_booklet.html">A6 WEB</a></span></div>
+</div>
+<div class="dl-card"><h4>🎲 GAMES &amp; CARDS</h4>
+<div class="dl-row"><span>Card deck</span><span><a class="chip" href="print_cards_deck.pdf">PDF</a><a class="chip" href="print_cards_deck.html">WEB</a></span></div>
+<div class="dl-row"><span>Games codex A4</span><span><a class="chip" href="print_games_codex_a4.pdf">PDF</a><a class="chip" href="print_games_codex_a4.html">WEB</a></span></div>
+<div class="dl-row"><span>Quest cards &amp; facilitator pack</span><span><a class="chip" href="quest_cards_and_facilitator_pack.pdf">PDF</a><a class="chip" href="quest_cards_and_facilitator_pack.docx">DOCX</a><a class="chip" href="quest_cards_and_facilitator_pack.md">MD</a><a class="chip" href="print_quest_cards_a6_booklet.html">A6 WEB</a></span></div>
+<div class="dl-row"><span>Game design &amp; activities</span><span><a class="chip" href="game_design_and_activities.pdf">PDF</a><a class="chip" href="game_design_and_activities.docx">DOCX</a><a class="chip" href="game_design_and_activities.md">MD</a><a class="chip" href="print_game_design_a6_booklet.html">A6 WEB</a></span></div>
+<div class="dl-row"><span>Cheat card ch.4</span><span><a class="chip" href="cheat_card_ch4.html">WEB</a></span></div>
+</div>
+<div class="dl-card"><h4>🔏 STAMPS &amp; PROPS</h4>
+<div class="dl-row"><span>Stamp preview sheet</span><span><a class="chip" href="stamps_preview.html">WEB</a></span></div>
+<div class="dl-row"><span>Prop fabrication guide</span><span><a class="chip" href="BITLAIR_PROP_FABRICATION_GUIDE.md">MD</a></span></div>
+<div class="dl-row"><span>Seals, insignia, 3D STL</span><span><a class="chip" href="downloads.html#ministry-seals-stamps">SVG/PNG</a><a class="chip" href="downloads.html#insignia">INSIGNIA</a><a class="chip" href="downloads.html#d-printable-stamps-stl">STL</a></span></div>
+</div>
+</div>
+<div class="dl-card dl-wide"><h4>🪧 POSTERS (16)</h4><div class="poster-grid">
+<div class="dl-row"><span>01 Apply For Citizenship</span><span><a class="chip" href="posters/posters/01%20Apply%20For%20Citizenship.pdf">PDF</a><a class="chip" href="posters/lasercutter/01%20Apply%20For%20Citizenship.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>02 Recycling Plant</span><span><a class="chip" href="posters/posters/02%20Recycling%20Plant.pdf">PDF</a><a class="chip" href="posters/lasercutter/02%20Recycling%20Plant.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>03 Darkness Light Screen</span><span><a class="chip" href="posters/posters/03%20Darkness%20Light%20Screen.pdf">PDF</a><a class="chip" href="posters/lasercutter/03%20Darkness%20Light%20Screen.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>04 Guardian Stag Trophy</span><span><a class="chip" href="posters/posters/04%20Guardian%20Stag%20Trophy.pdf">PDF</a><a class="chip" href="posters/lasercutter/04%20Guardian%20Stag%20Trophy.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>05 Resistance Stencil</span><span><a class="chip" href="posters/posters/05%20Resistance%20Stencil.pdf">PDF</a><a class="chip" href="posters/lasercutter/05%20Resistance%20Stencil.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>06 Reign Crest Plaque</span><span><a class="chip" href="posters/posters/06%20Reign%20Crest%20Plaque.pdf">PDF</a><a class="chip" href="posters/lasercutter/06%20Reign%20Crest%20Plaque.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>07 Conserve</span><span><a class="chip" href="posters/posters/07%20Conserve.pdf">PDF</a><a class="chip" href="posters/lasercutter/07%20Conserve.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>08 You Are Watched</span><span><a class="chip" href="posters/posters/08%20You%20Are%20Watched.pdf">PDF</a><a class="chip" href="posters/lasercutter/08%20You%20Are%20Watched.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>09 Obey</span><span><a class="chip" href="posters/posters/09%20Obey.pdf">PDF</a><a class="chip" href="posters/lasercutter/09%20Obey.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>10 Pedal</span><span><a class="chip" href="posters/posters/10%20Pedal.pdf">PDF</a><a class="chip" href="posters/lasercutter/10%20Pedal.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>11 Breathe Less</span><span><a class="chip" href="posters/posters/11%20Breathe%20Less.pdf">PDF</a><a class="chip" href="posters/lasercutter/11%20Breathe%20Less.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>12 Own Nothing</span><span><a class="chip" href="posters/posters/12%20Own%20Nothing.pdf">PDF</a><a class="chip" href="posters/lasercutter/12%20Own%20Nothing.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>13 Speak Up</span><span><a class="chip" href="posters/posters/13%20Speak%20Up.pdf">PDF</a><a class="chip" href="posters/lasercutter/13%20Speak%20Up%20SIMPLE%20lines%20only.svg">SVG SIMPLE</a><a class="chip" href="posters/lasercutter/13%20Speak%20Up.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>14 Smaller Is Greener</span><span><a class="chip" href="posters/posters/14%20Smaller%20Is%20Greener.pdf">PDF</a><a class="chip" href="posters/lasercutter/14%20Smaller%20Is%20Greener.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>15 Give Thanks</span><span><a class="chip" href="posters/posters/15%20Give%20Thanks.pdf">PDF</a><a class="chip" href="posters/lasercutter/15%20Give%20Thanks.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>16 Cold Is Cozy</span><span><a class="chip" href="posters/posters/16%20Cold%20Is%20Cozy.pdf">PDF</a><a class="chip" href="posters/lasercutter/16%20Cold%20Is%20Cozy.svg">LASER SVG</a></span></div>
+<div class="dl-row"><span>Print all ten A4</span><span><a class="chip" href="posters/posters/Print%20all%20ten%20A4.pdf">PDF</a><a class="chip" href="posters/lasercutter/All%20ten%20A4%20on%20one%20sheet.svg">LASER SHEET</a></span></div>
+</div></div>
+```
