@@ -13,6 +13,7 @@ project:
     - "game_design_and_activities.qmd"
     - "website_action_plan.qmd"
     - "review.qmd"
+    - "downloads.qmd"
 
 website:
   title: "ECOTOPIA"
@@ -30,6 +31,8 @@ website:
         href: lore.qmd
       - text: "10 MINISTRIES"
         href: manifesto.qmd
+      - text: "DOWNLOADS"
+        href: downloads.qmd
       - text: "ADMISSION & QUIZ"
         href: attend.qmd
       - text: "FEEDBACK FOR JACK"

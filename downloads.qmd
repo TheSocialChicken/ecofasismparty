@@ -1,0 +1,291 @@
+---
+title: "DOWNLOADS"
+subtitle: "Everything the Ministries have produced. Take it, print it, make it."
+---
+
+Want it all? [Download the whole archive (zip)](https://github.com/TheSocialChicken/ecofasismparty/archive/refs/heads/main.zip){.btn .btn-success}
+
+Source and history: [github.com/TheSocialChicken/ecofasismparty](https://github.com/TheSocialChicken/ecofasismparty)
+
+## Print-ready booklets & decks
+
+PDFs ready to print. A6 booklets are HTML: open in a browser and print (duplex, short edge).
+
+| File | Type | Size |
+|---|---|---|
+| [print_cards_deck.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_cards_deck.pdf) | PDF | 8.3 MB |
+| [print_games_codex_a4.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_games_codex_a4.pdf) | PDF | 11.5 MB |
+| [print_lore_a4_booklet.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_lore_a4_booklet.pdf) | PDF | 15.5 MB |
+| [passport_v2.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/passport_v2/passport_v2.pdf) | PDF | 396.9 KB |
+| [print_broadcast_scripts_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_broadcast_scripts_a6_booklet.html) | HTML | 48.8 KB |
+| [print_cards_deck.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_cards_deck.html) | HTML | 98.8 KB |
+| [print_game_design_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_game_design_a6_booklet.html) | HTML | 65.4 KB |
+| [print_games_codex_a4.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_games_codex_a4.html) | HTML | 70.8 KB |
+| [print_habit_tracker_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_habit_tracker_a6_booklet.html) | HTML | 281.0 KB |
+| [print_lore_a4_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_lore_a4_booklet.html) | HTML | 66.7 KB |
+| [print_lore_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_lore_a6_booklet.html) | HTML | 28.0 KB |
+| [print_lore_bible_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_lore_bible_a6_booklet.html) | HTML | 71.7 KB |
+| [print_passport_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_passport_a6_booklet.html) | HTML | 58.0 KB |
+| [print_quest_cards_a6_booklet.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/print_quest_cards_a6_booklet.html) | HTML | 72.3 KB |
+| [passport_v2.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/passport_v2/passport_v2.html) | HTML | 32.8 KB |
+
+## Game & lore documents
+
+The full design docs.
+
+| File | Type | Size |
+|---|---|---|
+| [game_design_and_activities.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/game_design_and_activities.pdf) | PDF | 47.9 KB |
+| [lore_and_narrative_bible.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/lore_and_narrative_bible.pdf) | PDF | 44.9 KB |
+| [quest_cards_and_facilitator_pack.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/quest_cards_and_facilitator_pack.pdf) | PDF | 45.6 KB |
+| [broadcast_scripts_and_liturgy.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/broadcast_scripts_and_liturgy.pdf) | PDF | 29.1 KB |
+| [cheat_card_ch4.html](https://github.com/TheSocialChicken/ecofasismparty/raw/main/cheat_card_ch4.html) | HTML | 70.6 KB |
+
+## Posters (print)
+
+A-size propaganda posters.
+
+| File | Type | Size |
+|---|---|---|
+| [01 Apply For Citizenship.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/01%20Apply%20For%20Citizenship.pdf) | PDF | 54.6 KB |
+| [02 Recycling Plant.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/02%20Recycling%20Plant.pdf) | PDF | 38.7 KB |
+| [03 Darkness Light Screen.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/03%20Darkness%20Light%20Screen.pdf) | PDF | 38.6 KB |
+| [04 Guardian Stag Trophy.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/04%20Guardian%20Stag%20Trophy.pdf) | PDF | 21.6 KB |
+| [05 Resistance Stencil.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/05%20Resistance%20Stencil.pdf) | PDF | 48.9 KB |
+| [06 Reign Crest Plaque.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/06%20Reign%20Crest%20Plaque.pdf) | PDF | 28.5 KB |
+| [07 Conserve.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/07%20Conserve.pdf) | PDF | 19.0 KB |
+| [08 You Are Watched.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/08%20You%20Are%20Watched.pdf) | PDF | 28.7 KB |
+| [09 Obey.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/09%20Obey.pdf) | PDF | 18.9 KB |
+| [10 Pedal.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/10%20Pedal.pdf) | PDF | 22.3 KB |
+| [11 Breathe Less.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/11%20Breathe%20Less.pdf) | PDF | 22.7 KB |
+| [12 Own Nothing.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/12%20Own%20Nothing.pdf) | PDF | 22.7 KB |
+| [13 Speak Up.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/13%20Speak%20Up.pdf) | PDF | 21.7 KB |
+| [14 Smaller Is Greener.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/14%20Smaller%20Is%20Greener.pdf) | PDF | 22.7 KB |
+| [15 Give Thanks.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/15%20Give%20Thanks.pdf) | PDF | 21.2 KB |
+| [16 Cold Is Cozy.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/16%20Cold%20Is%20Cozy.pdf) | PDF | 26.4 KB |
+| [Print all ten A4.pdf](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/posters/Print%20all%20ten%20A4.pdf) | PDF | 222.3 KB |
+
+## Posters (laser cutter)
+
+SVG cut/engrave files.
+
+| File | Type | Size |
+|---|---|---|
+| [01 Apply For Citizenship.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/01%20Apply%20For%20Citizenship.svg) | SVG | 150.5 KB |
+| [02 Recycling Plant.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/02%20Recycling%20Plant.svg) | SVG | 106.3 KB |
+| [03 Darkness Light Screen.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/03%20Darkness%20Light%20Screen.svg) | SVG | 111.9 KB |
+| [04 Guardian Stag Trophy.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/04%20Guardian%20Stag%20Trophy.svg) | SVG | 60.9 KB |
+| [05 Resistance Stencil.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/05%20Resistance%20Stencil.svg) | SVG | 160.4 KB |
+| [06 Reign Crest Plaque.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/06%20Reign%20Crest%20Plaque.svg) | SVG | 69.8 KB |
+| [07 Conserve.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/07%20Conserve.svg) | SVG | 52.8 KB |
+| [08 You Are Watched.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/08%20You%20Are%20Watched.svg) | SVG | 81.2 KB |
+| [09 Obey.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/09%20Obey.svg) | SVG | 53.7 KB |
+| [10 Pedal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/10%20Pedal.svg) | SVG | 60.5 KB |
+| [11 Breathe Less.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/11%20Breathe%20Less.svg) | SVG | 65.0 KB |
+| [12 Own Nothing.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/12%20Own%20Nothing.svg) | SVG | 64.2 KB |
+| [13 Speak Up SIMPLE lines only.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/13%20Speak%20Up%20SIMPLE%20lines%20only.svg) | SVG | 61.7 KB |
+| [13 Speak Up.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/13%20Speak%20Up.svg) | SVG | 63.5 KB |
+| [14 Smaller Is Greener.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/14%20Smaller%20Is%20Greener.svg) | SVG | 63.3 KB |
+| [15 Give Thanks.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/15%20Give%20Thanks.svg) | SVG | 59.8 KB |
+| [16 Cold Is Cozy.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/16%20Cold%20Is%20Cozy.svg) | SVG | 71.8 KB |
+| [All ten A4 on one sheet.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/posters/lasercutter/All%20ten%20A4%20on%20one%20sheet.svg) | SVG | 633.4 KB |
+
+## Props: laser & vinyl
+
+Desk placards, decals and other prop files.
+
+| File | Type | Size |
+|---|---|---|
+| [ministry_desk_placards.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/props/lasercutter/ministry_desk_placards.svg) | SVG | 18.6 KB |
+| [ministry_desk_placards_ready.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/props/lasercutter/ministry_desk_placards_ready.svg) | SVG | 792.5 KB |
+| [resistance_decals_ready.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/props/vinyl/resistance_decals_ready.svg) | SVG | 193.6 KB |
+| [resistance_decals_sheet.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/props/vinyl/resistance_decals_sheet.svg) | SVG | 15.1 KB |
+
+## Ministry seals (stamps)
+
+Vector and PNG seals for the 10 ministries.
+
+| File | Type | Size |
+|---|---|---|
+| [01_miniservice_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/01_miniservice_seal.svg) | SVG | 1.3 KB |
+| [02_minirenewal_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/02_minirenewal_seal.svg) | SVG | 1.2 KB |
+| [03_minilight_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/03_minilight_seal.svg) | SVG | 1.1 KB |
+| [04_miniflow_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/04_miniflow_seal.svg) | SVG | 1.2 KB |
+| [05_miniplenty_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/05_miniplenty_seal.svg) | SVG | 1.5 KB |
+| [06_minilove_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/06_minilove_seal.svg) | SVG | 1.2 KB |
+| [07_minijoy_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/07_minijoy_seal.svg) | SVG | 1.3 KB |
+| [08_minishelter_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/08_minishelter_seal.svg) | SVG | 1.4 KB |
+| [09_minithrift_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/09_minithrift_seal.svg) | SVG | 1.7 KB |
+| [10_minibreath_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/10_minibreath_seal.svg) | SVG | 1.5 KB |
+| [cleansed_to_humus.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/cleansed_to_humus.svg) | SVG | 1.2 KB |
+| [resistance_ankle_stamp.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/resistance_ankle_stamp.svg) | SVG | 1.9 KB |
+| [shift_plus_20.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/shift_plus_20.svg) | SVG | 1.1 KB |
+| [shift_plus_30.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/shift_plus_30.svg) | SVG | 1.1 KB |
+| [shift_plus_50.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/shift_plus_50.svg) | SVG | 1.1 KB |
+| [vip_library_speakeasy.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vip_library_speakeasy.svg) | SVG | 1.3 KB |
+| [01_miniservice_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/01_miniservice_seal.svg) | SVG | 13.2 KB |
+| [02_minirenewal_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/02_minirenewal_seal.svg) | SVG | 13.1 KB |
+| [03_minilight_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/03_minilight_seal.svg) | SVG | 12.8 KB |
+| [04_miniflow_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/04_miniflow_seal.svg) | SVG | 11.5 KB |
+| [05_miniplenty_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/05_miniplenty_seal.svg) | SVG | 11.8 KB |
+| [06_minilove_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/06_minilove_seal.svg) | SVG | 11.6 KB |
+| [07_minijoy_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/07_minijoy_seal.svg) | SVG | 12.3 KB |
+| [08_minishelter_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/08_minishelter_seal.svg) | SVG | 13.4 KB |
+| [09_minithrift_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/09_minithrift_seal.svg) | SVG | 11.4 KB |
+| [10_minibreath_seal.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/10_minibreath_seal.svg) | SVG | 13.7 KB |
+| [cleansed_to_humus.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/cleansed_to_humus.svg) | SVG | 29.1 KB |
+| [resistance_ankle_stamp.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/resistance_ankle_stamp.svg) | SVG | 16.6 KB |
+| [shift_plus_20.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/shift_plus_20.svg) | SVG | 9.9 KB |
+| [shift_plus_30.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/shift_plus_30.svg) | SVG | 10.1 KB |
+| [shift_plus_50.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/shift_plus_50.svg) | SVG | 10.3 KB |
+| [vip_library_speakeasy.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/vectorized/vip_library_speakeasy.svg) | SVG | 24.7 KB |
+| [01_miniservice_seal.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/01_miniservice_seal.png) | PNG | 60.3 KB |
+| [02_minirenewal_seal.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/02_minirenewal_seal.png) | PNG | 69.3 KB |
+| [03_minilight_seal.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/03_minilight_seal.png) | PNG | 67.0 KB |
+| [04_miniflow_seal.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/04_miniflow_seal.png) | PNG | 61.7 KB |
+| [05_miniplenty_seal.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/05_miniplenty_seal.png) | PNG | 64.1 KB |
+| [06_minilove_seal.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/06_minilove_seal.png) | PNG | 68.0 KB |
+| [07_minijoy_seal.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/07_minijoy_seal.png) | PNG | 63.7 KB |
+| [08_minishelter_seal.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/08_minishelter_seal.png) | PNG | 61.6 KB |
+| [09_minithrift_seal.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/09_minithrift_seal.png) | PNG | 65.3 KB |
+| [10_minibreath_seal.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/10_minibreath_seal.png) | PNG | 67.3 KB |
+| [cleansed_to_humus.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/cleansed_to_humus.png) | PNG | 38.3 KB |
+| [resistance_ankle_stamp.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/resistance_ankle_stamp.png) | PNG | 64.5 KB |
+| [shift_plus_20.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/shift_plus_20.png) | PNG | 28.8 KB |
+| [shift_plus_30.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/shift_plus_30.png) | PNG | 29.2 KB |
+| [shift_plus_50.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/shift_plus_50.png) | PNG | 28.8 KB |
+| [vip_library_speakeasy.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/png/vip_library_speakeasy.png) | PNG | 39.4 KB |
+
+## Insignia
+
+Ministry insignia artwork.
+
+| File | Type | Size |
+|---|---|---|
+| [01_purity.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/01_purity.svg) | SVG | 7.2 KB |
+| [01_purity_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/01_purity_paths.svg) | SVG | 70.5 KB |
+| [02_radiance.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/02_radiance.svg) | SVG | 8.1 KB |
+| [02_radiance_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/02_radiance_paths.svg) | SVG | 78.1 KB |
+| [03_breath.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/03_breath.svg) | SVG | 7.2 KB |
+| [03_breath_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/03_breath_paths.svg) | SVG | 73.8 KB |
+| [04_flow.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/04_flow.svg) | SVG | 6.7 KB |
+| [04_flow_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/04_flow_paths.svg) | SVG | 65.3 KB |
+| [05_light.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/05_light.svg) | SVG | 7.0 KB |
+| [05_light_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/05_light_paths.svg) | SVG | 66.9 KB |
+| [06_industry.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/06_industry.svg) | SVG | 7.7 KB |
+| [06_industry_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/06_industry_paths.svg) | SVG | 78.0 KB |
+| [07_humus.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/07_humus.svg) | SVG | 7.0 KB |
+| [07_humus_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/07_humus_paths.svg) | SVG | 70.9 KB |
+| [08_service.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/08_service.svg) | SVG | 7.4 KB |
+| [08_service_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/08_service_paths.svg) | SVG | 75.4 KB |
+| [09_vigilance.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/09_vigilance.svg) | SVG | 8.1 KB |
+| [09_vigilance_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/09_vigilance_paths.svg) | SVG | 78.6 KB |
+| [10_joy.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/10_joy.svg) | SVG | 6.5 KB |
+| [10_joy_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/10_joy_paths.svg) | SVG | 62.0 KB |
+| [credit_min10.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/credit_min10.svg) | SVG | 488 B |
+| [credit_min10_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/credit_min10_paths.svg) | SVG | 2.6 KB |
+| [credit_min20.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/credit_min20.svg) | SVG | 488 B |
+| [credit_min20_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/credit_min20_paths.svg) | SVG | 3.0 KB |
+| [credit_min50.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/credit_min50.svg) | SVG | 488 B |
+| [credit_min50_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/credit_min50_paths.svg) | SVG | 2.8 KB |
+| [credit_plus10.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/credit_plus10.svg) | SVG | 486 B |
+| [credit_plus10_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/credit_plus10_paths.svg) | SVG | 2.6 KB |
+| [credit_plus20.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/credit_plus20.svg) | SVG | 486 B |
+| [credit_plus20_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/credit_plus20_paths.svg) | SVG | 3.1 KB |
+| [credit_plus50.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/credit_plus50.svg) | SVG | 486 B |
+| [credit_plus50_paths.svg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/insignia/credit_plus50_paths.svg) | SVG | 2.9 KB |
+
+## 3D-printable stamps (STL)
+
+Ready-to-print stamp heads, full size and small.
+
+| File | Type | Size |
+|---|---|---|
+| [01_purity.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/01_purity.stl) | STL | 1.9 MB |
+| [02_radiance.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/02_radiance.stl) | STL | 2.1 MB |
+| [03_breath.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/03_breath.stl) | STL | 2.0 MB |
+| [04_flow.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/04_flow.stl) | STL | 1.8 MB |
+| [05_light.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/05_light.stl) | STL | 1.8 MB |
+| [06_industry.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/06_industry.stl) | STL | 2.1 MB |
+| [07_humus.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/07_humus.stl) | STL | 1.9 MB |
+| [08_service.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/08_service.stl) | STL | 2.0 MB |
+| [09_vigilance.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/09_vigilance.stl) | STL | 2.1 MB |
+| [10_joy.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/10_joy.stl) | STL | 1.7 MB |
+| [credit_min10.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/credit_min10.stl) | STL | 432.3 KB |
+| [credit_min20.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/credit_min20.stl) | STL | 485.6 KB |
+| [credit_min50.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/credit_min50.stl) | STL | 466.4 KB |
+| [credit_plus10.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/credit_plus10.stl) | STL | 433.7 KB |
+| [credit_plus20.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/credit_plus20.stl) | STL | 487.1 KB |
+| [credit_plus50.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/credit_plus50.stl) | STL | 467.9 KB |
+| [handle.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl/handle.stl) | STL | 1.2 MB |
+| [01_purity.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/01_purity.stl) | STL | 675.1 KB |
+| [02_radiance.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/02_radiance.stl) | STL | 747.3 KB |
+| [03_breath.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/03_breath.stl) | STL | 675.5 KB |
+| [04_flow.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/04_flow.stl) | STL | 672.0 KB |
+| [05_light.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/05_light.stl) | STL | 674.5 KB |
+| [06_industry.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/06_industry.stl) | STL | 673.9 KB |
+| [07_humus.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/07_humus.stl) | STL | 674.5 KB |
+| [08_service.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/08_service.stl) | STL | 672.0 KB |
+| [09_vigilance.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/09_vigilance.stl) | STL | 683.5 KB |
+| [10_joy.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/10_joy.stl) | STL | 674.5 KB |
+| [credit_min10.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/credit_min10.stl) | STL | 732.7 KB |
+| [credit_min20.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/credit_min20.stl) | STL | 786.1 KB |
+| [credit_min50.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/credit_min50.stl) | STL | 766.9 KB |
+| [credit_plus10.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/credit_plus10.stl) | STL | 734.2 KB |
+| [credit_plus20.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/credit_plus20.stl) | STL | 787.6 KB |
+| [credit_plus50.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/credit_plus50.stl) | STL | 768.4 KB |
+| [handle.stl](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_stl_small/handle.stl) | STL | 1.2 MB |
+| [StampMaker.scad](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_base/StampMaker.scad) | SCAD | 14.8 KB |
+| [StampMaker_grow.scad](https://github.com/TheSocialChicken/ecofasismparty/raw/main/stamps/stampmaker_base/StampMaker_grow.scad) | SCAD | 14.8 KB |
+
+## Images & artwork
+
+Propaganda art, engravings and mockups.
+
+| File | Type | Size |
+|---|---|---|
+| [ecotopia_passport_booklet_mockup.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/ecotopia_passport_booklet_mockup.png) | PNG | 907.3 KB |
+| [garage_intake_checkpoint.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/garage_intake_checkpoint.png) | PNG | 787.5 KB |
+| [martyr_icon_first_witness.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/martyr_icon_first_witness.png) | PNG | 1.0 MB |
+| [matriarch_reign_leader.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/matriarch_reign_leader.png) | PNG | 651.7 KB |
+| [propaganda_martyrs_shrine.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/propaganda_martyrs_shrine.png) | PNG | 714.4 KB |
+| [reign_ministries_poster.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/reign_ministries_poster.png) | PNG | 952.6 KB |
+| [revolution_cellar_evidence.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/revolution_cellar_evidence.png) | PNG | 798.4 KB |
+| [thijs_resistance_speakeasy.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/thijs_resistance_speakeasy.png) | PNG | 789.1 KB |
+| [babel.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/babel.jpg) | JPG | 665.8 KB |
+| [deluge.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/deluge.jpg) | JPG | 748.5 KB |
+| [dry_bones.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/dry_bones.jpg) | JPG | 939.3 KB |
+| [eden.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/eden.jpg) | JPG | 889.8 KB |
+| [famine.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/famine.jpg) | JPG | 820.3 KB |
+| [four_horsemen.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/four_horsemen.jpg) | JPG | 801.7 KB |
+| [leviathan.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/leviathan.jpg) | JPG | 853.0 KB |
+| [martyrs.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/martyrs.jpg) | JPG | 192.3 KB |
+| [melencolia.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/melencolia.jpg) | JPG | 902.6 KB |
+| [michael.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/michael.jpg) | JPG | 622.7 KB |
+| [moses.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/moses.jpg) | JPG | 893.4 KB |
+| [pale_horse.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/pale_horse.jpg) | JPG | 739.0 KB |
+| [patmos.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/patmos.jpg) | JPG | 234.6 KB |
+| [poster_ecotopia_passport_booklet_mockup.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/poster_ecotopia_passport_booklet_mockup.png) | PNG | 61.0 KB |
+| [poster_garage_intake_checkpoint.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/poster_garage_intake_checkpoint.png) | PNG | 53.3 KB |
+| [poster_martyr_icon_first_witness.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/poster_martyr_icon_first_witness.png) | PNG | 70.9 KB |
+| [poster_matriarch_reign_leader.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/poster_matriarch_reign_leader.png) | PNG | 28.6 KB |
+| [poster_propaganda_martyrs_shrine.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/poster_propaganda_martyrs_shrine.png) | PNG | 45.6 KB |
+| [poster_reign_ministries_poster.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/poster_reign_ministries_poster.png) | PNG | 48.2 KB |
+| [poster_revolution_cellar_evidence.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/poster_revolution_cellar_evidence.png) | PNG | 41.6 KB |
+| [poster_thijs_resistance_speakeasy.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/poster_thijs_resistance_speakeasy.png) | PNG | 37.4 KB |
+| [trumpets.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/bw/trumpets.jpg) | JPG | 669.3 KB |
+| [babel.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/babel.jpg) | JPG | 2.4 MB |
+| [deluge.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/deluge.jpg) | JPG | 2.3 MB |
+| [dry_bones.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/dry_bones.jpg) | JPG | 2.3 MB |
+| [eden.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/eden.jpg) | JPG | 2.3 MB |
+| [famine.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/famine.jpg) | JPG | 2.0 MB |
+| [four_horsemen.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/four_horsemen.jpg) | JPG | 2.7 MB |
+| [leviathan.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/leviathan.jpg) | JPG | 2.2 MB |
+| [martyrs.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/martyrs.jpg) | JPG | 1.7 MB |
+| [martyrs_bourne.png](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/martyrs_bourne.png) | PNG | 2.0 MB |
+| [melencolia.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/melencolia.jpg) | JPG | 2.6 MB |
+| [michael.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/michael.jpg) | JPG | 2.4 MB |
+| [moses.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/moses.jpg) | JPG | 2.3 MB |
+| [pale_horse.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/pale_horse.jpg) | JPG | 2.3 MB |
+| [patmos.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/patmos.jpg) | JPG | 522.6 KB |
+| [trumpets.jpg](https://github.com/TheSocialChicken/ecofasismparty/raw/main/images/engravings/trumpets.jpg) | JPG | 2.4 MB |
